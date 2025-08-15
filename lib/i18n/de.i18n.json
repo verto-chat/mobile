@@ -1,0 +1,640 @@
+{
+  "auth": {
+    "SignInScreen": {
+      "email_label": "E-Mail",
+      "password_label": "Passwort",
+      "forgot_password": "Passwort vergessen?",
+      "sign_in": "Anmelden",
+      "sign_up": "Registrierung",
+      "sign_in_with_google": "Mit Google anmelden",
+      "sign_in_with_apple": "Mit Apple anmelden",
+      "login_error": {
+        "invalid_credentials": "Ungültige Anmeldedaten",
+        "email_not_confirmed": "E-Mail nicht bestätigt"
+      },
+      "OAuthAcceptRegulationsSheet": {
+        "title": "Um fortzufahren, registrieren Sie sich",
+        "regulations(rich)": "Bitte akzeptieren Sie {terms(Nutzungsbedingungen)} und {policy(Datenschutzrichtlinie)}",
+        "accept": "Zustimmen",
+        "cancel": "Abbrechen",
+        "failed_get_regulations": "Regelungen konnten nicht abgerufen werden."
+      }
+    },
+    "SignUpScreen": {
+      "title": "Registrierung",
+      "first_name_label": "Vorname",
+      "last_name_label": "Nachname",
+      "email_label": "E-Mail",
+      "password_label": "Passwort",
+      "repeat_password": "Passwort wiederholen",
+      "sign_up": "Registrieren",
+      "password_not_equal": "Passwörter stimmen nicht überein",
+      "regulations(rich)": "Ich stimme {terms(Nutzungsbedingungen)} und {policy(Datenschutzrichtlinie)} zu",
+      "after_registration_toast": "✔️ Eine Bestätigungs-E-Mail wurde gesendet! Bitte überprüfen Sie Ihre E-Mails und bestätigen Sie die Adresse.",
+      "register_error": {
+        "incorrect_email": "Ungültige E-Mail",
+        "incorrect_name": "Ungültiger Name",
+        "incorrect_password": "Das Passwort muss mindestens 8 Zeichen lang sein und Buchstaben in Groß- und Kleinschreibung sowie Zahlen enthalten.",
+        "email_already_used": "E-Mail-Adresse wird bereits verwendet",
+        "create_error": "Fehler beim Erstellen des Benutzers",
+        "emailRateLimitExceeded": "Das Limit für den Versand von E-Mails wurde überschritten."
+      }
+    },
+    "reset_password": {
+      "ForgotPasswordScreen": {
+        "title": "Passwort wiederherstellen",
+        "email_label": "E-Mail",
+        "send_reset_link": "Link senden",
+        "check_error_description": "Der Code zur Wiederherstellung des Passworts konnte nicht gesendet werden"
+      },
+      "CodeScreen": {
+        "title": "Passwort wiederherstellen",
+        "description": "Ein Wiederherstellungscode wurde an Ihre E-Mail {email:String} gesendet",
+        "submit": "Weiter",
+        "field_label": "Wiederherstellungscode",
+        "field_error": "Ungültiger Code",
+        "check_error_description": "Der Wiederherstellungscode konnte nicht überprüft werden"
+      },
+      "NewPasswordScreen": {
+        "title": "Neues Passwort",
+        "reset_submit": "Einloggen",
+        "edit_submit": "Ändern",
+        "current_password": "Aktuelles Passwort",
+        "new_password": "Neues Passwort",
+        "repeat_new_password": "Neues Passwort wiederholen",
+        "password_label": "Passwort",
+        "repeat_password": "Passwort wiederholen",
+        "failed_change_password": "Das Passwort konnte nicht geändert werden",
+        "failed_reset_password": "Das Passwort konnte nicht zurückgesetzt werden",
+        "errors": {
+          "wrong_current_password": "Falsches aktuelles Passwort",
+          "same_password": "Das neue Passwort darf nicht mit dem aktuellen Passwort übereinstimmen."
+        }
+      }
+    }
+  },
+  "core": {
+    "field_empty": "Feld darf nicht leer sein",
+    "incorrect_format": "Ungültiges Format",
+    "address": {
+      "house_abbreviation": "Nr.",
+      "map_address_title": "Ihre Adresse",
+      "map_await_user_location": "Bestimme Ihre Adresse...",
+      "map_cant_get_user_location": "Adresse konnte nicht erkannt werden",
+      "map_cant_access_user_location": "Standort konnte nicht ermittelt werden",
+      "map_confirm_address": "Adresse bestätigen",
+      "map_address_not_contain_house": "Hausnummer nicht angegeben",
+      "map_not_found": "nicht gefunden",
+      "BaseMapScreen": {
+        "map_type_normal": "Karte",
+        "map_type_hybrid": "Hybrid"
+      },
+      "mapAddressesSheet": {
+        "input_address": "Adresse eingeben"
+      },
+      "SavedAddressesScreen": {
+        "title": "Meine Adressen",
+        "no_items_stub": {
+          "title": "Sie haben noch keine gespeicherten Adressen",
+          "description": "Fügen Sie eine Adresse zur Liste hinzu"
+        },
+        "add_address": "Adresse hinzufügen",
+        "success_toast": "Adresse erfolgreich gelöscht",
+        "confirm_remove": {
+          "title": "Adresse löschen?",
+          "description": "Möchten Sie diese Adresse aus den gespeicherten entfernen? Sie können sie später wieder hinzufügen.",
+          "ok": "Löschen",
+          "cancel": "Abbrechen"
+        }
+      },
+      "AddressActionsSheet": {
+        "remove": "Adresse entfernen"
+      },
+      "SelectAddressSheet": {
+        "current_address_title": "Aktuelle Adresse",
+        "saved_addresses_title": "Gespeicherte Adressen",
+        "add_address_label": "Adresse hinzufügen"
+      },
+      "FillAddressScreen": {
+        "title": "Adresse hinzufügen",
+        "address_label": "Adresse",
+        "name_label": "Bezeichnung der Adresse",
+        "save_address": "Speichern und hinzufügen",
+        "add_without_save": "Ohne Speichern hinzufügen",
+        "failed_save_address": "Adresse konnte nicht gespeichert werden"
+      }
+    },
+    "dialog_title": {
+      "error_title": "Fehler",
+      "connection_error": "Keine Verbindung",
+      "server_error": "Serverfehler",
+      "not_authorized": "Nicht autorisiert",
+      "upgrade_required": "Version veraltet",
+      "insufficient_accessRights": "Unzureichende Berechtigungen"
+    },
+    "dialog_msg": {
+      "retry_or_contact_support": "Versuchen Sie es erneut oder kontaktieren Sie den Support",
+      "server_error": "Es gab einen Fehler auf dem Server. {retryOrContactSupport}",
+      "default_error": "Es ist ein Fehler aufgetreten. {retryOrContactSupport}",
+      "connection_error": "Bitte überprüfen Sie Ihre Internetverbindung und versuchen Sie es erneut",
+      "authorization_required": "Anmeldedaten sind abgelaufen. Bitte melden Sie sich erneut an",
+      "upgrade_required": "Bitte installieren Sie die neueste Version der App für eine ordnungsgemäße Funktion",
+      "insufficient_access_rights": "Aktion nicht verfügbar. Ihre Berechtigungen sind eingeschränkt"
+    },
+    "dialog_action": {
+      "ok": "OK",
+      "login": "Anmelden",
+      "retry": "Erneut versuchen",
+      "upgrade": "Aktualisieren",
+      "back": "Zurück",
+      "yes": "Ja",
+      "no": "Nein",
+      "cancel": "Abbrechen"
+    },
+    "DialogPresenter": {
+      "permission_text_location": "Standort",
+      "permission_denied": {
+        "location": "Zugriff auf Standort zur Adressauswahl",
+        "title": "Zugriff auf {permission:String}",
+        "description": "{permission:String} Zugriff ist erforderlich, um diese Funktion zu nutzen. Sie können es in den Einstellungen Ihres Geräts aktivieren.",
+        "settings": "Zu den Einstellungen",
+        "later": "Später"
+      }
+    },
+    "photos": {
+      "GalleryScreen": {
+        "title": "Galerie"
+      }
+    },
+    "upload": {
+      "select_photo": {
+        "select_source_photo": {
+          "title": "Bild auswählen",
+          "from": {
+            "camera": "Kamera",
+            "gallery": "Aus Galerie"
+          }
+        }
+      },
+      "AddPhotoButton": {
+        "add_photo": "Hinzufügen"
+      }
+    },
+    "widgets": {
+      "LastPageErrorMessageView": {
+        "something_wrong_try_again": "Etwas ist schiefgelaufen, versuchen Sie es erneut:"
+      },
+      "TryAgainButton": {
+        "something_wrong": "Etwas ist schiefgelaufen",
+        "try_again": "Erneut versuchen"
+      }
+    }
+  },
+  "chats": {
+    "ChatPage": {
+      "no_messages_yet": "Noch keine Nachrichten",
+      "SlangChatL10n": {
+        "and": "und",
+        "attachmentButtonAccessibilityLabel": "Medien senden",
+        "emptyChatPlaceholder": "Sie haben noch keine Nachrichten",
+        "fileButtonAccessibilityLabel": "Datei",
+        "inputPlaceholder": "Nachricht",
+        "isTyping": "tippt…",
+        "others": "andere",
+        "sendButtonAccessibilityLabel": "Senden",
+        "unreadMessagesLabel": "Ungelesene Nachrichten"
+      },
+      "failure": "Fehler beim Laden des Chats",
+      "attachment_type_image": "Bild",
+      "attachment_type_file": "Datei",
+      "show_original": "Original anzeigen",
+      "return_translation": "Übersetzung zurückgeben",
+      "advert_chat": "Chat zur Anzeige"
+    },
+    "ChatsPage": {
+      "title": "Chats",
+      "failure": "Fehler beim Laden der Chats",
+      "empty": "Noch keine Chats",
+      "create_direct_chat": "Chat mit Benutzer erstellen",
+      "create_group_chat": "Gruppenchat erstellen",
+      "ChatCard": {
+        "favorites_chat_name": "Favoriten",
+        "support_chat_name": "Support"
+      },
+      "NoItemsStub": {
+        "title": "Noch keine Chats",
+        "description": "Sie haben noch keine Chats"
+      }
+    },
+    "CreateDirectChatPage": {
+      "title": "Chat erstellen",
+      "failure_create_chat": "Chat konnte nicht erstellt werden"
+    }
+  },
+  "feedback": {
+    "feedback_page": {
+      "title": "Feedback",
+      "type_label": "Art des Anliegens",
+      "description_label": "Beschreibung",
+      "description_hint": "Beschreiben Sie Ihr Problem oder Ihre Idee genauer",
+      "description_error": "Bitte schreiben Sie den Text der Anfrage.",
+      "submit": "Absenden",
+      "success": "Die Anfrage wurde gesendet",
+      "failed_send_feedback": "Feedback konnte nicht gesendet werden",
+      "types": {
+        "bug": "Einen Fehler melden",
+        "feature": "Eine Funktion vorschlagen",
+        "category": "Eine neue Kategorie von Anzeigen vorschlagen",
+        "question": "Eine Frage stellen",
+        "general": "Allgemeine Anmerkungen und Wünsche"
+      }
+    }
+  },
+  "home": {
+    "main_label": "Startseite",
+    "favorites_label": "Favoriten",
+    "my_adverts_label": "Anzeigen",
+    "chats_label": "Chats",
+    "profile_label": "Profil",
+    "shop_label": "Shop"
+  },
+  "in_app": {
+    "suppose_subscription_screen": {
+      "title": "Erhalten Sie eine kostenlose 7-tägige Testversion von Ovdix Plus",
+      "description": "Sie können jederzeit ohne zusätzliche Kosten kündigen",
+      "accept_button": "Jetzt kostenlos ausprobieren",
+      "cancel_button": "Nein, danke"
+    },
+    "SupposePromoteScreen": {
+      "title": "Anzeige bewerben",
+      "description": "Wählen Sie eine Werbemethode",
+      "subscription_card": {
+        "title": "Bewerbung im Abonnement",
+        "description": "In Ihrem Tarif enthalten. Wird nach dem Verkauf wiederhergestellt.",
+        "promote_button": "Bewerben",
+        "not_available_title": "Abonnement-Werbung nicht verfügbar",
+        "upgrade_button": "Upgrade",
+        "not_available_subtitle": "Sie haben die verfügbare Werbung für Ihren Tarif bereits genutzt.\nEntfernen Sie eine der beworbenen Anzeigen oder wählen Sie eine einmalige Werbung aus.",
+        "subscription_not_include_promotion": "Werbung ist in höheren Tarifen verfügbar. Upgrade auf einen Plan, um Anzeigen hervorzuheben."
+      },
+      "single_promotion_card": {
+        "title": "Einmalige Bewerbung",
+        "description": "Wird nach der Deaktivierung oder Bearbeitung der Anzeige nicht wiederhergestellt.",
+        "available": "Verfügbar: {available:int}",
+        "promote_button": "Bewerben",
+        "buy_button": "Kaufen"
+      },
+      "description_footer": "⚠️ Die Promotion gilt, solange die Anzeige aktiv ist.\nBei Deaktivierung oder Bearbeitung wird die einmalige Promotion nicht gespeichert.\nBei einem Abonnement - wird pausiert und bei erneuter Veröffentlichung zurückgegeben."
+    },
+    "select_subscription_screen": {
+      "title": "Wählen Sie ein Abonnement",
+      "description": "Jederzeit kündbar in {storeName:String}",
+      "try_1_week_free": "1 Woche kostenlos testen"
+    },
+    "BuyProductsScreen": {
+      "title": "Wählen Sie ein Produkt",
+      "buy_button": "Kaufen",
+      "unavailable": "Nicht verfügbar"
+    }
+  },
+  "legal": {
+    "failed_get_regulations": "Regelungen konnten nicht abgerufen werden.",
+    "LegalScreen": {
+      "title": "Rechtliche Informationen",
+      "policy_label": "Datenschutzrichtlinie",
+      "terms_label": "Nutzungsbedingungen",
+      "gdpr_label": "GDPR-Datenschutzrichtlinie"
+    }
+  },
+  "profile": {
+    "edit_profile_label": "Profil bearbeiten",
+    "to_my_adverts_label": "Meine Anzeigen",
+    "to_favorites_adverts_label": "Favoriten",
+    "logout_label": "Von Konto abmelden",
+    "language_label": "Sprache",
+    "legal_label": "Rechtliche Informationen",
+    "feedback_label": "Feedback",
+    "safety_label": "Sicherheit",
+    "select_language_title": "Sprache auswählen",
+    "version": "Version {version}",
+    "theme": {
+      "title": "Thema",
+      "light": "Hell",
+      "dark": "Dunkel",
+      "system": "System"
+    },
+    "edit_avatar_title": "Avatar bearbeiten",
+    "failed_upload_avatar": "Avatar konnte nicht hochgeladen werden",
+    "failed_update_avatar": "Avatar konnte nicht aktualisiert werden",
+    "ProfilePage": {
+      "my_addresses": "Meine Adressen",
+      "create_support_chat": "Support-Chat schreiben",
+      "failed_loading_profile": "Fehler beim Laden der Benutzerdaten",
+      "failed_create_support_chat": "Fehler beim Erstellen des Support-Chats",
+      "delete_account_error": {
+        "requires_recent_login": "Für die Kontolöschung ist eine erneute Anmeldung erforderlich"
+      },
+      "delete_confirm": {
+        "title": "Konto löschen",
+        "description": "Sind Sie sicher, dass Sie Ihr Konto löschen möchten?"
+      },
+      "subscription": {
+        "upgrade": "Tarif upgraden",
+        "subscription_name": "Tarif: {subscriptionName:String}",
+        "promotions_count": {
+          "one": "{n} Promotion",
+          "few": "{n} Promotionen",
+          "other": "{n} Promotionen"
+        },
+        "sub_promotion_limit": "{count:int} pro Abonnement",
+        "buy_promotion": "Promotion kaufen"
+      }
+    },
+    "EditProfileScreen": {
+      "title": "Profil bearbeiten",
+      "first_name_label": "Vorname",
+      "last_name_label": "Nachname",
+      "save_button_text": "Speichern",
+      "success_toast": "Ihr Name wurde erfolgreich aktualisiert.",
+      "edit_password": "Passwort ändern"
+    },
+    "SafetyScreen": {
+      "title": "Sicherheit",
+      "edit_password": "Passwort ändern",
+      "delete_account_label": "Konto löschen"
+    },
+    "delete_account_label": "Konto löschen"
+  },
+  "report": {
+    "ReportSheet": {
+      "title": "Verstoß melden",
+      "reasons": {
+        "spam": "Spam",
+        "inappropriate": "Unangemessenes Verhalten",
+        "abuse": "Beleidigungen oder Hassrede",
+        "other": "Sonstiges"
+      },
+      "description_label": "Beschreibung",
+      "submit": "Absenden",
+      "success": "Beschwerde eingereicht"
+    }
+  },
+  "shop": {
+    "core": {
+      "AddressCard": {
+        "title": "Adresse der Anzeige"
+      },
+      "upload_photo_help_text": "Drücken und halten Sie das Foto, um es als Titelbild festzulegen.",
+      "PhotoActionsSheet": {
+        "setAsMain": "Als Hauptbild festlegen",
+        "remove": "Entfernen"
+      },
+      "BaseEditAdvertScreen": {
+        "photos_empty_help_text": "Es muss mindestens ein Foto hinzugefügt werden.",
+        "photos_label": "Fotos ({count:int} / {limit:int})"
+      }
+    },
+    "price": {
+      "free": "Kostenlos",
+      "agreed_price": "Verhandlungsbasis",
+      "starting_price": "Ab {price:String} €",
+      "for_price": "{price:String} €"
+    },
+    "adverts": {
+      "ShopCard": {
+        "promotion_label": "Werbung"
+      },
+      "AdvertsPage": {
+        "allCategoriesTitle": "Alle Kategorien",
+        "menu": {
+          "create_advert": "Anzeige erstellen",
+          "my_adverts": "Meine Anzeigen"
+        }
+      },
+      "ShopPage": {
+        "address_not_selected": "Keine Adresse ausgewählt",
+        "getting_address": "Wir bestimmen Ihren Standort...",
+        "getting_address_helper": "Wir schauen, was in der Nähe ist",
+        "all_categories": "Alle Kategorien",
+        "select_address_manually": "Adresse manuell auswählen",
+        "failed_get_address_message": "Aktuelle Adresse konnte nicht abgerufen werden",
+        "failed_load_last_saved_address": "Die Informationen zur letzten Adresse konnten nicht abgerufen werden",
+        "failed_load_saved_addresses": "Die Liste der gespeicherten Adressen konnte nicht abgerufen werden"
+      },
+      "AdvertsFilterSheet": {
+        "title": "Filter",
+        "category_label": "Kategorie",
+        "address_label": "Adresse",
+        "condition_label": "Zustand",
+        "sort_label": "Sortierung",
+        "apply_filter": "Anwenden",
+        "clear_filter": "Zurücksetzen",
+        "category_not_selected": "Kategorie nicht ausgewählt",
+        "conditions": {
+          "new_item": "Neu",
+          "used": "Gebraucht",
+          "all": "Alle"
+        },
+        "sorts": {
+          "by_distance": "Nach Entfernung",
+          "by_price": "Nach Preis",
+          "by_date": "Nach Datum"
+        },
+        "sort_directions": {
+          "ascending": "Aufsteigend",
+          "descending": "Absteigend",
+          "ascending_date": "Zuerst die Neuen",
+          "descending_date": "Zuerst die Alten"
+        },
+        "radius": {
+          "title": "Radius",
+          "description": "Anzeigen im beliebigen Radius anzeigen",
+          "unlimited": "Unbegrenzt",
+          "radius_text": "Radius: {radiusKm:int} km",
+          "radius_label": "{radiusKm:int} km"
+        },
+        "catefory_not_selected": "Keine Kategorie ausgewählt"
+      }
+    },
+    "create_advert": {
+      "CreateAdvertStepperScreen": {
+        "title": "Anzeige erstellen",
+        "general_tab_title": "Allgemein",
+        "photo_tab_title": "Fotos",
+        "price_tab_title": "Preis",
+        "SelectInfoStepView": {
+          "name_label": "Titel",
+          "description_label": "Beschreibung, Eigenschaften",
+          "attach_documents_title": "Dokumente hinzufügen",
+          "attach_documents_description": "Zum Beispiel Zertifikate für das Produkt",
+          "product_condition_label": {
+            "title": "Zustand",
+            "new_item": "Neu",
+            "used": "Gebraucht",
+            "not_set": "Nicht angeben"
+          }
+        },
+        "SelectPhotoStepView": {
+          "add_photo_button": "Foto hinzufügen",
+          "photo_limit": "Bis zu {limit:int} Fotos."
+        },
+        "SelectPriceStepView": {
+          "price_label": "Preis",
+          "empty_price_hint": "Nach Vereinbarung",
+          "for_empty_price_label": "Für Preis nach Vereinbarung, lassen Sie das Feld leer.",
+          "negotiable_label": "Verhandlungsbasis",
+          "local_currency_label": "Zahlung in lokaler Währung",
+          "local_currency_subtitle": "Kann nicht in € zum aktuellen Kurs bezahlt werden",
+          "starting_price_label": "Dies ist der Startpreis",
+          "not_valid_price": "Ungültiges Preisformat",
+          "max_range": "Der Preis darf nicht mehr als 1.000.000.000 € betragen",
+          "min_range": "Der Preis darf nicht weniger als 0 € betragen"
+        }
+      },
+      "SelectAdvertAddressPage": {
+        "title": "Adresse auswählen"
+      },
+      "SelectCategoriesScreen": {
+        "title": "Kategorie auswählen",
+        "search_hint": "Suche",
+        "failed_loading_categories": "Kategorien konnten nicht geladen werden",
+        "all_categories": "Alle Kategorien",
+        "not_find_category": "Keine passende Kategorie gefunden?",
+        "closing_confirm": {
+          "title": "Prozess beenden",
+          "description": "Sind Sie sicher, dass Sie den Prozess zur Erstellung der Anzeige beenden möchten?"
+        }
+      },
+      "PreviewAdvertScreen": {
+        "title": "Vorschau",
+        "create_advert": "Anzeige erstellen",
+        "create_advert_success": "Anzeige erfolgreich erstellt"
+      },
+      "EditAdvertScreen": {
+        "title": "Anzeige bearbeiten",
+        "save_button": "Speichern"
+      }
+    },
+    "detail": {
+      "AdvertDetailPage": {
+        "sell_title": "Verkaufe",
+        "buy_title": "Kaufe",
+        "is_archived": "Anzeige wurde deaktiviert",
+        "create_chat": "Kontakt aufnehmen",
+        "restore": "Wiederherstellen",
+        "remove_promotion": "Werbung entfernen",
+        "promote": "Bewerben",
+        "author_title": "Anzeigeninhaber",
+        "failed_get_detail": "Fehler beim Abrufen der Detailinformationen zur Anzeige",
+        "menu": {
+          "edit": "Anzeige bearbeiten",
+          "archive": "Von der Veröffentlichung entfernen",
+          "restore": "Aus dem Archiv wiederherstellen",
+          "promote": "Anzeige bewerben",
+          "remove_promotion": "Werbung entfernen",
+          "report": "Verstoß melden",
+          "share": "Teilen"
+        },
+        "edit_promotion_confirmation": {
+          "title": "✏️ Diese Anzeige hat aktive Werbung.",
+          "description": "Bei der Bearbeitung wird die Werbung entfernt und kann nicht wiederhergestellt werden.\nSind Sie sicher, dass Sie die Anzeige ändern möchten?",
+          "archive": "Bearbeiten",
+          "cancel": "Abbrechen"
+        },
+        "is_new": "Neu",
+        "is_used": "Gebraucht",
+        "is_negotiable": "Preis verhandelbar",
+        "accepts_local_currency": "Zahlung in lokaler Währung möglich",
+        "share_text": "Sieh dir die Anzeige „{title:String}“ 👉 {shareUrl:String} an"
+      }
+    },
+    "favorites": {
+      "FavoritesAdvertsScreen": {
+        "title": "Favoriten",
+        "failed_create_chat": "Chat konnte nicht erstellt werden",
+        "no_items_stub": {
+          "title": "Keine Anzeigen",
+          "description": "Sie haben noch keine Anzeigen zu den Favoriten hinzugefügt."
+        },
+        "FavoriteAdvertCard": {
+          "is_archived": "Von der Veröffentlichung entfernt",
+          "chat": "Kontakt aufnehmen"
+        }
+      }
+    },
+    "my_adverts": {
+      "MyAdvertsScreen": {
+        "title": "Meine Anzeigen",
+        "active_tab_title": "Aktiv",
+        "archived_tab_title": "Archiv"
+      },
+      "MyAdvertsListView": {
+        "no_active_items_stub": {
+          "title": "Keine Anzeigen",
+          "description": "Erstellen Sie die erste Anzeige",
+          "create_advert": "Anzeige erstellen"
+        },
+        "no_archived_items_stub": {
+          "title": "Archiv leer",
+          "description": "Hier werden die Anzeigen angezeigt, die von der Veröffentlichung entfernt wurden"
+        },
+        "MyAdvertCard": {
+          "to_archive": "Von der Veröffentlichung entfernen",
+          "to_restore": "Wiederherstellen",
+          "to_promote": "Bewerben",
+          "to_remove_promotion": "Werbung entfernen",
+          "promoted_by_subscription": "Durch ein Abonnement gefördert – gültig bis zum Verkauf oder der Löschung.",
+          "single_promotion": "Die Förderung ist aktiv bis zur Löschung der Veröffentlichung oder zur Bearbeitung."
+        },
+        "restore_limit_confirmation": {
+          "title": "⚠️ Veröffentlichung der Anzeige nicht möglich",
+          "description": "Das Limit aktiver Anzeigen ist erreicht.\nBitte entfernen Sie zuerst eine andere Anzeige von der Veröffentlichung oder erhöhen Sie das Limit.",
+          "upgrade": "Limit erhöhen"
+        },
+        "archive_promote_confirmation": {
+          "title": "⚠️ Die Anzeige wird ins Archiv verschoben",
+          "description": "Die aktive Promotion wird unwiderruflich entfernt.\nFortfahren?",
+          "archive": "Archivieren",
+          "cancel": "Abbrechen"
+        },
+        "TariffInfo": {
+          "no_limit_tariff": "🚀 {subscriptionName:String} — unbegrenzte Anzeigen sind aktiv.",
+          "limit_tariff": "🚀 {activeAdvertsCount:int} von {limit:int} aktiven Anzeigen verwendet.",
+          "limit_reached": "Nehmen Sie eine von der Veröffentlichung oder erhöhen Sie das Limit!",
+          "limit_not_reached": "Möchten Sie mehr veröffentlichen?",
+          "upgrade_tariff": "Limit erhöhen!"
+        }
+      }
+    },
+    "distance": {
+      "in_meters": "{value:int} m",
+      "in_kilometers": "{value:int} km"
+    },
+    "SelectAdvertTypeSheet": {
+      "sell_title": "Verkaufe",
+      "buy_title": "Kaufe",
+      "LimitInfo": {
+        "title": "⚠️ Das Limit aktiver Anzeigen wurde erreicht.",
+        "description": "Die neue Anzeige wird im Archiv gespeichert.\nSie können eine andere Anzeige entfernen oder das Limit für die Veröffentlichung erhöhen."
+      }
+    },
+    "ShopPage": {
+      "create_advert": "Anzeige erstellen",
+      "sell_tab_title": "Verkaufen",
+      "buy_tab_title": "Kaufen",
+      "failed_loading_categories": "Kategorien konnten nicht geladen werden",
+      "advert_is_self": "Ihre Anzeige",
+      "search_hint": "Suche"
+    },
+    "NoItemsStub": {
+      "title": "Noch keine Anzeigen",
+      "create_advert": "Anzeige erstellen"
+    }
+  },
+  "users": {
+    "user_select_screen": {
+      "empty": "Noch keine Benutzer",
+      "failure": "Fehler beim Laden der Benutzer"
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "flutter": {
+    "platforms": {
+      "android": {
+        "default": {
+          "projectId": "vertochat-mobile",
+          "appId": "1:702476548325:android:8c9f14406eb577dba87c0c",
+          "fileOutput": "android/app/google-services.json"
+        }
+      },
+      "dart": {
+        "lib/firebase_options.dart": {
+          "projectId": "vertochat-mobile",
+          "configurations": {
+            "android": "1:702476548325:android:8c9f14406eb577dba87c0c",
+            "ios": "1:702476548325:ios:aeadf48dc32f1542a87c0c"
+          }
+        }
+      }
+    }
+  }
+}

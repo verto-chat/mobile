@@ -1,0 +1,30 @@
+targets:
+  $default:
+    builders:
+      slang_build_runner:
+        options:
+          base_locale: en
+          fallback_strategy: base_locale
+          input_directory: lib/i18n
+          input_file_pattern: .i18n.json
+          output_directory: lib/i18n
+          output_file_name: translations.g.dart
+          locale_handling: true
+          flutter_integration: true
+          namespaces: false
+          translate_var: appTexts
+          enum_name: AppLocale
+          class_name: Translations
+          translation_class_visibility: private
+          key_case: snake
+          key_map_case: camel
+          param_case: camel
+          string_interpolation: braces
+          flat_map: false
+          translation_overrides: false
+
+          gpt:
+            model: gpt-4o-mini
+            temperature: 0.3
+            description: |
+              "Ovdix" is an application for creating classified ads for the sale of goods and services.

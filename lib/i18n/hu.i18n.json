@@ -1,0 +1,640 @@
+{
+  "auth": {
+    "SignInScreen": {
+      "email_label": "Email",
+      "password_label": "Jelszó",
+      "forgot_password": "Elfelejtette a jelszavát?",
+      "sign_in": "Bejelentkezés",
+      "sign_up": "Regisztráció",
+      "sign_in_with_google": "Bejelentkezés Google-lal",
+      "sign_in_with_apple": "Bejelentkezés Apple-lel",
+      "login_error": {
+        "invalid_credentials": "Érvénytelen hitelesítő adatok",
+        "email_not_confirmed": "Az email cím nincs megerősítve"
+      },
+      "OAuthAcceptRegulationsSheet": {
+        "title": "A folytatáshoz kérjük, regisztráljon",
+        "regulations(rich)": "Kérjük, fogadja el a {terms(Használati feltételek)} és a {policy(Adatvédelmi irányelvek)}",
+        "accept": "Elfogadom",
+        "cancel": "Mégse",
+        "failed_get_regulations": "A szabályzatok lekérése nem sikerült."
+      }
+    },
+    "SignUpScreen": {
+      "title": "Regisztráció",
+      "first_name_label": "Keresztnév",
+      "last_name_label": "Vezetéknév",
+      "email_label": "Email",
+      "password_label": "Jelszó",
+      "repeat_password": "Jelszó megismétlése",
+      "sign_up": "Regisztráció",
+      "password_not_equal": "A jelszavak nem egyeznek",
+      "regulations(rich)": "Elfogadom a {terms(Használati feltételek)} és a {policy(Adatvédelmi irányelvek)}",
+      "after_registration_toast": "✔️ A megerősítő levél elküldve! Ellenőrizze a postaládáját és erősítse meg a címet.",
+      "register_error": {
+        "incorrect_email": "Érvénytelen email cím",
+        "incorrect_name": "Érvénytelen név",
+        "incorrect_password": "A jelszónak legalább 8 karakter hosszúnak kell lennie, és tartalmaznia kell nagy- és kisbetűket, valamint számokat.",
+        "email_already_used": "Az email cím már használatban van",
+        "create_error": "Hiba a felhasználó létrehozásakor",
+        "emailRateLimitExceeded": "Túllépte az e-mail küldési korlátot."
+      }
+    },
+    "reset_password": {
+      "ForgotPasswordScreen": {
+        "title": "Jelszó helyreállítása",
+        "email_label": "Email",
+        "send_reset_link": "Helyreállító link küldése",
+        "check_error_description": "Nem sikerült elküldeni a jelszó helyreállító kódot"
+      },
+      "CodeScreen": {
+        "title": "Jelszó helyreállítása",
+        "description": "A {email:String} email címre elküldtük a helyreállító kódot",
+        "submit": "Tovább",
+        "field_label": "Helyreállító kód",
+        "field_error": "Érvénytelen kód",
+        "check_error_description": "Nem sikerült ellenőrizni a helyreállító kódot"
+      },
+      "NewPasswordScreen": {
+        "title": "Új jelszó",
+        "reset_submit": "Bejelentkezés",
+        "edit_submit": "Módosítás",
+        "current_password": "Jelenlegi jelszó",
+        "new_password": "Új jelszó",
+        "repeat_new_password": "Ismételje meg az új jelszót",
+        "password_label": "Jelszó",
+        "repeat_password": "Ismételje meg a jelszót",
+        "failed_change_password": "Nem sikerült megváltoztatni a jelszót",
+        "failed_reset_password": "Nem sikerült visszaállítani a jelszót",
+        "errors": {
+          "wrong_current_password": "Hibás jelenlegi jelszó",
+          "same_password": "Az új jelszónak nem szabad megegyeznie a jelenlegivel."
+        }
+      }
+    }
+  },
+  "core": {
+    "field_empty": "A mező nem lehet üres",
+    "incorrect_format": "Érvénytelen formátum",
+    "address": {
+      "house_abbreviation": "h.",
+      "map_address_title": "Az Ön címe",
+      "map_await_user_location": "Az Ön címének meghatározása...",
+      "map_cant_get_user_location": "Nem sikerült azonosítani a címet",
+      "map_cant_access_user_location": "Nem sikerült meghatározni az Ön helyét",
+      "map_confirm_address": "Cím megerősítése",
+      "map_address_not_contain_house": "Nincs megadva házszám",
+      "map_not_found": "nem található",
+      "BaseMapScreen": {
+        "map_type_normal": "Térkép",
+        "map_type_hybrid": "Hibrid"
+      },
+      "mapAddressesSheet": {
+        "input_address": "Írja be a címet"
+      },
+      "SavedAddressesScreen": {
+        "title": "Saját címeim",
+        "no_items_stub": {
+          "title": "Jelenleg nincsenek mentett címei",
+          "description": "Adjon hozzá egy címet a listához"
+        },
+        "add_address": "Cím hozzáadása",
+        "success_toast": "A cím sikeresen törölve lett",
+        "confirm_remove": {
+          "title": "Cím törlése?",
+          "description": "Biztosan törölni szeretné ezt a címet a mentettek közül? Később újra hozzáadhatja.",
+          "ok": "Törlés",
+          "cancel": "Mégse"
+        }
+      },
+      "AddressActionsSheet": {
+        "remove": "Cím eltávolítása"
+      },
+      "SelectAddressSheet": {
+        "current_address_title": "Jelenlegi cím",
+        "saved_addresses_title": "Mentett címek",
+        "add_address_label": "Cím hozzáadása"
+      },
+      "FillAddressScreen": {
+        "title": "Cím hozzáadása",
+        "address_label": "Cím",
+        "name_label": "Cím neve",
+        "save_address": "Mentés és hozzáadás",
+        "add_without_save": "Hozzáadás mentés nélkül",
+        "failed_save_address": "A cím mentése nem sikerült"
+      }
+    },
+    "dialog_title": {
+      "error_title": "Hiba",
+      "connection_error": "Nincs kapcsolat",
+      "server_error": "Hiba a szerveren",
+      "not_authorized": "Nincs jogosultság",
+      "upgrade_required": "Elavult verzió",
+      "insufficient_accessRights": "Insufficient access rights"
+    },
+    "dialog_msg": {
+      "retry_or_contact_support": "Próbálja újra vagy lépjen kapcsolatba a támogatással",
+      "server_error": "Hiba történt a szerveren. {retryOrContactSupport}",
+      "default_error": "Hiba történt. {retryOrContactSupport}",
+      "connection_error": "Kérjük, ellenőrizze az internetkapcsolatát, és próbálja újra",
+      "authorization_required": "A hitelesítő adatok elavultak. Kérjük, jelentkezzen be újra",
+      "upgrade_required": "A megfelelő működéshez frissítse az alkalmazást",
+      "insufficient_access_rights": "A művelet nem elérhető. A jogosultságai korlátozottak"
+    },
+    "dialog_action": {
+      "ok": "Ok",
+      "login": "Bejelentkezés",
+      "retry": "Próbálja újra",
+      "upgrade": "Frissítés",
+      "back": "Vissza",
+      "yes": "Igen",
+      "no": "Nem",
+      "cancel": "Mégse"
+    },
+    "DialogPresenter": {
+      "permission_text_location": "Helymeghatározás",
+      "permission_denied": {
+        "location": "helymeghatározás a cím kiválasztásához",
+        "title": "Hozzáférés a {permission:String} engedélyezéséhez",
+        "description": "{permission:String} hozzáférés szükséges ennek a funkciónak a használatához. Ezt engedélyezheti az eszköz beállításaiban.",
+        "settings": "Beállítások",
+        "later": "Később"
+      }
+    },
+    "photos": {
+      "GalleryScreen": {
+        "title": "Galéria"
+      }
+    },
+    "upload": {
+      "select_photo": {
+        "select_source_photo": {
+          "title": "Kép kiválasztása",
+          "from": {
+            "camera": "Kamera",
+            "gallery": "Galériából"
+          }
+        }
+      },
+      "AddPhotoButton": {
+        "add_photo": "Hozzáadás"
+      }
+    },
+    "widgets": {
+      "LastPageErrorMessageView": {
+        "something_wrong_try_again": "Valami nem működött, próbálja újra:"
+      },
+      "TryAgainButton": {
+        "something_wrong": "Valami nem működött",
+        "try_again": "Próbálja újra"
+      }
+    }
+  },
+  "chats": {
+    "ChatPage": {
+      "no_messages_yet": "Még nincsenek üzenetek",
+      "SlangChatL10n": {
+        "and": "és",
+        "attachmentButtonAccessibilityLabel": "Média küldése",
+        "emptyChatPlaceholder": "Jelenleg nincsenek üzenetei",
+        "fileButtonAccessibilityLabel": "Fájl",
+        "inputPlaceholder": "Üzenet",
+        "isTyping": "gépel...",
+        "others": "mások",
+        "sendButtonAccessibilityLabel": "Küldés",
+        "unreadMessagesLabel": "Olvasatlan üzenetek"
+      },
+      "failure": "Hiba a chat betöltésekor",
+      "attachment_type_image": "Kép",
+      "attachment_type_file": "Fájl",
+      "show_original": "Eredeti megjelenítése",
+      "return_translation": "Fordítás visszaállítása",
+      "advert_chat": "Hirdetés chat"
+    },
+    "ChatsPage": {
+      "title": "Chatek",
+      "failure": "Hiba a chatek betöltésekor",
+      "empty": "Jelenleg nincsenek chatek",
+      "create_direct_chat": "Chat létrehozása felhasználóval",
+      "create_group_chat": "Csoportos chat létrehozása",
+      "ChatCard": {
+        "favorites_chat_name": "Kedvencek",
+        "support_chat_name": "Támogatás"
+      },
+      "NoItemsStub": {
+        "title": "Jelenleg nincsenek chatek",
+        "description": "Jelenleg nincsenek chatek"
+      }
+    },
+    "CreateDirectChatPage": {
+      "title": "Chat létrehozása",
+      "failure_create_chat": "Nem sikerült létrehozni a chatet"
+    }
+  },
+  "feedback": {
+    "feedback_page": {
+      "title": "Visszajelzés",
+      "type_label": "Kérelem típusa",
+      "description_label": "Leírás",
+      "description_hint": "Kérjük, részletesebben írja le a problémáját vagy ötletét",
+      "description_error": "Kérjük, írja le a megkeresés szövegét",
+      "submit": "Küldés",
+      "success": "A megkeresés elküldve",
+      "failed_send_feedback": "A visszajelzés elküldése nem sikerült",
+      "types": {
+        "bug": "Hiba bejelentése",
+        "feature": "Funkció javaslata",
+        "category": "Új hirdetési kategória javaslata",
+        "question": "Kérdés feltevése",
+        "general": "Általános megjegyzések és javaslatok"
+      }
+    }
+  },
+  "home": {
+    "main_label": "Főoldal",
+    "favorites_label": "Kedvencek",
+    "my_adverts_label": "Hirdetéseim",
+    "chats_label": "Chatek",
+    "profile_label": "Profil",
+    "shop_label": "Bolt"
+  },
+  "in_app": {
+    "suppose_subscription_screen": {
+      "title": "Próbálja ki ingyen az Ovdix Plus-t 7 napig",
+      "description": "Bármikor lemondhatja további költségek nélkül",
+      "accept_button": "Próbálja ki ingyen",
+      "cancel_button": "Nem, köszönöm"
+    },
+    "SupposePromoteScreen": {
+      "title": "Hirdetés népszerűsítése",
+      "description": "Válassza ki a népszerűsítés módját",
+      "subscription_card": {
+        "title": "Előfizetéses népszerűsítés",
+        "description": "A tarifacsomagjába tartozik. Az eladás után helyreáll.",
+        "promote_button": "Népszerűsítés",
+        "not_available_title": "Előfizetéses promóció nem elérhető",
+        "upgrade_button": "Frissítés",
+        "not_available_subtitle": "Már felhasználta a tarifájához elérhető promóciót.\nSzabadítsa fel, ha eltávolít egyet a promóciós hirdetések közül, vagy válasszon egy egyszeri promóciót.",
+        "subscription_not_include_promotion": "A promóciók magasabb tarifákon érhetők el. Frissítse a tervét, hogy kiemelje a hirdetéseket."
+      },
+      "single_promotion_card": {
+        "title": "Egyszeri népszerűsítés",
+        "description": "Nem állítható vissza, miután a hirdetést eltávolították vagy szerkesztették.",
+        "available": "Elérhető: {available:int}",
+        "promote_button": "Népszerűsítés",
+        "buy_button": "Vásárlás"
+      },
+      "description_footer": "⚠️ A promóció addig érvényes, amíg a hirdetés aktív.\nEltávolítás vagy szerkesztés esetén az egyszeri promóció nem mentésre kerül.\nElőfizetés esetén felfüggesztésre kerül, és visszatér a hirdetés újraközzétételekor."
+    },
+    "select_subscription_screen": {
+      "title": "Válasszon előfizetést",
+      "description": "Bármikor lemondhatja a(z) {storeName:String} szolgáltatásban",
+      "try_1_week_free": "Próbálja ki 1 hétig ingyen"
+    },
+    "BuyProductsScreen": {
+      "title": "Válassza ki a terméket",
+      "buy_button": "Vásárlás",
+      "unavailable": "Nem elérhető"
+    }
+  },
+  "legal": {
+    "failed_get_regulations": "Nem sikerült lekérni a szabályzatokat.",
+    "LegalScreen": {
+      "title": "Jogi információk",
+      "policy_label": "Adatvédelmi irányelvek",
+      "terms_label": "Használati feltételek",
+      "gdpr_label": "GDPR adatvédelmi irányelvek"
+    }
+  },
+  "profile": {
+    "edit_profile_label": "Profil szerkesztése",
+    "to_my_adverts_label": "Hirdetéseim",
+    "to_favorites_adverts_label": "Kedvenc hirdetések",
+    "logout_label": "Kijelentkezés",
+    "language_label": "Nyelv",
+    "legal_label": "Jogi információk",
+    "feedback_label": "Visszajelzés",
+    "safety_label": "Biztonság",
+    "select_language_title": "Nyelv kiválasztása",
+    "version": "Verzió {version}",
+    "theme": {
+      "title": "Téma",
+      "light": "Világos",
+      "dark": "Sötét",
+      "system": "Rendszer"
+    },
+    "edit_avatar_title": "Avatar szerkesztése",
+    "failed_upload_avatar": "A profilkép feltöltése nem sikerült",
+    "failed_update_avatar": "A profilkép frissítése nem sikerült",
+    "ProfilePage": {
+      "my_addresses": "Saját címeim",
+      "create_support_chat": "Támogatási chat írása",
+      "failed_loading_profile": "Nem sikerült betölteni a felhasználói információkat",
+      "failed_create_support_chat": "Nem sikerült létrehozni a támogatási chatet",
+      "delete_account_error": {
+        "requires_recent_login": "A fiók törléséhez újra be kell jelentkeznie az alkalmazásba"
+      },
+      "delete_confirm": {
+        "title": "Fiók törlése",
+        "description": "Biztosan törölni szeretné a fiókját?"
+      },
+      "subscription": {
+        "upgrade": "Előfizetés javítása",
+        "subscription_name": "Előfizetés: {subscriptionName:String}",
+        "promotions_count": {
+          "one": "{n} promóció",
+          "few": "{n} promóció",
+          "other": "{n} promóció"
+        },
+        "sub_promotion_limit": "{count:int} promóció az előfizetés keretében",
+        "buy_promotion": "Promóció vásárlása"
+      }
+    },
+    "EditProfileScreen": {
+      "title": "Profil szerkesztése",
+      "first_name_label": "Keresztnév",
+      "last_name_label": "Vezetéknév",
+      "save_button_text": "Mentés",
+      "success_toast": "A neved sikeresen frissítve lett.",
+      "edit_password": "Jelszó módosítása"
+    },
+    "SafetyScreen": {
+      "title": "Biztonság",
+      "edit_password": "Jelszó módosítása",
+      "delete_account_label": "Fiók törlése"
+    },
+    "delete_account_label": "Fiók törlése"
+  },
+  "report": {
+    "ReportSheet": {
+      "title": "Jelentsd a szabálysértést",
+      "reasons": {
+        "spam": "Spam",
+        "inappropriate": "Nem megfelelő viselkedés",
+        "abuse": "Bántalmazás vagy gyűlöletkeltés",
+        "other": "Egyéb"
+      },
+      "description_label": "Leírás",
+      "submit": "Küldés",
+      "success": "A panasz elküldve"
+    }
+  },
+  "shop": {
+    "core": {
+      "AddressCard": {
+        "title": "A hirdetés címe"
+      },
+      "upload_photo_help_text": "Nyomja meg és tartsa lenyomva a fényképet, hogy borítóként használja",
+      "PhotoActionsSheet": {
+        "setAsMain": "Főképként beállítani",
+        "remove": "Eltávolítani"
+      },
+      "BaseEditAdvertScreen": {
+        "photos_empty_help_text": "Legalább egy fényképet hozzá kell adni.",
+        "photos_label": "Fotók ({count:int} / {limit:int})"
+      }
+    },
+    "price": {
+      "free": "Ingyenes",
+      "agreed_price": "Alku tárgya",
+      "starting_price": "Tól {price:String} €",
+      "for_price": "{price:String} €"
+    },
+    "adverts": {
+      "ShopCard": {
+        "promotion_label": "Promó"
+      },
+      "AdvertsPage": {
+        "allCategoriesTitle": "Minden kategória",
+        "menu": {
+          "create_advert": "Hirdetés létrehozása",
+          "my_adverts": "Saját hirdetéseim"
+        }
+      },
+      "ShopPage": {
+        "address_not_selected": "Nincs kiválasztva cím",
+        "getting_address": "A helyzeted meghatározása...",
+        "getting_address_helper": "Nézzük, mi található a közelben",
+        "all_categories": "Minden kategória",
+        "select_address_manually": "Cím manuális kiválasztása",
+        "failed_get_address_message": "Nem sikerült megszerezni a jelenlegi címet",
+        "failed_load_last_saved_address": "Nem sikerült lekérni az utolsó mentett cím információit",
+        "failed_load_saved_addresses": "Nem sikerült lekérni a mentett címek listáját"
+      },
+      "AdvertsFilterSheet": {
+        "title": "Szűrő",
+        "category_label": "Kategória",
+        "address_label": "Cím",
+        "condition_label": "Állapot",
+        "sort_label": "Rendezés",
+        "apply_filter": "Alkalmaz",
+        "clear_filter": "Visszaállítás",
+        "category_not_selected": "Nincs kiválasztva",
+        "conditions": {
+          "new_item": "Új",
+          "used": "Használt",
+          "all": "Bármilyen"
+        },
+        "sorts": {
+          "by_distance": "Távolság szerint",
+          "by_price": "Ár szerint",
+          "by_date": "Dátum szerint"
+        },
+        "sort_directions": {
+          "ascending": "Növekvő",
+          "descending": "Csökkenő",
+          "ascending_date": "Először az újabbak",
+          "descending_date": "Először a régebbiek"
+        },
+        "radius": {
+          "title": "Sugár",
+          "description": "Hirdetések megjelenítése bármilyen sugáron belül",
+          "unlimited": "Korlátlan",
+          "radius_text": "Sugár: {radiusKm:int} km",
+          "radius_label": "{radiusKm:int} km"
+        },
+        "catefory_not_selected": "Nincs kiválasztva"
+      }
+    },
+    "create_advert": {
+      "CreateAdvertStepperScreen": {
+        "title": "Hirdetés létrehozása",
+        "general_tab_title": "Általános",
+        "photo_tab_title": "Fényképek",
+        "price_tab_title": "Ár",
+        "SelectInfoStepView": {
+          "name_label": "Név",
+          "description_label": "Leírás, jellemzők",
+          "attach_documents_title": "Dokumentumok csatolása",
+          "attach_documents_description": "Például termék tanúsítványok",
+          "product_condition_label": {
+            "title": "Állapot",
+            "new_item": "Új",
+            "used": "Használt",
+            "not_set": "Nem megadott"
+          }
+        },
+        "SelectPhotoStepView": {
+          "add_photo_button": "Kép hozzáadása",
+          "photo_limit": "Legfeljebb {limit:int} fénykép."
+        },
+        "SelectPriceStepView": {
+          "price_label": "Ár",
+          "empty_price_hint": "Megállapodás szerint",
+          "for_empty_price_label": "Megállapodás szerinti árhoz hagyja üresen a mezőt.",
+          "negotiable_label": "Tárgyalható",
+          "local_currency_label": "Fizetés helyi valutában",
+          "local_currency_subtitle": "Lehetőség van nem €-ban történő kifizetésre a jelenlegi árfolyamon",
+          "starting_price_label": "Ez a kezdő ár",
+          "not_valid_price": "Érvénytelen árformátum",
+          "max_range": "Az ár nem lehet magasabb, mint 1 000 000 000 €",
+          "min_range": "Az ár nem lehet alacsonyabb, mint 0 €"
+        }
+      },
+      "SelectAdvertAddressPage": {
+        "title": "Cím kiválasztása"
+      },
+      "SelectCategoriesScreen": {
+        "title": "Kategória kiválasztása",
+        "search_hint": "Keresés",
+        "failed_loading_categories": "Nem sikerült betölteni a kategóriákat",
+        "all_categories": "Összes kategória",
+        "not_find_category": "Nem talált megfelelő kategóriát?",
+        "closing_confirm": {
+          "title": "Kilépés a folyamatból",
+          "description": "Biztosan ki szeretne lépni a hirdetés létrehozásának folyamatából?"
+        }
+      },
+      "PreviewAdvertScreen": {
+        "title": "Előnézet",
+        "create_advert": "Hirdetés létrehozása",
+        "create_advert_success": "A hirdetés sikeresen létrejött"
+      },
+      "EditAdvertScreen": {
+        "title": "Hirdetés szerkesztése",
+        "save_button": "Mentés"
+      }
+    },
+    "detail": {
+      "AdvertDetailPage": {
+        "sell_title": "Eladó",
+        "buy_title": "Vásárolok",
+        "is_archived": "Hirdetés törölve",
+        "create_chat": "Kapcsolatfelvétel",
+        "restore": "Visszaállítás",
+        "remove_promotion": "Promóció eltávolítása",
+        "promote": "Promóció",
+        "author_title": "Hirdetés tulajdonosa",
+        "failed_get_detail": "Nem sikerült lekérni a hirdetés részletes információit",
+        "menu": {
+          "edit": "Hirdetés szerkesztése",
+          "archive": "Közzététel megszüntetése",
+          "restore": "Visszaállítás az archívumból",
+          "promote": "Hirdetés népszerűsítése",
+          "remove_promotion": "Promóció eltávolítása",
+          "report": "Jelentés a megsértésről",
+          "share": "Megosztás"
+        },
+        "edit_promotion_confirmation": {
+          "title": "✏️ Ennek a hirdetésnek aktív promóciója van.",
+          "description": "A promóció szerkesztésekor az eltávolításra kerül, és nem állítható vissza.\nBiztos benne, hogy módosítani szeretné a hirdetést?",
+          "archive": "Szerkesztés",
+          "cancel": "Mégse"
+        },
+        "is_new": "Új",
+        "is_used": "Használt",
+        "is_negotiable": "Ár alkuképes",
+        "accepts_local_currency": "Fizetés helyi valutában lehetséges",
+        "share_text": "Nézd meg a hirdetést: «{title:String}» 👉 {shareUrl:String}"
+      }
+    },
+    "favorites": {
+      "FavoritesAdvertsScreen": {
+        "title": "Kedvencek",
+        "failed_create_chat": "Nem sikerült létrehozni a chatet",
+        "no_items_stub": {
+          "title": "Nincsenek hirdetések",
+          "description": "Jelenleg nem adtál hozzá hirdetést a kedvencekhez."
+        },
+        "FavoriteAdvertCard": {
+          "is_archived": "Kihúzva a közzétételből",
+          "chat": "Kapcsolatfelvétel"
+        }
+      }
+    },
+    "my_adverts": {
+      "MyAdvertsScreen": {
+        "title": "Hirdetéseim",
+        "active_tab_title": "Aktív",
+        "archived_tab_title": "Archív"
+      },
+      "MyAdvertsListView": {
+        "no_active_items_stub": {
+          "title": "Nincsenek hirdetések",
+          "description": "Hozza létre az első hirdetését",
+          "create_advert": "Hirdetés létrehozása"
+        },
+        "no_archived_items_stub": {
+          "title": "Az archív üres",
+          "description": "Itt a közzétett hirdetések fognak megjelenni"
+        },
+        "MyAdvertCard": {
+          "to_archive": "Kihúz a közzétételből",
+          "to_restore": "Visszaállít",
+          "to_promote": "Népszerűsítés",
+          "to_remove_promotion": "Promóció eltávolítása",
+          "promoted_by_subscription": "Előfizetéssel népszerűsítve — érvényes az eladásig vagy a törlésig.",
+          "single_promotion": "A népszerűsítés aktív a közzététel törléséig vagy szerkesztéséig."
+        },
+        "restore_limit_confirmation": {
+          "title": "⚠️ Nem lehet hirdetést közzétenni",
+          "description": "Az aktív hirdetések limitje kimerült.\nElőször vegye le egy másik hirdetést a közzétételről, vagy emelje meg a limitet.",
+          "upgrade": "Limit emelése"
+        },
+        "archive_promote_confirmation": {
+          "title": "⚠️ A hirdetés archívumba kerül",
+          "description": "Az aktív promóció véglegesen törlésre kerül.\nFolytatni?",
+          "archive": "Archíválás",
+          "cancel": "Mégse"
+        },
+        "TariffInfo": {
+          "no_limit_tariff": "🚀 {subscriptionName:String} — korlátlan hirdetések aktívak.",
+          "limit_tariff": "🚀 {activeAdvertsCount:int} aktív hirdetésből {limit:int} felhasználva.",
+          "limit_reached": "Töröljön egyet a közzétételből, vagy emelje meg a korlátot!",
+          "limit_not_reached": "Többet szeretne közzétenni?",
+          "upgrade_tariff": "Emelje meg a korlátot!"
+        }
+      }
+    },
+    "distance": {
+      "in_meters": "{value:int} m",
+      "in_kilometers": "{value:int} km"
+    },
+    "SelectAdvertTypeSheet": {
+      "sell_title": "Eladó",
+      "buy_title": "Vásárlás",
+      "LimitInfo": {
+        "title": "⚠️ A aktív hirdetések limitje elérve.",
+        "description": "Az új hirdetés az archívumba lesz mentve.\nEltávolíthat egy másik hirdetést, vagy növelheti a közzétételi limitet."
+      }
+    },
+    "ShopPage": {
+      "create_advert": "Hirdetés létrehozása",
+      "sell_tab_title": "Eladók",
+      "buy_tab_title": "Vásárlók",
+      "failed_loading_categories": "Nem sikerült betölteni a kategóriákat",
+      "advert_is_self": "A hirdetése",
+      "search_hint": "Keresés"
+    },
+    "NoItemsStub": {
+      "title": "Jelenleg nincsenek hirdetések",
+      "create_advert": "Hirdetés létrehozása"
+    }
+  },
+  "users": {
+    "user_select_screen": {
+      "empty": "Jelenleg nincsenek felhasználók",
+      "failure": "Hiba a felhasználók betöltésekor"
+    }
+  }
+}

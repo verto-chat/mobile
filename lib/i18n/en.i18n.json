@@ -1,0 +1,640 @@
+{
+  "auth": {
+    "SignInScreen": {
+      "email_label": "Email",
+      "password_label": "Password",
+      "forgot_password": "Forgot your password?",
+      "sign_in": "Sign In",
+      "sign_up": "Sign Up",
+      "sign_in_with_google": "Sign In with Google",
+      "sign_in_with_apple": "Sign in with Apple",
+      "login_error": {
+        "invalid_credentials": "Invalid credentials",
+        "email_not_confirmed": "Email not confirmed"
+      },
+      "OAuthAcceptRegulationsSheet": {
+        "title": "To continue, please register",
+        "regulations(rich)": "Please accept {terms(Terms of Use)} and {policy(Privacy Policy)}",
+        "accept": "Accept",
+        "cancel": "Cancel",
+        "failed_get_regulations": "Failed to retrieve regulations."
+      }
+    },
+    "SignUpScreen": {
+      "title": "Sign Up",
+      "first_name_label": "First Name",
+      "last_name_label": "Last Name",
+      "email_label": "Email",
+      "password_label": "Password",
+      "repeat_password": "Repeat Password",
+      "sign_up": "Sign Up",
+      "password_not_equal": "Passwords do not match",
+      "regulations(rich)": "I agree to the {terms(terms of use)} and {policy(privacy policy)}",
+      "after_registration_toast": "✔️ A confirmation email has been sent! Please check your inbox and confirm your address.",
+      "register_error": {
+        "incorrect_email": "Incorrect email",
+        "incorrect_name": "Incorrect name",
+        "incorrect_password": "The password must be at least 8 characters long and contain uppercase and lowercase letters and numbers.",
+        "email_already_used": "Email address is already in use",
+        "create_error": "Error creating user",
+        "emailRateLimitExceeded": "Email sending limit exceeded"
+      }
+    },
+    "reset_password": {
+      "ForgotPasswordScreen": {
+        "title": "Password Recovery",
+        "email_label": "Email",
+        "send_reset_link": "Send Link",
+        "check_error_description": "Failed to send the password recovery code"
+      },
+      "CodeScreen": {
+        "title": "Password Recovery",
+        "description": "A recovery code has been sent to your email {email:String}",
+        "submit": "Next",
+        "field_label": "Recovery Code",
+        "field_error": "Invalid code",
+        "check_error_description": "Failed to verify the recovery code"
+      },
+      "NewPasswordScreen": {
+        "title": "New Password",
+        "reset_submit": "Log In",
+        "edit_submit": "Change",
+        "current_password": "Current Password",
+        "new_password": "New Password",
+        "repeat_new_password": "Repeat New Password",
+        "password_label": "Password",
+        "repeat_password": "Repeat Password",
+        "failed_change_password": "Failed to change password",
+        "failed_reset_password": "Failed to reset password",
+        "errors": {
+          "wrong_current_password": "Incorrect current password",
+          "same_password": "New password must not be the same as the current one"
+        }
+      }
+    }
+  },
+  "core": {
+    "field_empty": "Field cannot be empty",
+    "incorrect_format": "Incorrect format",
+    "address": {
+      "house_abbreviation": "No.",
+      "map_address_title": "Your Address",
+      "map_await_user_location": "Determining your address...",
+      "map_cant_get_user_location": "Could not recognize address",
+      "map_cant_access_user_location": "Could not determine your location",
+      "map_confirm_address": "Confirm Address",
+      "map_address_not_contain_house": "House number not specified",
+      "map_not_found": "not found",
+      "BaseMapScreen": {
+        "map_type_normal": "Map",
+        "map_type_hybrid": "Satellite"
+      },
+      "mapAddressesSheet": {
+        "input_address": "Enter address"
+      },
+      "SavedAddressesScreen": {
+        "title": "My Addresses",
+        "no_items_stub": {
+          "title": "You have no saved addresses yet",
+          "description": "Add an address to the list"
+        },
+        "add_address": "Add Address",
+        "success_toast": "Address successfully removed",
+        "confirm_remove": {
+          "title": "Remove address?",
+          "description": "Do you want to remove this address from saved addresses? You will be able to add it again later.",
+          "ok": "Remove",
+          "cancel": "Cancel"
+        }
+      },
+      "AddressActionsSheet": {
+        "remove": "Remove address"
+      },
+      "SelectAddressSheet": {
+        "current_address_title": "Current Address",
+        "saved_addresses_title": "Saved Addresses",
+        "add_address_label": "Add Address"
+      },
+      "FillAddressScreen": {
+        "title": "Adding Address",
+        "address_label": "Address",
+        "name_label": "Address Name",
+        "save_address": "Save and Add",
+        "add_without_save": "Add Without Saving",
+        "failed_save_address": "Failed to Save Address"
+      }
+    },
+    "dialog_title": {
+      "error_title": "Error",
+      "connection_error": "No connection",
+      "server_error": "Server error",
+      "not_authorized": "Not authorized",
+      "upgrade_required": "Version outdated",
+      "insufficient_accessRights": "Insufficient rights"
+    },
+    "dialog_msg": {
+      "retry_or_contact_support": "Please try again or contact support",
+      "server_error": "There was an error on the server. {retryOrContactSupport}",
+      "default_error": "An error occurred. {retryOrContactSupport}",
+      "connection_error": "Please check your internet connection and try again",
+      "authorization_required": "Authorization data is outdated. Please log in again",
+      "upgrade_required": "Please install the latest version of the app for proper functionality",
+      "insufficient_access_rights": "Action not available. Your rights are limited"
+    },
+    "dialog_action": {
+      "ok": "Ok",
+      "login": "Sign In",
+      "retry": "Try Again",
+      "upgrade": "Update",
+      "back": "Back",
+      "yes": "Yes",
+      "no": "No",
+      "cancel": "Cancel"
+    },
+    "DialogPresenter": {
+      "permission_text_location": "Location",
+      "permission_denied": {
+        "location": "access location to select an address",
+        "title": "Access to {permission:String}",
+        "description": "{permission:String} access is required to use this feature. You can enable it in your device settings.",
+        "settings": "Go to settings",
+        "later": "Later"
+      }
+    },
+    "photos": {
+      "GalleryScreen": {
+        "title": "Gallery"
+      }
+    },
+    "upload": {
+      "select_photo": {
+        "select_source_photo": {
+          "title": "Select Image",
+          "from": {
+            "camera": "Camera",
+            "gallery": "From Gallery"
+          }
+        }
+      },
+      "AddPhotoButton": {
+        "add_photo": "Add"
+      }
+    },
+    "widgets": {
+      "LastPageErrorMessageView": {
+        "something_wrong_try_again": "Something went wrong, please try again:"
+      },
+      "TryAgainButton": {
+        "something_wrong": "Something went wrong",
+        "try_again": "Try Again"
+      }
+    }
+  },
+  "chats": {
+    "ChatPage": {
+      "no_messages_yet": "No messages yet",
+      "SlangChatL10n": {
+        "and": "and",
+        "attachmentButtonAccessibilityLabel": "Send media",
+        "emptyChatPlaceholder": "You have no messages yet",
+        "fileButtonAccessibilityLabel": "File",
+        "inputPlaceholder": "Message",
+        "isTyping": "is typing…",
+        "others": "others",
+        "sendButtonAccessibilityLabel": "Send",
+        "unreadMessagesLabel": "Unread messages"
+      },
+      "failure": "Error loading chat",
+      "attachment_type_image": "Image",
+      "attachment_type_file": "File",
+      "show_original": "Show original",
+      "return_translation": "Return translation",
+      "advert_chat": "Ad Chat"
+    },
+    "ChatsPage": {
+      "title": "Chats",
+      "failure": "Error loading chats",
+      "empty": "No chats yet",
+      "create_direct_chat": "Create chat with user",
+      "create_group_chat": "Create group chat",
+      "ChatCard": {
+        "favorites_chat_name": "Favorites",
+        "support_chat_name": "Support"
+      },
+      "NoItemsStub": {
+        "title": "No chats yet",
+        "description": "You have no chats yet"
+      }
+    },
+    "CreateDirectChatPage": {
+      "title": "Create Chat",
+      "failure_create_chat": "Failed to create chat"
+    }
+  },
+  "feedback": {
+    "feedback_page": {
+      "title": "Feedback",
+      "type_label": "Type of Inquiry",
+      "description_label": "Description",
+      "description_hint": "Please describe your problem or idea in more detail",
+      "description_error": "Please write the text of your message",
+      "submit": "Submit",
+      "success": "Your request has been sent",
+      "failed_send_feedback": "Failed to send feedback",
+      "types": {
+        "bug": "Report a bug",
+        "feature": "Suggest a feature",
+        "category": "Suggest a new category of ads",
+        "question": "Ask a question",
+        "general": "General comments and suggestions"
+      }
+    }
+  },
+  "home": {
+    "main_label": "Home",
+    "favorites_label": "Favorites",
+    "my_adverts_label": "Advertisements",
+    "chats_label": "Chats",
+    "profile_label": "Profile",
+    "shop_label": "Shop"
+  },
+  "in_app": {
+    "suppose_subscription_screen": {
+      "title": "Get a free 7-day trial of Ovdix Plus",
+      "description": "You can cancel at any time without additional charges",
+      "accept_button": "Try for free",
+      "cancel_button": "No, thank you"
+    },
+    "SupposePromoteScreen": {
+      "title": "Promote Ad",
+      "description": "Choose a promotion method",
+      "subscription_card": {
+        "title": "Promote with Subscription",
+        "description": "Included in your tariff plan. Restores after sale.",
+        "promote_button": "Promote",
+        "not_available_title": "Subscription promotion not available",
+        "upgrade_button": "Upgrade",
+        "not_available_subtitle": "You have already used the available promotion for your plan.\nFree it up by removing one of the promoted ads, or choose a one-time promotion.",
+        "subscription_not_include_promotion": "Promotions are available on higher plans. Upgrade your plan to highlight ads."
+      },
+      "single_promotion_card": {
+        "title": "One-Time Promotion",
+        "description": "It cannot be restored after removing or editing the ad.",
+        "available": "Available: {available:int}",
+        "promote_button": "Promote",
+        "buy_button": "Buy"
+      },
+      "description_footer": "⚠️ Promotion is active as long as the ad is live.\nIf removed or edited, the one-time promotion is not saved.\nWith a subscription — it is paused and returns upon republishing."
+    },
+    "select_subscription_screen": {
+      "title": "Select Subscription",
+      "description": "Cancel anytime in {storeName:String}",
+      "try_1_week_free": "Try 1 week free"
+    },
+    "BuyProductsScreen": {
+      "title": "Select a product",
+      "buy_button": "Buy",
+      "unavailable": "Unavailable"
+    }
+  },
+  "legal": {
+    "failed_get_regulations": "Failed to retrieve regulations.",
+    "LegalScreen": {
+      "title": "Legal Information",
+      "policy_label": "Privacy Policy",
+      "terms_label": "Terms of Use",
+      "gdpr_label": "GDPR Privacy Policy"
+    }
+  },
+  "profile": {
+    "edit_profile_label": "Edit Profile",
+    "to_my_adverts_label": "My Ads",
+    "to_favorites_adverts_label": "Favorite Ads",
+    "logout_label": "Log Out",
+    "language_label": "Language",
+    "legal_label": "Legal Information",
+    "feedback_label": "Feedback",
+    "safety_label": "Safety",
+    "select_language_title": "Select Language",
+    "version": "Version {version}",
+    "theme": {
+      "title": "Theme",
+      "light": "Light",
+      "dark": "Dark",
+      "system": "System"
+    },
+    "edit_avatar_title": "Editing Avatar",
+    "failed_upload_avatar": "Failed to upload avatar",
+    "failed_update_avatar": "Failed to update avatar",
+    "ProfilePage": {
+      "my_addresses": "My Addresses",
+      "create_support_chat": "Contact Support Chat",
+      "failed_loading_profile": "Failed to load user information",
+      "failed_create_support_chat": "Failed to create support chat",
+      "delete_account_error": {
+        "requires_recent_login": "You need to log in again to delete your account"
+      },
+      "delete_confirm": {
+        "title": "Delete Account",
+        "description": "Are you sure you want to delete your account?"
+      },
+      "subscription": {
+        "upgrade": "Upgrade Plan",
+        "subscription_name": "Plan: {subscriptionName:String}",
+        "promotions_count": {
+          "one": "{n} promotion",
+          "few": "{n} promotions",
+          "other": "{n} promotions"
+        },
+        "sub_promotion_limit": "{count:int} per subscription",
+        "buy_promotion": "Buy Promotion"
+      }
+    },
+    "EditProfileScreen": {
+      "title": "Edit Profile",
+      "first_name_label": "First Name",
+      "last_name_label": "Last Name",
+      "save_button_text": "Save",
+      "success_toast": "Your name has been successfully updated",
+      "edit_password": "Change Password"
+    },
+    "SafetyScreen": {
+      "title": "Safety",
+      "edit_password": "Change Password",
+      "delete_account_label": "Delete Account"
+    },
+    "delete_account_label": "Delete Account"
+  },
+  "report": {
+    "ReportSheet": {
+      "title": "Report a Violation",
+      "reasons": {
+        "spam": "Spam",
+        "inappropriate": "Inappropriate Behavior",
+        "abuse": "Abuse or Hate Speech",
+        "other": "Other"
+      },
+      "description_label": "Description",
+      "submit": "Submit",
+      "success": "Complaint Submitted"
+    }
+  },
+  "shop": {
+    "core": {
+      "AddressCard": {
+        "title": "Advert Title"
+      },
+      "upload_photo_help_text": "Press and hold the photo to make it the cover.",
+      "PhotoActionsSheet": {
+        "setAsMain": "Set as Cover",
+        "remove": "Remove"
+      },
+      "BaseEditAdvertScreen": {
+        "photos_empty_help_text": "You need to add at least one photo",
+        "photos_label": "Photos ({count:int} / {limit:int})"
+      }
+    },
+    "price": {
+      "free": "Free",
+      "agreed_price": "Negotiable",
+      "starting_price": "From {price:String} €",
+      "for_price": "{price:String} €"
+    },
+    "adverts": {
+      "ShopCard": {
+        "promotion_label": "Promo"
+      },
+      "AdvertsPage": {
+        "allCategoriesTitle": "All Categories",
+        "menu": {
+          "create_advert": "Create Advert",
+          "my_adverts": "My Adverts"
+        }
+      },
+      "ShopPage": {
+        "address_not_selected": "Address not selected",
+        "getting_address": "Determining your location...",
+        "getting_address_helper": "Checking what's nearby",
+        "all_categories": "All Categories",
+        "select_address_manually": "Select address manually",
+        "failed_get_address_message": "Failed to get current address",
+        "failed_load_last_saved_address": "Failed to retrieve information about the last address",
+        "failed_load_saved_addresses": "Failed to retrieve the list of saved addresses"
+      },
+      "AdvertsFilterSheet": {
+        "title": "Filter",
+        "category_label": "Category",
+        "address_label": "Address",
+        "condition_label": "Condition",
+        "sort_label": "Sorting",
+        "apply_filter": "Apply",
+        "clear_filter": "Reset",
+        "category_not_selected": "Not selected",
+        "conditions": {
+          "new_item": "New",
+          "used": "Used",
+          "all": "Any"
+        },
+        "sorts": {
+          "by_distance": "By Distance",
+          "by_price": "By Price",
+          "by_date": "By Date"
+        },
+        "sort_directions": {
+          "ascending": "Ascending",
+          "descending": "Descending",
+          "ascending_date": "New first",
+          "descending_date": "Old first"
+        },
+        "radius": {
+          "title": "Radius",
+          "description": "Show ads within any radius",
+          "unlimited": "Unlimited",
+          "radius_text": "Radius: {radiusKm:int} km",
+          "radius_label": "{radiusKm:int} km"
+        },
+        "catefory_not_selected": "Not selected"
+      }
+    },
+    "create_advert": {
+      "CreateAdvertStepperScreen": {
+        "title": "Create Advert",
+        "general_tab_title": "General",
+        "photo_tab_title": "Photos",
+        "price_tab_title": "Price",
+        "SelectInfoStepView": {
+          "name_label": "Title",
+          "description_label": "Description, characteristics",
+          "attach_documents_title": "Add Documents",
+          "attach_documents_description": "For example, product certificates",
+          "product_condition_label": {
+            "title": "Condition",
+            "new_item": "New",
+            "used": "Used",
+            "not_set": "Do not specify"
+          }
+        },
+        "SelectPhotoStepView": {
+          "add_photo_button": "Add Photo",
+          "photo_limit": "Up to {limit:int} photos."
+        },
+        "SelectPriceStepView": {
+          "price_label": "Price",
+          "empty_price_hint": "By agreement",
+          "for_empty_price_label": "For a negotiable price, leave the field empty.",
+          "negotiable_label": "Negotiable",
+          "local_currency_label": "Payment in local currency",
+          "local_currency_subtitle": "Can pay not in € at the current rate",
+          "starting_price_label": "This is the starting price",
+          "not_valid_price": "Invalid price format",
+          "max_range": "Price cannot be greater than €1,000,000,000",
+          "min_range": "Price cannot be less than €0"
+        }
+      },
+      "SelectAdvertAddressPage": {
+        "title": "Select Address"
+      },
+      "SelectCategoriesScreen": {
+        "title": "Select Category",
+        "search_hint": "Search",
+        "failed_loading_categories": "Failed to load categories",
+        "all_categories": "All Categories",
+        "not_find_category": "Didn’t find a suitable category?",
+        "closing_confirm": {
+          "title": "Exit Process",
+          "description": "Are you sure you want to exit the ad creation process?"
+        }
+      },
+      "PreviewAdvertScreen": {
+        "title": "Preview",
+        "create_advert": "Create Advert",
+        "create_advert_success": "Ad successfully created"
+      },
+      "EditAdvertScreen": {
+        "title": "Edit Advert",
+        "save_button": "Save"
+      }
+    },
+    "detail": {
+      "AdvertDetailPage": {
+        "sell_title": "For Sale",
+        "buy_title": "Buying",
+        "is_archived": "Advert has been removed from publication",
+        "create_chat": "Contact",
+        "restore": "Restore",
+        "remove_promotion": "Remove Promotion",
+        "promote": "Promote",
+        "author_title": "Advert Owner",
+        "failed_get_detail": "Failed to retrieve detailed information for the advertisement",
+        "menu": {
+          "edit": "Edit Advertisement",
+          "archive": "Unpublish",
+          "restore": "Restore from Archive",
+          "promote": "Promote Advert",
+          "remove_promotion": "Remove Promotion",
+          "report": "Report a violation",
+          "share": "Share"
+        },
+        "edit_promotion_confirmation": {
+          "title": "✏️ This ad has active promotion.",
+          "description": "Editing will remove the promotion and it cannot be restored.\nAre you sure you want to change the ad?",
+          "archive": "Edit",
+          "cancel": "Cancel"
+        },
+        "is_new": "New",
+        "is_used": "Used",
+        "is_negotiable": "Negotiable",
+        "accepts_local_currency": "Payment can be made in local currency",
+        "share_text": "Check out the advert \"{title:String}\" 👉 {shareUrl:String}"
+      }
+    },
+    "favorites": {
+      "FavoritesAdvertsScreen": {
+        "title": "Favorites",
+        "failed_create_chat": "Failed to create chat",
+        "no_items_stub": {
+          "title": "No Ads",
+          "description": "You haven't added any ads to favorites yet."
+        },
+        "FavoriteAdvertCard": {
+          "is_archived": "Unpublished",
+          "chat": "Contact"
+        }
+      }
+    },
+    "my_adverts": {
+      "MyAdvertsScreen": {
+        "title": "My Ads",
+        "active_tab_title": "Active",
+        "archived_tab_title": "Archive"
+      },
+      "MyAdvertsListView": {
+        "no_active_items_stub": {
+          "title": "No Ads",
+          "description": "Create your first advert",
+          "create_advert": "Create Advert"
+        },
+        "no_archived_items_stub": {
+          "title": "Archive is Empty",
+          "description": "Ads that have been unpublished will be displayed here"
+        },
+        "MyAdvertCard": {
+          "to_archive": "Remove from publication",
+          "to_restore": "Restore",
+          "to_promote": "Promote",
+          "to_remove_promotion": "Remove promotion",
+          "promoted_by_subscription": "Promoted by subscription — valid until sold or removed.",
+          "single_promotion": "Promotion is active until removed from publication or edited."
+        },
+        "restore_limit_confirmation": {
+          "title": "⚠️ Unable to Publish Ad",
+          "description": "The limit of active ads has been reached.\nPlease remove another ad from publication or increase the limit.",
+          "upgrade": "Increase Limit"
+        },
+        "archive_promote_confirmation": {
+          "title": "⚠️ The advertisement will be moved to the archive",
+          "description": "Active promotion will be removed without return.\nContinue?",
+          "archive": "Archive",
+          "cancel": "Cancel"
+        },
+        "TariffInfo": {
+          "no_limit_tariff": "🚀 {subscriptionName:String} — unlimited ads are active.",
+          "limit_tariff": "🚀 {activeAdvertsCount:int} out of {limit:int} active ads used.",
+          "limit_reached": "Remove one from publication or upgrade the limit!",
+          "limit_not_reached": "Want to post more?",
+          "upgrade_tariff": "Upgrade limit!"
+        }
+      }
+    },
+    "distance": {
+      "in_meters": "{value:int} m",
+      "in_kilometers": "{value:int} km"
+    },
+    "SelectAdvertTypeSheet": {
+      "sell_title": "Selling",
+      "buy_title": "Buying",
+      "LimitInfo": {
+        "title": "⚠️ The limit of active ads has been reached.",
+        "description": "The new ad will be saved in the archive.\nYou can remove another ad or increase the limit for publication."
+      }
+    },
+    "ShopPage": {
+      "create_advert": "Create Advert",
+      "sell_tab_title": "Selling",
+      "buy_tab_title": "Buying",
+      "failed_loading_categories": "Failed to load categories",
+      "advert_is_self": "Your advert",
+      "search_hint": "Search"
+    },
+    "NoItemsStub": {
+      "title": "No Ads Yet",
+      "create_advert": "Create an advert"
+    }
+  },
+  "users": {
+    "user_select_screen": {
+      "empty": "No users yet",
+      "failure": "Error loading users"
+    }
+  }
+}

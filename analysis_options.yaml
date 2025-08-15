@@ -1,0 +1,23 @@
+include: package:flutter_lints/flutter.yaml
+
+analyzer:
+  language:
+    strict-casts: true
+    strict-inference: true
+    strict-raw-types: true
+
+  exclude:
+    - '.dart_tool/**'
+    - 'build/**'
+    - '**/*.g.dart'
+    - '**/*.config.dart'
+    - '**/*.gen.dart'
+    - '**/*.freezed.dart'
+
+linter:
+  rules:
+    prefer_const_constructors: true
+    prefer_relative_imports: true
+
+formatter:
+  page_width: 120

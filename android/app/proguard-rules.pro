@@ -1,0 +1,3 @@
+﻿-keep class net.sqlcipher.** { *; }
+-keep class com.appsflyer.** { *; }
+-keep class kotlin.jvm.internal.** { *; }

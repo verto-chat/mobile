@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "702476548325",
+    "project_id": "vertochat-mobile",
+    "storage_bucket": "vertochat-mobile.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:702476548325:android:8c9f14406eb577dba87c0c",
+        "android_client_info": {
+          "package_name": "chat.verto.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDU8TEYy7jz7z5xPuCB2gowP6z5Y2obQqw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
