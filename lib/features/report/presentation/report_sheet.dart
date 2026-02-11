@@ -38,44 +38,50 @@ class _ReportSheetState extends State<ReportSheet> {
                 children: [
                   Flexible(
                     child: SingleChildScrollView(
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.stretch,
-                        children: [
-                          Text(loc.title, textAlign: TextAlign.center, style: Theme.of(context).textTheme.titleMedium),
-                          ...ReportReason.values.map(
-                            (r) => RadioListTile<ReportReason>(
-                              title: Text(switch (r) {
-                                ReportReason.spam => loc.reasons.spam,
-                                ReportReason.inappropriate => loc.reasons.inappropriate,
-                                ReportReason.abuse => loc.reasons.abuse,
-                                ReportReason.other => loc.reasons.other,
-                              }),
-                              value: r,
-                              groupValue: _reason,
-                              onChanged: (v) => setState(() => _reason = v),
+                      child: RadioGroup<ReportReason>(
+                        groupValue: _reason,
+                        onChanged: (v) => setState(() => _reason = v),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.stretch,
+                          children: [
+                            Text(
+                              loc.title,
+                              textAlign: TextAlign.center,
+                              style: Theme.of(context).textTheme.titleMedium,
                             ),
-                          ),
-
-                          if (_reason == ReportReason.other)
-                            TextField(
-                              controller: _controller,
-                              decoration: InputDecoration(labelText: loc.description_label),
-                              minLines: 1,
-                              maxLines: 5,
-                              maxLength: 300,
-                              textCapitalization: TextCapitalization.sentences,
-                              textInputAction: TextInputAction.done,
+                            ...ReportReason.values.map(
+                              (r) => RadioListTile<ReportReason>(
+                                title: Text(switch (r) {
+                                  ReportReason.spam => loc.reasons.spam,
+                                  ReportReason.inappropriate => loc.reasons.inappropriate,
+                                  ReportReason.abuse => loc.reasons.abuse,
+                                  ReportReason.other => loc.reasons.other,
+                                }),
+                                value: r,
+                              ),
                             ),
 
-                          const SizedBox(height: 8),
+                            if (_reason == ReportReason.other)
+                              TextField(
+                                controller: _controller,
+                                decoration: InputDecoration(labelText: loc.description_label),
+                                minLines: 1,
+                                maxLines: 5,
+                                maxLength: 300,
+                                textCapitalization: TextCapitalization.sentences,
+                                textInputAction: TextInputAction.done,
+                              ),
 
-                          FilledButton(
-                            onPressed: _loading || _reason == null ? null : () => _submit(context.read()),
-                            child: _loading
-                                ? const SizedBox(width: 14, height: 14, child: CircularProgressIndicator())
-                                : Text(loc.submit),
-                          ),
-                        ],
+                            const SizedBox(height: 8),
+
+                            FilledButton(
+                              onPressed: _loading || _reason == null ? null : () => _submit(context.read()),
+                              child: _loading
+                                  ? const SizedBox(width: 14, height: 14, child: CircularProgressIndicator())
+                                  : Text(loc.submit),
+                            ),
+                          ],
+                        ),
                       ),
                     ),
                   ),

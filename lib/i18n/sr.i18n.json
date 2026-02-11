@@ -1,0 +1,380 @@
+{
+  "auth": {
+    "SignInScreen": {
+      "email_label": "Email",
+      "password_label": "Lozinka",
+      "forgot_password": "Zaboravili ste lozinku?",
+      "sign_in": "Prijavite se",
+      "sign_up": "Registracija",
+      "sign_in_with_google": "Prijavite se putem Google-a",
+      "sign_in_with_apple": "Prijavite se putem Apple-a",
+      "login_error": {
+        "invalid_credentials": "Neispravni podaci za prijavu",
+        "email_not_confirmed": "Email adresa nije potvrđena"
+      },
+      "OAuthAcceptRegulationsSheet": {
+        "title": "Da biste nastavili, registrujte se",
+        "regulations(rich)": "Molimo vas da prihvatite {terms(Uslove korišćenja)} i {policy(Politiku privatnosti)}",
+        "accept": "Prihvatam",
+        "cancel": "Otkaži",
+        "failed_get_regulations": "Nije moguće dobiti pravila."
+      }
+    },
+    "SignUpScreen": {
+      "title": "Registracija",
+      "first_name_label": "Ime",
+      "last_name_label": "Prezime",
+      "email_label": "Email",
+      "password_label": "Lozinka",
+      "repeat_password": "Ponovite lozinku",
+      "sign_up": "Registracija",
+      "password_not_equal": "Lozinke se ne poklapaju",
+      "regulations(rich)": "Slažem se sa {terms(uslovima korišćenja)} i {policy(politikom privatnosti)}",
+      "after_registration_toast": "✔️ Poslato potvrđujuće pismo! Proverite email i potvrdite adresu.",
+      "register_error": {
+        "incorrect_email": "Neispravna email adresa",
+        "incorrect_name": "Neispravno ime",
+        "incorrect_password": "Lozinka mora imati najmanje 8 karaktera i sadržati velika i mala slova i brojeve",
+        "email_already_used": "Email adresa se već koristi",
+        "create_error": "Greška prilikom kreiranja korisnika",
+        "emailRateLimitExceeded": "Prekoračen limit slanja email-ova"
+      }
+    },
+    "reset_password": {
+      "CodeScreen": {
+        "title": "Obnova lozinke",
+        "description": "Kod za obnovu je poslat na vašu email adresu {email:String}",
+        "submit": "Dalje",
+        "field_label": "Kod za obnovu",
+        "field_error": "Neispravan kod",
+        "check_error_description": "Nije moguće proveriti kod za obnovu"
+      },
+      "ForgotPasswordScreen": {
+        "title": "Obnova lozinke",
+        "email_label": "Email",
+        "send_reset_link": "Pošaljite link",
+        "check_error_description": "Nije moguće poslati kod za obnovu lozinke"
+      },
+      "NewPasswordScreen": {
+        "title": "Nova lozinka",
+        "reset_submit": "Prijavite se",
+        "edit_submit": "Izmeniti",
+        "current_password": "Trenutna lozinka",
+        "new_password": "Nova lozinka",
+        "repeat_new_password": "Ponovite novu lozinku",
+        "password_label": "Lozinka",
+        "repeat_password": "Ponovite lozinku",
+        "failed_change_password": "Nije moguće promeniti lozinku",
+        "failed_reset_password": "Nije moguće resetovati lozinku",
+        "errors": {
+          "wrong_current_password": "Neispravna trenutna lozinka",
+          "same_password": "Nova lozinka ne sme biti ista kao trenutna"
+        }
+      }
+    }
+  },
+  "chats": {
+    "ChatPage": {
+      "SlangChatL10n": {
+        "and": "i",
+        "attachmentButtonAccessibilityLabel": "Pošaljite medije",
+        "emptyChatPlaceholder": "Nemate poruka za sada",
+        "fileButtonAccessibilityLabel": "Datoteka",
+        "inputPlaceholder": "Poruka",
+        "isTyping": "kuca…",
+        "others": "drugi",
+        "sendButtonAccessibilityLabel": "Pošaljite",
+        "unreadMessagesLabel": "Nepročitane poruke"
+      },
+      "advert_chat": "Čat o oglasu",
+      "attachment_type_file": "Datoteka",
+      "attachment_type_image": "Slika",
+      "failure": "Greška prilikom učitavanja čata",
+      "no_messages_yet": "Još nema poruka",
+      "return_translation": "Vrati prevod",
+      "show_original": "Prikaži original",
+      "tts_play_failed": "Nije moguće reprodukovati: {error:String}",
+      "tts_play_original": "Igraj original",
+      "tts_play_translation": "Igraj prevod"
+    },
+    "ChatsPage": {
+      "ChatCard": {
+        "favorites_chat_name": "Omiljeno",
+        "support_chat_name": "Podrška"
+      },
+      "NoItemsStub": {
+        "description": "Nemate čatova za sada",
+        "title": "Nemate čatova"
+      },
+      "create_direct_chat": "Kreirajte čat sa korisnikom",
+      "create_group_chat": "Kreirajte grupni čat",
+      "delete_action": "Obriši",
+      "empty": "Nemate čatova",
+      "failure": "Greška prilikom učitavanja čatova",
+      "title": "Čatovi"
+    },
+    "CreateDirectChatPage": {
+      "failure_create_chat": "Nije moguće kreirati čat",
+      "title": "Kreirajte čat"
+    },
+    "CreateLocalChatPage": {
+      "languages_section": "Jezici",
+      "my_language_label": "Vaš jezik",
+      "partner_language_label": "Jezik sagovornika",
+      "show_both_subtitle": "Prikazivanje oba teksta radi lakšeg provere",
+      "show_both_title": "Prikazivanje originala i prevoda",
+      "start_button": "Započnite lokalni čat",
+      "swap_languages": "Zamenite",
+      "tips_item_1": "• Vi i sagovornik govorite naizmenično na jednom uređaju.",
+      "tips_item_2": "• Poruke se automatski prevode, može se prikazati original i prevod.",
+      "tips_item_3": "• Uključite TTS da bi prevod bio pročitan naglas.",
+      "tips_title": "Kako funkcioniše lokalni čat",
+      "title": "Novi lokalni čat",
+      "title_hint": "Na primer: Razgovor sa vlasnikom stana",
+      "title_label": "Naslov (opciono)",
+      "translation_section": "Prevod i prikazivanje",
+      "tts_subtitle": "Čitati prevod naglas prilikom prikazivanja",
+      "tts_title": "Igrajte prevod (TTS)"
+    },
+    "RecordHoldButton": {
+      "hold_to_record": "Držite\nza snimanje",
+      "semantics_label": "{label:String}: držite za snimanje"
+    },
+    "SelectChatTypePage": {
+      "continue_button": "Nastavite",
+      "details": {
+        "direct": {
+          "can_do": "Automatski prevod dolaznih i odlaznih, glasovne poruke, dodaci.",
+          "for_whom": "Za komunikaciju sa jednom osobom na različitim jezicima.",
+          "scenarios": "Poslovna korespondencija, lični razgovori, korisnička podrška."
+        },
+        "group": {
+          "can_do": "Automatski prevod za sve učesnike, uloge i prava, pinovi i reakcije.",
+          "for_whom": "Za timove, porodice i zajednice sa učesnicima iz različitih zemalja.",
+          "scenarios": "Projekti, zajednice, organizacijska korespondencija."
+        },
+        "local": {
+          "can_do": "Naizmenično ostavljate poruke na jednom telefonu — odmah se prevode sagovorniku.",
+          "for_whom": "Za turiste i offline pregovore na jednom uređaju.",
+          "scenarios": "Komunikacija sa taksistom/vlasnikom, naručivanje hrane, pomoć sa navigacijom."
+        },
+        "learning": {
+          "can_do": "Sačuvajte reči i fraze, pogledajte različita značenja i primere, vežbajte u režimima čitanja/diktiranja.",
+          "for_whom": "Za učenje jezika na jednom uređaju — kao 'lokalni čat', ali sa fokusom na praksu.",
+          "scenarios": "Samostalno učenje tokom putovanja, priprema za sastanak, analiza korespondencije, lični rečnik."
+        }
+      },
+      "labels": {
+        "can_do": "Šta možete",
+        "for_whom": "Za koga",
+        "scenarios": "Scenariji"
+      },
+      "soon_tag": "Uskoro",
+      "title": "Kreirajte čat",
+      "types": {
+        "direct": "Direktno (1-na-1)",
+        "group": "Grupni",
+        "learning": "Učenje",
+        "local": "Lokalni čat"
+      }
+    }
+  },
+  "core": {
+    "field_empty": "Polje ne može biti prazno",
+    "incorrect_format": "Neispravan format",
+    "dialog_title": {
+      "error_title": "Greška",
+      "connection_error": "Nema konekcije",
+      "server_error": "Greška na serveru",
+      "not_authorized": "Niste autorizovani",
+      "upgrade_required": "Verzija je zastarela",
+      "insufficient_accessRights": "Nedovoljna prava"
+    },
+    "dialog_msg": {
+      "retry_or_contact_support": "Pokušajte ponovo ili kontaktirajte podršku na: support@verto.chat",
+      "server_error": "Došlo je do greške na serveru. {retryOrContactSupport}",
+      "default_error": "Došlo je do greške. {retryOrContactSupport}",
+      "connection_error": "Proverite vašu internet konekciju i pokušajte ponovo",
+      "authorization_required": "Podaci za autorizaciju su zastareli. Potrebno je ponovo se prijaviti",
+      "upgrade_required": "Da bi aplikacija radila ispravno, instalirajte novu verziju",
+      "insufficient_access_rights": "Akcija nije dostupna. Vaša prava su ograničena"
+    },
+    "dialog_action": {
+      "ok": "U redu",
+      "login": "Prijavite se",
+      "retry": "Pokušajte ponovo",
+      "upgrade": "Ažurirajte",
+      "back": "Nazad",
+      "yes": "Da",
+      "no": "Ne",
+      "cancel": "Otkaži"
+    },
+    "DialogPresenter": {
+      "permission_text_location": "Lokacija",
+      "permission_denied": {
+        "location": "da dobijete lokaciju za izbor adrese",
+        "title": "Pristup {permission:String}",
+        "description": "Za korišćenje ove funkcije potreban je pristup {permission:String}. Možete ga omogućiti u podešavanjima vašeg uređaja.",
+        "settings": "U podešavanjima",
+        "later": "Kasnije"
+      }
+    },
+    "photos": {
+      "GalleryScreen": {
+        "title": "Galerija"
+      }
+    },
+    "upload": {
+      "select_photo": {
+        "select_source_photo": {
+          "title": "Izaberite sliku",
+          "from": {
+            "camera": "Kamera",
+            "gallery": "Iz galerije"
+          }
+        }
+      },
+      "AddPhotoButton": {
+        "add_photo": "Dodajte"
+      }
+    },
+    "widgets": {
+      "LastPageErrorMessageView": {
+        "something_wrong_try_again": "Nešto nije u redu, pokušajte ponovo:"
+      },
+      "TryAgainButton": {
+        "something_wrong": "Nešto nije u redu",
+        "try_again": "Pokušajte ponovo"
+      },
+      "AttachDocuments": {
+        "title": "Dodajte dokumente"
+      }
+    }
+  },
+  "feedback": {
+    "feedback_page": {
+      "title": "Povratne informacije",
+      "type_label": "Tip zahteva",
+      "description_label": "Opis",
+      "description_hint": "Detaljnije opišite vaš problem ili ideju",
+      "description_error": "Molimo vas da napišete tekst zahteva",
+      "submit": "Pošaljite",
+      "success": "Zahtev je poslat",
+      "failed_send_feedback": "Nije moguće poslati povratne informacije",
+      "types": {
+        "bug": "Prijavite grešku",
+        "feature": "Predložite funkcionalnost",
+        "category": "Predložite novu kategoriju oglasa",
+        "question": "Postavite pitanje",
+        "general": "Opšti komentari i sugestije"
+      }
+    }
+  },
+  "home": {
+    "main_label": "Početna",
+    "chats_label": "Čatovi",
+    "profile_label": "Profil"
+  },
+  "in_app": {
+    "BuyProductsScreen": {
+      "buy_button": "Kupiti",
+      "title": "Izaberite proizvod",
+      "unavailable": "Nedostupno"
+    }
+  },
+  "legal": {
+    "failed_get_regulations": "Nije moguće dobiti regulative.",
+    "LegalScreen": {
+      "title": "Pravne informacije",
+      "policy_label": "Politika privatnosti",
+      "terms_label": "Uslovi korišćenja",
+      "gdpr_label": "Politika privatnosti GDPR"
+    }
+  },
+  "logger": {
+    "SessionScreen": {
+      "no_space_line_1": "Nema dovoljno memorije na uređaju.",
+      "no_space_line_2": "Molimo oslobodite prostor i pokušajte ponovo.",
+      "ok": "U redu",
+      "title": "Lista sesija",
+      "unknown_error": "Nepoznata greška."
+    }
+  },
+  "profile": {
+    "EditProfileScreen": {
+      "edit_password": "Promenite lozinku",
+      "first_name_label": "Ime",
+      "last_name_label": "Prezime",
+      "save_button_text": "Sačuvaj",
+      "success_toast": "Vaše ime je uspešno ažurirano",
+      "title": "Izmeni profil"
+    },
+    "ProfilePage": {
+      "create_support_chat": "Pišite u čat podrške",
+      "failed_create_support_chat": "Nije moguće kreirati čat podrške",
+      "failed_loading_profile": "Nije moguće učitati informacije o korisniku",
+      "plan": {
+        "buy_credits": "Kupite kredite",
+        "credits_count": {
+          "one": "{n} kredit",
+          "few": "{n} kredita",
+          "other": "{n} kredita"
+        },
+        "plan_name": "Plan: {planName:String}",
+        "upgrade": "Poboljšajte plan"
+      }
+    },
+    "SafetyScreen": {
+      "delete_account_error": {
+        "requires_recent_login": "Za brisanje naloga potrebno je ponovo da se prijavite u aplikaciju"
+      },
+      "delete_account_label": "Obrišite nalog",
+      "delete_confirm": {
+        "description": "Da li ste sigurni da želite da obrišete nalog?",
+        "title": "Brisanje naloga"
+      },
+      "edit_password": "Izmenite lozinku",
+      "title": "Bezbednost"
+    },
+    "delete_account_label": "Obrišite nalog",
+    "edit_avatar_title": "Izmena avatara",
+    "edit_profile_label": "Izmeni profil",
+    "failed_update_avatar": "Nije moguće ažurirati avatar",
+    "failed_upload_avatar": "Nije moguće učitati avatar",
+    "feedback_label": "Povratne informacije",
+    "language_label": "Jezik",
+    "legal_label": "Pravne informacije",
+    "logout_label": "Odjavite se",
+    "safety_label": "Bezbednost",
+    "select_language_title": "Izaberite jezik",
+    "theme": {
+      "title": "Tema",
+      "light": "Svetla",
+      "dark": "Tamna",
+      "system": "Sistemska"
+    },
+    "to_favorites_adverts_label": "Omiljeni oglasi",
+    "to_my_adverts_label": "Moji oglasi",
+    "version": "Verzija {version}"
+  },
+  "report": {
+    "ReportSheet": {
+      "description_label": "Opis",
+      "reasons": {
+        "abuse": "Uvredljivo ponašanje ili podsticanje mržnje",
+        "inappropriate": "Neprikladno ponašanje",
+        "other": "Drugo",
+        "spam": "Spam"
+      },
+      "submit": "Pošaljite",
+      "success": "Žalba je poslana",
+      "title": "Prijavite prekršaj"
+    }
+  },
+  "users": {
+    "user_select_screen": {
+      "empty": "Trenutno nema korisnika",
+      "failure": "Greška prilikom učitavanja korisnika"
+    }
+  }
+}

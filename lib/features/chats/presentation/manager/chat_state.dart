@@ -4,13 +4,8 @@ part of 'chat_bloc.dart';
 sealed class ChatState with _$ChatState {
   const factory ChatState.notInitilized() = NotInitilized;
 
-  const factory ChatState.initilized({
-    required ChatController chatController,
-    required String currentUserId,
-    required String title,
-    required ChatType chatType,
-    required DomainId? advertId,
-  }) = Initilized;
+  const factory ChatState.initilized({required ChatController chatController, required ShortChatInfo chat}) =
+      Initilized;
 
   const factory ChatState.failure() = Failure;
 }

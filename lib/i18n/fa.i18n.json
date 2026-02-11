@@ -1,0 +1,380 @@
+{
+  "auth": {
+    "SignInScreen": {
+      "email_label": "ایمیل",
+      "password_label": "رمز عبور",
+      "forgot_password": "رمز عبور را فراموش کرده‌اید؟",
+      "sign_in": "ورود",
+      "sign_up": "ثبت‌نام",
+      "sign_in_with_google": "ورود با Google",
+      "sign_in_with_apple": "ورود با Apple",
+      "login_error": {
+        "invalid_credentials": "اطلاعات ورود نادرست است",
+        "email_not_confirmed": "ایمیل تأیید نشده است"
+      },
+      "OAuthAcceptRegulationsSheet": {
+        "title": "برای ادامه، ثبت‌نام کنید",
+        "regulations(rich)": "لطفاً {terms(شرایط استفاده)} و {policy(سیاست حفظ حریم خصوصی)} را بپذیرید",
+        "accept": "پذیرفتن",
+        "cancel": "لغو",
+        "failed_get_regulations": "دریافت قوانین ممکن نشد."
+      }
+    },
+    "SignUpScreen": {
+      "title": "ثبت‌نام",
+      "first_name_label": "نام",
+      "last_name_label": "نام خانوادگی",
+      "email_label": "ایمیل",
+      "password_label": "رمز عبور",
+      "repeat_password": "تکرار رمز عبور",
+      "sign_up": "ثبت‌نام",
+      "password_not_equal": "رمزهای عبور مطابقت ندارند",
+      "regulations(rich)": "با {terms(شرایط استفاده)} و {policy(سیاست حفظ حریم خصوصی)} موافقم",
+      "after_registration_toast": "✔️ ایمیل تأیید ارسال شد! ایمیل خود را بررسی کنید و آدرس را تأیید کنید.",
+      "register_error": {
+        "incorrect_email": "ایمیل نادرست است",
+        "incorrect_name": "نام نادرست است",
+        "incorrect_password": "رمز عبور باید حداقل 8 کاراکتر باشد و شامل حروف بزرگ و کوچک و اعداد باشد",
+        "email_already_used": "آدرس ایمیل قبلاً استفاده شده است",
+        "create_error": "خطا در ایجاد کاربر",
+        "emailRateLimitExceeded": "حد مجاز ارسال ایمیل‌ها exceeded"
+      }
+    },
+    "reset_password": {
+      "CodeScreen": {
+        "title": "بازیابی رمز عبور",
+        "description": "کد بازیابی به ایمیل شما {email:String} ارسال شده است",
+        "submit": "ادامه",
+        "field_label": "کد بازیابی",
+        "field_error": "کد نادرست است",
+        "check_error_description": "بررسی کد بازیابی ممکن نشد"
+      },
+      "ForgotPasswordScreen": {
+        "title": "بازیابی رمز عبور",
+        "email_label": "ایمیل",
+        "send_reset_link": "ارسال لینک",
+        "check_error_description": "ارسال کد برای بازیابی رمز عبور ممکن نشد"
+      },
+      "NewPasswordScreen": {
+        "title": "رمز عبور جدید",
+        "reset_submit": "ورود",
+        "edit_submit": "تغییر",
+        "current_password": "رمز عبور فعلی",
+        "new_password": "رمز عبور جدید",
+        "repeat_new_password": "تکرار رمز عبور جدید",
+        "password_label": "رمز عبور",
+        "repeat_password": "تکرار رمز عبور",
+        "failed_change_password": "تغییر رمز عبور ممکن نشد",
+        "failed_reset_password": "بازیابی رمز عبور ممکن نشد",
+        "errors": {
+          "wrong_current_password": "رمز عبور فعلی نادرست است",
+          "same_password": "رمز عبور جدید نباید با رمز عبور فعلی مطابقت داشته باشد"
+        }
+      }
+    }
+  },
+  "chats": {
+    "ChatPage": {
+      "SlangChatL10n": {
+        "and": "و",
+        "attachmentButtonAccessibilityLabel": "ارسال رسانه",
+        "emptyChatPlaceholder": "در حال حاضر پیام‌هایی ندارید",
+        "fileButtonAccessibilityLabel": "فایل",
+        "inputPlaceholder": "پیام",
+        "isTyping": "در حال تایپ...",
+        "others": "دیگران",
+        "sendButtonAccessibilityLabel": "ارسال",
+        "unreadMessagesLabel": "پیام‌های خوانده نشده"
+      },
+      "advert_chat": "چت آگهی",
+      "attachment_type_file": "فایل",
+      "attachment_type_image": "تصویر",
+      "failure": "خطا در بارگذاری چت",
+      "no_messages_yet": "هنوز پیامی وجود ندارد",
+      "return_translation": "بازگشت به ترجمه",
+      "show_original": "نمایش اصل",
+      "tts_play_failed": "پخش ممکن نشد: {error:String}",
+      "tts_play_original": "پخش اصل",
+      "tts_play_translation": "پخش ترجمه"
+    },
+    "ChatsPage": {
+      "ChatCard": {
+        "favorites_chat_name": "علاقه‌مندی‌ها",
+        "support_chat_name": "پشتیبانی"
+      },
+      "NoItemsStub": {
+        "description": "در حال حاضر چتی ندارید",
+        "title": "هنوز چتی وجود ندارد"
+      },
+      "create_direct_chat": "ایجاد چت با کاربر",
+      "create_group_chat": "ایجاد چت گروهی",
+      "delete_action": "حذف",
+      "empty": "هنوز چتی وجود ندارد",
+      "failure": "خطا در بارگذاری چت‌ها",
+      "title": "چت‌ها"
+    },
+    "CreateDirectChatPage": {
+      "failure_create_chat": "ایجاد چت ممکن نشد",
+      "title": "ایجاد چت"
+    },
+    "CreateLocalChatPage": {
+      "languages_section": "زبان‌ها",
+      "my_language_label": "زبان شما",
+      "partner_language_label": "زبان هم‌صحبت",
+      "show_both_subtitle": "نمایش هر دو متن برای راحتی بررسی",
+      "show_both_title": "نمایش اصل و ترجمه",
+      "start_button": "شروع چت محلی",
+      "swap_languages": "تعویض زبان‌ها",
+      "tips_item_1": "• شما و هم‌صحبت به نوبت بر روی یک دستگاه صحبت می‌کنید.",
+      "tips_item_2": "• پیام‌ها به‌طور خودکار ترجمه می‌شوند، می‌توانید اصل و ترجمه را نمایش دهید.",
+      "tips_item_3": "• TTS را فعال کنید تا ترجمه به صورت صوتی خوانده شود.",
+      "tips_title": "چگونه چت محلی کار می‌کند",
+      "title": "چت محلی جدید",
+      "title_hint": "به عنوان مثال: گفت‌وگو با صاحب آپارتمان",
+      "title_label": "عنوان (اختیاری)",
+      "translation_section": "ترجمه و نمایش",
+      "tts_subtitle": "خواندن ترجمه به صورت صوتی هنگام نمایش",
+      "tts_title": "خواندن ترجمه (TTS)"
+    },
+    "RecordHoldButton": {
+      "hold_to_record": "نگه‌دارید\nبرای ضبط",
+      "semantics_label": "{label:String}: نگه‌دارید برای ضبط"
+    },
+    "SelectChatTypePage": {
+      "continue_button": "ادامه",
+      "details": {
+        "direct": {
+          "can_do": "ترجمه خودکار ورودی و خروجی، پیام‌های صوتی، پیوست‌ها.",
+          "for_whom": "برای ارتباط با یک نفر به زبان‌های مختلف.",
+          "scenarios": "مکاتبات تجاری، گفت‌وگوهای شخصی، پشتیبانی مشتری."
+        },
+        "group": {
+          "can_do": "ترجمه خودکار برای همه شرکت‌کنندگان، نقش‌ها و حقوق، پین‌ها و واکنش‌ها.",
+          "for_whom": "برای تیم‌ها، خانواده‌ها و جوامع با شرکت‌کنندگان از کشورهای مختلف.",
+          "scenarios": "چت‌های پروژه‌ای، جوامع، مکاتبات سازمانی."
+        },
+        "local": {
+          "can_do": "شما به نوبت پیام‌هایی را بر روی یک تلفن می‌گذارید — آنها به‌طور فوری به هم‌صحبت ترجمه می‌شوند.",
+          "for_whom": "برای گردشگران و مذاکرات آفلاین بر روی یک دستگاه.",
+          "scenarios": "گفت‌وگو با تاکسی‌دار/اجاره‌دهنده، سفارش غذا، کمک با ناوبری."
+        },
+        "learning": {
+          "can_do": "کلمات و عبارات را ذخیره کنید، معانی و مثال‌های مختلف را ببینید، در حالت‌های خواندن/دیکته تمرین کنید.",
+          "for_whom": "برای یادگیری زبان‌ها بر روی یک دستگاه — مانند «چت محلی»، اما با تمرکز بر تمرین.",
+          "scenarios": "خودآموزی در سفر، آمادگی برای ملاقات، بررسی مکاتبات، دیکشنری شخصی."
+        }
+      },
+      "labels": {
+        "can_do": "چه کاری می‌توان انجام داد",
+        "for_whom": "برای چه کسی",
+        "scenarios": "سناریوها"
+      },
+      "soon_tag": "به زودی",
+      "title": "ایجاد چت",
+      "types": {
+        "direct": "مستقیم (1 به 1)",
+        "group": "گروهی",
+        "learning": "یادگیری",
+        "local": "چت محلی"
+      }
+    }
+  },
+  "core": {
+    "field_empty": "این فیلد نمی‌تواند خالی باشد",
+    "incorrect_format": "فرمت نادرست است",
+    "dialog_title": {
+      "error_title": "خطا",
+      "connection_error": "هیچ اتصال وجود ندارد",
+      "server_error": "خطا در سرور",
+      "not_authorized": "مجوز ندارد",
+      "upgrade_required": "نسخه قدیمی است",
+      "insufficient_accessRights": "دسترسی کافی نیست"
+    },
+    "dialog_msg": {
+      "retry_or_contact_support": "لطفاً دوباره تلاش کنید یا با پشتیبانی تماس بگیرید: support@verto.chat",
+      "server_error": "خطایی در سرور رخ داد. {retryOrContactSupport}",
+      "default_error": "خطایی رخ داد. {retryOrContactSupport}",
+      "connection_error": "لطفاً اتصال اینترنت خود را بررسی کرده و دوباره تلاش کنید",
+      "authorization_required": "اطلاعات ورود منقضی شده است. باید دوباره وارد شوید",
+      "upgrade_required": "برای عملکرد صحیح، نسخه جدید برنامه را نصب کنید",
+      "insufficient_access_rights": "این عمل در دسترس نیست. حقوق شما محدود است"
+    },
+    "dialog_action": {
+      "ok": "باشه",
+      "login": "ورود",
+      "retry": "دوباره تلاش کنید",
+      "upgrade": "به‌روزرسانی",
+      "back": "بازگشت",
+      "yes": "بله",
+      "no": "خیر",
+      "cancel": "لغو"
+    },
+    "DialogPresenter": {
+      "permission_text_location": "مکان",
+      "permission_denied": {
+        "location": "دریافت مکان برای انتخاب آدرس",
+        "title": "دسترسی به {permission:String}",
+        "description": "برای استفاده از این ویژگی به دسترسی به {permission:String} نیاز است. می‌توانید آن را در تنظیمات دستگاه خود فعال کنید.",
+        "settings": "به تنظیمات",
+        "later": "بعداً"
+      }
+    },
+    "photos": {
+      "GalleryScreen": {
+        "title": "گالری"
+      }
+    },
+    "upload": {
+      "select_photo": {
+        "select_source_photo": {
+          "title": "انتخاب تصویر",
+          "from": {
+            "camera": "دوربین",
+            "gallery": "از گالری"
+          }
+        }
+      },
+      "AddPhotoButton": {
+        "add_photo": "اضافه کردن عکس"
+      }
+    },
+    "widgets": {
+      "LastPageErrorMessageView": {
+        "something_wrong_try_again": "مشکلی پیش آمده، دوباره تلاش کنید:"
+      },
+      "TryAgainButton": {
+        "something_wrong": "مشکلی پیش آمده",
+        "try_again": "دوباره تلاش کنید"
+      },
+      "AttachDocuments": {
+        "title": "اضافه کردن مدارک"
+      }
+    }
+  },
+  "feedback": {
+    "feedback_page": {
+      "title": "بازخورد",
+      "type_label": "نوع درخواست",
+      "description_label": "توضیحات",
+      "description_hint": "مشکل یا ایده خود را به طور دقیق توضیح دهید",
+      "description_error": "لطفاً متن درخواست را بنویسید",
+      "submit": "ارسال",
+      "success": "درخواست ارسال شد",
+      "failed_send_feedback": "ارسال بازخورد ممکن نشد",
+      "types": {
+        "bug": "گزارش باگ",
+        "feature": "پیشنهاد ویژگی",
+        "category": "پیشنهاد دسته جدید آگهی",
+        "question": "سوال بپرسید",
+        "general": "نظرات و پیشنهادات عمومی"
+      }
+    }
+  },
+  "home": {
+    "main_label": "خانه",
+    "chats_label": "چت‌ها",
+    "profile_label": "پروفایل"
+  },
+  "in_app": {
+    "BuyProductsScreen": {
+      "buy_button": "خرید",
+      "title": "محصول را انتخاب کنید",
+      "unavailable": "در دسترس نیست"
+    }
+  },
+  "legal": {
+    "failed_get_regulations": "دریافت قوانین ممکن نشد.",
+    "LegalScreen": {
+      "title": "اطلاعات قانونی",
+      "policy_label": "سیاست حفظ حریم خصوصی",
+      "terms_label": "شرایط استفاده",
+      "gdpr_label": "سیاست حفظ حریم خصوصی GDPR"
+    }
+  },
+  "logger": {
+    "SessionScreen": {
+      "no_space_line_1": "فضای کافی در دستگاه وجود ندارد.",
+      "no_space_line_2": "لطفاً فضای خالی ایجاد کرده و دوباره تلاش کنید.",
+      "ok": "باشه",
+      "title": "لیست جلسات",
+      "unknown_error": "خطای ناشناخته."
+    }
+  },
+  "profile": {
+    "EditProfileScreen": {
+      "edit_password": "تغییر رمز عبور",
+      "first_name_label": "نام",
+      "last_name_label": "نام خانوادگی",
+      "save_button_text": "ذخیره",
+      "success_toast": "نام شما با موفقیت به‌روزرسانی شد",
+      "title": "ویرایش پروفایل"
+    },
+    "ProfilePage": {
+      "create_support_chat": "نوشتن به چت پشتیبانی",
+      "failed_create_support_chat": "ایجاد چت پشتیبانی ممکن نشد",
+      "failed_loading_profile": "بارگذاری اطلاعات کاربر ممکن نشد",
+      "plan": {
+        "buy_credits": "خرید اعتبار",
+        "credits_count": {
+          "one": "{n} اعتبار",
+          "few": "{n} اعتبار",
+          "other": "{n} اعتبار"
+        },
+        "plan_name": "طرح: {planName:String}",
+        "upgrade": "به‌روزرسانی طرح"
+      }
+    },
+    "SafetyScreen": {
+      "delete_account_error": {
+        "requires_recent_login": "برای حذف حساب کاربری باید دوباره وارد برنامه شوید"
+      },
+      "delete_account_label": "حذف حساب کاربری",
+      "delete_confirm": {
+        "description": "آیا مطمئن هستید که می‌خواهید حساب کاربری را حذف کنید؟",
+        "title": "حذف حساب کاربری"
+      },
+      "edit_password": "تغییر رمز عبور",
+      "title": "امنیت"
+    },
+    "delete_account_label": "حذف حساب کاربری",
+    "edit_avatar_title": "ویرایش آواتار",
+    "edit_profile_label": "ویرایش پروفایل",
+    "failed_update_avatar": "به‌روزرسانی آواتار ممکن نشد",
+    "failed_upload_avatar": "بارگذاری آواتار ممکن نشد",
+    "feedback_label": "بازخورد",
+    "language_label": "زبان",
+    "legal_label": "اطلاعات قانونی",
+    "logout_label": "خروج از حساب کاربری",
+    "safety_label": "امنیت",
+    "select_language_title": "انتخاب زبان",
+    "theme": {
+      "title": "تم",
+      "light": "روشن",
+      "dark": "تاریک",
+      "system": "سیستمی"
+    },
+    "to_favorites_adverts_label": "آگهی‌های مورد علاقه",
+    "to_my_adverts_label": "آگهی‌های من",
+    "version": "نسخه {version}"
+  },
+  "report": {
+    "ReportSheet": {
+      "description_label": "توضیحات",
+      "reasons": {
+        "abuse": "توهین یا تحریک به نفرت",
+        "inappropriate": "رفتار نامناسب",
+        "other": "دیگر",
+        "spam": "اسپم"
+      },
+      "submit": "ارسال",
+      "success": "شکایت ارسال شد",
+      "title": "گزارش تخلف"
+    }
+  },
+  "users": {
+    "user_select_screen": {
+      "empty": "در حال حاضر کاربری وجود ندارد",
+      "failure": "خطا در بارگذاری کاربران"
+    }
+  }
+}

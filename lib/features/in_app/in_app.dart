@@ -1,8 +1,8 @@
 ﻿import 'package:context_di/context_di.dart';
 import 'package:in_app_purchase/in_app_purchase.dart';
+import 'package:openapi/openapi.dart';
 import 'package:provider/provider.dart';
 
-import '../../core/core.dart';
 import '../features.dart';
 import 'presentation/managers/buy_products_bloc.dart';
 import 'presentation/managers/select_subscription_bloc.dart';
@@ -25,16 +25,7 @@ class InAppFeature extends FeatureDependencies with _$InAppFeatureMixin {
 
   @override
   List<Registration> register() {
-    return [
-      registerSingleton((context) {
-        final dio = context.read<CreateDio>().call(context, const (backendSupport: true));
-
-        final endpoints = context.read<IEndpoints>();
-
-        return UserSubscriptionApi(dio, baseUrl: "${endpoints.baseUrl}/monetization");
-      }),
-      ...super.register(),
-    ];
+    return [registerSingleton((context) => context.read<Openapi>().getMonetizationApi()), ...super.register()];
   }
 }
 
@@ -48,13 +39,7 @@ class PurchasesFeature extends FeatureDependencies with _$PurchasesFeatureMixin 
   @override
   List<Registration> register() {
     return [
-      registerSingleton((context) {
-        final dio = context.read<CreateDio>().call(context, const (backendSupport: true));
-
-        final endpoints = context.read<IEndpoints>();
-
-        return MonetizationApi(dio, baseUrl: "${endpoints.baseUrl}/monetization");
-      }),
+      registerSingleton((context) => context.read<Openapi>().getMonetizationApi()),
       registerSingleton<InAppPurchase>((c) => InAppPurchase.instance),
       ...super.register(),
     ];

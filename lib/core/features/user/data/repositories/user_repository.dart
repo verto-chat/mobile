@@ -1,10 +1,11 @@
 import 'dart:async';
 
+import 'package:openapi/openapi.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 
 import '../../../../../common/common.dart';
 import '../../domain/domain.dart';
-import '../data.dart';
+import '../data_sources/local/local_user_source.dart';
 
 class UserRepository implements IUserRepository {
   final UserApi _userApi;
@@ -31,7 +32,7 @@ class UserRepository implements IUserRepository {
         switch (userResult) {
           case Success(:final data):
             if (data != cachedEntity) {
-              await _localUserSource.cacheUserInfo(UserInfoDto.fromEntity(data));
+              await _localUserSource.cacheUserInfo(UserInfoDtoExtensions.fromEntity(data));
 
               onFreshData?.call(Success(data: data));
             }
@@ -67,7 +68,7 @@ class UserRepository implements IUserRepository {
       lastName: user.lastName,
     );
 
-    final apiResult = await _safeDio.execute(() => _userApi.updateUser(request));
+    final apiResult = await _safeDio.execute(() => _userApi.updateUser(updateUserDto: request));
 
     return switch (apiResult) {
       ApiSuccess() => Success(data: null),
@@ -88,11 +89,35 @@ class UserRepository implements IUserRepository {
       thumbnailAvatarUrl: user.thumbnailAvatarUrl,
     );
 
-    final apiResult = await _safeDio.execute(() => _userApi.updateUser(request));
+    final apiResult = await _safeDio.execute(() => _userApi.updateUser(updateUserDto: request));
 
     return switch (apiResult) {
       ApiSuccess() => Success(data: null),
       ApiError() => Error(errorData: apiResult.toDomain()),
     };
+  }
+}
+
+extension UserInfoDtoExtensions on UserInfoDto {
+  UserInfo toEntity() {
+    return UserInfo(
+      id: DomainId.fromString(id: id),
+      firstName: firstName,
+      lastName: lastName,
+      email: email,
+      avatarUrl: avatarUrl,
+      thumbnailAvatarUrl: thumbnailAvatarUrl,
+    );
+  }
+
+  static UserInfoDto fromEntity(UserInfo entity) {
+    return UserInfoDto(
+      id: entity.id.toString(),
+      firstName: entity.firstName,
+      lastName: entity.lastName,
+      email: entity.email,
+      avatarUrl: entity.avatarUrl,
+      thumbnailAvatarUrl: entity.thumbnailAvatarUrl,
+    );
   }
 }

@@ -9,11 +9,11 @@ class SafeDio {
 
   SafeDio(this._logger);
 
-  Future<ApiResult<T>> execute<T>(Future<T> Function() request) async {
+  Future<ApiResult<T>> execute<T>(Future<Response<T>> Function() request) async {
     try {
       final response = await request.call();
 
-      return ApiSuccess(data: response);
+      return ApiSuccess(data: response.data as T);
     } catch (e) {
       if (e is DioException) {
         //this will be logged by talker
@@ -26,7 +26,7 @@ class SafeDio {
     }
   }
 
-  Future<ApiResult<T>> executeReliably<T>(Future<T> Function() request) async {
+  Future<ApiResult<T>> executeReliably<T>(Future<Response<T>> Function() request) async {
     final response = await execute<T>(request);
 
     if (response is ApiSuccess<T>) {

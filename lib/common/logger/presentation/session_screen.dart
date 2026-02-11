@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
+import '../../../i18n/translations.g.dart';
 import '../data/files/files.dart';
 import '../domain/logger_repository.dart';
 import '../entities/entities.dart';
@@ -20,6 +21,7 @@ class _SessionScreenState extends State<SessionScreen> {
 
   @override
   Widget build(BuildContext context) {
+    final loc = context.appTexts.logger.session_screen;
     return MultiProvider(
       providers: [Provider<IShareLogFileService>(create: (c) => ShareLogFileService(c.read(), c.read(), c.read()))],
       child: FutureBuilder<List<SessionInfo>?>(
@@ -38,7 +40,7 @@ class _SessionScreenState extends State<SessionScreen> {
                     ),
                   ),
                 ],
-                title: const Padding(padding: EdgeInsets.symmetric(horizontal: 8), child: Text("Список сессий")),
+                title: Padding(padding: const EdgeInsets.symmetric(horizontal: 8), child: Text(loc.title)),
               ),
             ],
             body: CustomScrollView(
@@ -76,6 +78,7 @@ class _SessionScreenState extends State<SessionScreen> {
     final status = await share.share(session);
 
     final context = this.context;
+    final loc = context.appTexts.logger.session_screen;
 
     if (!context.mounted) return;
 
@@ -83,25 +86,25 @@ class _SessionScreenState extends State<SessionScreen> {
       await showDialog<void>(
         context: context,
         builder: (context) => AlertDialog(
-          title: const Text('Ошибка'),
-          content: const SingleChildScrollView(
+          title: Text(context.appTexts.core.dialog_title.error_title),
+          content: SingleChildScrollView(
             child: ListBody(
               children: [
-                Text('На устройстве недостаточно памяти.'),
-                Text('Пожалуйста, освободите место и повторите попытку.'),
+                Text(loc.no_space_line_1),
+                Text(loc.no_space_line_2),
               ],
             ),
           ),
-          actions: <Widget>[TextButton(child: const Text('ОК'), onPressed: () => Navigator.of(context).pop())],
+          actions: <Widget>[TextButton(child: Text(loc.ok), onPressed: () => Navigator.of(context).pop())],
         ),
       );
     } else if (status == ShareActionStatus.unknown) {
       await showDialog<void>(
         context: context,
         builder: (context) => AlertDialog(
-          title: const Text('Ошибка'),
-          content: const SingleChildScrollView(child: ListBody(children: [Text('Неизвестная ошибка.')])),
-          actions: [TextButton(child: const Text('ОК'), onPressed: () => Navigator.of(context).pop())],
+          title: Text(context.appTexts.core.dialog_title.error_title),
+          content: SingleChildScrollView(child: ListBody(children: [Text(loc.unknown_error)])),
+          actions: [TextButton(child: Text(loc.ok), onPressed: () => Navigator.of(context).pop())],
         ),
       );
     }

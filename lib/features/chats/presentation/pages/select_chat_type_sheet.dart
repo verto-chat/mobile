@@ -12,7 +12,7 @@ class SelectChatTypeSheet extends StatelessWidget {
     return SelectSheetContainer(
       children: [
         CommonSelectTile.fromIcons(
-          onTap: () => Navigator.pop(context, ChatType.p2p),
+          onTap: () => Navigator.pop(context, ChatType.direct),
           icon: Icons.person,
           title: context.appTexts.chats.chats_page.create_direct_chat,
         ),

@@ -19,14 +19,7 @@ class AppRouter extends RootStackRouter {
 
   @override
   List<AutoRoute> get routes => [
-    AutoRoute(
-      page: HomeRoute.page,
-      path: '/',
-      children: [
-        AutoRoute(page: ChatsRoute.page, path: 'chats'),
-        AutoRoute(page: ProfileRoute.page, path: 'profile'),
-      ],
-    ),
+    AutoRoute(page: HomeRoute.page, path: '/'),
 
     AutoRoute(page: SelectLanguageRoute.page, path: '/selectLanguage'),
     AutoRoute(page: SignInRoute.page, path: '/signIn'),
@@ -37,17 +30,25 @@ class AppRouter extends RootStackRouter {
     AutoRoute(page: EditProfileRoute.page, path: '/editProfile'),
     AutoRoute(page: SafetyRoute.page, path: '/safety'),
 
-    // chats
     AutoRoute(page: ChatRoute.page, path: '/chat'),
-    AutoRoute(page: AdvertChatsRoute.page, path: '/advertChats'),
-    AutoRoute(page: CreateDirectChatRoute.page, path: '/createDirectChat'),
+    AutoRoute(
+      page: CreateChatRoute.page,
+      path: '/createChat',
+      type: const RouteType.cupertino(),
+      children: [
+        RedirectRoute(path: '', redirectTo: SelectChatTypeRoute.name),
+        AutoRoute(page: SelectChatTypeRoute.page, path: 'selectChatType', type: const RouteType.cupertino()),
+        AutoRoute(page: CreateLocalChatRoute.page, path: 'createLocalChat', type: const RouteType.cupertino()),
+        AutoRoute(page: CreateDirectChatRoute.page, path: 'createDirectChat', type: const RouteType.cupertino()),
+      ],
+    ),
 
     AutoRoute(page: LegalRoute.page, path: '/legal'),
     AutoRoute(page: FeedbackRoute.page, path: '/feedback'),
 
     // in-app
-    AutoRoute(page: SupposeSubscriptionRoute.page, path: '/supposeSubscription'),
-    AutoRoute(page: SupposePromoteRoute.page, path: '/supposePromote'),
+    // AutoRoute(page: SupposeSubscriptionRoute.page, path: '/supposeSubscription'),
+    // AutoRoute(page: SupposePromoteRoute.page, path: '/supposePromote'),
     AutoRoute(page: SelectSubscriptionRoute.page, path: '/selectSubscription'),
     AutoRoute(page: BuyProductsRoute.page, path: '/buyProducts'),
   ];

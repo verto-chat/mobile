@@ -1,2 +1,2 @@
-﻿export 'chat_messages_api.dart';
-export 'chats_api.dart';
+﻿//GENERATED BARREL FILE 
+export 'models_extensions.dart'; 

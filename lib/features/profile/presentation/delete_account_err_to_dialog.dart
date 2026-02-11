@@ -42,7 +42,7 @@ extension DeleteAccountErrToDialog on DeleteAccountErrorResult {
   }
 
   String _errorTypeToMsg(BuildContext context, DeleteAccountErrorType errorType) {
-    final loc = context.appTexts.profile.profile_page.delete_account_error;
+    final loc = context.appTexts.profile.safety_screen.delete_account_error;
 
     return switch (errorType) {
       DeleteAccountErrorType.other => context.appTexts.core.dialog_msg.retry_or_contact_support,

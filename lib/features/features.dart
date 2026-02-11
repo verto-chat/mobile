@@ -1,6 +1,7 @@
 export 'analytics/analytics.dart';
 export 'auth/auth.dart';
 export 'chats/chats.dart';
+export 'create/create.dart';
 export 'feedback/feedback.dart';
 export 'home/home.dart';
 export 'in_app/in_app.dart';

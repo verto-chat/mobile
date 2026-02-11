@@ -8,14 +8,13 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
-import 'package:path/path.dart' as p;
-import 'package:path_provider/path_provider.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 import 'package:talker_bloc_logger/talker_bloc_logger_observer.dart';
 import 'package:talker_bloc_logger/talker_bloc_logger_settings.dart';
 import 'package:talker_dio_logger/talker_dio_logger.dart';
 import 'package:talker_flutter/talker_flutter.dart' hide LogLevel;
 
+import 'app_db.dart';
 import 'common/common.dart';
 import 'common/logger/data/database_provider.dart';
 import 'common/logger/data/logger_repository.dart';
@@ -25,7 +24,6 @@ import 'common/logger/talker_logger.dart';
 import 'common/preferences/shared_preferences.dart';
 import 'core/core.dart';
 import 'firebase_options.dart';
-import 'objectbox.g.dart';
 
 Future<List<Registration>> configure() async {
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
@@ -51,7 +49,7 @@ Future<List<Registration>> configure() async {
   final deviceIdProvider = await DeviceIdProvider.create();
   final pushActionNotificator = PushActionNotificator();
 
-  AndroidOptions getAndroidOptions() => const AndroidOptions(encryptedSharedPreferences: true, resetOnError: true);
+  AndroidOptions getAndroidOptions() => const AndroidOptions(resetOnError: true);
 
   final flutterSecureStorage = FlutterSecureStorage(aOptions: getAndroidOptions());
 
@@ -92,9 +90,9 @@ Future<List<Registration>> configure() async {
 
   final deepLinksNotificator = DeepLinksNotificator();
 
-  //await _initAppsFlyer(logger, deepLinksNotificator);
+  final db = AppDatabase();
 
-  final objectBox = await ObjectBox.create();
+  //await _initAppsFlyer(logger, deepLinksNotificator);
 
   await _logStartMessage(logger, versionProvider);
 
@@ -111,7 +109,7 @@ Future<List<Registration>> configure() async {
     SingletonRegistration<LocalPushPresenter>((c) => localPushPresenter, lazy: false),
     SingletonRegistration<EndpointsManager>((c) => endpointsManager, lazy: false),
     SingletonRegistration<IEndpoints>((c) => endpoints, lazy: false),
-    SingletonRegistration<ObjectBox>((c) => objectBox, lazy: false),
+    SingletonRegistration<AppDatabase>((c) => db, lazy: false),
     FactoryRegistration<TalkerRouteObserver>((c) => TalkerRouteObserver(logger.talkerInstance)),
     SingletonRegistration<TalkerDioLogger>(
       (c) => TalkerDioLogger(
@@ -212,20 +210,4 @@ void _subscribeDeepLinks(AppsflyerSdk appsflyerSdk, ILogger logger, DeepLinksNot
         break;
     }
   });
-}
-
-class ObjectBox {
-  late final Store store;
-
-  ObjectBox._create(this.store) {
-    // Add any additional setup code, e.g. build queries.
-  }
-
-  /// Create an instance of ObjectBox to use throughout the app.
-  static Future<ObjectBox> create() async {
-    final docsDir = await getApplicationDocumentsDirectory();
-    // Future<Store> openStore() {...} is defined in the generated objectbox.g.dart
-    final store = await openStore(directory: p.join(docsDir.path, "obx-example"));
-    return ObjectBox._create(store);
-  }
 }

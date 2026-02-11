@@ -12,7 +12,44 @@
           "package_name": "chat.verto.app"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "702476548325-36blsangm1qfo3mo2adta7u5o163tnfq.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "chat.verto.app",
+            "certificate_hash": "ecd22a965745528ee3185544c0b0bf5f633f5477"
+          }
+        },
+        {
+          "client_id": "702476548325-84ntnpims1hjgsda7b9bradsvp5lhsmv.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "chat.verto.app",
+            "certificate_hash": "d99f741d65bc06c8cf2c43523db91c6856020c9c"
+          }
+        },
+        {
+          "client_id": "702476548325-arsknn87rtplke0pdd6fr40b3c7rp6t0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "chat.verto.app",
+            "certificate_hash": "900c04de039deca285173ddbbebcfe4a0cd28fd4"
+          }
+        },
+        {
+          "client_id": "702476548325-olhj2kf8045rfg1fr8dlavc69naf5hbh.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "chat.verto.app",
+            "certificate_hash": "0e125b2fbe27022759dc42677af22f6530a8f074"
+          }
+        },
+        {
+          "client_id": "702476548325-ougll3a7re1vcrfqd5jn21vun88ripc0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyDU8TEYy7jz7z5xPuCB2gowP6z5Y2obQqw"
@@ -20,7 +57,19 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "702476548325-ougll3a7re1vcrfqd5jn21vun88ripc0.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "702476548325-j7adhk03g6iurpfg6q0p48p88b192k8p.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "chat.verto.app"
+              }
+            }
+          ]
         }
       }
     }

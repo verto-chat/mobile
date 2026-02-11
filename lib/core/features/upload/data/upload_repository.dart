@@ -68,6 +68,18 @@ class UploadRepository implements IUploadRepository {
   }
 
   @override
+  Future<EmptyDomainResult> uploadChatVoice(File file, String ttsStorageKey) async {
+    try {
+      await _supabaseUploadApi.uploadChatVoice(file, ttsStorageKey);
+
+      return Success(data: null);
+    } catch (e) {
+      _logger.log(LogLevel.error, "Failed to upload chat voice", exception: e);
+      return Error(errorData: const DomainErrorType.serverError());
+    }
+  }
+
+  @override
   Future<DomainResultDErr<UploadedImageUrl>> uploadChatImage(File file) async {
     try {
       final compressedFile = await _compressImage(file);

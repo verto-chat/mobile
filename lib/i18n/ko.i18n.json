@@ -1,0 +1,380 @@
+{
+  "auth": {
+    "SignInScreen": {
+      "email_label": "이메일",
+      "password_label": "비밀번호",
+      "forgot_password": "비밀번호를 잊으셨나요?",
+      "sign_in": "로그인",
+      "sign_up": "회원가입",
+      "sign_in_with_google": "Google로 로그인",
+      "sign_in_with_apple": "Apple로 로그인",
+      "login_error": {
+        "invalid_credentials": "잘못된 인증 정보",
+        "email_not_confirmed": "이메일이 확인되지 않았습니다"
+      },
+      "OAuthAcceptRegulationsSheet": {
+        "title": "계속하려면 등록하세요",
+        "regulations(rich)": "이용 약관 {terms(이용 약관)} 및 {policy(개인정보 보호정책)}에 동의해 주세요",
+        "accept": "동의합니다",
+        "cancel": "취소",
+        "failed_get_regulations": "규정을 가져오는 데 실패했습니다."
+      }
+    },
+    "SignUpScreen": {
+      "title": "회원가입",
+      "first_name_label": "이름",
+      "last_name_label": "성",
+      "email_label": "이메일",
+      "password_label": "비밀번호",
+      "repeat_password": "비밀번호 확인",
+      "sign_up": "회원가입",
+      "password_not_equal": "비밀번호가 일치하지 않습니다",
+      "regulations(rich)": "이용 약관 {terms(이용 약관)} 및 {policy(개인정보 보호정책)}에 동의합니다",
+      "after_registration_toast": "✔️ 확인 이메일이 발송되었습니다! 이메일을 확인하고 주소를 확인하세요.",
+      "register_error": {
+        "incorrect_email": "잘못된 이메일",
+        "incorrect_name": "잘못된 이름",
+        "incorrect_password": "비밀번호는 8자 이상이어야 하며 대문자, 소문자 및 숫자를 포함해야 합니다",
+        "email_already_used": "이메일 주소가 이미 사용 중입니다",
+        "create_error": "사용자 생성 중 오류가 발생했습니다",
+        "emailRateLimitExceeded": "이메일 발송 한도를 초과했습니다"
+      }
+    },
+    "reset_password": {
+      "CodeScreen": {
+        "title": "비밀번호 복구",
+        "description": "이메일 {email:String}로 복구 코드를 보냈습니다",
+        "submit": "다음",
+        "field_label": "복구 코드",
+        "field_error": "잘못된 코드",
+        "check_error_description": "복구 코드를 확인할 수 없습니다"
+      },
+      "ForgotPasswordScreen": {
+        "title": "비밀번호 복구",
+        "email_label": "이메일",
+        "send_reset_link": "링크 보내기",
+        "check_error_description": "비밀번호 복구 코드를 보내는 데 실패했습니다"
+      },
+      "NewPasswordScreen": {
+        "title": "새 비밀번호",
+        "reset_submit": "로그인",
+        "edit_submit": "변경",
+        "current_password": "현재 비밀번호",
+        "new_password": "새 비밀번호",
+        "repeat_new_password": "새 비밀번호 확인",
+        "password_label": "비밀번호",
+        "repeat_password": "비밀번호 확인",
+        "failed_change_password": "비밀번호 변경에 실패했습니다",
+        "failed_reset_password": "비밀번호 재설정에 실패했습니다",
+        "errors": {
+          "wrong_current_password": "현재 비밀번호가 잘못되었습니다",
+          "same_password": "새 비밀번호는 현재 비밀번호와 같을 수 없습니다"
+        }
+      }
+    }
+  },
+  "chats": {
+    "ChatPage": {
+      "SlangChatL10n": {
+        "and": "와",
+        "attachmentButtonAccessibilityLabel": "미디어 전송",
+        "emptyChatPlaceholder": "아직 메시지가 없습니다",
+        "fileButtonAccessibilityLabel": "파일",
+        "inputPlaceholder": "메시지",
+        "isTyping": "입력 중...",
+        "others": "다른 사람들",
+        "sendButtonAccessibilityLabel": "전송",
+        "unreadMessagesLabel": "읽지 않은 메시지"
+      },
+      "advert_chat": "광고 채팅",
+      "attachment_type_file": "파일",
+      "attachment_type_image": "이미지",
+      "failure": "채팅 로드 중 오류 발생",
+      "no_messages_yet": "아직 메시지가 없습니다",
+      "return_translation": "번역 반환",
+      "show_original": "원본 보기",
+      "tts_play_failed": "재생 실패: {error:String}",
+      "tts_play_original": "원본 음성 재생",
+      "tts_play_translation": "번역 음성 재생"
+    },
+    "ChatsPage": {
+      "ChatCard": {
+        "favorites_chat_name": "즐겨찾기",
+        "support_chat_name": "지원"
+      },
+      "NoItemsStub": {
+        "description": "아직 채팅이 없습니다",
+        "title": "아직 채팅이 없습니다"
+      },
+      "create_direct_chat": "사용자와 채팅 생성",
+      "create_group_chat": "그룹 채팅 생성",
+      "delete_action": "삭제",
+      "empty": "아직 채팅이 없습니다",
+      "failure": "채팅 로드 중 오류 발생",
+      "title": "채팅"
+    },
+    "CreateDirectChatPage": {
+      "failure_create_chat": "채팅 생성에 실패했습니다",
+      "title": "채팅 생성"
+    },
+    "CreateLocalChatPage": {
+      "languages_section": "언어",
+      "my_language_label": "내 언어",
+      "partner_language_label": "상대방 언어",
+      "show_both_subtitle": "검토 편의를 위해 두 텍스트 표시",
+      "show_both_title": "원본 및 번역 표시",
+      "start_button": "로컬 채팅 시작",
+      "swap_languages": "언어 바꾸기",
+      "tips_item_1": "• 당신과 상대방이 한 기기에서 번갈아 말합니다.",
+      "tips_item_2": "• 메시지가 자동으로 번역되며 원본과 번역을 표시할 수 있습니다.",
+      "tips_item_3": "• TTS를 활성화하여 번역을 음성으로 읽어줍니다.",
+      "tips_title": "로컬 채팅 작동 방식",
+      "title": "새 로컬 채팅",
+      "title_hint": "예: 아파트 주인과의 대화",
+      "title_label": "제목 (선택 사항)",
+      "translation_section": "번역 및 표시",
+      "tts_subtitle": "표시 시 번역을 음성으로 읽기",
+      "tts_title": "번역 음성 재생 (TTS)"
+    },
+    "RecordHoldButton": {
+      "hold_to_record": "녹음하려면\n길게 누르세요",
+      "semantics_label": "{label:String}: 녹음을 위해 길게 누르세요"
+    },
+    "SelectChatTypePage": {
+      "continue_button": "계속",
+      "details": {
+        "direct": {
+          "can_do": "들어오는 및 나가는 자동 번역, 음성 메시지, 첨부 파일.",
+          "for_whom": "다양한 언어로 한 사람과 소통하기 위해.",
+          "scenarios": "비즈니스 서신, 개인 대화, 고객 지원."
+        },
+        "group": {
+          "can_do": "모든 참가자를 위한 자동 번역, 역할 및 권한, 고정 및 반응.",
+          "for_whom": "다양한 국가의 참가자가 있는 팀, 가족 및 커뮤니티를 위해.",
+          "scenarios": "프로젝트 채팅, 커뮤니티, 조직 서신."
+        },
+        "local": {
+          "can_do": "한 전화기에서 번갈아 메시지를 남기면 즉시 상대방에게 번역됩니다.",
+          "for_whom": "여행자 및 오프라인 대화를 위한 한 기기에서.",
+          "scenarios": "택시 기사/임대인과의 소통, 음식 주문, 내비게이션 도움."
+        },
+        "learning": {
+          "can_do": "단어와 구문을 저장하고 다양한 의미와 예를 보고 읽기/받아쓰기 모드에서 연습합니다.",
+          "for_whom": "한 기기에서 언어를 배우기 위해 - '로컬 채팅'과 유사하지만 연습에 중점을 둡니다.",
+          "scenarios": "여행 중 자기 학습, 미팅 준비, 서신 분석, 개인 사전."
+        }
+      },
+      "labels": {
+        "can_do": "할 수 있는 것",
+        "for_whom": "누구를 위한 것",
+        "scenarios": "시나리오"
+      },
+      "soon_tag": "곧",
+      "title": "채팅 생성",
+      "types": {
+        "direct": "직접 (1:1)",
+        "group": "그룹",
+        "learning": "학습",
+        "local": "로컬 채팅"
+      }
+    }
+  },
+  "core": {
+    "DialogPresenter": {
+      "permission_text_location": "위치",
+      "permission_denied": {
+        "location": "주소 선택을 위한 위치를 가져오는 데 필요한 권한이 없습니다.",
+        "title": "{permission:String} 접근",
+        "description": "이 기능을 사용하려면 {permission:String}에 대한 접근이 필요합니다. 기기 설정에서 활성화할 수 있습니다.",
+        "settings": "설정으로",
+        "later": "나중에"
+      }
+    },
+    "dialog_action": {
+      "ok": "확인",
+      "login": "로그인",
+      "retry": "다시 시도",
+      "upgrade": "업그레이드",
+      "back": "뒤로",
+      "yes": "예",
+      "no": "아니요",
+      "cancel": "취소"
+    },
+    "dialog_msg": {
+      "retry_or_contact_support": "다시 시도하거나 지원팀에 문의하세요: support@verto.chat",
+      "server_error": "서버에서 오류가 발생했습니다. {retryOrContactSupport}",
+      "default_error": "오류가 발생했습니다. {retryOrContactSupport}",
+      "connection_error": "인터넷 연결을 확인하고 다시 시도하세요",
+      "authorization_required": "인증 정보가 만료되었습니다. 다시 로그인해야 합니다",
+      "upgrade_required": "정상 작동을 위해 새 버전을 설치하세요",
+      "insufficient_access_rights": "작업이 불가능합니다. 권한이 제한되어 있습니다"
+    },
+    "dialog_title": {
+      "error_title": "오류",
+      "connection_error": "연결 없음",
+      "server_error": "서버 오류",
+      "not_authorized": "인증되지 않음",
+      "upgrade_required": "버전이 오래되었습니다",
+      "insufficient_accessRights": "권한이 부족합니다"
+    },
+    "field_empty": "필드는 비어 있을 수 없습니다",
+    "incorrect_format": "잘못된 형식",
+    "photos": {
+      "GalleryScreen": {
+        "title": "갤러리"
+      }
+    },
+    "upload": {
+      "select_photo": {
+        "select_source_photo": {
+          "title": "이미지 선택",
+          "from": {
+            "camera": "카메라",
+            "gallery": "갤러리에서"
+          }
+        }
+      },
+      "AddPhotoButton": {
+        "add_photo": "사진 추가"
+      }
+    },
+    "widgets": {
+      "LastPageErrorMessageView": {
+        "something_wrong_try_again": "문제가 발생했습니다. 다시 시도하세요:"
+      },
+      "TryAgainButton": {
+        "something_wrong": "문제가 발생했습니다",
+        "try_again": "다시 시도"
+      },
+      "AttachDocuments": {
+        "title": "문서 첨부"
+      }
+    }
+  },
+  "feedback": {
+    "feedback_page": {
+      "title": "피드백",
+      "type_label": "문의 유형",
+      "description_label": "설명",
+      "description_hint": "문제나 아이디어를 자세히 설명하세요",
+      "description_error": "문의 내용을 작성해 주세요",
+      "submit": "제출",
+      "success": "문의가 제출되었습니다",
+      "failed_send_feedback": "피드백 제출에 실패했습니다",
+      "types": {
+        "bug": "버그 신고",
+        "feature": "기능 제안",
+        "category": "새 광고 카테고리 제안",
+        "question": "질문하기",
+        "general": "일반적인 의견 및 요청"
+      }
+    }
+  },
+  "home": {
+    "main_label": "홈",
+    "chats_label": "채팅",
+    "profile_label": "프로필"
+  },
+  "in_app": {
+    "BuyProductsScreen": {
+      "buy_button": "구매",
+      "title": "상품 선택",
+      "unavailable": "사용 불가능"
+    }
+  },
+  "legal": {
+    "failed_get_regulations": "규정을 가져오는 데 실패했습니다.",
+    "LegalScreen": {
+      "title": "법적 정보",
+      "policy_label": "개인정보 보호정책",
+      "terms_label": "이용 약관",
+      "gdpr_label": "GDPR 개인정보 보호정책"
+    }
+  },
+  "logger": {
+    "SessionScreen": {
+      "no_space_line_1": "장치에 메모리가 부족합니다.",
+      "no_space_line_2": "공간을 확보하고 다시 시도하세요.",
+      "ok": "확인",
+      "title": "세션 목록",
+      "unknown_error": "알 수 없는 오류."
+    }
+  },
+  "profile": {
+    "EditProfileScreen": {
+      "edit_password": "비밀번호 변경",
+      "first_name_label": "이름",
+      "last_name_label": "성",
+      "save_button_text": "저장",
+      "success_toast": "이름이 성공적으로 업데이트되었습니다",
+      "title": "프로필 편집"
+    },
+    "ProfilePage": {
+      "create_support_chat": "지원 채팅 작성",
+      "failed_create_support_chat": "지원 채팅 생성에 실패했습니다",
+      "failed_loading_profile": "사용자 정보를 로드하는 데 실패했습니다",
+      "plan": {
+        "buy_credits": "크레딧 구매",
+        "credits_count": {
+          "one": "{n} 크레딧",
+          "few": "{n} 크레딧",
+          "other": "{n} 크레딧"
+        },
+        "plan_name": "플랜: {planName:String}",
+        "upgrade": "플랜 업그레이드"
+      }
+    },
+    "SafetyScreen": {
+      "delete_account_error": {
+        "requires_recent_login": "계정을 삭제하려면 앱에 다시 로그인해야 합니다"
+      },
+      "delete_account_label": "계정 삭제",
+      "delete_confirm": {
+        "description": "정말로 계정을 삭제하시겠습니까?",
+        "title": "계정 삭제"
+      },
+      "edit_password": "비밀번호 변경",
+      "title": "보안"
+    },
+    "delete_account_label": "계정 삭제",
+    "edit_avatar_title": "아바타 편집",
+    "edit_profile_label": "프로필 편집",
+    "failed_update_avatar": "아바타 업데이트에 실패했습니다",
+    "failed_upload_avatar": "아바타 업로드에 실패했습니다",
+    "feedback_label": "피드백",
+    "language_label": "언어",
+    "legal_label": "법적 정보",
+    "logout_label": "로그아웃",
+    "safety_label": "보안",
+    "select_language_title": "언어 선택",
+    "theme": {
+      "title": "테마",
+      "light": "라이트",
+      "dark": "다크",
+      "system": "시스템"
+    },
+    "to_favorites_adverts_label": "즐겨찾기 광고",
+    "to_my_adverts_label": "내 광고",
+    "version": "버전 {version}"
+  },
+  "report": {
+    "ReportSheet": {
+      "description_label": "설명",
+      "reasons": {
+        "abuse": "모욕 또는 증오 조장",
+        "inappropriate": "부적절한 행동",
+        "other": "기타",
+        "spam": "스팸"
+      },
+      "submit": "제출",
+      "success": "신고가 제출되었습니다",
+      "title": "위반 신고"
+    }
+  },
+  "users": {
+    "user_select_screen": {
+      "empty": "아직 사용자가 없습니다",
+      "failure": "사용자 로드 중 오류 발생"
+    }
+  }
+}

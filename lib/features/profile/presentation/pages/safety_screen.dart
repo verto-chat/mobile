@@ -60,7 +60,7 @@ class _SafetyScreenState extends State<SafetyScreen> {
   }
 
   Future<void> _onDeleteAccount() async {
-    final loc = appTexts.profile.profile_page.delete_confirm;
+    final loc = appTexts.profile.safety_screen.delete_confirm;
 
     final context = this.context;
 

@@ -1,0 +1,380 @@
+{
+  "auth": {
+    "SignInScreen": {
+      "email_label": "Correu electrònic",
+      "password_label": "Contrasenya",
+      "forgot_password": "Has oblidat la contrasenya?",
+      "sign_in": "Iniciar sessió",
+      "sign_up": "Registrar-se",
+      "sign_in_with_google": "Iniciar sessió amb Google",
+      "sign_in_with_apple": "Iniciar sessió amb Apple",
+      "login_error": {
+        "invalid_credentials": "Credencials no vàlides",
+        "email_not_confirmed": "Correu electrònic no confirmat"
+      },
+      "OAuthAcceptRegulationsSheet": {
+        "title": "Per continuar, registra't",
+        "regulations(rich)": "Si us plau, accepta {terms(Condicions d'ús)} i {policy(Política de privacitat)}",
+        "accept": "Acceptar",
+        "cancel": "Cancel·lar",
+        "failed_get_regulations": "No s'ha pogut obtenir les regulacions."
+      }
+    },
+    "SignUpScreen": {
+      "title": "Registrar-se",
+      "first_name_label": "Nom",
+      "last_name_label": "Cognom",
+      "email_label": "Correu electrònic",
+      "password_label": "Contrasenya",
+      "repeat_password": "Repetir contrasenya",
+      "sign_up": "Registrar-se",
+      "password_not_equal": "Les contrasenyes no coincideixen",
+      "regulations(rich)": "Accepto {terms(condicions d'ús)} i {policy(política de privacitat)}",
+      "after_registration_toast": "✔️ S'ha enviat un correu de confirmació! Comprova el correu i confirma l'adreça.",
+      "register_error": {
+        "incorrect_email": "Correu electrònic incorrecte",
+        "incorrect_name": "Nom incorrecte",
+        "incorrect_password": "La contrasenya ha de tenir almenys 8 caràcters i contenir lletres majúscules, minúscules i números",
+        "email_already_used": "L'adreça de correu electrònic ja s'està utilitzant",
+        "create_error": "Error en crear l'usuari",
+        "emailRateLimitExceeded": "S'ha superat el límit d'enviament de correus electrònics"
+      }
+    },
+    "reset_password": {
+      "CodeScreen": {
+        "title": "Restablir contrasenya",
+        "description": "S'ha enviat un codi de recuperació al teu correu {email:String}",
+        "submit": "Següent",
+        "field_label": "Codi de recuperació",
+        "field_error": "Codi incorrecte",
+        "check_error_description": "No s'ha pogut verificar el codi de recuperació"
+      },
+      "ForgotPasswordScreen": {
+        "title": "Restablir contrasenya",
+        "email_label": "Correu electrònic",
+        "send_reset_link": "Enviar enllaç",
+        "check_error_description": "No s'ha pogut enviar el codi per restablir la contrasenya"
+      },
+      "NewPasswordScreen": {
+        "title": "Nova contrasenya",
+        "reset_submit": "Iniciar sessió",
+        "edit_submit": "Modificar",
+        "current_password": "Contrasenya actual",
+        "new_password": "Nova contrasenya",
+        "repeat_new_password": "Repetir nova contrasenya",
+        "password_label": "Contrasenya",
+        "repeat_password": "Repetir contrasenya",
+        "failed_change_password": "No s'ha pogut canviar la contrasenya",
+        "failed_reset_password": "No s'ha pogut restablir la contrasenya",
+        "errors": {
+          "wrong_current_password": "Contrasenya actual incorrecta",
+          "same_password": "La nova contrasenya no ha de coincidir amb l'actual"
+        }
+      }
+    }
+  },
+  "chats": {
+    "ChatPage": {
+      "SlangChatL10n": {
+        "and": "i",
+        "attachmentButtonAccessibilityLabel": "Enviar mitjans",
+        "emptyChatPlaceholder": "Encara no tens missatges",
+        "fileButtonAccessibilityLabel": "Fitxer",
+        "inputPlaceholder": "Missatge",
+        "isTyping": "està escrivint…",
+        "others": "altres",
+        "sendButtonAccessibilityLabel": "Enviar",
+        "unreadMessagesLabel": "Missatges no llegits"
+      },
+      "advert_chat": "Xat de l'anunci",
+      "attachment_type_file": "Fitxer",
+      "attachment_type_image": "Imatge",
+      "failure": "Error en carregar el xat",
+      "no_messages_yet": "Encara no hi ha missatges",
+      "return_translation": "Tornar a la traducció",
+      "show_original": "Mostrar l'original",
+      "tts_play_failed": "No s'ha pogut reproduir: {error:String}",
+      "tts_play_original": "Llegir l'original",
+      "tts_play_translation": "Llegir la traducció"
+    },
+    "ChatsPage": {
+      "ChatCard": {
+        "favorites_chat_name": "Favorits",
+        "support_chat_name": "Suport"
+      },
+      "NoItemsStub": {
+        "description": "Encara no tens xats",
+        "title": "Encara no hi ha xats"
+      },
+      "create_direct_chat": "Crear xat amb l'usuari",
+      "create_group_chat": "Crear xat de grup",
+      "delete_action": "Eliminar",
+      "empty": "Encara no hi ha xats",
+      "failure": "Error en carregar els xats",
+      "title": "Xats"
+    },
+    "CreateDirectChatPage": {
+      "failure_create_chat": "No s'ha pogut crear el xat",
+      "title": "Crear xat"
+    },
+    "CreateLocalChatPage": {
+      "languages_section": "Idiomes",
+      "my_language_label": "El teu idioma",
+      "partner_language_label": "Idioma de la parella",
+      "show_both_subtitle": "Mostrar els dos textos per facilitar la verificació",
+      "show_both_title": "Mostrar l'original i la traducció",
+      "start_button": "Iniciar xat local",
+      "swap_languages": "Intercanviar idiomes",
+      "tips_item_1": "• Tu i la parella parleu per torns en un mateix dispositiu.",
+      "tips_item_2": "• Els missatges es tradueixen automàticament, es poden mostrar l'original i la traducció.",
+      "tips_item_3": "• Activa TTS perquè la traducció es llegeixi en veu alta.",
+      "tips_title": "Com funciona el xat local",
+      "title": "Nou xat local",
+      "title_hint": "Per exemple: Conversa amb el propietari de l'apartament",
+      "title_label": "Títol (opcional)",
+      "translation_section": "Traducció i visualització",
+      "tts_subtitle": "Llegir la traducció en veu alta quan es mostra",
+      "tts_title": "Llegir la traducció (TTS)"
+    },
+    "RecordHoldButton": {
+      "hold_to_record": "Mantingueu\nper gravar",
+      "semantics_label": "{label:String}: mantingueu per gravar"
+    },
+    "SelectChatTypePage": {
+      "continue_button": "Continuar",
+      "details": {
+        "direct": {
+          "can_do": "Traducció automàtica d'entrades i sortides, missatges de veu, adjunts.",
+          "for_whom": "Per comunicar-se amb una sola persona en diferents idiomes.",
+          "scenarios": "Correspondència empresarial, converses personals, suport al client."
+        },
+        "group": {
+          "can_do": "Traducció automàtica per a tots els participants, rols i drets, pins i reaccions.",
+          "for_whom": "Per equips, famílies i comunitats amb participants de diferents països.",
+          "scenarios": "Xats de projectes, comunitats, correspondència organitzativa."
+        },
+        "local": {
+          "can_do": "Deixeu missatges per torns en un mateix telèfon — es tradueixen immediatament per a la parella.",
+          "for_whom": "Per a turistes i negociacions fora de línia en un mateix dispositiu.",
+          "scenarios": "Comunicació amb taxistes/propietaris, comanda de menjar, ajuda amb la navegació."
+        },
+        "learning": {
+          "can_do": "Desa paraules i frases, mira diferents significats i exemples, practica en modes de lectura/dictat.",
+          "for_whom": "Per aprendre idiomes en un mateix dispositiu — com un 'xat local', però amb èmfasi en la pràctica.",
+          "scenarios": "Autoaprenentatge en viatge, preparació per a reunions, anàlisi de correspondència, diccionari personal."
+        }
+      },
+      "labels": {
+        "can_do": "Què es pot fer",
+        "for_whom": "Per a qui",
+        "scenarios": "Escenaris"
+      },
+      "soon_tag": "Logo",
+      "title": "Crear xat",
+      "types": {
+        "direct": "Directe (1-a-1)",
+        "group": "Grup",
+        "learning": "Aprenentatge",
+        "local": "Xat local"
+      }
+    }
+  },
+  "core": {
+    "field_empty": "El camp no pot estar buit",
+    "incorrect_format": "Format incorrecte",
+    "dialog_title": {
+      "error_title": "Error",
+      "connection_error": "Sense connexió",
+      "server_error": "Error del servidor",
+      "not_authorized": "No autoritzat",
+      "upgrade_required": "Versió obsoleta",
+      "insufficient_accessRights": "Drets insuficients"
+    },
+    "dialog_msg": {
+      "retry_or_contact_support": "Prova-ho de nou o contacta amb el suport a: support@verto.chat",
+      "server_error": "S'ha produït un error al servidor. {retryOrContactSupport}",
+      "default_error": "S'ha produït un error. {retryOrContactSupport}",
+      "connection_error": "Si us plau, comprova la teva connexió a Internet i torna-ho a provar",
+      "authorization_required": "Les credencials d'autorització han caducat. Necessites tornar a iniciar sessió",
+      "upgrade_required": "Per al funcionament correcte, instal·la la nova versió de l'aplicació",
+      "insufficient_access_rights": "L'acció no està disponible. Els teus drets són limitats"
+    },
+    "dialog_action": {
+      "ok": "D'acord",
+      "login": "Iniciar sessió",
+      "retry": "Provar de nou",
+      "upgrade": "Actualitzar",
+      "back": "Enrere",
+      "yes": "Sí",
+      "no": "No",
+      "cancel": "Cancel·lar"
+    },
+    "DialogPresenter": {
+      "permission_text_location": "Ubicació",
+      "permission_denied": {
+        "location": "obtenir la ubicació per seleccionar l'adreça",
+        "title": "Accés a {permission:String}",
+        "description": "Per utilitzar aquesta funció es requereix accés a {permission:String}. Pots activar-ho a la configuració del teu dispositiu.",
+        "settings": "A la configuració",
+        "later": "Més tard"
+      }
+    },
+    "photos": {
+      "GalleryScreen": {
+        "title": "Galeria"
+      }
+    },
+    "upload": {
+      "select_photo": {
+        "select_source_photo": {
+          "title": "Seleccionar imatge",
+          "from": {
+            "camera": "Càmera",
+            "gallery": "De la galeria"
+          }
+        }
+      },
+      "AddPhotoButton": {
+        "add_photo": "Afegir"
+      }
+    },
+    "widgets": {
+      "LastPageErrorMessageView": {
+        "something_wrong_try_again": "Alguna cosa ha anat malament, intenta-ho de nou:"
+      },
+      "TryAgainButton": {
+        "something_wrong": "Alguna cosa ha anat malament",
+        "try_again": "Intenta-ho de nou"
+      },
+      "AttachDocuments": {
+        "title": "Afegir documents"
+      }
+    }
+  },
+  "feedback": {
+    "feedback_page": {
+      "title": "Comentaris",
+      "type_label": "Tipus de consulta",
+      "description_label": "Descripció",
+      "description_hint": "Descriu més detalladament el teu problema o idea",
+      "description_error": "Si us plau, escriu el text de la consulta",
+      "submit": "Enviar",
+      "success": "Consulta enviada",
+      "failed_send_feedback": "No s'ha pogut enviar els comentaris",
+      "types": {
+        "bug": "Informar d'un error",
+        "feature": "Proposar funcionalitat",
+        "category": "Proposar nova categoria d'anuncis",
+        "question": "Fer una pregunta",
+        "general": "Comentaris i suggeriments generals"
+      }
+    }
+  },
+  "home": {
+    "main_label": "Inici",
+    "chats_label": "Xats",
+    "profile_label": "Perfil"
+  },
+  "in_app": {
+    "BuyProductsScreen": {
+      "buy_button": "Comprar",
+      "title": "Selecciona el producte",
+      "unavailable": "No disponible"
+    }
+  },
+  "legal": {
+    "failed_get_regulations": "No s'han pogut obtenir les regulacions.",
+    "LegalScreen": {
+      "title": "Informació legal",
+      "policy_label": "Política de privacitat",
+      "terms_label": "Condicions d'ús",
+      "gdpr_label": "Política de privacitat GDPR"
+    }
+  },
+  "logger": {
+    "SessionScreen": {
+      "no_space_line_1": "No hi ha prou memòria a l'aparell.",
+      "no_space_line_2": "Si us plau, allibera espai i torna-ho a provar.",
+      "ok": "D'acord",
+      "title": "Llista de sessions",
+      "unknown_error": "Error desconegut."
+    }
+  },
+  "profile": {
+    "EditProfileScreen": {
+      "edit_password": "Canviar contrasenya",
+      "first_name_label": "Nom",
+      "last_name_label": "Cognom",
+      "save_button_text": "Desar",
+      "success_toast": "El teu nom s'ha actualitzat correctament",
+      "title": "Editar perfil"
+    },
+    "ProfilePage": {
+      "create_support_chat": "Escriure al xat de suport",
+      "failed_create_support_chat": "No s'ha pogut crear el xat de suport",
+      "failed_loading_profile": "No s'ha pogut carregar la informació de l'usuari",
+      "plan": {
+        "buy_credits": "Comprar crèdits",
+        "credits_count": {
+          "one": "{n} crèdit",
+          "few": "{n} crèdits",
+          "other": "{n} crèdits"
+        },
+        "plan_name": "Pla: {planName:String}",
+        "upgrade": "Millorar pla"
+      }
+    },
+    "SafetyScreen": {
+      "delete_account_error": {
+        "requires_recent_login": "Per eliminar el compte cal tornar a iniciar sessió a l'aplicació"
+      },
+      "delete_account_label": "Eliminar compte",
+      "delete_confirm": {
+        "description": "Estàs segur que vols eliminar el compte?",
+        "title": "Eliminar compte"
+      },
+      "edit_password": "Modificar contrasenya",
+      "title": "Seguretat"
+    },
+    "delete_account_label": "Eliminar compte",
+    "edit_avatar_title": "Editar avatar",
+    "edit_profile_label": "Editar perfil",
+    "failed_update_avatar": "No s'ha pogut actualitzar l'avatar",
+    "failed_upload_avatar": "No s'ha pogut carregar l'avatar",
+    "feedback_label": "Comentaris",
+    "language_label": "Idioma",
+    "legal_label": "Informació legal",
+    "logout_label": "Tancar sessió",
+    "safety_label": "Seguretat",
+    "select_language_title": "Seleccionar idioma",
+    "theme": {
+      "title": "Tema",
+      "light": "Clar",
+      "dark": "Fosc",
+      "system": "Sistema"
+    },
+    "to_favorites_adverts_label": "Anuncis favorits",
+    "to_my_adverts_label": "Els meus anuncis",
+    "version": "Versió {version}"
+  },
+  "report": {
+    "ReportSheet": {
+      "description_label": "Descripció",
+      "reasons": {
+        "abuse": "Insults o incitació a l'odi",
+        "inappropriate": "Comportament inadequat",
+        "other": "Altres",
+        "spam": "Spam"
+      },
+      "submit": "Enviar",
+      "success": "Queixa enviada",
+      "title": "Informar d'una infracció"
+    }
+  },
+  "users": {
+    "user_select_screen": {
+      "empty": "Encara no hi ha usuaris",
+      "failure": "Error en carregar els usuaris"
+    }
+  }
+}

@@ -2,7 +2,7 @@
 import '../../../../../features/in_app/domain/entities/entities.dart';
 
 abstract interface class IUserSubscriptionRepository {
-  Stream<dynamic> get subscriptionChangesStream;
+  Stream<UserSubscriptionInfo> get subscriptionChangesStream;
 
   Future<DomainResultDErr<UserSubscriptionInfo>> getSubscription();
 }

@@ -1,0 +1,380 @@
+{
+  "auth": {
+    "SignInScreen": {
+      "email_label": "E-posta",
+      "password_label": "Şifre",
+      "forgot_password": "Şifremi unuttum?",
+      "sign_in": "Giriş yap",
+      "sign_up": "Kayıt ol",
+      "sign_in_with_google": "Google ile giriş yap",
+      "sign_in_with_apple": "Apple ile giriş yap",
+      "login_error": {
+        "invalid_credentials": "Geçersiz kimlik bilgileri",
+        "email_not_confirmed": "E-posta onaylanmadı"
+      },
+      "OAuthAcceptRegulationsSheet": {
+        "title": "Devam etmek için kayıt olun",
+        "regulations(rich)": "Lütfen {terms(Kullanım şartları)} ve {policy(Gizlilik politikası)}'nı kabul edin",
+        "accept": "Kabul et",
+        "cancel": "İptal",
+        "failed_get_regulations": "Kurallar alınamadı."
+      }
+    },
+    "SignUpScreen": {
+      "title": "Kayıt ol",
+      "first_name_label": "Ad",
+      "last_name_label": "Soyad",
+      "email_label": "E-posta",
+      "password_label": "Şifre",
+      "repeat_password": "Şifreyi tekrar girin",
+      "sign_up": "Kayıt ol",
+      "password_not_equal": "Şifreler eşleşmiyor",
+      "regulations(rich)": "{terms(Terms of Service)} ve {policy(Privacy Policy)}'ye katılıyorum.",
+      "after_registration_toast": "✔️ Onay e-postası gönderildi! Lütfen e-postanızı kontrol edin ve adresinizi onaylayın.",
+      "register_error": {
+        "incorrect_email": "Geçersiz e-posta",
+        "incorrect_name": "Geçersiz ad",
+        "incorrect_password": "Şifre en az 8 karakter olmalı ve büyük harf, küçük harf ve rakam içermelidir",
+        "email_already_used": "E-posta adresi zaten kullanılıyor",
+        "create_error": "Kullanıcı oluşturulurken hata",
+        "emailRateLimitExceeded": "E-posta gönderim limiti aşıldı"
+      }
+    },
+    "reset_password": {
+      "CodeScreen": {
+        "title": "Şifreyi sıfırlama",
+        "description": "E-posta adresinize {email:String} sıfırlama kodu gönderildi",
+        "submit": "Devam",
+        "field_label": "Sıfırlama kodu",
+        "field_error": "Geçersiz kod",
+        "check_error_description": "Sıfırlama kodu kontrol edilemedi"
+      },
+      "ForgotPasswordScreen": {
+        "title": "Şifreyi sıfırlama",
+        "email_label": "E-posta",
+        "send_reset_link": "Bağlantıyı gönder",
+        "check_error_description": "Şifre sıfırlama kodu gönderilemedi"
+      },
+      "NewPasswordScreen": {
+        "title": "Yeni şifre",
+        "reset_submit": "Giriş yap",
+        "edit_submit": "Değiştir",
+        "current_password": "Mevcut şifre",
+        "new_password": "Yeni şifre",
+        "repeat_new_password": "Yeni şifreyi tekrar girin",
+        "password_label": "Şifre",
+        "repeat_password": "Şifreyi tekrar girin",
+        "failed_change_password": "Şifre değiştirilemedi",
+        "failed_reset_password": "Şifre sıfırlanamadı",
+        "errors": {
+          "wrong_current_password": "Mevcut şifre yanlış",
+          "same_password": "Yeni şifre mevcut şifre ile aynı olmamalıdır"
+        }
+      }
+    }
+  },
+  "chats": {
+    "ChatPage": {
+      "SlangChatL10n": {
+        "and": "ve",
+        "attachmentButtonAccessibilityLabel": "Medya gönder",
+        "emptyChatPlaceholder": "Henüz mesajınız yok",
+        "fileButtonAccessibilityLabel": "Dosya",
+        "inputPlaceholder": "Mesaj",
+        "isTyping": "yazıyor…",
+        "others": "diğerleri",
+        "sendButtonAccessibilityLabel": "Gönder",
+        "unreadMessagesLabel": "Okunmamış mesajlar"
+      },
+      "advert_chat": "İlan sohbeti",
+      "attachment_type_file": "Dosya",
+      "attachment_type_image": "Resim",
+      "failure": "Sohbet yüklenirken hata",
+      "no_messages_yet": "Henüz mesaj yok",
+      "return_translation": "Çeviriyi geri getir",
+      "show_original": "Orijinali göster",
+      "tts_play_failed": "Oynatma başarısız: {error:String}",
+      "tts_play_original": "Orijinali seslendir",
+      "tts_play_translation": "Çeviriyi seslendir"
+    },
+    "ChatsPage": {
+      "ChatCard": {
+        "favorites_chat_name": "Favoriler",
+        "support_chat_name": "Destek"
+      },
+      "NoItemsStub": {
+        "description": "Henüz sohbetiniz yok",
+        "title": "Henüz sohbet yok"
+      },
+      "create_direct_chat": "Kullanıcı ile sohbet oluştur",
+      "create_group_chat": "Grup sohbeti oluştur",
+      "delete_action": "Sil",
+      "empty": "Henüz sohbet yok",
+      "failure": "Sohbetler yüklenirken hata",
+      "title": "Sohbetler"
+    },
+    "CreateDirectChatPage": {
+      "failure_create_chat": "Sohbet oluşturulamadı",
+      "title": "Sohbet oluştur"
+    },
+    "CreateLocalChatPage": {
+      "languages_section": "Diller",
+      "my_language_label": "Diliniz",
+      "partner_language_label": "Karşı tarafın dili",
+      "show_both_subtitle": "Kontrol kolaylığı için her iki metni göster",
+      "show_both_title": "Orijinal ve çeviriyi göster",
+      "start_button": "Yerel sohbeti başlat",
+      "swap_languages": "Dilleri değiştir",
+      "tips_item_1": "• Siz ve karşı taraf sırayla tek bir cihazda konuşuyorsunuz.",
+      "tips_item_2": "• Mesajlar otomatik olarak çevriliyor, orijinal ve çeviriyi gösterebilirsiniz.",
+      "tips_item_3": "• Çeviri sesli okunması için TTS'yi açın.",
+      "tips_title": "Yerel sohbet nasıl çalışır",
+      "title": "Yeni yerel sohbet",
+      "title_hint": "Örneğin: Daire sahibine sohbet",
+      "title_label": "Başlık (isteğe bağlı)",
+      "translation_section": "Çeviri ve gösterim",
+      "tts_subtitle": "Gösterim sırasında çeviriyi sesli oku",
+      "tts_title": "Çeviriyi seslendir (TTS)"
+    },
+    "RecordHoldButton": {
+      "hold_to_record": "Kaydetmek için basılı tutun",
+      "semantics_label": "{label:String}: kaydetmek için basılı tut"
+    },
+    "SelectChatTypePage": {
+      "continue_button": "Devam et",
+      "details": {
+        "direct": {
+          "can_do": "Gelen ve giden otomatik çeviri, sesli mesajlar, ekler.",
+          "for_whom": "Farklı dillerde tek bir kişiyle iletişim için.",
+          "scenarios": "İş yazışmaları, kişisel konuşmalar, müşteri desteği."
+        },
+        "group": {
+          "can_do": "Tüm katılımcılar için otomatik çeviri, roller ve haklar, sabitler ve tepkiler.",
+          "for_whom": "Farklı ülkelerden katılımcıları olan ekipler, aileler ve topluluklar için.",
+          "scenarios": "Proje sohbetleri, topluluklar, organizasyonel yazışmalar."
+        },
+        "local": {
+          "can_do": "Siz sırayla tek bir telefonda mesaj bırakıyorsunuz — hemen karşı tarafa çevriliyor.",
+          "for_whom": "Turistler ve tek bir cihazda çevrimdışı görüşmeler için.",
+          "scenarios": "Taksiciyle/ev sahibiyle iletişim, yemek siparişi, navigasyona yardım."
+        },
+        "learning": {
+          "can_do": "Kelimeleri ve ifadeleri kaydedin, farklı anlamları ve örnekleri görün, okuma/dikte modlarında pratik yapın.",
+          "for_whom": "Tek bir cihazda dil öğrenimi için — 'yerel sohbet' gibi, ancak pratik odaklı.",
+          "scenarios": "Seyahat sırasında kendi kendine öğrenme, toplantıya hazırlık, yazışmaları çözümleme, kişisel sözlük."
+        }
+      },
+      "labels": {
+        "can_do": "Ne yapılabilir",
+        "for_whom": "Kimin için",
+        "scenarios": "Senaryolar"
+      },
+      "soon_tag": "Yakında",
+      "title": "Sohbet oluştur",
+      "types": {
+        "direct": "Direkt (1-1)",
+        "group": "Grup",
+        "learning": "Öğrenme",
+        "local": "Yerel sohbet"
+      }
+    }
+  },
+  "core": {
+    "DialogPresenter": {
+      "permission_text_location": "Konum",
+      "permission_denied": {
+        "location": "adres seçimi için konum almak",
+        "title": "{permission:String} erişimi",
+        "description": "Bu özelliği kullanmak için {permission:String} erişimine ihtiyacınız var. Bunu cihaz ayarlarınızdan açabilirsiniz.",
+        "settings": "Ayarlar",
+        "later": "Sonra"
+      }
+    },
+    "dialog_action": {
+      "ok": "Tamam",
+      "login": "Giriş yap",
+      "retry": "Tekrar dene",
+      "upgrade": "Güncelle",
+      "back": "Geri",
+      "yes": "Evet",
+      "no": "Hayır",
+      "cancel": "İptal"
+    },
+    "dialog_msg": {
+      "retry_or_contact_support": "Lütfen tekrar deneyin veya destek için: support@verto.chat adresine başvurun",
+      "server_error": "Sunucuda bir hata oluştu. {retryOrContactSupport}",
+      "default_error": "Bir hata oluştu. {retryOrContactSupport}",
+      "connection_error": "Lütfen internet bağlantınızı kontrol edin ve tekrar deneyin",
+      "authorization_required": "Yetkilendirme bilgileri güncel değil. Yeniden giriş yapmanız gerekiyor",
+      "upgrade_required": "Uygulamanın düzgün çalışması için yeni sürümü yükleyin",
+      "insufficient_access_rights": "Eylem mevcut değil. Erişim haklarınız kısıtlı"
+    },
+    "dialog_title": {
+      "error_title": "Hata",
+      "connection_error": "Bağlantı yok",
+      "server_error": "Sunucu hatası",
+      "not_authorized": "Yetkilendirilmemiş",
+      "upgrade_required": "Sürüm güncel değil",
+      "insufficient_accessRights": "Yetersiz erişim hakları"
+    },
+    "field_empty": "Alan boş olamaz",
+    "incorrect_format": "Geçersiz format",
+    "photos": {
+      "GalleryScreen": {
+        "title": "Galeri"
+      }
+    },
+    "upload": {
+      "select_photo": {
+        "select_source_photo": {
+          "title": "Görüntü seç",
+          "from": {
+            "camera": "Kamera",
+            "gallery": "Galeriden"
+          }
+        }
+      },
+      "AddPhotoButton": {
+        "add_photo": "Fotoğraf ekle"
+      }
+    },
+    "widgets": {
+      "LastPageErrorMessageView": {
+        "something_wrong_try_again": "Bir şeyler yanlış gitti, tekrar deneyin:"
+      },
+      "TryAgainButton": {
+        "something_wrong": "Bir şeyler yanlış gitti",
+        "try_again": "Tekrar dene"
+      },
+      "AttachDocuments": {
+        "title": "Belgeleri ekle"
+      }
+    }
+  },
+  "feedback": {
+    "feedback_page": {
+      "title": "Geri bildirim",
+      "type_label": "Başvuru türü",
+      "description_label": "Açıklama",
+      "description_hint": "Sorununuzu veya fikrinizi daha ayrıntılı açıklayın",
+      "description_error": "Lütfen başvuru metnini yazın",
+      "submit": "Gönder",
+      "success": "Başvuru gönderildi",
+      "failed_send_feedback": "Geri bildirim gönderilemedi",
+      "types": {
+        "bug": "Hata bildir",
+        "feature": "Özellik öner",
+        "category": "Yeni ilan kategorisi öner",
+        "question": "Soru sor",
+        "general": "Genel yorumlar ve öneriler"
+      }
+    }
+  },
+  "home": {
+    "main_label": "Ana Sayfa",
+    "chats_label": "Sohbetler",
+    "profile_label": "Profil"
+  },
+  "in_app": {
+    "BuyProductsScreen": {
+      "buy_button": "Satın al",
+      "title": "Ürünü seçin",
+      "unavailable": "Mevcut değil"
+    }
+  },
+  "legal": {
+    "failed_get_regulations": "Regülasyonlar alınamadı.",
+    "LegalScreen": {
+      "title": "Hukuki Bilgiler",
+      "policy_label": "Gizlilik Politikası",
+      "terms_label": "Kullanım Şartları",
+      "gdpr_label": "GDPR Gizlilik Politikası"
+    }
+  },
+  "logger": {
+    "SessionScreen": {
+      "no_space_line_1": "Cihazda yeterli alan yok.",
+      "no_space_line_2": "Lütfen alan açın ve tekrar deneyin.",
+      "ok": "Tamam",
+      "title": "Oturum Listesi",
+      "unknown_error": "Bilinmeyen hata."
+    }
+  },
+  "profile": {
+    "EditProfileScreen": {
+      "edit_password": "Şifreyi değiştir",
+      "first_name_label": "Ad",
+      "last_name_label": "Soyad",
+      "save_button_text": "Kaydet",
+      "success_toast": "Adınız başarıyla güncellendi",
+      "title": "Profili Düzenle"
+    },
+    "ProfilePage": {
+      "create_support_chat": "Destek sohbeti başlat",
+      "failed_create_support_chat": "Destek sohbeti oluşturulamadı",
+      "failed_loading_profile": "Kullanıcı bilgileri yüklenemedi",
+      "plan": {
+        "buy_credits": "Kredi satın al",
+        "credits_count": {
+          "one": "{n} kredi",
+          "few": "{n} kredisi",
+          "other": "{n} kredi"
+        },
+        "plan_name": "Plan: {planName:String}",
+        "upgrade": "Planı yükselt"
+      }
+    },
+    "SafetyScreen": {
+      "delete_account_error": {
+        "requires_recent_login": "Hesabı silmek için uygulamaya yeniden giriş yapmanız gerekiyor"
+      },
+      "delete_account_label": "Hesabı sil",
+      "delete_confirm": {
+        "description": "Hesabı silmek istediğinize emin misiniz?",
+        "title": "Hesap silme"
+      },
+      "edit_password": "Şifreyi değiştir",
+      "title": "Güvenlik"
+    },
+    "delete_account_label": "Hesabı sil",
+    "edit_avatar_title": "Avatarı düzenle",
+    "edit_profile_label": "Profili düzenle",
+    "failed_update_avatar": "Avatar güncellenemedi",
+    "failed_upload_avatar": "Avatar yüklenemedi",
+    "feedback_label": "Geri bildirim",
+    "language_label": "Dil",
+    "legal_label": "Hukuki Bilgiler",
+    "logout_label": "Hesaptan çık",
+    "safety_label": "Güvenlik",
+    "select_language_title": "Dili seç",
+    "theme": {
+      "title": "Tema",
+      "light": "Aydınlık",
+      "dark": "Karanlık",
+      "system": "Sistem"
+    },
+    "to_favorites_adverts_label": "Favori ilanlar",
+    "to_my_adverts_label": "Benim ilanlarım",
+    "version": "Sürüm {version}"
+  },
+  "report": {
+    "ReportSheet": {
+      "description_label": "Açıklama",
+      "reasons": {
+        "abuse": "Hakaret veya nefret söylemi",
+        "inappropriate": "Uygunsuz davranış",
+        "other": "Diğer",
+        "spam": "Spam"
+      },
+      "submit": "Gönder",
+      "success": "Şikayet gönderildi",
+      "title": "İhlali bildirin"
+    }
+  },
+  "users": {
+    "user_select_screen": {
+      "empty": "Henüz kullanıcı yok",
+      "failure": "Kullanıcılar yüklenirken hata"
+    }
+  }
+}

@@ -8,9 +8,17 @@ import '../../domain/domain.dart';
 
 part 'subscription_bloc.freezed.dart';
 
-part 'subscription_event.dart';
+@freezed
+class SubscriptionEvent with _$SubscriptionEvent {
+  const factory SubscriptionEvent.fetchSubscription() = _FetchSubscription;
 
-part 'subscription_state.dart';
+  const factory SubscriptionEvent.updateSubscription(UserSubscriptionInfo info) = _UpdateSubscription;
+}
+
+@freezed
+sealed class SubscriptionState with _$SubscriptionState {
+  const factory SubscriptionState({required UserSubscriptionInfo subscription}) = _SubscriptionState;
+}
 
 class SubscriptionBloc extends Bloc<SubscriptionEvent, SubscriptionState> {
   final IUserSubscriptionRepository _subscriptionRepository;
@@ -22,30 +30,33 @@ class SubscriptionBloc extends Bloc<SubscriptionEvent, SubscriptionState> {
     : super(
         const SubscriptionState(
           subscription: UserSubscriptionInfo(
-            subscriptionName: "Ovdix Free",
-            activeAdvertsCount: 0,
-            advertLimit: 5,
-            showAd: true,
+            creditsBalance: 0,
             recommendUpgrade: true,
-            subscriptionPromoteLimit: null,
-            singlePromotionLimit: 0,
-            isFree: true,
+            plan: UserPlanInfo(
+              code: 'free',
+              name: 'Free',
+              isFree: true,
+              showAd: true,
+              monthlyCreditsGrant: 200,
+              asrSecondsPerClipLimit: 30,
+            ),
           ),
         ),
       ) {
     on<_FetchSubscription>(_onFetchSubscription);
+    on<_UpdateSubscription>((event, emit) {
+      emit(state.copyWith(subscription: event.info));
+    });
 
     _subscriptionChangesSubscription = _subscriptionRepository.subscriptionChangesStream.listen(
-      (_) {
+      (info) {
         _logger.log(LogLevel.info, "Subscription changes received");
-        add(const SubscriptionEvent.fetchSubscription());
+        add(SubscriptionEvent.updateSubscription(info));
       },
       onError: (dynamic error) {
         _logger.log(LogLevel.error, "Failed to get subscription changes", exception: error);
       },
     );
-
-    add(const SubscriptionEvent.fetchSubscription());
   }
 
   @override

@@ -12,7 +12,6 @@ import '../../../../core/core.dart';
 import '../../../../i18n/translations.g.dart';
 import '../../../../router/app_router.dart';
 import '../../../auth/auth.dart';
-import '../../../chats/chats.dart';
 
 part 'profile_bloc.freezed.dart';
 part 'profile_event.dart';
@@ -21,14 +20,12 @@ part 'profile_state.dart';
 class ProfileBloc extends ContextBloc<ProfileEvent, ProfileState> {
   final IAuthRepository _authRepository;
   final IUserRepository _userRepository;
-  final IChatsRepository _chatsRepository;
   final IUploadRepository _uploadRepository;
 
   ProfileBloc(
     this._userRepository,
     this._authRepository,
     this._uploadRepository,
-    this._chatsRepository,
     VersionProvider versionProvider,
     BuildContext context,
   ) : super(_createInitialState(versionProvider), context) {
@@ -37,7 +34,6 @@ class ProfileBloc extends ContextBloc<ProfileEvent, ProfileState> {
     on<_EditProfile>(_onEditProfile);
     on<_UploadAvatar>(_onUploadAvatar);
     on<_Logout>(_onLogout);
-    on<_CreateSupportChat>(_onCreateSupportChat);
     on<_FreshLoad>(_onFreshLoad);
 
     add(const ProfileEvent.started());
@@ -90,21 +86,6 @@ class ProfileBloc extends ContextBloc<ProfileEvent, ProfileState> {
     await _authRepository.logOut();
   }
 
-  Future<void> _onCreateSupportChat(_CreateSupportChat event, Emitter<ProfileState> emit) async {
-    emit(state.copyWith(isLoading: true));
-
-    final result = await _chatsRepository.createSupportChat();
-
-    emit(state.copyWith(isLoading: false));
-
-    switch (result) {
-      case Success():
-        router?.push(ChatRoute(chatId: result.data.id, name: appTexts.chats.chats_page.chat_card.support_chat_name));
-      case Error():
-        showError(result.errorData, customMessage: appTexts.profile.profile_page.failed_create_support_chat);
-    }
-  }
-
   Future<void> _onUploadAvatar(_UploadAvatar event, Emitter<ProfileState> emit) async {
     final images = await pickImages(context);
 
@@ -128,7 +109,7 @@ class ProfileBloc extends ContextBloc<ProfileEvent, ProfileState> {
           lockAspectRatio: true,
           aspectRatioPresets: [CropAspectRatioPreset.square],
           cropStyle: CropStyle.circle,
-          statusBarColor: Colors.transparent,
+          statusBarLight: true,
           hideBottomControls: true,
           showCropGrid: false,
         ),

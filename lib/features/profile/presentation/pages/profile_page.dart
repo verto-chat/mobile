@@ -1,8 +1,6 @@
 import 'dart:async';
-import 'dart:ui';
 
 import 'package:auto_route/auto_route.dart';
-import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -12,7 +10,6 @@ import '../../../../i18n/translations.g.dart';
 import '../../../../router/app_router.dart';
 import '../../../features.dart';
 import '../manager/profile_bloc.dart';
-import '../widgets/widgets.dart';
 import 'select_language_sheet.dart';
 import 'select_theme_sheet.dart';
 
@@ -24,10 +21,7 @@ class ProfilePage extends StatelessWidget {
   Widget build(BuildContext context) {
     final loc = context.appTexts.profile;
 
-    final avatarRadius = 80.0;
-
     final topPadding = MediaQuery.of(context).padding.top;
-    final headerHeight = avatarRadius * 2 + 32 + topPadding;
 
     return MultiBlocProvider(
       providers: [
@@ -46,102 +40,52 @@ class ProfilePage extends StatelessWidget {
                 context.read<ProfileBloc>().add(ProfileEvent.load(completer: completer));
                 return completer.future;
               },
-              child: CustomScrollView(
+              child: ListView(
                 physics: const BouncingScrollPhysics(),
-                slivers: [
-                  SliverAppBar(
-                    expandedHeight: headerHeight,
-                    stretch: true,
-                    pinned: true,
-                    flexibleSpace: FlexibleSpaceBar(
-                      title: _Username(state.userInfo),
-                      titlePadding: EdgeInsets.only(top: topPadding),
-                      centerTitle: true,
-                      collapseMode: CollapseMode.pin,
-                      stretchModes: const [StretchMode.zoomBackground],
-                      expandedTitleScale: 1,
-                      background: Stack(
-                        fit: StackFit.expand,
-                        children: [
-                          SizedBox(
-                            height: headerHeight,
-                            width: double.infinity,
-                            child: state.isShimmerLoading
-                                ? const ShimmerContainer()
-                                : RepaintBoundary(
-                                    child: ClipRect(
-                                      child: ImageFiltered(
-                                        imageFilter: ImageFilter.blur(sigmaX: 15.0, sigmaY: 15.0),
-                                        child: state.userInfo.thumbnail?.isNotEmpty ?? false
-                                            ? CachedNetworkImage(imageUrl: state.userInfo.thumbnail!, fit: BoxFit.cover)
-                                            : Container(color: getUserAvatarNameColor(state.userInfo.id)),
-                                      ),
-                                    ),
-                                  ),
-                          ),
-                          Container(color: Theme.of(context).colorScheme.surface.withValues(alpha: 0.2)),
-                          _Header(state.userInfo, state.isShimmerLoading, avatarRadius),
-                        ],
-                      ),
-                    ),
+                shrinkWrap: true,
+                padding: EdgeInsets.zero,
+                children: [
+                  _HeaderAll(state: state),
+
+                  ListTile(
+                    onTap: () => context.read<ProfileBloc>().add(const ProfileEvent.editProfile()),
+                    title: Text(loc.edit_profile_label),
+                    leading: const Icon(Icons.edit),
                   ),
-                  SliverToBoxAdapter(
-                    child: Padding(
-                      padding: const EdgeInsets.all(24.0).copyWith(top: 0),
-                      child: ListView(
-                        shrinkWrap: true,
-                        physics: const NeverScrollableScrollPhysics(),
-                        padding: EdgeInsets.zero,
-                        children: [
-                          const _SubscriptionInfo(),
-                          const Divider(),
-                          CommonSettingsTitle(
-                            onTap: () => context.read<ProfileBloc>().add(const ProfileEvent.editProfile()),
-                            title: loc.edit_profile_label,
-                            icon: Icons.edit,
-                          ),
-                          const Divider(),
-                          CommonSettingsTitle(
-                            onTap: () => context.router.push(const SafetyRoute()),
-                            title: loc.safety_label,
-                            icon: Icons.shield,
-                          ),
-                          const Divider(),
-                          const _LanguageSettingsTile(),
-                          const Divider(),
-                          const _ThemeSettingsTile(),
-                          const Divider(),
-                          CommonSettingsTitle(
-                            onTap: () => context.read<ProfileBloc>().add(const ProfileEvent.createSupportChat()),
-                            title: loc.profile_page.create_support_chat,
-                            icon: Icons.contact_support,
-                          ),
-                          const Divider(),
-                          CommonSettingsTitle(
-                            onTap: () => context.router.push(FeedbackRoute()),
-                            title: loc.feedback_label,
-                            icon: Icons.feedback,
-                          ),
-                          const Divider(),
-                          CommonSettingsTitle(
-                            onTap: () => context.router.push(const LegalRoute()),
-                            title: loc.legal_label,
-                            icon: Icons.policy,
-                          ),
-                          const Divider(),
-                          CommonSettingsTitle(
-                            onTap: () => context.read<ProfileBloc>().add(const ProfileEvent.logout()),
-                            title: loc.logout_label,
-                            icon: Icons.logout,
-                          ),
-                          const Divider(),
-                          SmartAdInlineBanner(adUnitId: context.read<IAdMobId>().profileBannerId),
-                          const SizedBox(height: 48),
-                          Center(child: ServiceButton(version: state.version)),
-                        ],
-                      ),
-                    ),
+
+                  ListTile(
+                    onTap: () => context.router.push(const SafetyRoute()),
+                    title: Text(loc.safety_label),
+                    leading: const Icon(Icons.shield),
                   ),
+
+                  const _LanguageSettingsTile(),
+
+                  const _ThemeSettingsTile(),
+
+                  ListTile(
+                    onTap: () => context.router.push(FeedbackRoute()),
+                    title: Text(loc.feedback_label),
+                    leading: const Icon(Icons.feedback),
+                  ),
+
+                  ListTile(
+                    onTap: () => context.router.push(const LegalRoute()),
+                    title: Text(loc.legal_label),
+                    leading: const Icon(Icons.policy),
+                  ),
+
+                  ListTile(
+                    onTap: () => context.read<ProfileBloc>().add(const ProfileEvent.logout()),
+                    title: Text(loc.logout_label),
+                    leading: const Icon(Icons.logout),
+                  ),
+
+                  SmartAdInlineBanner(adUnitId: context.read<IAdMobId>().profileBannerId),
+                  const SizedBox(height: 48),
+                  Center(child: ServiceButton(version: state.version)),
+
+                  SizedBox(height: MediaQuery.of(context).padding.bottom),
                 ],
               ),
             ),
@@ -152,102 +96,79 @@ class ProfilePage extends StatelessWidget {
   }
 }
 
-class _Username extends StatelessWidget {
-  const _Username(this.userInfo);
+class _HeaderAll extends StatelessWidget {
+  const _HeaderAll({required this.state});
 
-  final UserInfo userInfo;
+  final ProfileState state;
 
   @override
   Widget build(BuildContext context) {
+    final loc = context.appTexts.profile.profile_page.plan;
+
+    final userInfo = state.userInfo;
+
     final displayName = userInfo.lastName?.isNotEmpty ?? false
         ? '${userInfo.firstName} ${userInfo.lastName!.substring(0, 1).toUpperCase()}.'
         : userInfo.firstName;
 
-    return Align(
-      alignment: Alignment.topCenter,
-      child: Text(displayName, style: Theme.of(context).textTheme.headlineLarge!.copyWith(fontWeight: FontWeight.w600)),
-    );
-  }
-}
+    return DrawerHeader(
+      child: Row(
+        spacing: 12,
+        children: [
+          Column(
+            spacing: 8,
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              UserAvatar(radius: 40, user: userInfo, isShimmerLoading: state.isShimmerLoading),
 
-class _Header extends StatelessWidget {
-  const _Header(this.userInfo, this.isShimmerLoading, this.avatarRadius);
-
-  final UserInfo userInfo;
-  final bool isShimmerLoading;
-  final double avatarRadius;
-
-  @override
-  Widget build(BuildContext context) {
-    return Stack(
-      fit: StackFit.expand,
-      children: [
-        Align(
-          alignment: Alignment.bottomCenter,
-          child: Container(height: avatarRadius, color: Theme.of(context).colorScheme.surface),
-        ),
-        Align(
-          alignment: Alignment.bottomCenter,
-          child: EditBorderedAvatar(
-            avatarRadius: avatarRadius,
-            userInfo: userInfo,
-            isShimmerLoading: isShimmerLoading,
-            onEditTap: () => context.read<ProfileBloc>().add(const ProfileEvent.uploadAvatar()),
+              Text(displayName, style: Theme.of(context).textTheme.titleMedium!.copyWith(fontWeight: FontWeight.w600)),
+            ],
           ),
-        ),
-      ],
-    );
-  }
-}
 
-class _SubscriptionInfo extends StatelessWidget {
-  const _SubscriptionInfo();
+          Expanded(
+            child: BlocBuilder<SubscriptionBloc, SubscriptionState>(
+              builder: (context, state) {
+                final sub = state.subscription;
 
-  @override
-  Widget build(BuildContext context) {
-    final loc = context.appTexts.profile.profile_page.subscription;
-
-    return Center(
-      child: Padding(
-        padding: const EdgeInsets.all(6.0),
-        child: BlocBuilder<SubscriptionBloc, SubscriptionState>(
-          builder: (context, state) {
-            final sub = state.subscription;
-
-            return Column(
-              spacing: 8,
-              mainAxisSize: MainAxisSize.min,
-              children: [
-                Text(
-                  loc.subscription_name(subscriptionName: sub.subscriptionName),
-                  style: Theme.of(
-                    context,
-                  ).textTheme.titleLarge!.copyWith(color: Theme.of(context).colorScheme.tertiary),
-                ),
-                Text(
-                  loc.promotions_count(n: sub.singlePromotionLimit) +
-                      (sub.subscriptionPromoteLimit != null
-                          ? " + ${loc.sub_promotion_limit(count: sub.subscriptionPromoteLimit!)}"
-                          : ""),
-                  style: Theme.of(
-                    context,
-                  ).textTheme.titleMedium!.copyWith(color: Theme.of(context).colorScheme.secondary),
-                ),
-                if (sub.recommendUpgrade)
-                  FilledButton.icon(
-                    onPressed: () => context.router.push(const SupposeSubscriptionRoute()),
-                    label: Text(loc.upgrade),
-                    icon: const Icon(Icons.upgrade),
-                  ),
-                FilledButton.tonalIcon(
-                  onPressed: () => context.router.push(const BuyProductsRoute()),
-                  icon: const Icon(Icons.add),
-                  label: Text(loc.buy_promotion),
-                ),
-              ],
-            );
-          },
-        ),
+                return Column(
+                  spacing: 8,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    Text(
+                      loc.plan_name(planName: sub.plan.name),
+                      style: Theme.of(
+                        context,
+                      ).textTheme.titleSmall!.copyWith(color: Theme.of(context).colorScheme.tertiary),
+                    ),
+                    // if (sub.recommendUpgrade)
+                    //   TextButton.icon(
+                    //     onPressed: () => context.router.push(const SupposeSubscriptionRoute()),
+                    //     label: Text(loc.upgrade),
+                    //     icon: const Icon(Icons.upgrade),
+                    //   ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text(
+                          loc.credits_count(n: sub.creditsBalance),
+                          style: Theme.of(
+                            context,
+                          ).textTheme.titleSmall!.copyWith(color: Theme.of(context).colorScheme.secondary),
+                        ),
+                        IconButton.filled(
+                          onPressed: () => context.router.push(const BuyProductsRoute()),
+                          icon: const Icon(Icons.add),
+                        ),
+                      ],
+                    ),
+                  ],
+                );
+              },
+            ),
+          ),
+        ],
       ),
     );
   }
@@ -260,11 +181,11 @@ class _LanguageSettingsTile extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocBuilder<LangBloc, LangState>(
       builder: (context, state) {
-        return CommonSettingsTitle(
+        return ListTile(
           onTap: () => _showLanguageSelectionDialog(context),
-          title: context.appTexts.profile.language_label,
-          icon: Icons.language,
-          value: getLocaleName(state.selectedLocale),
+          title: Text(context.appTexts.profile.language_label),
+          leading: const Icon(Icons.language),
+          trailing: Text(getLocaleName(state.selectedLocale)),
         );
       },
     );
@@ -295,11 +216,11 @@ class _ThemeSettingsTile extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocBuilder<AppBloc, AppState>(
       builder: (context, state) {
-        return CommonSettingsTitle(
+        return ListTile(
           onTap: () => _showThemeModeSelectionDialog(context),
-          title: context.appTexts.profile.theme.title,
-          icon: Icons.color_lens,
-          value: getThemeModeName(state.themeMode, context),
+          title: Text(context.appTexts.profile.theme.title),
+          leading: const Icon(Icons.color_lens),
+          trailing: Text(getThemeModeName(state.themeMode, context)),
         );
       },
     );

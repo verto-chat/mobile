@@ -22,7 +22,7 @@ class PreReleaseEndpoints implements IEndpoints {
   String get id => 'pre-release';
 
   @override
-  String get baseUrl => "http://10.0.2.2:5041";
+  String get baseUrl => "http://10.0.2.2:5042";
 }
 
 class ProductionEndpoints implements IEndpoints {
@@ -39,5 +39,5 @@ class ProductionEndpoints implements IEndpoints {
   String get id => 'production';
 
   @override
-  String get baseUrl => "https://backend.ovdix.com";
+  String get baseUrl => "https://verto-chat-ekaadnatandjb7h7.germanywestcentral-01.azurewebsites.net";
 }

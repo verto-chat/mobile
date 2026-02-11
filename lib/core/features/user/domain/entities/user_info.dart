@@ -13,7 +13,6 @@ sealed class UserInfo with _$UserInfo {
     required String? email,
     required String? avatarUrl,
     required String? thumbnailAvatarUrl,
-    required DomainId? lastAddressId,
   }) = _UserInfo;
 
   factory UserInfo.empty() {
@@ -24,7 +23,6 @@ sealed class UserInfo with _$UserInfo {
       email: null,
       avatarUrl: null,
       thumbnailAvatarUrl: null,
-      lastAddressId: null,
     );
   }
 }

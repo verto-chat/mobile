@@ -1,0 +1,380 @@
+{
+  "auth": {
+    "SignInScreen": {
+      "email_label": "电子邮件",
+      "password_label": "密码",
+      "forgot_password": "忘记密码？",
+      "sign_in": "登录",
+      "sign_up": "注册",
+      "sign_in_with_google": "通过 Google 登录",
+      "sign_in_with_apple": "通过 Apple 登录",
+      "login_error": {
+        "invalid_credentials": "凭据无效",
+        "email_not_confirmed": "电子邮件未确认"
+      },
+      "OAuthAcceptRegulationsSheet": {
+        "title": "要继续，请注册",
+        "regulations(rich)": "请接受 {terms(服务条款)} 和 {policy(隐私政策)}",
+        "accept": "接受",
+        "cancel": "取消",
+        "failed_get_regulations": "无法获取规则。"
+      }
+    },
+    "SignUpScreen": {
+      "title": "注册",
+      "first_name_label": "名字",
+      "last_name_label": "姓氏",
+      "email_label": "电子邮件",
+      "password_label": "密码",
+      "repeat_password": "重复密码",
+      "sign_up": "注册",
+      "password_not_equal": "密码不匹配",
+      "regulations(rich)": "我同意 {terms(服务条款)} 和 {policy(隐私政策)}",
+      "after_registration_toast": "✔️ 确认邮件已发送！请检查您的邮件并确认地址。",
+      "register_error": {
+        "incorrect_email": "电子邮件不正确",
+        "incorrect_name": "名字不正确",
+        "incorrect_password": "密码必须至少 8 个字符，并包含大小写字母和数字",
+        "email_already_used": "电子邮件地址已被使用",
+        "create_error": "创建用户时出错",
+        "emailRateLimitExceeded": "超过电子邮件发送限制"
+      }
+    },
+    "reset_password": {
+      "CodeScreen": {
+        "title": "重置密码",
+        "description": "重置代码已发送到您的电子邮件 {email:String}",
+        "submit": "下一步",
+        "field_label": "重置代码",
+        "field_error": "代码无效",
+        "check_error_description": "无法验证重置代码"
+      },
+      "ForgotPasswordScreen": {
+        "title": "重置密码",
+        "email_label": "电子邮件",
+        "send_reset_link": "发送链接",
+        "check_error_description": "无法发送重置密码的代码"
+      },
+      "NewPasswordScreen": {
+        "title": "新密码",
+        "reset_submit": "登录",
+        "edit_submit": "修改",
+        "current_password": "当前密码",
+        "new_password": "新密码",
+        "repeat_new_password": "重复新密码",
+        "password_label": "密码",
+        "repeat_password": "重复密码",
+        "failed_change_password": "无法更改密码",
+        "failed_reset_password": "无法重置密码",
+        "errors": {
+          "wrong_current_password": "当前密码错误",
+          "same_password": "新密码不能与当前密码相同"
+        }
+      }
+    }
+  },
+  "chats": {
+    "ChatPage": {
+      "SlangChatL10n": {
+        "and": "和",
+        "attachmentButtonAccessibilityLabel": "发送媒体",
+        "emptyChatPlaceholder": "您还没有消息",
+        "fileButtonAccessibilityLabel": "文件",
+        "inputPlaceholder": "消息",
+        "isTyping": "正在输入…",
+        "others": "其他人",
+        "sendButtonAccessibilityLabel": "发送",
+        "unreadMessagesLabel": "未读消息"
+      },
+      "advert_chat": "广告聊天",
+      "attachment_type_file": "文件",
+      "attachment_type_image": "图片",
+      "failure": "加载聊天时出错",
+      "no_messages_yet": "还没有消息",
+      "return_translation": "返回翻译",
+      "show_original": "显示原文",
+      "tts_play_failed": "无法播放：{error:String}",
+      "tts_play_original": "朗读原文",
+      "tts_play_translation": "朗读翻译"
+    },
+    "ChatsPage": {
+      "ChatCard": {
+        "favorites_chat_name": "收藏",
+        "support_chat_name": "支持"
+      },
+      "NoItemsStub": {
+        "description": "您还没有聊天",
+        "title": "还没有聊天"
+      },
+      "create_direct_chat": "与用户创建聊天",
+      "create_group_chat": "创建群聊",
+      "delete_action": "删除",
+      "empty": "还没有聊天",
+      "failure": "加载聊天时出错",
+      "title": "聊天"
+    },
+    "CreateDirectChatPage": {
+      "failure_create_chat": "无法创建聊天",
+      "title": "创建聊天"
+    },
+    "CreateLocalChatPage": {
+      "languages_section": "语言",
+      "my_language_label": "您的语言",
+      "partner_language_label": "对方语言",
+      "show_both_subtitle": "为方便检查显示两种文本",
+      "show_both_title": "显示原文和翻译",
+      "start_button": "开始本地聊天",
+      "swap_languages": "交换语言",
+      "tips_item_1": "• 您和对方轮流在同一设备上说话。",
+      "tips_item_2": "• 消息会自动翻译，可以显示原文和翻译。",
+      "tips_item_3": "• 启用 TTS，以便翻译可以朗读。",
+      "tips_title": "本地聊天如何工作",
+      "title": "新本地聊天",
+      "title_hint": "例如：与房东的对话",
+      "title_label": "标题（可选）",
+      "translation_section": "翻译和显示",
+      "tts_subtitle": "显示时朗读翻译",
+      "tts_title": "朗读翻译（TTS）"
+    },
+    "RecordHoldButton": {
+      "hold_to_record": "按住\n录音",
+      "semantics_label": "{label:String}：按住录音"
+    },
+    "SelectChatTypePage": {
+      "continue_button": "继续",
+      "details": {
+        "direct": {
+          "can_do": "自动翻译输入和输出，语音消息，附件。",
+          "for_whom": "用于与一个人用不同语言交流。",
+          "scenarios": "商务通信，个人对话，客户支持。"
+        },
+        "group": {
+          "can_do": "为所有参与者自动翻译，角色和权限，固定和反应。",
+          "for_whom": "用于来自不同国家的团队、家庭和社区。",
+          "scenarios": "项目聊天，社区，组织通信。"
+        },
+        "local": {
+          "can_do": "您轮流在一部手机上留言——它们会立即翻译给对方。",
+          "for_whom": "用于旅游和在一台设备上的离线对话。",
+          "scenarios": "与出租车司机/房东交流，点餐，导航帮助。"
+        },
+        "learning": {
+          "can_do": "保存单词和短语，查看不同的含义和例子，练习阅读/听写模式。",
+          "for_whom": "用于在一台设备上学习语言——像“本地聊天”，但侧重于实践。",
+          "scenarios": "旅行中的自学，会议准备，分析通信，个人词汇。"
+        }
+      },
+      "labels": {
+        "can_do": "可以做什么",
+        "for_whom": "适合谁",
+        "scenarios": "场景"
+      },
+      "soon_tag": "即将推出",
+      "title": "创建聊天",
+      "types": {
+        "direct": "直接（1对1）",
+        "group": "群组",
+        "learning": "学习",
+        "local": "本地聊天"
+      }
+    }
+  },
+  "core": {
+    "field_empty": "字段不能为空",
+    "incorrect_format": "格式不正确",
+    "dialog_title": {
+      "error_title": "错误",
+      "connection_error": "没有连接",
+      "server_error": "服务器错误",
+      "not_authorized": "未授权",
+      "upgrade_required": "版本过时",
+      "insufficient_accessRights": "权限不足"
+    },
+    "dialog_msg": {
+      "retry_or_contact_support": "请重试或联系支持：support@verto.chat",
+      "server_error": "服务器发生错误。{retryOrContactSupport}",
+      "default_error": "发生错误。{retryOrContactSupport}",
+      "connection_error": "请检查您的互联网连接并重试",
+      "authorization_required": "授权凭据已过期。需要重新登录",
+      "upgrade_required": "请安装新版本以正常工作",
+      "insufficient_access_rights": "操作不可用。您的权限受限"
+    },
+    "dialog_action": {
+      "ok": "确定",
+      "login": "登录",
+      "retry": "重试",
+      "upgrade": "升级",
+      "back": "返回",
+      "yes": "是",
+      "no": "否",
+      "cancel": "取消"
+    },
+    "DialogPresenter": {
+      "permission_text_location": "位置",
+      "permission_denied": {
+        "location": "获取位置以选择地址",
+        "title": "访问 {permission:String}",
+        "description": "使用此功能需要访问 {permission:String}。您可以在设备设置中启用它。",
+        "settings": "去设置",
+        "later": "稍后"
+      }
+    },
+    "photos": {
+      "GalleryScreen": {
+        "title": "图库"
+      }
+    },
+    "upload": {
+      "select_photo": {
+        "select_source_photo": {
+          "title": "选择图像",
+          "from": {
+            "camera": "相机",
+            "gallery": "从图库"
+          }
+        }
+      },
+      "AddPhotoButton": {
+        "add_photo": "添加照片"
+      }
+    },
+    "widgets": {
+      "LastPageErrorMessageView": {
+        "something_wrong_try_again": "出现问题，请重试："
+      },
+      "TryAgainButton": {
+        "something_wrong": "出现问题",
+        "try_again": "重试"
+      },
+      "AttachDocuments": {
+        "title": "添加文件"
+      }
+    }
+  },
+  "feedback": {
+    "feedback_page": {
+      "title": "反馈",
+      "type_label": "请求类型",
+      "description_label": "描述",
+      "description_hint": "请详细描述您的问题或想法",
+      "description_error": "请写下请求的内容",
+      "submit": "提交",
+      "success": "请求已提交",
+      "failed_send_feedback": "无法发送反馈",
+      "types": {
+        "bug": "报告错误",
+        "feature": "建议功能",
+        "category": "建议新广告类别",
+        "question": "提问",
+        "general": "一般意见和建议"
+      }
+    }
+  },
+  "home": {
+    "main_label": "首页",
+    "chats_label": "聊天",
+    "profile_label": "个人资料"
+  },
+  "in_app": {
+    "BuyProductsScreen": {
+      "buy_button": "购买",
+      "title": "选择商品",
+      "unavailable": "不可用"
+    }
+  },
+  "legal": {
+    "failed_get_regulations": "无法获取规章。",
+    "LegalScreen": {
+      "title": "法律信息",
+      "policy_label": "隐私政策",
+      "terms_label": "服务条款",
+      "gdpr_label": "GDPR 隐私政策"
+    }
+  },
+  "logger": {
+    "SessionScreen": {
+      "no_space_line_1": "设备内存不足。",
+      "no_space_line_2": "请释放空间并重试。",
+      "ok": "确定",
+      "title": "会话列表",
+      "unknown_error": "未知错误。"
+    }
+  },
+  "profile": {
+    "EditProfileScreen": {
+      "edit_password": "更改密码",
+      "first_name_label": "名字",
+      "last_name_label": "姓氏",
+      "save_button_text": "保存",
+      "success_toast": "您的名字已成功更新",
+      "title": "编辑个人资料"
+    },
+    "ProfilePage": {
+      "create_support_chat": "联系支持聊天",
+      "failed_create_support_chat": "无法创建支持聊天",
+      "failed_loading_profile": "无法加载用户信息",
+      "plan": {
+        "buy_credits": "购买积分",
+        "credits_count": {
+          "one": "{n} 积分",
+          "few": "{n} 积分",
+          "other": "{n} 积分"
+        },
+        "plan_name": "计划：{planName:String}",
+        "upgrade": "升级计划"
+      }
+    },
+    "SafetyScreen": {
+      "delete_account_error": {
+        "requires_recent_login": "删除账户需要重新登录应用"
+      },
+      "delete_account_label": "删除账户",
+      "delete_confirm": {
+        "description": "您确定要删除账户吗？",
+        "title": "删除账户"
+      },
+      "edit_password": "更改密码",
+      "title": "安全"
+    },
+    "delete_account_label": "删除账户",
+    "edit_avatar_title": "编辑头像",
+    "edit_profile_label": "编辑个人资料",
+    "failed_update_avatar": "无法更新头像",
+    "failed_upload_avatar": "无法上传头像",
+    "feedback_label": "反馈",
+    "language_label": "语言",
+    "legal_label": "法律信息",
+    "logout_label": "退出账户",
+    "safety_label": "安全",
+    "select_language_title": "选择语言",
+    "theme": {
+      "title": "主题",
+      "light": "浅色",
+      "dark": "深色",
+      "system": "系统"
+    },
+    "to_favorites_adverts_label": "收藏的广告",
+    "to_my_adverts_label": "我的广告",
+    "version": "版本 {version}"
+  },
+  "report": {
+    "ReportSheet": {
+      "description_label": "描述",
+      "reasons": {
+        "abuse": "侮辱或煽动仇恨",
+        "inappropriate": "不当行为",
+        "other": "其他",
+        "spam": "垃圾邮件"
+      },
+      "submit": "提交",
+      "success": "投诉已提交",
+      "title": "报告违规"
+    }
+  },
+  "users": {
+    "user_select_screen": {
+      "empty": "目前没有用户",
+      "failure": "加载用户时出错"
+    }
+  }
+}

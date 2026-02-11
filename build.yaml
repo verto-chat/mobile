@@ -28,3 +28,8 @@ targets:
             temperature: 0.3
             description: |
               "Ovdix" is an application for creating classified ads for the sale of goods and services.
+
+      drift_dev:
+        options:
+          databases:
+            my_database: lib/app_db.dart

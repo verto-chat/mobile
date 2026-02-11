@@ -63,6 +63,9 @@ class DefaultFirebaseOptions {
     messagingSenderId: '702476548325',
     projectId: 'vertochat-mobile',
     storageBucket: 'vertochat-mobile.firebasestorage.app',
+    androidClientId: '702476548325-36blsangm1qfo3mo2adta7u5o163tnfq.apps.googleusercontent.com',
+    iosClientId: '702476548325-j7adhk03g6iurpfg6q0p48p88b192k8p.apps.googleusercontent.com',
     iosBundleId: 'chat.verto.app',
   );
+
 }

@@ -5,7 +5,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../../../../features/in_app/presentation/managers/select_subscription_bloc.dart';
-import '../../../../../i18n/translations.g.dart';
 import '../../../../core/core.dart';
 import '../../../features.dart';
 
@@ -15,7 +14,7 @@ class SelectSubscriptionScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final loc = context.appTexts.in_app.select_subscription_screen;
+    //final loc = context.appTexts.in_app.select_subscription_screen;
 
     final backgroundColor = Theme.of(context).colorScheme.surfaceContainerHighest;
 
@@ -33,7 +32,7 @@ class SelectSubscriptionScreen extends StatelessWidget {
               slivers: [
                 SliverToBoxAdapter(
                   child: Text(
-                    loc.title,
+                    "Выберите подписку",
                     style: Theme.of(context).textTheme.headlineMedium,
                     textAlign: TextAlign.center,
                   ),
@@ -82,7 +81,7 @@ class SelectSubscriptionScreen extends StatelessWidget {
 class _BottomBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    final loc = context.appTexts.in_app.select_subscription_screen;
+    //final loc = context.appTexts.in_app.select_subscription_screen;
     final storeName = Platform.isAndroid ? "Google Play" : "App Store";
 
     return SizedBox(
@@ -96,7 +95,7 @@ class _BottomBar extends StatelessWidget {
             mainAxisSize: MainAxisSize.min,
             children: [
               Text(
-                loc.description(storeName: storeName),
+                "Отмените в любое время в {storeName:String}",
                 style: Theme.of(context).textTheme.labelLarge,
                 textAlign: TextAlign.center,
               ),
@@ -108,7 +107,7 @@ class _BottomBar extends StatelessWidget {
                             SelectSubscriptionEvent.buy(state.selectedSubscription!),
                           )
                         : null,
-                    child: Text(loc.try_1_week_free),
+                    child: Text("Попробовать 1 неделю бесплатно"),
                   );
                 },
               ),

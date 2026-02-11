@@ -34,31 +34,6 @@ class SupabaseAuthApi {
     await _supabase.auth.updateUser(UserAttributes(password: password));
   }
 
-  Future<void> register({
-    required String firstName,
-    required String? lastName,
-    required String email,
-    required String password,
-  }) async {
-    final userCredential = await _supabase.auth.signUp(
-      email: email,
-      password: password,
-      emailRedirectTo: "https://ovdix.com/welcome",
-      data: {'firstName': firstName, 'lastName': lastName},
-    );
-
-    if (userCredential.user != null) {
-      final user = userCredential.user!;
-
-      await _supabase.functions.invoke(
-        'register_by_email',
-        body: {
-          'user': {'id': user.id, 'email': user.email, 'firstName': firstName, 'lastName': lastName},
-        },
-      );
-    }
-  }
-
   Future<void> logOut() => _supabase.auth.signOut();
 
   Future<void> deleteAccount() async {

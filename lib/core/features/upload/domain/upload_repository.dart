@@ -11,4 +11,6 @@ abstract interface class IUploadRepository {
   Future<DomainResultDErr<UploadedFileUrl>> uploadChatFile(File file);
 
   Future<DomainResultDErr<UploadedImageUrl>> uploadChatImage(File file);
+
+  Future<EmptyDomainResult> uploadChatVoice(File file, String ttsStorageKey);
 }

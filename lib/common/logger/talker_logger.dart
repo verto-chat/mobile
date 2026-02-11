@@ -1,7 +1,6 @@
 import 'dart:developer' as dart_developer;
 
 import 'package:flutter/foundation.dart';
-import 'package:stack_trace/stack_trace.dart';
 import 'package:talker_flutter/talker_flutter.dart' hide LogLevel;
 
 import 'entities/entities.dart';
@@ -25,20 +24,20 @@ class TalkerLoggerImpl implements ILogger {
 
   @override
   void log(LogLevel logLevel, String text, {dynamic exception, StackTrace? stacktrace}) {
-    String? callMember;
+    // String? callMember;
 
     // skip an extra frame from talker wrapper
-    stacktrace ??= filterStackTrace(StackTrace.current, 1);
+    // stacktrace ??= filterStackTrace(StackTrace.current, 1);
+    //
+    // final trace = Trace.from(stacktrace);
+    //
+    // if (trace.frames.isNotEmpty && trace.frames.length > 1) {
+    //   String? member = trace.frames[1].member;
+    //
+    //   callMember = member?.split(".").take(2).join(" ─> ");
+    // }
 
-    final trace = Trace.from(stacktrace);
-
-    if (trace.frames.isNotEmpty && trace.frames.length > 1) {
-      String? member = trace.frames[1].member;
-
-      callMember = member?.split(".").take(2).join(" ─> ");
-    }
-
-    _log(logLevel, "${callMember ?? "callMember"}: $text", exception, trace.original);
+    _log(logLevel, text, exception, stacktrace);
   }
 
   /// source code copied from TalkerFlutter extension

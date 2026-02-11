@@ -1,0 +1,380 @@
+{
+  "auth": {
+    "SignInScreen": {
+      "email_label": "Email",
+      "password_label": "Password",
+      "forgot_password": "Hai dimenticato la password?",
+      "sign_in": "Accedi",
+      "sign_up": "Registrati",
+      "sign_in_with_google": "Accedi con Google",
+      "sign_in_with_apple": "Accedi con Apple",
+      "login_error": {
+        "invalid_credentials": "Credenziali non valide",
+        "email_not_confirmed": "Email non confermata"
+      },
+      "OAuthAcceptRegulationsSheet": {
+        "title": "Per continuare, registrati",
+        "regulations(rich)": "Si prega di accettare {terms(Condizioni d'uso)} e {policy(Politica sulla privacy)}",
+        "accept": "Accetta",
+        "cancel": "Annulla",
+        "failed_get_regulations": "Impossibile ottenere le normative."
+      }
+    },
+    "SignUpScreen": {
+      "title": "Registrazione",
+      "first_name_label": "Nome",
+      "last_name_label": "Cognome",
+      "email_label": "Email",
+      "password_label": "Password",
+      "repeat_password": "Ripeti la password",
+      "sign_up": "Registrati",
+      "password_not_equal": "Le password non corrispondono",
+      "regulations(rich)": "Accetto {terms(termini d'uso)} e {policy(politica sulla privacy)}",
+      "after_registration_toast": "✔️ Email di conferma inviata! Controlla la tua email e conferma l'indirizzo.",
+      "register_error": {
+        "incorrect_email": "Email non valida",
+        "incorrect_name": "Nome non valido",
+        "incorrect_password": "La password deve essere lunga almeno 8 caratteri e contenere lettere maiuscole, minuscole e numeri",
+        "email_already_used": "L'indirizzo email è già in uso",
+        "create_error": "Errore nella creazione dell'utente",
+        "emailRateLimitExceeded": "Limite di invio email superato"
+      }
+    },
+    "reset_password": {
+      "CodeScreen": {
+        "title": "Ripristino password",
+        "description": "È stato inviato un codice di ripristino alla tua email {email:String}",
+        "submit": "Avanti",
+        "field_label": "Codice di ripristino",
+        "field_error": "Codice non valido",
+        "check_error_description": "Impossibile verificare il codice di ripristino"
+      },
+      "ForgotPasswordScreen": {
+        "title": "Ripristino password",
+        "email_label": "Email",
+        "send_reset_link": "Invia link",
+        "check_error_description": "Impossibile inviare il codice per il ripristino della password"
+      },
+      "NewPasswordScreen": {
+        "title": "Nuova password",
+        "reset_submit": "Accedi",
+        "edit_submit": "Modifica",
+        "current_password": "Password attuale",
+        "new_password": "Nuova password",
+        "repeat_new_password": "Ripeti la nuova password",
+        "password_label": "Password",
+        "repeat_password": "Ripeti la password",
+        "failed_change_password": "Impossibile cambiare la password",
+        "failed_reset_password": "Impossibile ripristinare la password",
+        "errors": {
+          "wrong_current_password": "Password attuale errata",
+          "same_password": "La nuova password non deve corrispondere a quella attuale"
+        }
+      }
+    }
+  },
+  "chats": {
+    "ChatPage": {
+      "SlangChatL10n": {
+        "and": "e",
+        "attachmentButtonAccessibilityLabel": "Invia media",
+        "emptyChatPlaceholder": "Non hai ancora messaggi",
+        "fileButtonAccessibilityLabel": "File",
+        "inputPlaceholder": "Messaggio",
+        "isTyping": "sta scrivendo…",
+        "others": "altri",
+        "sendButtonAccessibilityLabel": "Invia",
+        "unreadMessagesLabel": "Messaggi non letti"
+      },
+      "advert_chat": "Chat dell'annuncio",
+      "attachment_type_file": "File",
+      "attachment_type_image": "Immagine",
+      "failure": "Errore nel caricamento della chat",
+      "no_messages_yet": "Non ci sono messaggi per ora",
+      "return_translation": "Restituisci traduzione",
+      "show_original": "Mostra originale",
+      "tts_play_failed": "Impossibile riprodurre: {error:String}",
+      "tts_play_original": "Leggi originale",
+      "tts_play_translation": "Leggi traduzione"
+    },
+    "ChatsPage": {
+      "ChatCard": {
+        "favorites_chat_name": "Preferiti",
+        "support_chat_name": "Supporto"
+      },
+      "NoItemsStub": {
+        "description": "Non hai ancora chat",
+        "title": "Non ci sono chat"
+      },
+      "create_direct_chat": "Crea chat con l'utente",
+      "create_group_chat": "Crea chat di gruppo",
+      "delete_action": "Elimina",
+      "empty": "Non ci sono chat",
+      "failure": "Errore nel caricamento delle chat",
+      "title": "Chat"
+    },
+    "CreateDirectChatPage": {
+      "failure_create_chat": "Impossibile creare chat",
+      "title": "Crea chat"
+    },
+    "CreateLocalChatPage": {
+      "languages_section": "Lingue",
+      "my_language_label": "La tua lingua",
+      "partner_language_label": "Lingua del partner",
+      "show_both_subtitle": "Mostra entrambi i testi per una facile verifica",
+      "show_both_title": "Mostra originale e traduzione",
+      "start_button": "Inizia chat locale",
+      "swap_languages": "Scambia",
+      "tips_item_1": "• Tu e il partner parlate a turno su un dispositivo.",
+      "tips_item_2": "• I messaggi vengono tradotti automaticamente, puoi mostrare originale e traduzione.",
+      "tips_item_3": "• Attiva TTS per far leggere la traduzione ad alta voce.",
+      "tips_title": "Come funziona la chat locale",
+      "title": "Nuova chat locale",
+      "title_hint": "Ad esempio: Conversazione con il padrone di casa",
+      "title_label": "Titolo (opzionale)",
+      "translation_section": "Traduzione e visualizzazione",
+      "tts_subtitle": "Leggi la traduzione ad alta voce durante la visualizzazione",
+      "tts_title": "Leggi traduzione (TTS)"
+    },
+    "RecordHoldButton": {
+      "hold_to_record": "Tieni premuto\nper registrare",
+      "semantics_label": "{label:String}: tieni premuto per registrare"
+    },
+    "SelectChatTypePage": {
+      "continue_button": "Continua",
+      "details": {
+        "direct": {
+          "can_do": "Traduzione automatica dei messaggi in entrata e in uscita, messaggi vocali, allegati.",
+          "for_whom": "Per comunicare con una sola persona in lingue diverse.",
+          "scenarios": "Corrispondenza commerciale, conversazioni personali, supporto clienti."
+        },
+        "group": {
+          "can_do": "Traduzione automatica per tutti i partecipanti, ruoli e diritti, pin e reazioni.",
+          "for_whom": "Per team, famiglie e comunità con partecipanti di diversi paesi.",
+          "scenarios": "Chat di progetto, comunità, corrispondenza organizzativa."
+        },
+        "local": {
+          "can_do": "Tu e il partner lasciate messaggi a turno su un telefono — vengono tradotti immediatamente per il partner.",
+          "for_whom": "Per turisti e negoziazioni offline su un dispositivo.",
+          "scenarios": "Comunicazione con tassisti/proprietari, ordinazione di cibo, aiuto con la navigazione."
+        },
+        "learning": {
+          "can_do": "Salva parole e frasi, guarda diversi significati e esempi, esercitati in modalità lettura/dettatura.",
+          "for_whom": "Per l'apprendimento delle lingue su un dispositivo — come 'chat locale', ma con focus sulla pratica.",
+          "scenarios": "Autoapprendimento in viaggio, preparazione a un incontro, analisi di corrispondenza, dizionario personale."
+        }
+      },
+      "labels": {
+        "can_do": "Cosa puoi fare",
+        "for_whom": "Per chi",
+        "scenarios": "Scenari"
+      },
+      "soon_tag": "Presto",
+      "title": "Crea chat",
+      "types": {
+        "direct": "Diretta (1-a-1)",
+        "group": "Gruppo",
+        "learning": "Apprendimento",
+        "local": "Chat locale"
+      }
+    }
+  },
+  "core": {
+    "field_empty": "Il campo non può essere vuoto",
+    "incorrect_format": "Formato non valido",
+    "dialog_title": {
+      "error_title": "Errore",
+      "connection_error": "Nessuna connessione",
+      "server_error": "Errore del server",
+      "not_authorized": "Non autorizzato",
+      "upgrade_required": "Versione obsoleta",
+      "insufficient_accessRights": "Accesso insufficiente"
+    },
+    "dialog_msg": {
+      "retry_or_contact_support": "Riprova o contatta il supporto all'indirizzo: support@verto.chat",
+      "server_error": "Si è verificato un errore sul server. {retryOrContactSupport}",
+      "default_error": "Si è verificato un errore. {retryOrContactSupport}",
+      "connection_error": "Controlla la tua connessione internet e riprova",
+      "authorization_required": "Le credenziali di accesso sono scadute. È necessario effettuare nuovamente l'accesso",
+      "upgrade_required": "Per un corretto funzionamento, installa la nuova versione dell'app",
+      "insufficient_access_rights": "Azione non disponibile. I tuoi diritti sono limitati"
+    },
+    "dialog_action": {
+      "ok": "Ok",
+      "login": "Accedi",
+      "retry": "Riprova",
+      "upgrade": "Aggiorna",
+      "back": "Indietro",
+      "yes": "Sì",
+      "no": "No",
+      "cancel": "Annulla"
+    },
+    "DialogPresenter": {
+      "permission_text_location": "Posizione",
+      "permission_denied": {
+        "location": "ottenere la posizione per selezionare un indirizzo",
+        "title": "Accesso a {permission:String}",
+        "description": "Per utilizzare questa funzione è necessario l'accesso a {permission:String}. Puoi attivarlo nelle impostazioni del tuo dispositivo.",
+        "settings": "Nelle impostazioni",
+        "later": "Più tardi"
+      }
+    },
+    "photos": {
+      "GalleryScreen": {
+        "title": "Galleria"
+      }
+    },
+    "upload": {
+      "select_photo": {
+        "select_source_photo": {
+          "title": "Seleziona immagine",
+          "from": {
+            "camera": "Fotocamera",
+            "gallery": "Dalla galleria"
+          }
+        }
+      },
+      "AddPhotoButton": {
+        "add_photo": "Aggiungi"
+      }
+    },
+    "widgets": {
+      "LastPageErrorMessageView": {
+        "something_wrong_try_again": "Qualcosa è andato storto, riprova:"
+      },
+      "TryAgainButton": {
+        "something_wrong": "Qualcosa è andato storto",
+        "try_again": "Riprova"
+      },
+      "AttachDocuments": {
+        "title": "Aggiungi documenti"
+      }
+    }
+  },
+  "feedback": {
+    "feedback_page": {
+      "title": "Feedback",
+      "type_label": "Tipo di richiesta",
+      "description_label": "Descrizione",
+      "description_hint": "Descrivi più dettagliatamente il tuo problema o idea",
+      "description_error": "Si prega di scrivere il testo della richiesta",
+      "submit": "Invia",
+      "success": "Richiesta inviata",
+      "failed_send_feedback": "Impossibile inviare feedback",
+      "types": {
+        "bug": "Segnala un bug",
+        "feature": "Proponi una funzionalità",
+        "category": "Proponi una nuova categoria di annunci",
+        "question": "Fai una domanda",
+        "general": "Commenti e suggerimenti generali"
+      }
+    }
+  },
+  "home": {
+    "main_label": "Home",
+    "chats_label": "Chat",
+    "profile_label": "Profilo"
+  },
+  "in_app": {
+    "BuyProductsScreen": {
+      "buy_button": "Acquista",
+      "title": "Seleziona prodotto",
+      "unavailable": "Non disponibile"
+    }
+  },
+  "legal": {
+    "failed_get_regulations": "Impossibile ottenere le normative.",
+    "LegalScreen": {
+      "title": "Informazioni legali",
+      "policy_label": "Politica sulla privacy",
+      "terms_label": "Condizioni d'uso",
+      "gdpr_label": "Politica sulla privacy GDPR"
+    }
+  },
+  "logger": {
+    "SessionScreen": {
+      "no_space_line_1": "Non c'è abbastanza memoria sul dispositivo.",
+      "no_space_line_2": "Si prega di liberare spazio e riprovare.",
+      "ok": "OK",
+      "title": "Elenco sessioni",
+      "unknown_error": "Errore sconosciuto."
+    }
+  },
+  "profile": {
+    "EditProfileScreen": {
+      "edit_password": "Cambia password",
+      "first_name_label": "Nome",
+      "last_name_label": "Cognome",
+      "save_button_text": "Salva",
+      "success_toast": "Il tuo nome è stato aggiornato con successo",
+      "title": "Modifica profilo"
+    },
+    "ProfilePage": {
+      "create_support_chat": "Scrivi al supporto",
+      "failed_create_support_chat": "Impossibile creare chat di supporto",
+      "failed_loading_profile": "Impossibile caricare le informazioni dell'utente",
+      "plan": {
+        "buy_credits": "Acquista crediti",
+        "credits_count": {
+          "one": "{n} credito",
+          "few": "{n} crediti",
+          "other": "{n} crediti"
+        },
+        "plan_name": "Piano: {planName:String}",
+        "upgrade": "Migliora il piano"
+      }
+    },
+    "SafetyScreen": {
+      "delete_account_error": {
+        "requires_recent_login": "Per eliminare l'account è necessario accedere nuovamente all'app"
+      },
+      "delete_account_label": "Elimina account",
+      "delete_confirm": {
+        "description": "Sei sicuro di voler eliminare l'account?",
+        "title": "Eliminazione account"
+      },
+      "edit_password": "Cambia password",
+      "title": "Sicurezza"
+    },
+    "delete_account_label": "Elimina account",
+    "edit_avatar_title": "Modifica avatar",
+    "edit_profile_label": "Modifica profilo",
+    "failed_update_avatar": "Impossibile aggiornare l'avatar",
+    "failed_upload_avatar": "Impossibile caricare l'avatar",
+    "feedback_label": "Feedback",
+    "language_label": "Lingua",
+    "legal_label": "Informazioni legali",
+    "logout_label": "Esci dall'account",
+    "safety_label": "Sicurezza",
+    "select_language_title": "Seleziona lingua",
+    "theme": {
+      "title": "Tema",
+      "light": "Chiaro",
+      "dark": "Scuro",
+      "system": "Di sistema"
+    },
+    "to_favorites_adverts_label": "Annunci preferiti",
+    "to_my_adverts_label": "I miei annunci",
+    "version": "Versione {version}"
+  },
+  "report": {
+    "ReportSheet": {
+      "description_label": "Descrizione",
+      "reasons": {
+        "abuse": "Insulti o incitamento all'odio",
+        "inappropriate": "Comportamento inappropriato",
+        "other": "Altro",
+        "spam": "Spam"
+      },
+      "submit": "Invia",
+      "success": "Segnalazione inviata",
+      "title": "Segnala violazione"
+    }
+  },
+  "users": {
+    "user_select_screen": {
+      "empty": "Non ci sono utenti per ora",
+      "failure": "Errore nel caricamento degli utenti"
+    }
+  }
+}

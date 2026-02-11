@@ -1,4 +1,6 @@
-﻿import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';
+
+import '../../../i18n/translations.g.dart';
 
 class AttachDocuments extends StatelessWidget {
   const AttachDocuments({super.key, required this.description});
@@ -7,6 +9,7 @@ class AttachDocuments extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final loc = context.appTexts.core.widgets.attach_documents;
     return Card(
       margin: const EdgeInsets.all(0),
       child: Container(
@@ -19,7 +22,7 @@ class AttachDocuments extends StatelessWidget {
               spacing: 8,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text("Добавить документы", style: Theme.of(context).textTheme.titleMedium),
+                Text(loc.title, style: Theme.of(context).textTheme.titleMedium),
                 Text(description, style: Theme.of(context).textTheme.labelMedium),
               ],
             ),

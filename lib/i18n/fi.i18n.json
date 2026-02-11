@@ -1,0 +1,380 @@
+{
+  "auth": {
+    "SignInScreen": {
+      "email_label": "Sähköposti",
+      "password_label": "Salasana",
+      "forgot_password": "Unohditko salasanan?",
+      "sign_in": "Kirjaudu sisään",
+      "sign_up": "Rekisteröidy",
+      "sign_in_with_google": "Kirjaudu sisään Googlella",
+      "sign_in_with_apple": "Kirjaudu sisään Applen kautta",
+      "login_error": {
+        "invalid_credentials": "Virheelliset kirjautumistiedot",
+        "email_not_confirmed": "Sähköpostia ei ole vahvistettu"
+      },
+      "OAuthAcceptRegulationsSheet": {
+        "title": "Jatkaaksesi, rekisteröidy",
+        "regulations(rich)": "Hyväksy {terms(Käyttöehdot)} ja {policy(Yksityisyydensuojakäytäntö)}",
+        "accept": "Hyväksy",
+        "cancel": "Peruuta",
+        "failed_get_regulations": "Sääntöjä ei voitu ladata."
+      }
+    },
+    "SignUpScreen": {
+      "title": "Rekisteröinti",
+      "first_name_label": "Etunimi",
+      "last_name_label": "Sukunimi",
+      "email_label": "Sähköposti",
+      "password_label": "Salasana",
+      "repeat_password": "Toista salasana",
+      "sign_up": "Rekisteröidy",
+      "password_not_equal": "Salasanat eivät täsmää",
+      "regulations(rich)": "Hyväksyn {terms(käyttöehdot)} ja {policy(yksityisyydensuojakäytäntö)}",
+      "after_registration_toast": "✔️ Vahvistusviesti on lähetetty! Tarkista sähköpostisi ja vahvista osoite.",
+      "register_error": {
+        "incorrect_email": "Virheellinen sähköposti",
+        "incorrect_name": "Virheellinen nimi",
+        "incorrect_password": "Salasanan on oltava vähintään 8 merkkiä pitkä ja sisältää isoja ja pieniä kirjaimia sekä numeroita",
+        "email_already_used": "Sähköpostiosoite on jo käytössä",
+        "create_error": "Käyttäjän luomisessa tapahtui virhe",
+        "emailRateLimitExceeded": "Sähköpostiviestien lähetysraja ylitetty"
+      }
+    },
+    "reset_password": {
+      "CodeScreen": {
+        "title": "Salasanan palautus",
+        "description": "Palautuskoodi on lähetetty sähköpostiisi {email:String}",
+        "submit": "Jatka",
+        "field_label": "Palautuskoodi",
+        "field_error": "Virheellinen koodi",
+        "check_error_description": "Palautuskoodin tarkistaminen epäonnistui"
+      },
+      "ForgotPasswordScreen": {
+        "title": "Salasanan palautus",
+        "email_label": "Sähköposti",
+        "send_reset_link": "Lähetä linkki",
+        "check_error_description": "Palautuskoodin lähettäminen epäonnistui"
+      },
+      "NewPasswordScreen": {
+        "title": "Uusi salasana",
+        "reset_submit": "Kirjaudu sisään",
+        "edit_submit": "Muokkaa",
+        "current_password": "Nykyinen salasana",
+        "new_password": "Uusi salasana",
+        "repeat_new_password": "Toista uusi salasana",
+        "password_label": "Salasana",
+        "repeat_password": "Toista salasana",
+        "failed_change_password": "Salasanan muuttaminen epäonnistui",
+        "failed_reset_password": "Salasanan palauttaminen epäonnistui",
+        "errors": {
+          "wrong_current_password": "Virheellinen nykyinen salasana",
+          "same_password": "Uuden salasanan ei tule olla sama kuin nykyinen"
+        }
+      }
+    }
+  },
+  "chats": {
+    "ChatPage": {
+      "SlangChatL10n": {
+        "and": "ja",
+        "attachmentButtonAccessibilityLabel": "Lähetä media",
+        "emptyChatPlaceholder": "Sinulla ei ole vielä viestejä",
+        "fileButtonAccessibilityLabel": "Tiedosto",
+        "inputPlaceholder": "Viesti",
+        "isTyping": "kirjoittaa…",
+        "others": "muita",
+        "sendButtonAccessibilityLabel": "Lähetä",
+        "unreadMessagesLabel": "Lukemattomat viestit"
+      },
+      "advert_chat": "Ilmoituschat",
+      "attachment_type_file": "Tiedosto",
+      "attachment_type_image": "Kuva",
+      "failure": "Virhe chattia ladattaessa",
+      "no_messages_yet": "Ei viestejä vielä",
+      "return_translation": "Palauta käännös",
+      "show_original": "Näytä alkuperäinen",
+      "tts_play_failed": "Toisto epäonnistui: {error:String}",
+      "tts_play_original": "Lue alkuperäinen",
+      "tts_play_translation": "Lue käännös"
+    },
+    "ChatsPage": {
+      "ChatCard": {
+        "favorites_chat_name": "Suosikit",
+        "support_chat_name": "Tuki"
+      },
+      "NoItemsStub": {
+        "description": "Sinulla ei ole vielä chatteja",
+        "title": "Ei chatteja vielä"
+      },
+      "create_direct_chat": "Luo chat käyttäjän kanssa",
+      "create_group_chat": "Luo ryhmächat",
+      "delete_action": "Poista",
+      "empty": "Ei chatteja vielä",
+      "failure": "Virhe chatteja ladattaessa",
+      "title": "Chattit"
+    },
+    "CreateDirectChatPage": {
+      "failure_create_chat": "Chatin luominen epäonnistui",
+      "title": "Luo chat"
+    },
+    "CreateLocalChatPage": {
+      "languages_section": "Kielet",
+      "my_language_label": "Kieleni",
+      "partner_language_label": "Keskustelukumppanin kieli",
+      "show_both_subtitle": "Näytä molemmat tekstit tarkistuksen helpottamiseksi",
+      "show_both_title": "Näytä alkuperäinen ja käännös",
+      "start_button": "Aloita paikallinen chat",
+      "swap_languages": "Vaihtaa kieliä",
+      "tips_item_1": "• Sinä ja keskustelukumppani puhuvat vuorotellen yhdellä laitteella.",
+      "tips_item_2": "• Viestit käännetään automaattisesti, alkuperäisen ja käännöksen voi näyttää.",
+      "tips_item_3": "• Ota TTS käyttöön, jotta käännös luetaan ääneen.",
+      "tips_title": "Miten paikallinen chat toimii",
+      "title": "Uusi paikallinen chat",
+      "title_hint": "Esimerkiksi: Keskustelu asunnon omistajan kanssa",
+      "title_label": "Nimi (valinnainen)",
+      "translation_section": "Käännös ja näyttö",
+      "tts_subtitle": "Lue käännös ääneen näyttäessä",
+      "tts_title": "Lue käännös ääneen (TTS)"
+    },
+    "RecordHoldButton": {
+      "hold_to_record": "Paina\ntallentaaksesi",
+      "semantics_label": "{label:String}: pidä painettuna tallentaaksesi"
+    },
+    "SelectChatTypePage": {
+      "continue_button": "Jatka",
+      "details": {
+        "direct": {
+          "can_do": "Automaattinen käännös saapuvista ja lähtevistä viesteistä, ääniviestit, liitteet.",
+          "for_whom": "Yhden henkilön kanssa keskustelemiseen eri kielillä.",
+          "scenarios": "Liiketoimintakirjeenvaihto, henkilökohtaiset keskustelut, asiakastuki."
+        },
+        "group": {
+          "can_do": "Automaattinen käännös kaikille osallistujille, roolit ja oikeudet, kiinnitykset ja reaktiot.",
+          "for_whom": "Tiimeille, perheille ja yhteisöille, joissa on osallistujia eri maista.",
+          "scenarios": "Projektichatit, yhteisöt, organisatorinen kirjeenvaihto."
+        },
+        "local": {
+          "can_do": "Jätät viestejä vuorotellen yhdellä puhelimella — ne käännetään heti keskustelukumppanille.",
+          "for_whom": "Matkailijoille ja offline-keskusteluille yhdellä laitteella.",
+          "scenarios": "Keskustelu taksinkuljettajan/omistajan kanssa, ruoan tilaus, navigoinnin apu."
+        },
+        "learning": {
+          "can_do": "Tallenna sanoja ja lauseita, katso erilaisia merkityksiä ja esimerkkejä, harjoittele lukemisen/diktaamisen tiloissa.",
+          "for_whom": "Kielten oppimiseen yhdellä laitteella — kuin 'paikallinen chat', mutta keskittyen harjoitteluun.",
+          "scenarios": "Itsenäinen oppiminen matkalla, valmistautuminen tapaamiseen, kirjeenvaihdon purkaminen, henkilökohtainen sanakirja."
+        }
+      },
+      "labels": {
+        "can_do": "Mitä voi tehdä",
+        "for_whom": "Kenelle",
+        "scenarios": "Skenaariot"
+      },
+      "soon_tag": "Pian",
+      "title": "Luo chat",
+      "types": {
+        "direct": "Suora (1‑1)",
+        "group": "Ryhmä",
+        "learning": "Oppiminen",
+        "local": "Paikallinen chat"
+      }
+    }
+  },
+  "core": {
+    "field_empty": "Kenttä ei voi olla tyhjää",
+    "incorrect_format": "Virheellinen muoto",
+    "dialog_title": {
+      "error_title": "Virhe",
+      "connection_error": "Ei yhteyttä",
+      "server_error": "Virhe palvelimella",
+      "not_authorized": "Ei kirjautunut",
+      "upgrade_required": "Versio vanhentunut",
+      "insufficient_accessRights": "Riittämättömät oikeudet"
+    },
+    "dialog_msg": {
+      "retry_or_contact_support": "Yritä uudelleen tai ota yhteyttä tukeen osoitteessa: support@verto.chat",
+      "server_error": "Palvelimella tapahtui virhe. {retryOrContactSupport}",
+      "default_error": "Tapahtui virhe. {retryOrContactSupport}",
+      "connection_error": "Tarkista internet-yhteytesi ja yritä uudelleen",
+      "authorization_required": "Kirjautumistiedot ovat vanhentuneet. Kirjaudu sisään uudelleen",
+      "upgrade_required": "Asennettavan uuden version vuoksi, päivitä sovellus",
+      "insufficient_access_rights": "Toiminto ei ole käytettävissä. Oikeutesi ovat rajoitetut"
+    },
+    "dialog_action": {
+      "ok": "Ok",
+      "login": "Kirjaudu sisään",
+      "retry": "Yritä uudelleen",
+      "upgrade": "Päivitä",
+      "back": "Takaisin",
+      "yes": "Kyllä",
+      "no": "Ei",
+      "cancel": "Peruuta"
+    },
+    "DialogPresenter": {
+      "permission_text_location": "Sijainti",
+      "permission_denied": {
+        "location": "saada sijainti osoitteen valitsemiseksi",
+        "title": "Pääsy {permission:String}",
+        "description": "Tämän toiminnon käyttämiseksi tarvitaan pääsy {permission:String}. Voit ottaa sen käyttöön laitteesi asetuksista.",
+        "settings": "Asetukset",
+        "later": "Myöhemmin"
+      }
+    },
+    "photos": {
+      "GalleryScreen": {
+        "title": "Galleria"
+      }
+    },
+    "upload": {
+      "select_photo": {
+        "select_source_photo": {
+          "title": "Valitse kuva",
+          "from": {
+            "camera": "Kamera",
+            "gallery": "Galleria"
+          }
+        }
+      },
+      "AddPhotoButton": {
+        "add_photo": "Lisää kuva"
+      }
+    },
+    "widgets": {
+      "LastPageErrorMessageView": {
+        "something_wrong_try_again": "Jotain meni pieleen, yritä uudelleen:"
+      },
+      "TryAgainButton": {
+        "something_wrong": "Jotain meni pieleen",
+        "try_again": "Yritä uudelleen"
+      },
+      "AttachDocuments": {
+        "title": "Lisää asiakirjat"
+      }
+    }
+  },
+  "feedback": {
+    "feedback_page": {
+      "title": "Palaute",
+      "type_label": "Pyyntötyyppi",
+      "description_label": "Kuvaus",
+      "description_hint": "Kuvaile ongelmaasi tai ideasi tarkemmin",
+      "description_error": "Kirjoita pyyntösi teksti",
+      "submit": "Lähetä",
+      "success": "Pyyntö lähetetty",
+      "failed_send_feedback": "Palautteen lähettäminen epäonnistui",
+      "types": {
+        "bug": "Ilmoita virheestä",
+        "feature": "Ehdota ominaisuutta",
+        "category": "Ehdota uutta ilmoitusluokkaa",
+        "question": "Esitä kysymys",
+        "general": "Yleiset huomautukset ja toiveet"
+      }
+    }
+  },
+  "home": {
+    "main_label": "Etusivu",
+    "chats_label": "Chattit",
+    "profile_label": "Profiili"
+  },
+  "in_app": {
+    "BuyProductsScreen": {
+      "buy_button": "Osta",
+      "title": "Valitse tuote",
+      "unavailable": "Ei saatavilla"
+    }
+  },
+  "legal": {
+    "failed_get_regulations": "Sääntöjä ei voitu ladata.",
+    "LegalScreen": {
+      "title": "Oikeudelliset tiedot",
+      "policy_label": "Yksityisyydensuojakäytäntö",
+      "terms_label": "Käyttöehdot",
+      "gdpr_label": "GDPR-yksityisyydensuojakäytäntö"
+    }
+  },
+  "logger": {
+    "SessionScreen": {
+      "no_space_line_1": "Laitteessa ei ole tarpeeksi muistia.",
+      "no_space_line_2": "Vapauta tilaa ja yritä uudelleen.",
+      "ok": "OK",
+      "title": "Istuntoluettelo",
+      "unknown_error": "Tuntematon virhe."
+    }
+  },
+  "profile": {
+    "EditProfileScreen": {
+      "edit_password": "Vaihda salasana",
+      "first_name_label": "Etunimi",
+      "last_name_label": "Sukunimi",
+      "save_button_text": "Tallenna",
+      "success_toast": "Nimesi on päivitetty onnistuneesti",
+      "title": "Muokkaa profiilia"
+    },
+    "ProfilePage": {
+      "create_support_chat": "Kirjoita tukichattiin",
+      "failed_create_support_chat": "Tukichatin luominen epäonnistui",
+      "failed_loading_profile": "Käyttäjätietojen lataaminen epäonnistui",
+      "plan": {
+        "buy_credits": "Osta krediittejä",
+        "credits_count": {
+          "one": "{n} krediitti",
+          "few": "{n} krediittiä",
+          "other": "{n} krediittiä"
+        },
+        "plan_name": "Suunnitelma: {planName:String}",
+        "upgrade": "Päivitä suunnitelma"
+      }
+    },
+    "SafetyScreen": {
+      "delete_account_error": {
+        "requires_recent_login": "Tilin poistamiseen tarvitaan uusi kirjautuminen sovellukseen"
+      },
+      "delete_account_label": "Poista tili",
+      "delete_confirm": {
+        "description": "Oletko varma, että haluat poistaa tilin?",
+        "title": "Tilin poistaminen"
+      },
+      "edit_password": "Vaihda salasana",
+      "title": "Turvallisuus"
+    },
+    "delete_account_label": "Poista tili",
+    "edit_avatar_title": "Muokkaa avataria",
+    "edit_profile_label": "Muokkaa profiilia",
+    "failed_update_avatar": "Avatarin päivittäminen epäonnistui",
+    "failed_upload_avatar": "Avatarin lataaminen epäonnistui",
+    "feedback_label": "Palaute",
+    "language_label": "Kieli",
+    "legal_label": "Oikeudelliset tiedot",
+    "logout_label": "Kirjaudu ulos",
+    "safety_label": "Turvallisuus",
+    "select_language_title": "Valitse kieli",
+    "theme": {
+      "title": "Teema",
+      "light": "Vaalea",
+      "dark": "Tumma",
+      "system": "Järjestelmä"
+    },
+    "to_favorites_adverts_label": "Suosikit",
+    "to_my_adverts_label": "Omat ilmoitukset",
+    "version": "Versio {version}"
+  },
+  "report": {
+    "ReportSheet": {
+      "description_label": "Kuvaus",
+      "reasons": {
+        "abuse": "Vihapuhe tai loukkaava käytös",
+        "inappropriate": "Sopimaton käytös",
+        "other": "Muu",
+        "spam": "Roskaposti"
+      },
+      "submit": "Lähetä",
+      "success": "Ilmoitus lähetetty",
+      "title": "Ilmoita rikkomuksesta"
+    }
+  },
+  "users": {
+    "user_select_screen": {
+      "empty": "Ei käyttäjiä vielä",
+      "failure": "Virhe käyttäjien lataamisessa"
+    }
+  }
+}

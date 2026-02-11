@@ -1,10 +1,9 @@
 import 'package:flutter_chat_core/flutter_chat_core.dart';
+import 'package:openapi/openapi.dart';
 
 import '../../../../common/common.dart';
-import '../../../../core/core.dart';
 import '../../domain/domain.dart';
-import '../data_sources/data_sources.dart';
-import '../models/models.dart';
+import '../data_sources/models_extensions.dart';
 import '../supabase/supabase.dart';
 
 class ChatsRepository implements IChatsRepository {
@@ -16,10 +15,14 @@ class ChatsRepository implements IChatsRepository {
 
   ChatsRepository(this._supabaseChatsApi, this._logger, this._chatsApi, this._chatMessagesApi, this._safeDio);
 
+  void dispose() {
+    _supabaseChatsApi.dispose();
+  }
+
   @override
   Stream<int> onChatsChanges(int offset) {
     try {
-      return _supabaseChatsApi.onChatsChanges(limit: offset).map((data) => data.length);
+      return _supabaseChatsApi.chatsChangesStream.map((data) => 0);
     } catch (e) {
       _logger.log(LogLevel.error, "Failed to get chats changes", exception: e);
       rethrow;
@@ -27,24 +30,9 @@ class ChatsRepository implements IChatsRepository {
   }
 
   @override
-  Future<DomainResultDErr<List<Chat>>> getChats(int limit, String locale, {DomainId? lastChatId}) async {
-    final apiResult = await _safeDio.execute(() => _chatsApi.getChats(limit, lastChatId: lastChatId?.toString()));
-
-    return switch (apiResult) {
-      ApiSuccess() => Success(data: apiResult.data.map((d) => d.toEntity()).toList()),
-      ApiError() => Error(errorData: apiResult.toDomain()),
-    };
-  }
-
-  @override
-  Future<DomainResultDErr<List<Chat>>> getAdvertChats(
-    int offset,
-    String locale,
-    DomainId advertId, {
-    DomainId? lastChatId,
-  }) async {
+  Future<DomainResultDErr<List<Chat>>> getChats(int limit, {DomainId? lastChatId}) async {
     final apiResult = await _safeDio.execute(
-      () => _chatsApi.getAdvertChats(offset, advertId.toString(), lastChatId: lastChatId?.toString()),
+      () => _chatsApi.getChats(limit: limit, lastChatId: lastChatId?.toString()),
     );
 
     return switch (apiResult) {
@@ -64,8 +52,8 @@ class ChatsRepository implements IChatsRepository {
   }
 
   @override
-  Future<DomainResultDErr<ShortChatInfo>> getShortChatInfo(DomainId chatId, String languageCode) async {
-    final apiResult = await _safeDio.execute(() => _chatsApi.getShortChatInfo(chatId.toString()));
+  Future<DomainResultDErr<ShortChatInfo>> getShortChatInfo(DomainId chatId) async {
+    final apiResult = await _safeDio.execute(() => _chatsApi.getChatDetail(chatId: chatId.toString()));
 
     return switch (apiResult) {
       ApiSuccess() => Success(data: apiResult.data.toEntity()),
@@ -74,23 +62,22 @@ class ChatsRepository implements IChatsRepository {
   }
 
   @override
-  Future<DomainResultDErr<List<Message>>> getMessages(DomainId chatId, int limit, {DomainId? lastMessageId}) async {
+  Future<DomainResultDErr<List<Message>>> getMessages(
+    DomainId chatId,
+    int limit, {
+    required String Function(String authorId, String originalLanguageCode) resolveAuthor,
+    DomainId? lastMessageId,
+  }) async {
     final apiResult = await _safeDio.execute(
-      () => _chatMessagesApi.getMessages(chatId.toString(), limit, lastMessageId: lastMessageId?.toString()),
+      () => _chatMessagesApi.getMessages(
+        chatId: chatId.toString(),
+        limit: limit,
+        lastMessageId: lastMessageId?.toString(),
+      ),
     );
 
     return switch (apiResult) {
-      ApiSuccess() => Success(data: apiResult.data.map((d) => d.toEntity()).toList()),
-      ApiError() => Error(errorData: apiResult.toDomain()),
-    };
-  }
-
-  @override
-  Future<DomainResultDErr<CreatedChat>> createDirectChat(UserInfo user) async {
-    final apiResult = await _safeDio.execute(() => _chatsApi.createDirectChat(user.id.toString()));
-
-    return switch (apiResult) {
-      ApiSuccess(:final data) => Success(data: (id: DomainId.fromString(id: data.id), name: data.name)),
+      ApiSuccess() => Success(data: apiResult.data.map((d) => d.toEntity(resolveAuthor)).toList()),
       ApiError() => Error(errorData: apiResult.toDomain()),
     };
   }
@@ -99,7 +86,35 @@ class ChatsRepository implements IChatsRepository {
   Future<EmptyDomainResult> sendMessage(DomainId chatId, String message) async {
     final request = SendTextMessageRequestDto(chatId: chatId.toString(), originalText: message);
 
-    final apiResult = await _safeDio.execute(() => _chatMessagesApi.sendTextMessage(request));
+    final apiResult = await _safeDio.execute(
+      () => _chatMessagesApi.sendTextMessage(sendTextMessageRequestDto: request),
+    );
+
+    return switch (apiResult) {
+      ApiSuccess() => Success(data: null),
+      ApiError() => Error(errorData: apiResult.toDomain()),
+    };
+  }
+
+  @override
+  Future<EmptyDomainResult> sendVoiceMessage({
+    required DomainId chatId,
+    required String messageId,
+    required String ttsStorageKey,
+    required String originalLanguageCode,
+    required String translatedLanguageCode,
+  }) async {
+    final request = SendVoiceMessageRequestDto(
+      chatId: chatId.toString(),
+      messageId: messageId,
+      ttsStorageKey: ttsStorageKey,
+      originalLanguageCode: originalLanguageCode.toLanguageCode(),
+      translatedLanguageCode: translatedLanguageCode.toLanguageCode(),
+    );
+
+    final apiResult = await _safeDio.execute(
+      () => _chatMessagesApi.sendVoiceMessage(sendVoiceMessageRequestDto: request),
+    );
 
     return switch (apiResult) {
       ApiSuccess() => Success(data: null),
@@ -123,7 +138,9 @@ class ChatsRepository implements IChatsRepository {
       mimeType: mimeType,
     );
 
-    final apiResult = await _safeDio.execute(() => _chatMessagesApi.sendFileMessage(request));
+    final apiResult = await _safeDio.execute(
+      () => _chatMessagesApi.sendFileMessage(sendFileMessageRequestDto: request),
+    );
 
     return switch (apiResult) {
       ApiSuccess() => Success(data: null),
@@ -145,9 +162,12 @@ class ChatsRepository implements IChatsRepository {
       thumbnailImageUrl: thumbnailUrl,
       fileName: name,
       fileSize: size,
+      mimeType: null,
     );
 
-    final apiResult = await _safeDio.execute(() => _chatMessagesApi.sendImageMessage(request));
+    final apiResult = await _safeDio.execute(
+      () => _chatMessagesApi.sendImageMessage(sendImageMessageRequestDto: request),
+    );
 
     return switch (apiResult) {
       ApiSuccess() => Success(data: null),
@@ -156,12 +176,19 @@ class ChatsRepository implements IChatsRepository {
   }
 
   @override
-  Future<DomainResultDErr<CreatedChat>> createSupportChat() async {
-    final apiResult = await _safeDio.execute(() => _chatsApi.createSupportChat());
+  Future<DomainResultDErr<String>> getTtsLink({required DomainId chatId, required String messageId}) async {
+    final request = TtsLinkRequestDto(chatId: chatId.toString(), messageId: messageId, isTranslatedVoice: true);
+
+    final apiResult = await _safeDio.execute(() => _chatMessagesApi.getTtsLink(ttsLinkRequestDto: request));
 
     return switch (apiResult) {
-      ApiSuccess(:final data) => Success(data: (id: DomainId.fromString(id: data.id), name: data.name)),
+      ApiSuccess(:final data) => Success(data: data.url),
       ApiError() => Error(errorData: apiResult.toDomain()),
     };
+  }
+
+  @override
+  String getTtsStorageKey({required String languageCode, required DomainId chatId, required String messageId}) {
+    return "tts/${chatId.toString()}/${messageId}_$languageCode.mp3";
   }
 }

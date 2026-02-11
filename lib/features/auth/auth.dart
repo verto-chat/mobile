@@ -1,12 +1,14 @@
 import 'package:context_di/context_di.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:openapi/openapi.dart';
 import 'package:provider/provider.dart';
 
 import '../../common/common.dart';
 import '../../core/core.dart';
 import '../../core/features/upload/data/upload_repository.dart';
 import '../../core/features/user/data/data.dart';
+import '../../core/features/user/data/data_sources/local/local_user_source.dart';
 import '../features.dart';
 import 'presentation/managers/sign_in_bloc.dart';
 import 'presentation/managers/sign_up_bloc.dart';
@@ -28,7 +30,9 @@ class LoggedInFeature extends FeatureDependencies with _$LoggedInFeatureMixin {
           child: InAppFeature(
             child: MultiProvider(
               providers: [BlocProvider(create: (c) => c.read<CreateSubscriptionBloc>().call(c), lazy: false)],
-              child: ChatsFeature(child: ProfileFeature(child: child)),
+              child: CreateChatsFeature(
+                child: ChatsFeature(child: ProfileFeature(child: child)),
+              ),
             ),
           ),
         ),
@@ -36,17 +40,7 @@ class LoggedInFeature extends FeatureDependencies with _$LoggedInFeatureMixin {
 
   @override
   List<Registration> register() {
-    return [
-      registerSingleton((context) {
-        final dio = context.read<CreateDio>().call(context, const (backendSupport: true));
-
-        final endpoints = context.read<IEndpoints>();
-
-        return UserApi(dio, baseUrl: "${endpoints.baseUrl}/users");
-      }),
-
-      ...super.register(),
-    ];
+    return [registerSingleton((context) => context.read<Openapi>().getUserApi()), ...super.register()];
   }
 }
 

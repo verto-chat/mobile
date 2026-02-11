@@ -1,0 +1,380 @@
+{
+  "auth": {
+    "SignInScreen": {
+      "email_label": "Email",
+      "password_label": "Kata Sandi",
+      "forgot_password": "Lupa kata sandi?",
+      "sign_in": "Masuk",
+      "sign_up": "Daftar",
+      "sign_in_with_google": "Masuk dengan Google",
+      "sign_in_with_apple": "Masuk dengan Apple",
+      "login_error": {
+        "invalid_credentials": "Kredensial tidak valid",
+        "email_not_confirmed": "Email belum dikonfirmasi"
+      },
+      "OAuthAcceptRegulationsSheet": {
+        "title": "Untuk melanjutkan, silakan daftar",
+        "regulations(rich)": "Silakan terima {terms(Ketentuan Layanan)} dan {policy(Kebijakan Privasi)}",
+        "accept": "Setuju",
+        "cancel": "Batal",
+        "failed_get_regulations": "Gagal mendapatkan ketentuan."
+      }
+    },
+    "SignUpScreen": {
+      "title": "Daftar",
+      "first_name_label": "Nama Depan",
+      "last_name_label": "Nama Belakang",
+      "email_label": "Email",
+      "password_label": "Kata Sandi",
+      "repeat_password": "Ulangi kata sandi",
+      "sign_up": "Daftar",
+      "password_not_equal": "Kata sandi tidak cocok",
+      "regulations(rich)": "Saya setuju dengan {terms(ketentuan layanan)} dan {policy(kebijakan privasi)}",
+      "after_registration_toast": "✔️ Email konfirmasi telah dikirim! Periksa email Anda dan konfirmasi alamat.",
+      "register_error": {
+        "incorrect_email": "Email tidak valid",
+        "incorrect_name": "Nama tidak valid",
+        "incorrect_password": "Kata sandi harus terdiri dari minimal 8 karakter dan mengandung huruf besar, huruf kecil, dan angka",
+        "email_already_used": "Alamat email sudah digunakan",
+        "create_error": "Gagal membuat pengguna",
+        "emailRateLimitExceeded": "Batas pengiriman email telah terlampaui"
+      }
+    },
+    "reset_password": {
+      "CodeScreen": {
+        "title": "Pemulihan Kata Sandi",
+        "description": "Kode pemulihan telah dikirim ke email Anda {email:String}",
+        "submit": "Selanjutnya",
+        "field_label": "Kode Pemulihan",
+        "field_error": "Kode tidak valid",
+        "check_error_description": "Gagal memverifikasi kode pemulihan"
+      },
+      "ForgotPasswordScreen": {
+        "title": "Pemulihan Kata Sandi",
+        "email_label": "Email",
+        "send_reset_link": "Kirim tautan",
+        "check_error_description": "Gagal mengirim kode untuk pemulihan kata sandi"
+      },
+      "NewPasswordScreen": {
+        "title": "Kata Sandi Baru",
+        "reset_submit": "Masuk",
+        "edit_submit": "Ubah",
+        "current_password": "Kata sandi saat ini",
+        "new_password": "Kata sandi baru",
+        "repeat_new_password": "Ulangi kata sandi baru",
+        "password_label": "Kata Sandi",
+        "repeat_password": "Ulangi kata sandi",
+        "failed_change_password": "Gagal mengubah kata sandi",
+        "failed_reset_password": "Gagal mereset kata sandi",
+        "errors": {
+          "wrong_current_password": "Kata sandi saat ini salah",
+          "same_password": "Kata sandi baru tidak boleh sama dengan yang saat ini"
+        }
+      }
+    }
+  },
+  "chats": {
+    "ChatPage": {
+      "SlangChatL10n": {
+        "and": "dan",
+        "attachmentButtonAccessibilityLabel": "Kirim media",
+        "emptyChatPlaceholder": "Belum ada pesan",
+        "fileButtonAccessibilityLabel": "Berkas",
+        "inputPlaceholder": "Pesan",
+        "isTyping": "sedang mengetik...",
+        "others": "lainnya",
+        "sendButtonAccessibilityLabel": "Kirim",
+        "unreadMessagesLabel": "Pesan belum dibaca"
+      },
+      "advert_chat": "Obrolan Iklan",
+      "attachment_type_file": "Berkas",
+      "attachment_type_image": "Gambar",
+      "failure": "Gagal memuat obrolan",
+      "no_messages_yet": "Belum ada pesan",
+      "return_translation": "Kembalikan terjemahan",
+      "show_original": "Tampilkan yang asli",
+      "tts_play_failed": "Gagal memutar: {error:String}",
+      "tts_play_original": "Bacakan yang asli",
+      "tts_play_translation": "Bacakan terjemahan"
+    },
+    "ChatsPage": {
+      "ChatCard": {
+        "favorites_chat_name": "Favorit",
+        "support_chat_name": "Dukungan"
+      },
+      "NoItemsStub": {
+        "description": "Belum ada obrolan",
+        "title": "Belum ada obrolan"
+      },
+      "create_direct_chat": "Buat obrolan dengan pengguna",
+      "create_group_chat": "Buat obrolan grup",
+      "delete_action": "Hapus",
+      "empty": "Belum ada obrolan",
+      "failure": "Gagal memuat obrolan",
+      "title": "Obrolan"
+    },
+    "CreateDirectChatPage": {
+      "failure_create_chat": "Gagal membuat obrolan",
+      "title": "Buat obrolan"
+    },
+    "CreateLocalChatPage": {
+      "languages_section": "Bahasa",
+      "my_language_label": "Bahasa Anda",
+      "partner_language_label": "Bahasa Mitra",
+      "show_both_subtitle": "Tampilkan kedua teks untuk memudahkan pemeriksaan",
+      "show_both_title": "Tampilkan yang asli dan terjemahan",
+      "start_button": "Mulai obrolan lokal",
+      "swap_languages": "Tukar bahasa",
+      "tips_item_1": "• Anda dan mitra berbicara secara bergantian di satu perangkat.",
+      "tips_item_2": "• Pesan diterjemahkan secara otomatis, dapat menampilkan yang asli dan terjemahan.",
+      "tips_item_3": "• Aktifkan TTS agar terjemahan dibacakan.",
+      "tips_title": "Cara kerja obrolan lokal",
+      "title": "Obrolan lokal baru",
+      "title_hint": "Contoh: Percakapan dengan pemilik apartemen",
+      "title_label": "Judul (opsional)",
+      "translation_section": "Terjemahan dan tampilan",
+      "tts_subtitle": "Bacakan terjemahan saat ditampilkan",
+      "tts_title": "Bacakan terjemahan (TTS)"
+    },
+    "RecordHoldButton": {
+      "hold_to_record": "Tahan\nuntuk merekam",
+      "semantics_label": "{label:String}: tahan untuk merekam"
+    },
+    "SelectChatTypePage": {
+      "continue_button": "Lanjutkan",
+      "details": {
+        "direct": {
+          "can_do": "Penerjemahan otomatis untuk pesan masuk dan keluar, pesan suara, lampiran.",
+          "for_whom": "Untuk berkomunikasi dengan satu orang dalam berbagai bahasa.",
+          "scenarios": "Korespondensi bisnis, percakapan pribadi, dukungan pelanggan."
+        },
+        "group": {
+          "can_do": "Penerjemahan otomatis untuk semua peserta, peran dan hak, pin dan reaksi.",
+          "for_whom": "Untuk tim, keluarga, dan komunitas dengan peserta dari berbagai negara.",
+          "scenarios": "Obrolan proyek, komunitas, korespondensi organisasi."
+        },
+        "local": {
+          "can_do": "Anda bergantian meninggalkan pesan di satu ponsel — mereka langsung diterjemahkan untuk mitra.",
+          "for_whom": "Untuk wisatawan dan negosiasi offline di satu perangkat.",
+          "scenarios": "Berkomunikasi dengan sopir taksi/pemilik sewa, memesan makanan, bantuan dengan navigasi."
+        },
+        "learning": {
+          "can_do": "Simpan kata dan frasa, lihat berbagai makna dan contoh, berlatih dalam mode membaca/dikte.",
+          "for_whom": "Untuk belajar bahasa di satu perangkat — seperti 'obrolan lokal', tetapi fokus pada praktik.",
+          "scenarios": "Belajar mandiri dalam perjalanan, persiapan untuk pertemuan, analisis korespondensi, kamus pribadi."
+        }
+      },
+      "labels": {
+        "can_do": "Apa yang bisa dilakukan",
+        "for_whom": "Untuk siapa",
+        "scenarios": "Skenario"
+      },
+      "soon_tag": "Segera",
+      "title": "Buat obrolan",
+      "types": {
+        "direct": "Direct (1-ke-1)",
+        "group": "Grup",
+        "learning": "Pembelajaran",
+        "local": "Obrolan lokal"
+      }
+    }
+  },
+  "core": {
+    "field_empty": "Kolom tidak boleh kosong",
+    "incorrect_format": "Format tidak valid",
+    "dialog_title": {
+      "error_title": "Kesalahan",
+      "connection_error": "Tidak ada koneksi",
+      "server_error": "Kesalahan di server",
+      "not_authorized": "Tidak terotorisasi",
+      "upgrade_required": "Versi usang",
+      "insufficient_accessRights": "Hak akses tidak cukup"
+    },
+    "dialog_msg": {
+      "retry_or_contact_support": "Silakan coba lagi atau hubungi dukungan di: support@verto.chat",
+      "server_error": "Terjadi kesalahan di server. {retryOrContactSupport}",
+      "default_error": "Terjadi kesalahan. {retryOrContactSupport}",
+      "connection_error": "Silakan periksa koneksi internet Anda dan coba lagi",
+      "authorization_required": "Data otorisasi sudah usang. Anda perlu masuk kembali",
+      "upgrade_required": "Untuk berfungsi dengan baik, silakan instal versi terbaru aplikasi",
+      "insufficient_access_rights": "Tindakan tidak tersedia. Hak Anda terbatas"
+    },
+    "dialog_action": {
+      "ok": "Oke",
+      "login": "Masuk",
+      "retry": "Coba lagi",
+      "upgrade": "Perbarui",
+      "back": "Kembali",
+      "yes": "Ya",
+      "no": "Tidak",
+      "cancel": "Batal"
+    },
+    "DialogPresenter": {
+      "permission_text_location": "Lokasi",
+      "permission_denied": {
+        "location": "mendapatkan lokasi untuk memilih alamat",
+        "title": "Akses ke {permission:String}",
+        "description": "Untuk menggunakan fitur ini, diperlukan akses ke {permission:String}. Anda dapat mengaktifkannya di pengaturan perangkat Anda.",
+        "settings": "Ke pengaturan",
+        "later": "Nanti"
+      }
+    },
+    "photos": {
+      "GalleryScreen": {
+        "title": "Galeri"
+      }
+    },
+    "upload": {
+      "select_photo": {
+        "select_source_photo": {
+          "title": "Pilih gambar",
+          "from": {
+            "camera": "Kamera",
+            "gallery": "Dari Galeri"
+          }
+        }
+      },
+      "AddPhotoButton": {
+        "add_photo": "Tambahkan"
+      }
+    },
+    "widgets": {
+      "LastPageErrorMessageView": {
+        "something_wrong_try_again": "Terjadi kesalahan, coba lagi:"
+      },
+      "TryAgainButton": {
+        "something_wrong": "Terjadi kesalahan",
+        "try_again": "Coba lagi"
+      },
+      "AttachDocuments": {
+        "title": "Tambahkan dokumen"
+      }
+    }
+  },
+  "feedback": {
+    "feedback_page": {
+      "title": "Umpan Balik",
+      "type_label": "Jenis permintaan",
+      "description_label": "Deskripsi",
+      "description_hint": "Jelaskan lebih lanjut masalah atau ide Anda",
+      "description_error": "Silakan tulis teks permintaan",
+      "submit": "Kirim",
+      "success": "Permintaan telah dikirim",
+      "failed_send_feedback": "Gagal mengirim umpan balik",
+      "types": {
+        "bug": "Laporkan bug",
+        "feature": "Usulkan fitur",
+        "category": "Usulkan kategori iklan baru",
+        "question": "Ajukan pertanyaan",
+        "general": "Komentar dan saran umum"
+      }
+    }
+  },
+  "home": {
+    "main_label": "Beranda",
+    "chats_label": "Obrolan",
+    "profile_label": "Profil"
+  },
+  "in_app": {
+    "BuyProductsScreen": {
+      "buy_button": "Beli",
+      "title": "Pilih barang",
+      "unavailable": "Tidak tersedia"
+    }
+  },
+  "legal": {
+    "failed_get_regulations": "Gagal mendapatkan ketentuan.",
+    "LegalScreen": {
+      "title": "Informasi Hukum",
+      "policy_label": "Kebijakan Privasi",
+      "terms_label": "Ketentuan Layanan",
+      "gdpr_label": "Kebijakan Privasi GDPR"
+    }
+  },
+  "logger": {
+    "SessionScreen": {
+      "no_space_line_1": "Tidak ada cukup ruang di perangkat.",
+      "no_space_line_2": "Silakan kosongkan ruang dan coba lagi.",
+      "ok": "Oke",
+      "title": "Daftar Sesi",
+      "unknown_error": "Kesalahan tidak diketahui."
+    }
+  },
+  "profile": {
+    "EditProfileScreen": {
+      "edit_password": "Ubah kata sandi",
+      "first_name_label": "Nama Depan",
+      "last_name_label": "Nama Belakang",
+      "save_button_text": "Simpan",
+      "success_toast": "Nama Anda berhasil diperbarui",
+      "title": "Edit Profil"
+    },
+    "ProfilePage": {
+      "create_support_chat": "Tulis ke obrolan dukungan",
+      "failed_create_support_chat": "Gagal membuat obrolan dukungan",
+      "failed_loading_profile": "Gagal memuat informasi pengguna",
+      "plan": {
+        "buy_credits": "Beli kredit",
+        "credits_count": {
+          "one": "{n} kredit",
+          "few": "{n} kredit",
+          "other": "{n} kredit"
+        },
+        "plan_name": "Rencana: {planName:String}",
+        "upgrade": "Tingkatkan rencana"
+      }
+    },
+    "SafetyScreen": {
+      "delete_account_error": {
+        "requires_recent_login": "Untuk menghapus akun, Anda perlu masuk kembali ke aplikasi"
+      },
+      "delete_account_label": "Hapus akun",
+      "delete_confirm": {
+        "description": "Apakah Anda yakin ingin menghapus akun?",
+        "title": "Hapus Akun"
+      },
+      "edit_password": "Ubah kata sandi",
+      "title": "Keamanan"
+    },
+    "delete_account_label": "Hapus akun",
+    "edit_avatar_title": "Edit Avatar",
+    "edit_profile_label": "Edit Profil",
+    "failed_update_avatar": "Gagal memperbarui avatar",
+    "failed_upload_avatar": "Gagal mengunggah avatar",
+    "feedback_label": "Umpan Balik",
+    "language_label": "Bahasa",
+    "legal_label": "Informasi Hukum",
+    "logout_label": "Keluar dari akun",
+    "safety_label": "Keamanan",
+    "select_language_title": "Pilih Bahasa",
+    "theme": {
+      "title": "Tema",
+      "light": "Terang",
+      "dark": "Gelap",
+      "system": "Sistem"
+    },
+    "to_favorites_adverts_label": "Iklan Favorit",
+    "to_my_adverts_label": "Iklan Saya",
+    "version": "Versi {version}"
+  },
+  "report": {
+    "ReportSheet": {
+      "description_label": "Deskripsi",
+      "reasons": {
+        "abuse": "Pelecehan atau provokasi kebencian",
+        "inappropriate": "Perilaku tidak pantas",
+        "other": "Lainnya",
+        "spam": "Spam"
+      },
+      "submit": "Kirim",
+      "success": "Laporan telah dikirim",
+      "title": "Laporkan Pelanggaran"
+    }
+  },
+  "users": {
+    "user_select_screen": {
+      "empty": "Belum ada pengguna",
+      "failure": "Gagal memuat pengguna"
+    }
+  }
+}

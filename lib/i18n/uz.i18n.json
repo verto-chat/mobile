@@ -1,0 +1,380 @@
+{
+  "auth": {
+    "SignInScreen": {
+      "email_label": "Email",
+      "password_label": "Parol",
+      "forgot_password": "Parolni unutdingizmi?",
+      "sign_in": "Kirish",
+      "sign_up": "Ro'yxatdan o'tish",
+      "sign_in_with_google": "Google orqali kirish",
+      "sign_in_with_apple": "Apple orqali kirish",
+      "login_error": {
+        "invalid_credentials": "Noto'g'ri kirish ma'lumotlari",
+        "email_not_confirmed": "Email tasdiqlanmagan"
+      },
+      "OAuthAcceptRegulationsSheet": {
+        "title": "Davom etish uchun ro'yxatdan o'ting",
+        "regulations(rich)": "Iltimos, {terms(foydalanish shartlari)} va {policy(maxfiylik siyosati)} ni qabul qiling",
+        "accept": "Qabul qilish",
+        "cancel": "Bekor qilish",
+        "failed_get_regulations": "Qoidalarni olishda xato."
+      }
+    },
+    "SignUpScreen": {
+      "title": "Ro'yxatdan o'tish",
+      "first_name_label": "Ism",
+      "last_name_label": "Familiya",
+      "email_label": "Email",
+      "password_label": "Parol",
+      "repeat_password": "Parolni takrorlang",
+      "sign_up": "Ro'yxatdan o'tish",
+      "password_not_equal": "Parollar mos kelmaydi",
+      "regulations(rich)": "Men {terms(foydalanish shartlari)} va {policy(maxfiylik siyosati)} ga roziman",
+      "after_registration_toast": "✔️ Tasdiqlash xati yuborildi! Iltimos, pochtaingizni tekshirib ko'ring va manzilni tasdiqlang.",
+      "register_error": {
+        "incorrect_email": "Noto'g'ri email",
+        "incorrect_name": "Noto'g'ri ism",
+        "incorrect_password": "Parol 8 ta belgidan kam bo'lmasligi va katta va kichik harflar va raqamlarni o'z ichiga olishi kerak",
+        "email_already_used": "Email manzili allaqachon ishlatilmoqda",
+        "create_error": "Foydalanuvchini yaratishda xato",
+        "emailRateLimitExceeded": "Email yuborish chegarasi oshib ketdi"
+      }
+    },
+    "reset_password": {
+      "CodeScreen": {
+        "title": "Parolni tiklash",
+        "description": "Sizning emailingizga {email:String} tiklash kodi yuborildi",
+        "submit": "Keyingi",
+        "field_label": "Tiklash kodi",
+        "field_error": "Noto'g'ri kod",
+        "check_error_description": "Tiklash kodini tekshirishda xato"
+      },
+      "ForgotPasswordScreen": {
+        "title": "Parolni tiklash",
+        "email_label": "Email",
+        "send_reset_link": "Havolani yuborish",
+        "check_error_description": "Parolni tiklash uchun kod yuborishda xato"
+      },
+      "NewPasswordScreen": {
+        "title": "Yangi parol",
+        "reset_submit": "Kirish",
+        "edit_submit": "O'zgartirish",
+        "current_password": "Hozirgi parol",
+        "new_password": "Yangi parol",
+        "repeat_new_password": "Yangi parolni takrorlang",
+        "password_label": "Parol",
+        "repeat_password": "Parolni takrorlang",
+        "failed_change_password": "Parolni o'zgartirishda xato",
+        "failed_reset_password": "Parolni tiklashda xato",
+        "errors": {
+          "wrong_current_password": "Hozirgi parol noto'g'ri",
+          "same_password": "Yangi parol hozirgi parol bilan bir xil bo'lmasligi kerak"
+        }
+      }
+    }
+  },
+  "chats": {
+    "ChatPage": {
+      "SlangChatL10n": {
+        "and": "va",
+        "attachmentButtonAccessibilityLabel": "Media yuborish",
+        "emptyChatPlaceholder": "Hozircha sizda xabarlar yo'q",
+        "fileButtonAccessibilityLabel": "Fayl",
+        "inputPlaceholder": "Xabar",
+        "isTyping": "yozyapti…",
+        "others": "boshqalar",
+        "sendButtonAccessibilityLabel": "Yuborish",
+        "unreadMessagesLabel": "O'qilmagan xabarlar"
+      },
+      "advert_chat": "E'lon bo'yicha chat",
+      "attachment_type_file": "Fayl",
+      "attachment_type_image": "Rasm",
+      "failure": "Chatni yuklashda xato",
+      "no_messages_yet": "Hozircha xabarlar yo'q",
+      "return_translation": "Tarjima qaytarish",
+      "show_original": "Aslini ko'rsatish",
+      "tts_play_failed": "Ovoz chiqarishda xato: {error:String}",
+      "tts_play_original": "Aslini ovoz chiqarish",
+      "tts_play_translation": "Tarjimani ovoz chiqarish"
+    },
+    "ChatsPage": {
+      "ChatCard": {
+        "favorites_chat_name": "Sevimlilar",
+        "support_chat_name": "Qo'llab-quvvatlash"
+      },
+      "NoItemsStub": {
+        "description": "Hozircha sizda chatlar yo'q",
+        "title": "Hozircha chatlar yo'q"
+      },
+      "create_direct_chat": "Foydalanuvchi bilan chat yaratish",
+      "create_group_chat": "Guruh chatini yaratish",
+      "delete_action": "O'chirish",
+      "empty": "Hozircha chatlar yo'q",
+      "failure": "Chatlarni yuklashda xato",
+      "title": "Chatlar"
+    },
+    "CreateDirectChatPage": {
+      "failure_create_chat": "Chatni yaratishda xato",
+      "title": "Chat yaratish"
+    },
+    "CreateLocalChatPage": {
+      "languages_section": "Tilllar",
+      "my_language_label": "Sizning tilingiz",
+      "partner_language_label": "Hamkoringiz tili",
+      "show_both_subtitle": "Tekshirish uchun ikkala matnni ko'rsatish",
+      "show_both_title": "Asl va tarjimani ko'rsatish",
+      "start_button": "Mahalliy chatni boshlash",
+      "swap_languages": "Tillarni almashtirish",
+      "tips_item_1": "• Siz va hamkoringiz bir qurilmada navbatma-navbat gapirasiz.",
+      "tips_item_2": "• Xabarlar avtomatik tarjima qilinadi, asl va tarjimani ko'rsatish mumkin.",
+      "tips_item_3": "• Tarjimani ovoz chiqarish uchun TTS ni yoqing.",
+      "tips_title": "Mahalliy chat qanday ishlaydi",
+      "title": "Yangi mahalliy chat",
+      "title_hint": "Masalan: Xonadon egasi bilan suhbat",
+      "title_label": "Sarlavha (ixtiyoriy)",
+      "translation_section": "Tarjima va ko'rsatish",
+      "tts_subtitle": "Tarjimani ko'rsatishda ovoz chiqarish",
+      "tts_title": "Tarjimani ovoz chiqarish (TTS)"
+    },
+    "RecordHoldButton": {
+      "hold_to_record": "Ushlab turish\nyozish uchun",
+      "semantics_label": "{label:String}: yozish uchun ushlab turish"
+    },
+    "SelectChatTypePage": {
+      "continue_button": "Davom etish",
+      "details": {
+        "direct": {
+          "can_do": "Kirish va chiqish xabarlarini avtomatik tarjima qilish, ovozli xabarlar, ilovalar.",
+          "for_whom": "Bitta odam bilan turli tillarda muloqot qilish uchun.",
+          "scenarios": "Biznes yozishmalari, shaxsiy suhbatlar, mijozlarga xizmat ko'rsatish."
+        },
+        "group": {
+          "can_do": "Barcha ishtirokchilar uchun avtomatik tarjima, rollar va huquqlar, pinlar va reaktsiyalar.",
+          "for_whom": "Turli mamlakatlardan ishtirokchilarga ega jamoalar, oilalar va jamoalar uchun.",
+          "scenarios": "Loyihalar chatlari, jamoalar, tashkiliy yozishmalar."
+        },
+        "local": {
+          "can_do": "Siz bir telefonda navbatma-navbat xabarlar qoldirasiz — ular darhol hamkoringizga tarjima qilinadi.",
+          "for_whom": "Sayohatchilar va bir qurilmada oflayn muloqotlar uchun.",
+          "scenarios": "Taksi haydovchisi/ijara beruvchisi bilan muloqot, ovqat buyurtma qilish, navigatsiya yordam."
+        },
+        "learning": {
+          "can_do": "So'zlar va iboralarni saqlang, turli ma'nolar va misollarni ko'ring, o'qish/diktatsiya rejimlarida mashq qiling.",
+          "for_whom": "Bir qurilmada tillarni o'rganish uchun — «mahalliy chat» kabi, lekin amaliyotga e'tibor qaratilgan.",
+          "scenarios": "Sayohat davomida o'z-o'zini o'rganish, uchrashuvga tayyorgarlik, yozishmalarni tahlil qilish, shaxsiy lug'at."
+        }
+      },
+      "labels": {
+        "can_do": "Nima mumkin",
+        "for_whom": "Kim uchun",
+        "scenarios": "Scenarilar"
+      },
+      "soon_tag": "Tez orada",
+      "title": "Chat yaratish",
+      "types": {
+        "direct": "To'g'ridan-to'g'ri (1-1)",
+        "group": "Guruh",
+        "learning": "O'rganish",
+        "local": "Mahalliy chat"
+      }
+    }
+  },
+  "core": {
+    "DialogPresenter": {
+      "permission_text_location": "Joylashuv",
+      "permission_denied": {
+        "location": "manzilni tanlash uchun joylashuvni olishga ruxsat berilmagan",
+        "title": "{permission:String} ga kirish",
+        "description": "Ushbu funksiyani ishlatish uchun {permission:String} ga kirish kerak. Buni qurilmangizning sozlamalarida yoqishingiz mumkin.",
+        "settings": "Sozlamalarga",
+        "later": "Keyinroq"
+      }
+    },
+    "dialog_action": {
+      "ok": "OK",
+      "login": "Kirish",
+      "retry": "Qaytadan urinib ko'ring",
+      "upgrade": "Yangilash",
+      "back": "Orqaga",
+      "yes": "Ha",
+      "no": "Yo'q",
+      "cancel": "Bekor qilish"
+    },
+    "dialog_msg": {
+      "retry_or_contact_support": "Qaytadan urinib ko'ring yoki qo'llab-quvvatlash xizmatiga murojaat qiling: support@verto.chat",
+      "server_error": "Serverda xato yuz berdi. {retryOrContactSupport}",
+      "default_error": "Xato yuz berdi. {retryOrContactSupport}",
+      "connection_error": "Iltimos, internet ulanishingizni tekshirib ko'ring va qaytadan urinib ko'ring",
+      "authorization_required": "Avtorizatsiya ma'lumotlari eskirgan. Qaytadan kirish zarur",
+      "upgrade_required": "To'g'ri ishlashi uchun yangi versiyani o'rnating",
+      "insufficient_access_rights": "Harakat mavjud emas. Sizning huquqlaringiz cheklangan"
+    },
+    "dialog_title": {
+      "error_title": "Xato",
+      "connection_error": "Ulanish yo'q",
+      "server_error": "Serverda xato",
+      "not_authorized": "Avtorizatsiya qilinmagan",
+      "upgrade_required": "Versiya eskirgan",
+      "insufficient_accessRights": "Yetarli huquq yo'q"
+    },
+    "field_empty": "Maydon bo'sh bo'lmasligi kerak",
+    "incorrect_format": "Noto'g'ri format",
+    "photos": {
+      "GalleryScreen": {
+        "title": "Galereya"
+      }
+    },
+    "upload": {
+      "select_photo": {
+        "select_source_photo": {
+          "title": "Rasmni tanlang",
+          "from": {
+            "camera": "Kamera",
+            "gallery": "Galereyadan"
+          }
+        }
+      },
+      "AddPhotoButton": {
+        "add_photo": "Rasm qo'shish"
+      }
+    },
+    "widgets": {
+      "LastPageErrorMessageView": {
+        "something_wrong_try_again": "Nimadir noto'g'ri ketdi, qaytadan urinib ko'ring:"
+      },
+      "TryAgainButton": {
+        "something_wrong": "Nimadir noto'g'ri ketdi",
+        "try_again": "Qaytadan urinib ko'ring"
+      },
+      "AttachDocuments": {
+        "title": "Hujjatlarni qo'shish"
+      }
+    }
+  },
+  "feedback": {
+    "feedback_page": {
+      "title": "Fikr-mulohaza",
+      "type_label": "Murojaat turi",
+      "description_label": "Tavsif",
+      "description_hint": "Muammo yoki g'oyangizni batafsilroq tasvirlab bering",
+      "description_error": "Iltimos, murojaat matnini yozing",
+      "submit": "Yuborish",
+      "success": "Murojaat yuborildi",
+      "failed_send_feedback": "Fikr-mulohazani yuborishda xato",
+      "types": {
+        "bug": "Xatoni xabar qilish",
+        "feature": "Funktsiyani taklif qilish",
+        "category": "Yangi e'lonlar kategoriyasini taklif qilish",
+        "question": "Savol berish",
+        "general": "Umumiy fikrlar va takliflar"
+      }
+    }
+  },
+  "home": {
+    "main_label": "Asosiy",
+    "chats_label": "Chatlar",
+    "profile_label": "Profil"
+  },
+  "in_app": {
+    "BuyProductsScreen": {
+      "buy_button": "Sotib olish",
+      "title": "Mahsulotni tanlang",
+      "unavailable": "Mavjud emas"
+    }
+  },
+  "legal": {
+    "failed_get_regulations": "Qoidalarni olishda xato.",
+    "LegalScreen": {
+      "title": "Huquqiy ma'lumot",
+      "policy_label": "Maxfiylik siyosati",
+      "terms_label": "Foydalanish shartlari",
+      "gdpr_label": "GDPR maxfiylik siyosati"
+    }
+  },
+  "logger": {
+    "SessionScreen": {
+      "no_space_line_1": "Qurilmada yetarli joy yo'q.",
+      "no_space_line_2": "Iltimos, joyni bo'shatib, qaytadan urinib ko'ring.",
+      "ok": "OK",
+      "title": "Sessiyalar ro'yxati",
+      "unknown_error": "Noma'lum xato."
+    }
+  },
+  "profile": {
+    "EditProfileScreen": {
+      "edit_password": "Parolni o'zgartirish",
+      "first_name_label": "Ism",
+      "last_name_label": "Familiya",
+      "save_button_text": "Saqlash",
+      "success_toast": "Ismingiz muvaffaqiyatli yangilandi",
+      "title": "Profilni tahrirlash"
+    },
+    "ProfilePage": {
+      "create_support_chat": "Qo'llab-quvvatlash chatiga yozish",
+      "failed_create_support_chat": "Qo'llab-quvvatlash chatini yaratishda xato",
+      "failed_loading_profile": "Foydalanuvchi ma'lumotlarini yuklashda xato",
+      "plan": {
+        "buy_credits": "Kredit sotib olish",
+        "credits_count": {
+          "one": "{n} kredit",
+          "few": "{n} krediti",
+          "other": "{n} kreditlar"
+        },
+        "plan_name": "Reja: {planName:String}",
+        "upgrade": "Rejani yaxshilash"
+      }
+    },
+    "SafetyScreen": {
+      "delete_account_error": {
+        "requires_recent_login": "Hisobni o'chirish uchun dasturga qaytadan kirish zarur"
+      },
+      "delete_account_label": "Hisobni o'chirish",
+      "delete_confirm": {
+        "description": "Hisobni o'chirishni xohlaysizmi?",
+        "title": "Hisobni o'chirish"
+      },
+      "edit_password": "Parolni o'zgartirish",
+      "title": "Xavfsizlik"
+    },
+    "delete_account_label": "Hisobni o'chirish",
+    "edit_avatar_title": "Avatarni tahrirlash",
+    "edit_profile_label": "Profilni tahrirlash",
+    "failed_update_avatar": "Avatarni yangilashda xato",
+    "failed_upload_avatar": "Avatarni yuklashda xato",
+    "feedback_label": "Fikr-mulohaza",
+    "language_label": "Til",
+    "legal_label": "Huquqiy ma'lumot",
+    "logout_label": "Hisobdan chiqish",
+    "safety_label": "Xavfsizlik",
+    "select_language_title": "Tilni tanlang",
+    "theme": {
+      "title": "Mavzu",
+      "light": "Yengil",
+      "dark": "Qorong'u",
+      "system": "Tizim"
+    },
+    "to_favorites_adverts_label": "Sevimli e'lonlar",
+    "to_my_adverts_label": "Mening e'lonlarim",
+    "version": "Versiya {version}"
+  },
+  "report": {
+    "ReportSheet": {
+      "description_label": "Tavsif",
+      "reasons": {
+        "abuse": "Ta'qib yoki nafratni keltirib chiqarish",
+        "inappropriate": "Noto'g'ri xulq-atvor",
+        "other": "Boshqa",
+        "spam": "Spam"
+      },
+      "submit": "Yuborish",
+      "success": "Shikoyat yuborildi",
+      "title": "Qoidabuzarlik haqida xabar berish"
+    }
+  },
+  "users": {
+    "user_select_screen": {
+      "empty": "Hozircha foydalanuvchilar yo'q",
+      "failure": "Foydalanuvchilarni yuklashda xato"
+    }
+  }
+}

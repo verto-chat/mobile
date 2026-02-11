@@ -1,5 +1,6 @@
 import 'dart:async';
 
+import 'package:openapi/openapi.dart';
 import 'package:rxdart/rxdart.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 
@@ -12,6 +13,7 @@ import 'google_sign_in_provider.dart';
 class AuthRepository implements IAuthRepository {
   final SupabaseAuthApi _supabaseAuthApi;
   final AuthApi _authApi;
+  final UserApi _userApi;
   final SupabaseClient _supabase;
   final GoogleSignInProvider _googleSignInProvider;
   final AppleSignInProvider _appleSignInProvider;
@@ -24,6 +26,7 @@ class AuthRepository implements IAuthRepository {
   AuthRepository(
     this._logger,
     this._supabaseAuthApi,
+    this._userApi,
     this._authApi,
     this._supabase,
     this._googleSignInProvider,
@@ -110,7 +113,7 @@ class AuthRepository implements IAuthRepository {
 
   @override
   Future<EmptyDomainResult> completeRegistration(User user) async {
-    final apiResult = await _safeDio.execute(() => _authApi.completeRegistration());
+    final apiResult = await _safeDio.execute(() => _userApi.completeRegistration());
 
     switch (apiResult) {
       case ApiSuccess():
@@ -129,26 +132,47 @@ class AuthRepository implements IAuthRepository {
     required String email,
     required String password,
   }) async {
-    try {
-      await _supabaseAuthApi.register(firstName: firstName, lastName: lastName, email: email, password: password);
+    final apiResult = await _safeDio.execute(
+      () => _authApi.register(
+        registerUserRequestDto: RegisterUserRequestDto(
+          firstName: firstName,
+          lastName: lastName,
+          email: email,
+          password: password,
+        ),
+      ),
+    );
 
-      return Success(data: null);
-    } on AuthException catch (e) {
-      _logger.log(LogLevel.warning, e.toString(), exception: e);
+    return switch (apiResult) {
+      ApiSuccess() => Success(data: null),
+      ApiError() => Error(errorData: _getRegisterError(apiResult)),
+    };
+  }
 
-      final error = switch (e.code) {
-        'user_already_exists' => RegisterErrorType.emailAlreadyUsed,
-        'weak_password' => RegisterErrorType.incorrectPassword,
-        'invalid-email' => RegisterErrorType.incorrectEmail,
-        'over_email_send_rate_limit' => RegisterErrorType.emailRateLimitExceeded,
-        _ => RegisterErrorType.other,
-      };
+  RegisterErrorResult _getRegisterError(ApiError<void> apiError) {
+    final defaultError = RegisterErrorResult.defaultError(apiError.toDomain());
 
-      return Error(errorData: RegisterErrorResult.registerError(error));
-    } on Exception catch (e) {
-      _logger.log(LogLevel.error, "Failed to register", exception: e);
-      return Error(errorData: const RegisterErrorResult.defaultError(DomainErrorType.errorDefaultType()));
+    final errorData = apiError.getAdditionalDataSafe<Map<String, dynamic>>();
+
+    if (errorData != null) {
+      try {
+        final model = RegisterErrorDto.fromJson(errorData);
+
+        RegisterErrorType type = switch (model.code) {
+          RegisterErrorCodeDto.emailExists => RegisterErrorType.emailAlreadyUsed,
+          RegisterErrorCodeDto.invalidEmail => RegisterErrorType.incorrectEmail,
+          RegisterErrorCodeDto.weakPassword => RegisterErrorType.incorrectPassword,
+          RegisterErrorCodeDto.tooManyRequests => RegisterErrorType.other,
+          RegisterErrorCodeDto.unknown => RegisterErrorType.other,
+        };
+
+        return RegisterErrorResult.registerError(type);
+      } catch (e) {
+        _logger.log(LogLevel.error, "Failed get register error model", exception: e);
+      }
     }
+
+    return defaultError;
   }
 
   @override

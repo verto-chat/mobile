@@ -1,0 +1,380 @@
+{
+  "auth": {
+    "SignInScreen": {
+      "email_label": "E-mail",
+      "password_label": "Wachtwoord",
+      "forgot_password": "Wachtwoord vergeten?",
+      "sign_in": "Inloggen",
+      "sign_up": "Registreren",
+      "sign_in_with_google": "Inloggen met Google",
+      "sign_in_with_apple": "Inloggen met Apple",
+      "login_error": {
+        "invalid_credentials": "Ongeldige inloggegevens",
+        "email_not_confirmed": "E-mailadres niet bevestigd"
+      },
+      "OAuthAcceptRegulationsSheet": {
+        "title": "Registreer om door te gaan",
+        "regulations(rich)": "Gelieve {terms(gebruikersvoorwaarden)} en {policy(privacbeleid)} te accepteren",
+        "accept": "Accepteren",
+        "cancel": "Annuleren",
+        "failed_get_regulations": "Kon de regels niet ophalen."
+      }
+    },
+    "SignUpScreen": {
+      "title": "Registreren",
+      "first_name_label": "Voornaam",
+      "last_name_label": "Achternaam",
+      "email_label": "E-mail",
+      "password_label": "Wachtwoord",
+      "repeat_password": "Herhaal wachtwoord",
+      "sign_up": "Registreren",
+      "password_not_equal": "Wachtwoorden komen niet overeen",
+      "regulations(rich)": "Ik ga akkoord met {terms(gebruikersvoorwaarden)} en {policy(privacbeleid)}",
+      "after_registration_toast": "✔️ Bevestigingsmail verzonden! Controleer je e-mail en bevestig je adres.",
+      "register_error": {
+        "incorrect_email": "Ongeldig e-mailadres",
+        "incorrect_name": "Ongeldige naam",
+        "incorrect_password": "Wachtwoord moet minimaal 8 tekens lang zijn en zowel hoofdletters als kleine letters en cijfers bevatten",
+        "email_already_used": "E-mailadres is al in gebruik",
+        "create_error": "Fout bij het aanmaken van gebruiker",
+        "emailRateLimitExceeded": "Limiet voor het verzenden van e-mails overschreden"
+      }
+    },
+    "reset_password": {
+      "CodeScreen": {
+        "title": "Wachtwoord herstellen",
+        "description": "Er is een herstelcode naar je e-mail {email:String} gestuurd",
+        "submit": "Volgende",
+        "field_label": "Herstelcode",
+        "field_error": "Ongeldige code",
+        "check_error_description": "Kon de herstelcode niet verifiëren"
+      },
+      "ForgotPasswordScreen": {
+        "title": "Wachtwoord herstellen",
+        "email_label": "E-mail",
+        "send_reset_link": "Verzend link",
+        "check_error_description": "Kon de code voor het herstellen van het wachtwoord niet verzenden"
+      },
+      "NewPasswordScreen": {
+        "title": "Nieuw wachtwoord",
+        "reset_submit": "Inloggen",
+        "edit_submit": "Wijzigen",
+        "current_password": "Huidig wachtwoord",
+        "new_password": "Nieuw wachtwoord",
+        "repeat_new_password": "Herhaal nieuw wachtwoord",
+        "password_label": "Wachtwoord",
+        "repeat_password": "Herhaal wachtwoord",
+        "failed_change_password": "Kon wachtwoord niet wijzigen",
+        "failed_reset_password": "Kon wachtwoord niet resetten",
+        "errors": {
+          "wrong_current_password": "Huidig wachtwoord is onjuist",
+          "same_password": "Nieuw wachtwoord mag niet hetzelfde zijn als het huidige"
+        }
+      }
+    }
+  },
+  "chats": {
+    "ChatPage": {
+      "SlangChatL10n": {
+        "and": "en",
+        "attachmentButtonAccessibilityLabel": "Media verzenden",
+        "emptyChatPlaceholder": "Je hebt nog geen berichten",
+        "fileButtonAccessibilityLabel": "Bestand",
+        "inputPlaceholder": "Bericht",
+        "isTyping": "typt…",
+        "others": "anderen",
+        "sendButtonAccessibilityLabel": "Verzenden",
+        "unreadMessagesLabel": "Ongelezen berichten"
+      },
+      "advert_chat": "Advertentie chat",
+      "attachment_type_file": "Bestand",
+      "attachment_type_image": "Afbeelding",
+      "failure": "Fout bij het laden van de chat",
+      "no_messages_yet": "Nog geen berichten",
+      "return_translation": "Vertaling teruggeven",
+      "show_original": "Toon origineel",
+      "tts_play_failed": "Kon niet afspelen: {error:String}",
+      "tts_play_original": "Origineel voorlezen",
+      "tts_play_translation": "Vertaling voorlezen"
+    },
+    "ChatsPage": {
+      "ChatCard": {
+        "favorites_chat_name": "Favorieten",
+        "support_chat_name": "Ondersteuning"
+      },
+      "NoItemsStub": {
+        "description": "Je hebt nog geen chats",
+        "title": "Nog geen chats"
+      },
+      "create_direct_chat": "Maak chat met gebruiker",
+      "create_group_chat": "Maak groepschat",
+      "delete_action": "Verwijderen",
+      "empty": "Nog geen chats",
+      "failure": "Fout bij het laden van chats",
+      "title": "Chats"
+    },
+    "CreateDirectChatPage": {
+      "failure_create_chat": "Kon chat niet aanmaken",
+      "title": "Maak chat"
+    },
+    "CreateLocalChatPage": {
+      "languages_section": "Talen",
+      "my_language_label": "Jouw taal",
+      "partner_language_label": "Taal van gesprekspartner",
+      "show_both_subtitle": "Toon beide teksten voor gemakkelijke controle",
+      "show_both_title": "Toon origineel en vertaling",
+      "start_button": "Begin lokale chat",
+      "swap_languages": "Talen verwisselen",
+      "tips_item_1": "• Jij en je gesprekspartner spreken om de beurt op één apparaat.",
+      "tips_item_2": "• Berichten worden automatisch vertaald, origineel en vertaling kunnen worden getoond.",
+      "tips_item_3": "• Zet TTS aan om de vertaling hardop voor te lezen.",
+      "tips_title": "Hoe lokale chat werkt",
+      "title": "Nieuwe lokale chat",
+      "title_hint": "Bijvoorbeeld: Gesprek met de verhuurder",
+      "title_label": "Titel (optioneel)",
+      "translation_section": "Vertaling en weergave",
+      "tts_subtitle": "Lees vertaling hardop voor bij weergave",
+      "tts_title": "Vertaling voorlezen (TTS)"
+    },
+    "RecordHoldButton": {
+      "hold_to_record": "Houd vast\nom op te nemen",
+      "semantics_label": "{label:String}: houd vast om op te nemen"
+    },
+    "SelectChatTypePage": {
+      "continue_button": "Doorgaan",
+      "details": {
+        "direct": {
+          "can_do": "Automatische vertaling van inkomende en uitgaande berichten, spraakberichten, bijlagen.",
+          "for_whom": "Voor communicatie met één persoon in verschillende talen.",
+          "scenarios": "Zakelijke correspondentie, persoonlijke gesprekken, klantenservice."
+        },
+        "group": {
+          "can_do": "Automatische vertaling voor alle deelnemers, rollen en rechten, pinnen en reacties.",
+          "for_whom": "Voor teams, gezinnen en gemeenschappen met deelnemers uit verschillende landen.",
+          "scenarios": "Projectchats, gemeenschappen, organisatorische correspondentie."
+        },
+        "local": {
+          "can_do": "Je laat om de beurt berichten achter op één telefoon — ze worden onmiddellijk vertaald naar de gesprekspartner.",
+          "for_whom": "Voor toeristen en offline gesprekken op één apparaat.",
+          "scenarios": "Communicatie met taxichauffeur/verhuurder, eten bestellen, hulp bij navigatie."
+        },
+        "learning": {
+          "can_do": "Bewaar woorden en zinnen, bekijk verschillende betekenissen en voorbeelden, oefen in lees-/dicteermodi.",
+          "for_whom": "Voor het leren van talen op één apparaat — zoals 'lokale chat', maar met focus op praktijk.",
+          "scenarios": "Zelfstudie tijdens een reis, voorbereiding op een ontmoeting, doorlopen van correspondentie, persoonlijk woordenboek."
+        }
+      },
+      "labels": {
+        "can_do": "Wat kan",
+        "for_whom": "Voor wie",
+        "scenarios": "Scenario's"
+      },
+      "soon_tag": "Binnenkort",
+      "title": "Maak chat",
+      "types": {
+        "direct": "Direct (1-op-1)",
+        "group": "Groep",
+        "learning": "Leren",
+        "local": "Lokale chat"
+      }
+    }
+  },
+  "core": {
+    "field_empty": "Veld mag niet leeg zijn",
+    "incorrect_format": "Ongeldig formaat",
+    "dialog_title": {
+      "error_title": "Fout",
+      "connection_error": "Geen verbinding",
+      "server_error": "Serverfout",
+      "not_authorized": "Niet geautoriseerd",
+      "upgrade_required": "Versie verouderd",
+      "insufficient_accessRights": "Onvoldoende rechten"
+    },
+    "dialog_msg": {
+      "retry_or_contact_support": "Probeer het opnieuw of neem contact op met de ondersteuning via: support@verto.chat",
+      "server_error": "Er is een fout op de server opgetreden. {retryOrContactSupport}",
+      "default_error": "Er is een fout opgetreden. {retryOrContactSupport}",
+      "connection_error": "Controleer je internetverbinding en probeer het opnieuw",
+      "authorization_required": "Inloggegevens zijn verouderd. Je moet opnieuw inloggen",
+      "upgrade_required": "Installeer de nieuwste versie van de app voor correcte werking",
+      "insufficient_access_rights": "Actie niet beschikbaar. Je rechten zijn beperkt"
+    },
+    "dialog_action": {
+      "ok": "Oké",
+      "login": "Inloggen",
+      "retry": "Probeer opnieuw",
+      "upgrade": "Bijwerken",
+      "back": "Terug",
+      "yes": "Ja",
+      "no": "Nee",
+      "cancel": "Annuleren"
+    },
+    "DialogPresenter": {
+      "permission_text_location": "Locatie",
+      "permission_denied": {
+        "location": "locatie verkrijgen voor adresselectie",
+        "title": "Toegang tot {permission:String}",
+        "description": "Toegang tot {permission:String} is vereist voor deze functie. Je kunt dit inschakelen in de instellingen van je apparaat.",
+        "settings": "Naar instellingen",
+        "later": "Later"
+      }
+    },
+    "photos": {
+      "GalleryScreen": {
+        "title": "Galerij"
+      }
+    },
+    "upload": {
+      "select_photo": {
+        "select_source_photo": {
+          "title": "Selecteer afbeelding",
+          "from": {
+            "camera": "Camera",
+            "gallery": "Uit galerij"
+          }
+        }
+      },
+      "AddPhotoButton": {
+        "add_photo": "Foto toevoegen"
+      }
+    },
+    "widgets": {
+      "LastPageErrorMessageView": {
+        "something_wrong_try_again": "Er is iets misgegaan, probeer opnieuw:"
+      },
+      "TryAgainButton": {
+        "something_wrong": "Er is iets misgegaan",
+        "try_again": "Probeer opnieuw"
+      },
+      "AttachDocuments": {
+        "title": "Documenten toevoegen"
+      }
+    }
+  },
+  "feedback": {
+    "feedback_page": {
+      "title": "Feedback",
+      "type_label": "Type verzoek",
+      "description_label": "Beschrijving",
+      "description_hint": "Beschrijf je probleem of idee in detail",
+      "description_error": "Voer alstublieft de tekst van het verzoek in",
+      "submit": "Verzenden",
+      "success": "Verzoek verzonden",
+      "failed_send_feedback": "Kon feedback niet verzenden",
+      "types": {
+        "bug": "Bug rapporteren",
+        "feature": "Functionaliteit voorstellen",
+        "category": "Nieuwe categorie advertenties voorstellen",
+        "question": "Vraag stellen",
+        "general": "Algemene opmerkingen en wensen"
+      }
+    }
+  },
+  "home": {
+    "main_label": "Hoofdpagina",
+    "chats_label": "Chats",
+    "profile_label": "Profiel"
+  },
+  "in_app": {
+    "BuyProductsScreen": {
+      "buy_button": "Kopen",
+      "title": "Kies een product",
+      "unavailable": "Niet beschikbaar"
+    }
+  },
+  "legal": {
+    "failed_get_regulations": "Kon de regels niet ophalen.",
+    "LegalScreen": {
+      "title": "Juridische informatie",
+      "policy_label": "Privacybeleid",
+      "terms_label": "Gebruikersvoorwaarden",
+      "gdpr_label": "GDPR Privacybeleid"
+    }
+  },
+  "logger": {
+    "SessionScreen": {
+      "no_space_line_1": "Er is onvoldoende geheugen op het apparaat.",
+      "no_space_line_2": "Maak ruimte vrij en probeer het opnieuw.",
+      "ok": "OK",
+      "title": "Lijst met sessies",
+      "unknown_error": "Onbekende fout."
+    }
+  },
+  "profile": {
+    "EditProfileScreen": {
+      "edit_password": "Wachtwoord wijzigen",
+      "first_name_label": "Voornaam",
+      "last_name_label": "Achternaam",
+      "save_button_text": "Opslaan",
+      "success_toast": "Je naam is succesvol bijgewerkt",
+      "title": "Profiel bewerken"
+    },
+    "ProfilePage": {
+      "create_support_chat": "Chat met ondersteuning",
+      "failed_create_support_chat": "Kon chat met ondersteuning niet aanmaken",
+      "failed_loading_profile": "Kon gebruikersinformatie niet laden",
+      "plan": {
+        "buy_credits": "Koop credits",
+        "credits_count": {
+          "one": "{n} credit",
+          "few": "{n} credits",
+          "other": "{n} credits"
+        },
+        "plan_name": "Plan: {planName:String}",
+        "upgrade": "Upgrade plan"
+      }
+    },
+    "SafetyScreen": {
+      "delete_account_error": {
+        "requires_recent_login": "Voor het verwijderen van het account is een recente aanmelding vereist"
+      },
+      "delete_account_label": "Account verwijderen",
+      "delete_confirm": {
+        "description": "Weet je zeker dat je je account wilt verwijderen?",
+        "title": "Account verwijderen"
+      },
+      "edit_password": "Wachtwoord wijzigen",
+      "title": "Veiligheid"
+    },
+    "delete_account_label": "Account verwijderen",
+    "edit_avatar_title": "Avatar bewerken",
+    "edit_profile_label": "Profiel bewerken",
+    "failed_update_avatar": "Kon avatar niet bijwerken",
+    "failed_upload_avatar": "Kon avatar niet uploaden",
+    "feedback_label": "Feedback",
+    "language_label": "Taal",
+    "legal_label": "Juridische informatie",
+    "logout_label": "Uitloggen",
+    "safety_label": "Veiligheid",
+    "select_language_title": "Selecteer taal",
+    "theme": {
+      "title": "Thema",
+      "light": "Licht",
+      "dark": "Donker",
+      "system": "Systeem"
+    },
+    "to_favorites_adverts_label": "Favoriete advertenties",
+    "to_my_adverts_label": "Mijn advertenties",
+    "version": "Versie {version}"
+  },
+  "report": {
+    "ReportSheet": {
+      "description_label": "Beschrijving",
+      "reasons": {
+        "abuse": "Beledigingen of haatzaaien",
+        "inappropriate": "Ongepast gedrag",
+        "other": "Anders",
+        "spam": "Spam"
+      },
+      "submit": "Verzenden",
+      "success": "Klacht verzonden",
+      "title": "Meld een overtreding"
+    }
+  },
+  "users": {
+    "user_select_screen": {
+      "empty": "Nog geen gebruikers",
+      "failure": "Fout bij het laden van gebruikers"
+    }
+  }
+}

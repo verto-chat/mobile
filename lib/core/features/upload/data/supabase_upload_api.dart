@@ -25,9 +25,17 @@ class SupabaseUploadApi {
     final uniqueFileName = const Uuid().v4();
     final storagePath = 'files/$uniqueFileName.$extension';
 
-    await _supabase.storage.from('chats').upload(storagePath, file);
+    final bucket = _supabase.storage.from('chats');
 
-    return UploadedFileDto(_supabase.storage.from('chats').getPublicUrl(storagePath));
+    await bucket.upload(storagePath, file);
+
+    return UploadedFileDto(bucket.getPublicUrl(storagePath));
+  }
+
+  Future<void> uploadChatVoice(File file, String ttsStorageKey) async {
+    final bucket = _supabase.storage.from("voice");
+
+    await bucket.upload(ttsStorageKey, file);
   }
 
   Future<UploadedImageDto> uploadChatImage(File file, Uint8List thumbBytes) {
