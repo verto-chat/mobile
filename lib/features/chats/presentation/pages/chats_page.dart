@@ -1,4 +1,5 @@
 ﻿import 'package:auto_route/auto_route.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:infinite_scroll_pagination/infinite_scroll_pagination.dart';
@@ -12,6 +13,7 @@ import '../../../chats/presentation/manager/chats_sm.dart';
 import '../../../chats/presentation/widgets/widgets.dart';
 import '../../../features.dart';
 
+@RoutePage()
 class ChatsPage extends StatelessWidget {
   const ChatsPage({super.key});
 
@@ -23,7 +25,6 @@ class ChatsPage extends StatelessWidget {
         builder: (context, state, _) {
           return Scaffold(
             appBar: AppBar(title: Text(context.appTexts.chats.chats_page.title)),
-            drawer: const Drawer(child: ProfilePage()),
             body: RefreshIndicator(
               edgeOffset: MediaQuery.of(context).padding.top + kToolbarHeight,
               onRefresh: () async => context.read<ChatsStateManager>().refresh(),
@@ -67,7 +68,7 @@ class ChatsPage extends StatelessWidget {
             floatingActionButton: FloatingActionButton(
               onPressed: () => context.router.push(const SelectChatTypeRoute()),
               shape: const CircleBorder(),
-              child: const Icon(Icons.edit),
+              child: const Icon(CupertinoIcons.chat_bubble_2_fill),
             ),
           );
         },

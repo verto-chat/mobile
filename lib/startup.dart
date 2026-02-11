@@ -37,7 +37,7 @@ Future<List<Registration>> configure() async {
   final versionProvider = await VersionProvider.create();
   final sharedPreferences = await AppSharedPreferences.create();
 
-  final endpointsManager = EndpointsManager(sharedPreferences, useProdApiWhenDebug: false);
+  final endpointsManager = EndpointsManager(sharedPreferences, useProdApiWhenDebug: true);
 
   final endpoints = await endpointsManager.getEndpoints();
 
@@ -114,11 +114,7 @@ Future<List<Registration>> configure() async {
     SingletonRegistration<TalkerDioLogger>(
       (c) => TalkerDioLogger(
         talker: logger.talkerInstance,
-        settings: const TalkerDioLoggerSettings(
-          printRequestHeaders: false,
-          printResponseHeaders: false,
-          printResponseMessage: true,
-        ),
+        settings: const TalkerDioLoggerSettings(printRequestHeaders: false, printResponseHeaders: false, printResponseMessage: true),
       ),
       lazy: false,
     ),

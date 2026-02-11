@@ -5,7 +5,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../../../common/common.dart';
 import '../../../../i18n/translations.g.dart';
-import '../../../profile/presentation/widgets/widgets.dart';
+import '../../../settings/presentation/widgets/widgets.dart';
 import '../../legal.dart';
 
 @RoutePage()
