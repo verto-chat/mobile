@@ -21,17 +21,26 @@ class HomeScreen extends StatelessWidget {
           lazy: false,
           child: AutoTabsScaffold(
             routes: [const ChatsRoute(), const SettingsRoute(), const ProfileRoute()],
+            extendBody: true,
+            //floatingActionButtonLocation: FloatingActionButtonLocation.miniCenterFloat,
             bottomNavigationBuilder: (_, tabsRouter) {
-              return BottomNavigationBar(
-                currentIndex: tabsRouter.activeIndex,
-                onTap: tabsRouter.setActiveIndex,
-                selectedItemColor: Theme.of(context).colorScheme.primary,
-                unselectedItemColor: Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.5),
-                items: [
-                  BottomNavigationBarItem(label: loc.chats_label, icon: const Icon(Icons.chat)),
-                  const BottomNavigationBarItem(label: "Settings", icon: Icon(Icons.settings_outlined)),
-                  BottomNavigationBarItem(label: loc.profile_label, icon: const Icon(Icons.person)),
-                ],
+              return Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 24.0).copyWith(bottom: 24),
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(100),
+                  child: BottomNavigationBar(
+                    type: BottomNavigationBarType.fixed,
+                    currentIndex: tabsRouter.activeIndex,
+                    onTap: tabsRouter.setActiveIndex,
+                    selectedItemColor: Theme.of(context).colorScheme.primary,
+                    unselectedItemColor: Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.5),
+                    items: [
+                      BottomNavigationBarItem(label: loc.chats_label, icon: const Icon(Icons.chat)),
+                      const BottomNavigationBarItem(label: "Settings", icon: Icon(Icons.settings_outlined)),
+                      BottomNavigationBarItem(label: loc.profile_label, icon: const Icon(Icons.person)),
+                    ],
+                  ),
+                ),
               );
             },
           ),

@@ -86,7 +86,7 @@ class ProfilePage extends StatelessWidget {
                   ),
                   SliverToBoxAdapter(
                     child: Padding(
-                      padding: const EdgeInsets.all(16.0).copyWith(top: 0),
+                      padding: const EdgeInsets.all(16.0).copyWith(top: 0, bottom: 80),
                       child: ListView(
                         shrinkWrap: true,
                         physics: const NeverScrollableScrollPhysics(),
