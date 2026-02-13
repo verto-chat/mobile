@@ -16,16 +16,20 @@
 default_platform(:android)
 
 platform :android do
-  desc "Build AAB and upload to Google Play Internal track"
-  lane :internal do
+  desc "Build AAB and upload to Google Play track from env/options"
+  lane :deploy do |options|
+    track = options[:track] || ENV["PLAY_TRACK"] || "internal"
+    validate_only = (ENV["PLAY_VALIDATE_ONLY"] || "false").downcase == "true"
+
     gradle(
       task: "bundle",
       build_type: "Release"
     )
 
     upload_to_play_store(
-      track: "internal",
+      track: track,
       aab: "app/build/outputs/bundle/release/app-release.aab",
+      validate_only: validate_only,
       skip_upload_changelogs: true,
       skip_upload_images: true,
       skip_upload_metadata: true,
