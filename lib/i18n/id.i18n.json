@@ -180,24 +180,15 @@
     }
   },
   "core": {
-    "field_empty": "Kolom tidak boleh kosong",
-    "incorrect_format": "Format tidak valid",
-    "dialog_title": {
-      "error_title": "Kesalahan",
-      "connection_error": "Tidak ada koneksi",
-      "server_error": "Kesalahan di server",
-      "not_authorized": "Tidak terotorisasi",
-      "upgrade_required": "Versi usang",
-      "insufficient_accessRights": "Hak akses tidak cukup"
-    },
-    "dialog_msg": {
-      "retry_or_contact_support": "Silakan coba lagi atau hubungi dukungan di: support@verto.chat",
-      "server_error": "Terjadi kesalahan di server. {retryOrContactSupport}",
-      "default_error": "Terjadi kesalahan. {retryOrContactSupport}",
-      "connection_error": "Silakan periksa koneksi internet Anda dan coba lagi",
-      "authorization_required": "Data otorisasi sudah usang. Anda perlu masuk kembali",
-      "upgrade_required": "Untuk berfungsi dengan baik, silakan instal versi terbaru aplikasi",
-      "insufficient_access_rights": "Tindakan tidak tersedia. Hak Anda terbatas"
+    "DialogPresenter": {
+      "permission_text_location": "Lokasi",
+      "permission_denied": {
+        "location": "mendapatkan lokasi untuk memilih alamat",
+        "title": "Akses ke {permission:String}",
+        "description": "Untuk menggunakan fitur ini, diperlukan akses ke {permission:String}. Anda dapat mengaktifkannya di pengaturan perangkat Anda.",
+        "settings": "Ke pengaturan",
+        "later": "Nanti"
+      }
     },
     "dialog_action": {
       "ok": "Oke",
@@ -209,16 +200,25 @@
       "no": "Tidak",
       "cancel": "Batal"
     },
-    "DialogPresenter": {
-      "permission_text_location": "Lokasi",
-      "permission_denied": {
-        "location": "mendapatkan lokasi untuk memilih alamat",
-        "title": "Akses ke {permission:String}",
-        "description": "Untuk menggunakan fitur ini, diperlukan akses ke {permission:String}. Anda dapat mengaktifkannya di pengaturan perangkat Anda.",
-        "settings": "Ke pengaturan",
-        "later": "Nanti"
-      }
+    "dialog_msg": {
+      "retry_or_contact_support": "Silakan coba lagi atau hubungi dukungan di: support@verto.chat",
+      "server_error": "Terjadi kesalahan di server. {retryOrContactSupport}",
+      "default_error": "Terjadi kesalahan. {retryOrContactSupport}",
+      "connection_error": "Silakan periksa koneksi internet Anda dan coba lagi",
+      "authorization_required": "Data otorisasi sudah usang. Anda perlu masuk kembali",
+      "upgrade_required": "Untuk berfungsi dengan baik, silakan instal versi terbaru aplikasi",
+      "insufficient_access_rights": "Tindakan tidak tersedia. Hak Anda terbatas"
     },
+    "dialog_title": {
+      "error_title": "Kesalahan",
+      "connection_error": "Tidak ada koneksi",
+      "server_error": "Kesalahan di server",
+      "not_authorized": "Tidak terotorisasi",
+      "upgrade_required": "Versi usang",
+      "insufficient_accessRights": "Hak akses tidak cukup"
+    },
+    "field_empty": "Kolom tidak boleh kosong",
+    "incorrect_format": "Format tidak valid",
     "photos": {
       "GalleryScreen": {
         "title": "Galeri"
@@ -271,9 +271,10 @@
     }
   },
   "home": {
-    "main_label": "Beranda",
     "chats_label": "Obrolan",
-    "profile_label": "Profil"
+    "profile_label": "Profil",
+    "settings_label": "Pengaturan",
+    "main_label": "Beranda"
   },
   "in_app": {
     "BuyProductsScreen": {

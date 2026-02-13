@@ -180,24 +180,15 @@
     }
   },
   "core": {
-    "field_empty": "این فیلد نمی‌تواند خالی باشد",
-    "incorrect_format": "فرمت نادرست است",
-    "dialog_title": {
-      "error_title": "خطا",
-      "connection_error": "هیچ اتصال وجود ندارد",
-      "server_error": "خطا در سرور",
-      "not_authorized": "مجوز ندارد",
-      "upgrade_required": "نسخه قدیمی است",
-      "insufficient_accessRights": "دسترسی کافی نیست"
-    },
-    "dialog_msg": {
-      "retry_or_contact_support": "لطفاً دوباره تلاش کنید یا با پشتیبانی تماس بگیرید: support@verto.chat",
-      "server_error": "خطایی در سرور رخ داد. {retryOrContactSupport}",
-      "default_error": "خطایی رخ داد. {retryOrContactSupport}",
-      "connection_error": "لطفاً اتصال اینترنت خود را بررسی کرده و دوباره تلاش کنید",
-      "authorization_required": "اطلاعات ورود منقضی شده است. باید دوباره وارد شوید",
-      "upgrade_required": "برای عملکرد صحیح، نسخه جدید برنامه را نصب کنید",
-      "insufficient_access_rights": "این عمل در دسترس نیست. حقوق شما محدود است"
+    "DialogPresenter": {
+      "permission_text_location": "مکان",
+      "permission_denied": {
+        "location": "دریافت مکان برای انتخاب آدرس",
+        "title": "دسترسی به {permission:String}",
+        "description": "برای استفاده از این ویژگی به دسترسی به {permission:String} نیاز است. می‌توانید آن را در تنظیمات دستگاه خود فعال کنید.",
+        "settings": "به تنظیمات",
+        "later": "بعداً"
+      }
     },
     "dialog_action": {
       "ok": "باشه",
@@ -209,16 +200,25 @@
       "no": "خیر",
       "cancel": "لغو"
     },
-    "DialogPresenter": {
-      "permission_text_location": "مکان",
-      "permission_denied": {
-        "location": "دریافت مکان برای انتخاب آدرس",
-        "title": "دسترسی به {permission:String}",
-        "description": "برای استفاده از این ویژگی به دسترسی به {permission:String} نیاز است. می‌توانید آن را در تنظیمات دستگاه خود فعال کنید.",
-        "settings": "به تنظیمات",
-        "later": "بعداً"
-      }
+    "dialog_msg": {
+      "retry_or_contact_support": "لطفاً دوباره تلاش کنید یا با پشتیبانی تماس بگیرید: support@verto.chat",
+      "server_error": "خطایی در سرور رخ داد. {retryOrContactSupport}",
+      "default_error": "خطایی رخ داد. {retryOrContactSupport}",
+      "connection_error": "لطفاً اتصال اینترنت خود را بررسی کرده و دوباره تلاش کنید",
+      "authorization_required": "اطلاعات ورود منقضی شده است. باید دوباره وارد شوید",
+      "upgrade_required": "برای عملکرد صحیح، نسخه جدید برنامه را نصب کنید",
+      "insufficient_access_rights": "این عمل در دسترس نیست. حقوق شما محدود است"
     },
+    "dialog_title": {
+      "error_title": "خطا",
+      "connection_error": "هیچ اتصال وجود ندارد",
+      "server_error": "خطا در سرور",
+      "not_authorized": "مجوز ندارد",
+      "upgrade_required": "نسخه قدیمی است",
+      "insufficient_accessRights": "دسترسی کافی نیست"
+    },
+    "field_empty": "این فیلد نمی‌تواند خالی باشد",
+    "incorrect_format": "فرمت نادرست است",
     "photos": {
       "GalleryScreen": {
         "title": "گالری"
@@ -271,9 +271,10 @@
     }
   },
   "home": {
-    "main_label": "خانه",
     "chats_label": "چت‌ها",
-    "profile_label": "پروفایل"
+    "profile_label": "پروفایل",
+    "settings_label": "تنظیمات",
+    "main_label": "خانه"
   },
   "in_app": {
     "BuyProductsScreen": {

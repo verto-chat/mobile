@@ -180,24 +180,15 @@
     }
   },
   "core": {
-    "field_empty": "Өріс бос болмауы тиіс",
-    "incorrect_format": "Қате формат",
-    "dialog_title": {
-      "error_title": "Қате",
-      "connection_error": "Байланыс жоқ",
-      "server_error": "Серверде қате",
-      "not_authorized": "Авторизацияланбаған",
-      "upgrade_required": "Нұсқа ескірген",
-      "insufficient_accessRights": "Құқықтар жеткіліксіз"
-    },
-    "dialog_msg": {
-      "retry_or_contact_support": "Қайтадан көріңіз немесе қолдау қызметіне хабарласыңыз: support@verto.chat",
-      "server_error": "Серверде қате орын алды. {retryOrContactSupport}",
-      "default_error": "Қате орын алды. {retryOrContactSupport}",
-      "connection_error": "Интернет байланысыңызды тексеріңіз және қайтадан көріңіз",
-      "authorization_required": "Авторизация деректері ескірген. Қайта кіру қажет",
-      "upgrade_required": "Дұрыс жұмыс істеу үшін жаңа нұсқасын орнатыңыз",
-      "insufficient_access_rights": "Әрекет қолжетімсіз. Сіздің құқықтарыңыз шектеулі"
+    "DialogPresenter": {
+      "permission_text_location": "Орналасқан жер",
+      "permission_denied": {
+        "location": "мекенжайды таңдау үшін орналасқан жерді алу",
+        "title": "{permission:String} рұқсаты",
+        "description": "Бұл функцияны пайдалану үшін {permission:String} рұқсатын алу қажет. Сіз оны құрылғыңыздың параметрлерінде қосуға болады.",
+        "settings": "Параметрлерге",
+        "later": "Кейін"
+      }
     },
     "dialog_action": {
       "ok": "ОК",
@@ -209,16 +200,25 @@
       "no": "Жоқ",
       "cancel": "Бас тарту"
     },
-    "DialogPresenter": {
-      "permission_text_location": "Орналасқан жер",
-      "permission_denied": {
-        "location": "мекенжайды таңдау үшін орналасқан жерді алу",
-        "title": "{permission:String} рұқсаты",
-        "description": "Бұл функцияны пайдалану үшін {permission:String} рұқсатын алу қажет. Сіз оны құрылғыңыздың параметрлерінде қосуға болады.",
-        "settings": "Параметрлерге",
-        "later": "Кейін"
-      }
+    "dialog_msg": {
+      "retry_or_contact_support": "Қайтадан көріңіз немесе қолдау қызметіне хабарласыңыз: support@verto.chat",
+      "server_error": "Серверде қате орын алды. {retryOrContactSupport}",
+      "default_error": "Қате орын алды. {retryOrContactSupport}",
+      "connection_error": "Интернет байланысыңызды тексеріңіз және қайтадан көріңіз",
+      "authorization_required": "Авторизация деректері ескірген. Қайта кіру қажет",
+      "upgrade_required": "Дұрыс жұмыс істеу үшін жаңа нұсқасын орнатыңыз",
+      "insufficient_access_rights": "Әрекет қолжетімсіз. Сіздің құқықтарыңыз шектеулі"
     },
+    "dialog_title": {
+      "error_title": "Қате",
+      "connection_error": "Байланыс жоқ",
+      "server_error": "Серверде қате",
+      "not_authorized": "Авторизацияланбаған",
+      "upgrade_required": "Нұсқа ескірген",
+      "insufficient_accessRights": "Құқықтар жеткіліксіз"
+    },
+    "field_empty": "Өріс бос болмауы тиіс",
+    "incorrect_format": "Қате формат",
     "photos": {
       "GalleryScreen": {
         "title": "Галерея"
@@ -271,9 +271,10 @@
     }
   },
   "home": {
-    "main_label": "Басты",
     "chats_label": "Чаттар",
-    "profile_label": "Профиль"
+    "profile_label": "Профиль",
+    "settings_label": "Параметрлер",
+    "main_label": "Басты"
   },
   "in_app": {
     "BuyProductsScreen": {

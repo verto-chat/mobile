@@ -180,24 +180,15 @@
     }
   },
   "core": {
-    "field_empty": "Feltet kan ikke være tomt",
-    "incorrect_format": "Ugyldig format",
-    "dialog_title": {
-      "error_title": "Feil",
-      "connection_error": "Ingen tilkobling",
-      "server_error": "Serverfeil",
-      "not_authorized": "Ikke autorisert",
-      "upgrade_required": "Versjonen er utdatert",
-      "insufficient_accessRights": "Utilstrekkelige rettigheter"
-    },
-    "dialog_msg": {
-      "retry_or_contact_support": "Prøv igjen eller kontakt support på: support@verto.chat",
-      "server_error": "Det oppstod en feil på serveren. {retryOrContactSupport}",
-      "default_error": "Det oppstod en feil. {retryOrContactSupport}",
-      "connection_error": "Vennligst sjekk internettforbindelsen din og prøv igjen",
-      "authorization_required": "Påloggingsopplysningene er utdaterte. Du må logge inn på nytt",
-      "upgrade_required": "For korrekt funksjon, installer den nyeste versjonen av appen",
-      "insufficient_access_rights": "Handling ikke tilgjengelig. Dine rettigheter er begrenset"
+    "DialogPresenter": {
+      "permission_text_location": "Plassering",
+      "permission_denied": {
+        "location": "få tilgang til plasseringen for å velge adresse",
+        "title": "Tilgang til {permission:String}",
+        "description": "For å bruke denne funksjonen kreves tilgang til {permission:String}. Du kan aktivere det i innstillingene på enheten din.",
+        "settings": "Til innstillinger",
+        "later": "Senere"
+      }
     },
     "dialog_action": {
       "ok": "OK",
@@ -209,16 +200,25 @@
       "no": "Nei",
       "cancel": "Avbryt"
     },
-    "DialogPresenter": {
-      "permission_text_location": "Plassering",
-      "permission_denied": {
-        "location": "få tilgang til plasseringen for å velge adresse",
-        "title": "Tilgang til {permission:String}",
-        "description": "For å bruke denne funksjonen kreves tilgang til {permission:String}. Du kan aktivere det i innstillingene på enheten din.",
-        "settings": "Til innstillinger",
-        "later": "Senere"
-      }
+    "dialog_msg": {
+      "retry_or_contact_support": "Prøv igjen eller kontakt support på: support@verto.chat",
+      "server_error": "Det oppstod en feil på serveren. {retryOrContactSupport}",
+      "default_error": "Det oppstod en feil. {retryOrContactSupport}",
+      "connection_error": "Vennligst sjekk internettforbindelsen din og prøv igjen",
+      "authorization_required": "Påloggingsopplysningene er utdaterte. Du må logge inn på nytt",
+      "upgrade_required": "For korrekt funksjon, installer den nyeste versjonen av appen",
+      "insufficient_access_rights": "Handling ikke tilgjengelig. Dine rettigheter er begrenset"
     },
+    "dialog_title": {
+      "error_title": "Feil",
+      "connection_error": "Ingen tilkobling",
+      "server_error": "Serverfeil",
+      "not_authorized": "Ikke autorisert",
+      "upgrade_required": "Versjonen er utdatert",
+      "insufficient_accessRights": "Utilstrekkelige rettigheter"
+    },
+    "field_empty": "Feltet kan ikke være tomt",
+    "incorrect_format": "Ugyldig format",
     "photos": {
       "GalleryScreen": {
         "title": "Galleri"
@@ -271,9 +271,10 @@
     }
   },
   "home": {
-    "main_label": "Hjem",
     "chats_label": "Chatter",
-    "profile_label": "Profil"
+    "profile_label": "Profil",
+    "settings_label": "Innstillinger",
+    "main_label": "Hjem"
   },
   "in_app": {
     "BuyProductsScreen": {

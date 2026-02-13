@@ -271,9 +271,10 @@
     }
   },
   "home": {
-    "main_label": "홈",
     "chats_label": "채팅",
-    "profile_label": "프로필"
+    "profile_label": "프로필",
+    "settings_label": "설정",
+    "main_label": "홈"
   },
   "in_app": {
     "BuyProductsScreen": {

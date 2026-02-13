@@ -180,24 +180,15 @@
     }
   },
   "core": {
-    "field_empty": "Polje ne može biti prazno",
-    "incorrect_format": "Neispravan format",
-    "dialog_title": {
-      "error_title": "Greška",
-      "connection_error": "Nema veze",
-      "server_error": "Greška na serveru",
-      "not_authorized": "Niste autorizirani",
-      "upgrade_required": "Verzija je zastarjela",
-      "insufficient_accessRights": "Nedovoljna prava pristupa"
-    },
-    "dialog_msg": {
-      "retry_or_contact_support": "Pokušajte ponovo ili kontaktirajte podršku na: support@verto.chat",
-      "server_error": "Došlo je do greške na serveru. {retryOrContactSupport}",
-      "default_error": "Došlo je do greške. {retryOrContactSupport}",
-      "connection_error": "Molimo provjerite svoje internet veze i pokušajte ponovo",
-      "authorization_required": "Podaci za prijavu su zastarjeli. Potrebno je ponovo se prijaviti",
-      "upgrade_required": "Za ispravan rad instalirajte novu verziju aplikacije",
-      "insufficient_access_rights": "Radnja nije dostupna. Vaša prava su ograničena"
+    "DialogPresenter": {
+      "permission_text_location": "Lokacija",
+      "permission_denied": {
+        "location": "pristupiti lokaciji za odabir adrese",
+        "title": "Pristup {permission:String}",
+        "description": "Za korištenje ove funkcije potreban je pristup {permission:String}. Možete ga uključiti u postavkama vašeg uređaja.",
+        "settings": "U postavke",
+        "later": "Kasnije"
+      }
     },
     "dialog_action": {
       "ok": "U redu",
@@ -209,16 +200,25 @@
       "no": "Ne",
       "cancel": "Odustani"
     },
-    "DialogPresenter": {
-      "permission_text_location": "Lokacija",
-      "permission_denied": {
-        "location": "pristupiti lokaciji za odabir adrese",
-        "title": "Pristup {permission:String}",
-        "description": "Za korištenje ove funkcije potreban je pristup {permission:String}. Možete ga uključiti u postavkama vašeg uređaja.",
-        "settings": "U postavke",
-        "later": "Kasnije"
-      }
+    "dialog_msg": {
+      "retry_or_contact_support": "Pokušajte ponovo ili kontaktirajte podršku na: support@verto.chat",
+      "server_error": "Došlo je do greške na serveru. {retryOrContactSupport}",
+      "default_error": "Došlo je do greške. {retryOrContactSupport}",
+      "connection_error": "Molimo provjerite svoje internet veze i pokušajte ponovo",
+      "authorization_required": "Podaci za prijavu su zastarjeli. Potrebno je ponovo se prijaviti",
+      "upgrade_required": "Za ispravan rad instalirajte novu verziju aplikacije",
+      "insufficient_access_rights": "Radnja nije dostupna. Vaša prava su ograničena"
     },
+    "dialog_title": {
+      "error_title": "Greška",
+      "connection_error": "Nema veze",
+      "server_error": "Greška na serveru",
+      "not_authorized": "Niste autorizirani",
+      "upgrade_required": "Verzija je zastarjela",
+      "insufficient_accessRights": "Nedovoljna prava pristupa"
+    },
+    "field_empty": "Polje ne može biti prazno",
+    "incorrect_format": "Neispravan format",
     "photos": {
       "GalleryScreen": {
         "title": "Galerija"
@@ -271,9 +271,10 @@
     }
   },
   "home": {
-    "main_label": "Početna",
     "chats_label": "Chatovi",
-    "profile_label": "Profil"
+    "profile_label": "Profil",
+    "settings_label": "Postavke",
+    "main_label": "Početna"
   },
   "in_app": {
     "BuyProductsScreen": {

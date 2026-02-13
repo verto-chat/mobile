@@ -271,9 +271,10 @@
     }
   },
   "home": {
-    "main_label": "Asosiy",
     "chats_label": "Chatlar",
-    "profile_label": "Profil"
+    "profile_label": "Profil",
+    "settings_label": "Sozlamalar",
+    "main_label": "Asosiy"
   },
   "in_app": {
     "BuyProductsScreen": {

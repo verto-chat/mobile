@@ -271,9 +271,10 @@
     }
   },
   "home": {
-    "main_label": "Home",
     "chats_label": "Chats",
-    "profile_label": "Profile"
+    "profile_label": "Profile",
+    "settings_label": "Settings",
+    "main_label": "Home"
   },
   "in_app": {
     "BuyProductsScreen": {

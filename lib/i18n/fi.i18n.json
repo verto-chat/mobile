@@ -180,24 +180,15 @@
     }
   },
   "core": {
-    "field_empty": "Kenttä ei voi olla tyhjää",
-    "incorrect_format": "Virheellinen muoto",
-    "dialog_title": {
-      "error_title": "Virhe",
-      "connection_error": "Ei yhteyttä",
-      "server_error": "Virhe palvelimella",
-      "not_authorized": "Ei kirjautunut",
-      "upgrade_required": "Versio vanhentunut",
-      "insufficient_accessRights": "Riittämättömät oikeudet"
-    },
-    "dialog_msg": {
-      "retry_or_contact_support": "Yritä uudelleen tai ota yhteyttä tukeen osoitteessa: support@verto.chat",
-      "server_error": "Palvelimella tapahtui virhe. {retryOrContactSupport}",
-      "default_error": "Tapahtui virhe. {retryOrContactSupport}",
-      "connection_error": "Tarkista internet-yhteytesi ja yritä uudelleen",
-      "authorization_required": "Kirjautumistiedot ovat vanhentuneet. Kirjaudu sisään uudelleen",
-      "upgrade_required": "Asennettavan uuden version vuoksi, päivitä sovellus",
-      "insufficient_access_rights": "Toiminto ei ole käytettävissä. Oikeutesi ovat rajoitetut"
+    "DialogPresenter": {
+      "permission_text_location": "Sijainti",
+      "permission_denied": {
+        "location": "saada sijainti osoitteen valitsemiseksi",
+        "title": "Pääsy {permission:String}",
+        "description": "Tämän toiminnon käyttämiseksi tarvitaan pääsy {permission:String}. Voit ottaa sen käyttöön laitteesi asetuksista.",
+        "settings": "Asetukset",
+        "later": "Myöhemmin"
+      }
     },
     "dialog_action": {
       "ok": "Ok",
@@ -209,16 +200,25 @@
       "no": "Ei",
       "cancel": "Peruuta"
     },
-    "DialogPresenter": {
-      "permission_text_location": "Sijainti",
-      "permission_denied": {
-        "location": "saada sijainti osoitteen valitsemiseksi",
-        "title": "Pääsy {permission:String}",
-        "description": "Tämän toiminnon käyttämiseksi tarvitaan pääsy {permission:String}. Voit ottaa sen käyttöön laitteesi asetuksista.",
-        "settings": "Asetukset",
-        "later": "Myöhemmin"
-      }
+    "dialog_msg": {
+      "retry_or_contact_support": "Yritä uudelleen tai ota yhteyttä tukeen osoitteessa: support@verto.chat",
+      "server_error": "Palvelimella tapahtui virhe. {retryOrContactSupport}",
+      "default_error": "Tapahtui virhe. {retryOrContactSupport}",
+      "connection_error": "Tarkista internet-yhteytesi ja yritä uudelleen",
+      "authorization_required": "Kirjautumistiedot ovat vanhentuneet. Kirjaudu sisään uudelleen",
+      "upgrade_required": "Asennettavan uuden version vuoksi, päivitä sovellus",
+      "insufficient_access_rights": "Toiminto ei ole käytettävissä. Oikeutesi ovat rajoitetut"
     },
+    "dialog_title": {
+      "error_title": "Virhe",
+      "connection_error": "Ei yhteyttä",
+      "server_error": "Virhe palvelimella",
+      "not_authorized": "Ei kirjautunut",
+      "upgrade_required": "Versio vanhentunut",
+      "insufficient_accessRights": "Riittämättömät oikeudet"
+    },
+    "field_empty": "Kenttä ei voi olla tyhjää",
+    "incorrect_format": "Virheellinen muoto",
     "photos": {
       "GalleryScreen": {
         "title": "Galleria"
@@ -271,9 +271,10 @@
     }
   },
   "home": {
-    "main_label": "Etusivu",
     "chats_label": "Chattit",
-    "profile_label": "Profiili"
+    "profile_label": "Profiili",
+    "settings_label": "Asetukset",
+    "main_label": "Etusivu"
   },
   "in_app": {
     "BuyProductsScreen": {

@@ -180,24 +180,15 @@
     }
   },
   "core": {
-    "field_empty": "لا يمكن أن يكون الحقل فارغًا",
-    "incorrect_format": "تنسيق غير صحيح",
-    "dialog_title": {
-      "error_title": "خطأ",
-      "connection_error": "لا يوجد اتصال",
-      "server_error": "خطأ في الخادم",
-      "not_authorized": "غير مصرح",
-      "upgrade_required": "الإصدار قديم",
-      "insufficient_accessRights": "حقوق الوصول غير كافية"
-    },
-    "dialog_msg": {
-      "retry_or_contact_support": "حاول مرة أخرى أو اتصل بالدعم على: support@verto.chat",
-      "server_error": "حدث خطأ في الخادم. {retryOrContactSupport}",
-      "default_error": "حدث خطأ. {retryOrContactSupport}",
-      "connection_error": "يرجى التحقق من اتصال الإنترنت الخاص بك وحاول مرة أخرى",
-      "authorization_required": "بيانات الاعتماد قديمة. يجب تسجيل الدخول مرة أخرى",
-      "upgrade_required": "لتعمل بشكل صحيح، قم بتثبيت الإصدار الجديد من التطبيق",
-      "insufficient_access_rights": "الإجراء غير متاح. حقوقك محدودة"
+    "DialogPresenter": {
+      "permission_text_location": "الموقع",
+      "permission_denied": {
+        "location": "الحصول على الموقع لاختيار العنوان",
+        "title": "الوصول إلى {permission:String}",
+        "description": "للاستخدام هذه الميزة، تحتاج إلى الوصول إلى {permission:String}. يمكنك تمكينه في إعدادات جهازك.",
+        "settings": "إلى الإعدادات",
+        "later": "لاحقاً"
+      }
     },
     "dialog_action": {
       "ok": "حسناً",
@@ -209,16 +200,25 @@
       "no": "لا",
       "cancel": "إلغاء"
     },
-    "DialogPresenter": {
-      "permission_text_location": "الموقع",
-      "permission_denied": {
-        "location": "الحصول على الموقع لاختيار العنوان",
-        "title": "الوصول إلى {permission:String}",
-        "description": "للاستخدام هذه الميزة، تحتاج إلى الوصول إلى {permission:String}. يمكنك تمكينه في إعدادات جهازك.",
-        "settings": "إلى الإعدادات",
-        "later": "لاحقاً"
-      }
+    "dialog_msg": {
+      "retry_or_contact_support": "حاول مرة أخرى أو اتصل بالدعم على: support@verto.chat",
+      "server_error": "حدث خطأ في الخادم. {retryOrContactSupport}",
+      "default_error": "حدث خطأ. {retryOrContactSupport}",
+      "connection_error": "يرجى التحقق من اتصال الإنترنت الخاص بك وحاول مرة أخرى",
+      "authorization_required": "بيانات الاعتماد قديمة. يجب تسجيل الدخول مرة أخرى",
+      "upgrade_required": "لتعمل بشكل صحيح، قم بتثبيت الإصدار الجديد من التطبيق",
+      "insufficient_access_rights": "الإجراء غير متاح. حقوقك محدودة"
     },
+    "dialog_title": {
+      "error_title": "خطأ",
+      "connection_error": "لا يوجد اتصال",
+      "server_error": "خطأ في الخادم",
+      "not_authorized": "غير مصرح",
+      "upgrade_required": "الإصدار قديم",
+      "insufficient_accessRights": "حقوق الوصول غير كافية"
+    },
+    "field_empty": "لا يمكن أن يكون الحقل فارغًا",
+    "incorrect_format": "تنسيق غير صحيح",
     "photos": {
       "GalleryScreen": {
         "title": "المعرض"
@@ -271,9 +271,10 @@
     }
   },
   "home": {
-    "main_label": "الرئيسية",
     "chats_label": "الدردشات",
-    "profile_label": "الملف الشخصي"
+    "profile_label": "الملف الشخصي",
+    "settings_label": "الإعدادات",
+    "main_label": "الرئيسية"
   },
   "in_app": {
     "BuyProductsScreen": {

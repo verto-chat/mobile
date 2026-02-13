@@ -180,24 +180,15 @@
     }
   },
   "core": {
-    "field_empty": "Fältet kan inte vara tomt",
-    "incorrect_format": "Ogiltigt format",
-    "dialog_title": {
-      "error_title": "Fel",
-      "connection_error": "Ingen anslutning",
-      "server_error": "Serverfel",
-      "not_authorized": "Inte auktoriserad",
-      "upgrade_required": "Versionen är föråldrad",
-      "insufficient_accessRights": "Otillräckliga rättigheter"
-    },
-    "dialog_msg": {
-      "retry_or_contact_support": "Försök igen eller kontakta supporten på: support@verto.chat",
-      "server_error": "Ett fel inträffade på servern. {retryOrContactSupport}",
-      "default_error": "Ett fel inträffade. {retryOrContactSupport}",
-      "connection_error": "Kontrollera din internetanslutning och försök igen",
-      "authorization_required": "Inloggningsuppgifterna har gått ut. Du måste logga in igen",
-      "upgrade_required": "Installera den senaste versionen av appen för korrekt funktion",
-      "insufficient_access_rights": "Åtgärden är inte tillgänglig. Dina rättigheter är begränsade"
+    "DialogPresenter": {
+      "permission_text_location": "Plats",
+      "permission_denied": {
+        "location": "att få plats för att välja adress",
+        "title": "Åtkomst till {permission:String}",
+        "description": "För att använda denna funktion krävs åtkomst till {permission:String}. Du kan aktivera det i inställningarna på din enhet.",
+        "settings": "I inställningarna",
+        "later": "Senare"
+      }
     },
     "dialog_action": {
       "ok": "OK",
@@ -209,16 +200,25 @@
       "no": "Nej",
       "cancel": "Avbryt"
     },
-    "DialogPresenter": {
-      "permission_text_location": "Plats",
-      "permission_denied": {
-        "location": "att få plats för att välja adress",
-        "title": "Åtkomst till {permission:String}",
-        "description": "För att använda denna funktion krävs åtkomst till {permission:String}. Du kan aktivera det i inställningarna på din enhet.",
-        "settings": "I inställningarna",
-        "later": "Senare"
-      }
+    "dialog_msg": {
+      "retry_or_contact_support": "Försök igen eller kontakta supporten på: support@verto.chat",
+      "server_error": "Ett fel inträffade på servern. {retryOrContactSupport}",
+      "default_error": "Ett fel inträffade. {retryOrContactSupport}",
+      "connection_error": "Kontrollera din internetanslutning och försök igen",
+      "authorization_required": "Inloggningsuppgifterna har gått ut. Du måste logga in igen",
+      "upgrade_required": "Installera den senaste versionen av appen för korrekt funktion",
+      "insufficient_access_rights": "Åtgärden är inte tillgänglig. Dina rättigheter är begränsade"
     },
+    "dialog_title": {
+      "error_title": "Fel",
+      "connection_error": "Ingen anslutning",
+      "server_error": "Serverfel",
+      "not_authorized": "Inte auktoriserad",
+      "upgrade_required": "Versionen är föråldrad",
+      "insufficient_accessRights": "Otillräckliga rättigheter"
+    },
+    "field_empty": "Fältet kan inte vara tomt",
+    "incorrect_format": "Ogiltigt format",
     "photos": {
       "GalleryScreen": {
         "title": "Galleri"
@@ -271,9 +271,10 @@
     }
   },
   "home": {
-    "main_label": "Huvud",
     "chats_label": "Chattar",
-    "profile_label": "Profil"
+    "profile_label": "Profil",
+    "settings_label": "Inställningar",
+    "main_label": "Huvud"
   },
   "in_app": {
     "BuyProductsScreen": {

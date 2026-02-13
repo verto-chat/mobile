@@ -12,7 +12,9 @@ part 'chats_sm.freezed.dart';
 
 @freezed
 sealed class ChatsState with _$ChatsState {
-  const factory ChatsState({required PagingState<DomainId?, Chat> pagingState}) = _ChatsState;
+  const factory ChatsState({
+    required PagingState<DomainId?, Chat> pagingState,
+  }) = _ChatsState;
 }
 
 const int _limit = 10;
@@ -30,7 +32,11 @@ class ChatsStateManager extends ContextStateManager<ChatsState> {
         .listen(
           (chats) => refresh(),
           onError: (dynamic error) {
-            _logger.log(LogLevel.error, "Failed to get chats changes", exception: error);
+            _logger.log(
+              LogLevel.error,
+              "Failed to get chats changes",
+              exception: error,
+            );
           },
         );
   }
@@ -41,35 +47,54 @@ class ChatsStateManager extends ContextStateManager<ChatsState> {
     return super.close();
   }
 
-  Future<void> fetchNextPage() => handle((emit) async {
+  void fetchNextPage() => handle((emit) async {
     final pagingState = state.pagingState;
 
-    if (pagingState.isLoading) return;
+    if (pagingState.isLoading || !pagingState.hasNextPage) return;
 
-    emit(state.copyWith(pagingState: pagingState.copyWith(isLoading: true, error: null)));
+    emit(
+      state.copyWith(
+        pagingState: pagingState.copyWith(isLoading: true, error: null),
+      ),
+    );
 
     final lastChatId = pagingState.keys?.lastOrNull;
 
-    final result = await _chatsRepository.getChats(_limit, lastChatId: lastChatId);
+    final result = await _chatsRepository.getChats(
+      _limit,
+      lastChatId: lastChatId,
+    );
 
     switch (result) {
       case Success():
         final newItems = result.data;
-        final newKey = newItems.lastOrNull?.id;
-        final isLastPage = newItems.isEmpty || newItems.length < _limit;
+        final isLastPage = newItems.length < _limit;
+        final updatedPages = newItems.isEmpty
+            ? pagingState.pages
+            : [...?pagingState.pages, newItems];
+        final updatedKeys = newItems.isEmpty
+            ? pagingState.keys
+            : [...?pagingState.keys, newItems.last.id];
 
         emit(
           state.copyWith(
             pagingState: pagingState.copyWith(
-              pages: [...?pagingState.pages, newItems],
-              keys: [...?pagingState.keys, newKey],
+              pages: updatedPages,
+              keys: updatedKeys,
               hasNextPage: !isLastPage,
               isLoading: false,
             ),
           ),
         );
       case Error():
-        emit(state.copyWith(pagingState: pagingState.copyWith(isLoading: false, error: result.errorData)));
+        emit(
+          state.copyWith(
+            pagingState: pagingState.copyWith(
+              isLoading: false,
+              error: result.errorData,
+            ),
+          ),
+        );
     }
   });
 
@@ -86,7 +111,10 @@ class ChatsStateManager extends ContextStateManager<ChatsState> {
       items: [
         PopupMenuItem(
           value: ChatAction.delete,
-          child: ListTile(leading: const Icon(Icons.delete), title: Text(context.appTexts.chats.chats_page.delete_action)),
+          child: ListTile(
+            leading: const Icon(Icons.delete),
+            title: Text(context.appTexts.chats.chats_page.delete_action),
+          ),
         ),
       ],
     );

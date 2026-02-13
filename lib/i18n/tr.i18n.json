@@ -271,9 +271,10 @@
     }
   },
   "home": {
-    "main_label": "Ana Sayfa",
     "chats_label": "Sohbetler",
-    "profile_label": "Profil"
+    "profile_label": "Profil",
+    "settings_label": "Ayarlar",
+    "main_label": "Ana Sayfa"
   },
   "in_app": {
     "BuyProductsScreen": {

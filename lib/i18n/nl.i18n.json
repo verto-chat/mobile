@@ -180,24 +180,15 @@
     }
   },
   "core": {
-    "field_empty": "Veld mag niet leeg zijn",
-    "incorrect_format": "Ongeldig formaat",
-    "dialog_title": {
-      "error_title": "Fout",
-      "connection_error": "Geen verbinding",
-      "server_error": "Serverfout",
-      "not_authorized": "Niet geautoriseerd",
-      "upgrade_required": "Versie verouderd",
-      "insufficient_accessRights": "Onvoldoende rechten"
-    },
-    "dialog_msg": {
-      "retry_or_contact_support": "Probeer het opnieuw of neem contact op met de ondersteuning via: support@verto.chat",
-      "server_error": "Er is een fout op de server opgetreden. {retryOrContactSupport}",
-      "default_error": "Er is een fout opgetreden. {retryOrContactSupport}",
-      "connection_error": "Controleer je internetverbinding en probeer het opnieuw",
-      "authorization_required": "Inloggegevens zijn verouderd. Je moet opnieuw inloggen",
-      "upgrade_required": "Installeer de nieuwste versie van de app voor correcte werking",
-      "insufficient_access_rights": "Actie niet beschikbaar. Je rechten zijn beperkt"
+    "DialogPresenter": {
+      "permission_text_location": "Locatie",
+      "permission_denied": {
+        "location": "locatie verkrijgen voor adresselectie",
+        "title": "Toegang tot {permission:String}",
+        "description": "Toegang tot {permission:String} is vereist voor deze functie. Je kunt dit inschakelen in de instellingen van je apparaat.",
+        "settings": "Naar instellingen",
+        "later": "Later"
+      }
     },
     "dialog_action": {
       "ok": "Oké",
@@ -209,16 +200,25 @@
       "no": "Nee",
       "cancel": "Annuleren"
     },
-    "DialogPresenter": {
-      "permission_text_location": "Locatie",
-      "permission_denied": {
-        "location": "locatie verkrijgen voor adresselectie",
-        "title": "Toegang tot {permission:String}",
-        "description": "Toegang tot {permission:String} is vereist voor deze functie. Je kunt dit inschakelen in de instellingen van je apparaat.",
-        "settings": "Naar instellingen",
-        "later": "Later"
-      }
+    "dialog_msg": {
+      "retry_or_contact_support": "Probeer het opnieuw of neem contact op met de ondersteuning via: support@verto.chat",
+      "server_error": "Er is een fout op de server opgetreden. {retryOrContactSupport}",
+      "default_error": "Er is een fout opgetreden. {retryOrContactSupport}",
+      "connection_error": "Controleer je internetverbinding en probeer het opnieuw",
+      "authorization_required": "Inloggegevens zijn verouderd. Je moet opnieuw inloggen",
+      "upgrade_required": "Installeer de nieuwste versie van de app voor correcte werking",
+      "insufficient_access_rights": "Actie niet beschikbaar. Je rechten zijn beperkt"
     },
+    "dialog_title": {
+      "error_title": "Fout",
+      "connection_error": "Geen verbinding",
+      "server_error": "Serverfout",
+      "not_authorized": "Niet geautoriseerd",
+      "upgrade_required": "Versie verouderd",
+      "insufficient_accessRights": "Onvoldoende rechten"
+    },
+    "field_empty": "Veld mag niet leeg zijn",
+    "incorrect_format": "Ongeldig formaat",
     "photos": {
       "GalleryScreen": {
         "title": "Galerij"
@@ -271,9 +271,10 @@
     }
   },
   "home": {
-    "main_label": "Hoofdpagina",
     "chats_label": "Chats",
-    "profile_label": "Profiel"
+    "profile_label": "Profiel",
+    "settings_label": "Instellingen",
+    "main_label": "Hoofdpagina"
   },
   "in_app": {
     "BuyProductsScreen": {

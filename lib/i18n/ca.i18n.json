@@ -180,24 +180,15 @@
     }
   },
   "core": {
-    "field_empty": "El camp no pot estar buit",
-    "incorrect_format": "Format incorrecte",
-    "dialog_title": {
-      "error_title": "Error",
-      "connection_error": "Sense connexió",
-      "server_error": "Error del servidor",
-      "not_authorized": "No autoritzat",
-      "upgrade_required": "Versió obsoleta",
-      "insufficient_accessRights": "Drets insuficients"
-    },
-    "dialog_msg": {
-      "retry_or_contact_support": "Prova-ho de nou o contacta amb el suport a: support@verto.chat",
-      "server_error": "S'ha produït un error al servidor. {retryOrContactSupport}",
-      "default_error": "S'ha produït un error. {retryOrContactSupport}",
-      "connection_error": "Si us plau, comprova la teva connexió a Internet i torna-ho a provar",
-      "authorization_required": "Les credencials d'autorització han caducat. Necessites tornar a iniciar sessió",
-      "upgrade_required": "Per al funcionament correcte, instal·la la nova versió de l'aplicació",
-      "insufficient_access_rights": "L'acció no està disponible. Els teus drets són limitats"
+    "DialogPresenter": {
+      "permission_text_location": "Ubicació",
+      "permission_denied": {
+        "location": "obtenir la ubicació per seleccionar l'adreça",
+        "title": "Accés a {permission:String}",
+        "description": "Per utilitzar aquesta funció es requereix accés a {permission:String}. Pots activar-ho a la configuració del teu dispositiu.",
+        "settings": "A la configuració",
+        "later": "Més tard"
+      }
     },
     "dialog_action": {
       "ok": "D'acord",
@@ -209,16 +200,25 @@
       "no": "No",
       "cancel": "Cancel·lar"
     },
-    "DialogPresenter": {
-      "permission_text_location": "Ubicació",
-      "permission_denied": {
-        "location": "obtenir la ubicació per seleccionar l'adreça",
-        "title": "Accés a {permission:String}",
-        "description": "Per utilitzar aquesta funció es requereix accés a {permission:String}. Pots activar-ho a la configuració del teu dispositiu.",
-        "settings": "A la configuració",
-        "later": "Més tard"
-      }
+    "dialog_msg": {
+      "retry_or_contact_support": "Prova-ho de nou o contacta amb el suport a: support@verto.chat",
+      "server_error": "S'ha produït un error al servidor. {retryOrContactSupport}",
+      "default_error": "S'ha produït un error. {retryOrContactSupport}",
+      "connection_error": "Si us plau, comprova la teva connexió a Internet i torna-ho a provar",
+      "authorization_required": "Les credencials d'autorització han caducat. Necessites tornar a iniciar sessió",
+      "upgrade_required": "Per al funcionament correcte, instal·la la nova versió de l'aplicació",
+      "insufficient_access_rights": "L'acció no està disponible. Els teus drets són limitats"
     },
+    "dialog_title": {
+      "error_title": "Error",
+      "connection_error": "Sense connexió",
+      "server_error": "Error del servidor",
+      "not_authorized": "No autoritzat",
+      "upgrade_required": "Versió obsoleta",
+      "insufficient_accessRights": "Drets insuficients"
+    },
+    "field_empty": "El camp no pot estar buit",
+    "incorrect_format": "Format incorrecte",
     "photos": {
       "GalleryScreen": {
         "title": "Galeria"
@@ -271,9 +271,10 @@
     }
   },
   "home": {
-    "main_label": "Inici",
     "chats_label": "Xats",
-    "profile_label": "Perfil"
+    "profile_label": "Perfil",
+    "settings_label": "Configuració",
+    "main_label": "Inici"
   },
   "in_app": {
     "BuyProductsScreen": {

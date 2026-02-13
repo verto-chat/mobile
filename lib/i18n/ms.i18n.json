@@ -180,24 +180,15 @@
     }
   },
   "core": {
-    "field_empty": "Medan tidak boleh kosong",
-    "incorrect_format": "Format tidak sah",
-    "dialog_title": {
-      "error_title": "Ralat",
-      "connection_error": "Tiada sambungan",
-      "server_error": "Ralat pada pelayan",
-      "not_authorized": "Tidak dibenarkan",
-      "upgrade_required": "Versi sudah lapuk",
-      "insufficient_accessRights": "Hak akses tidak mencukupi"
-    },
-    "dialog_msg": {
-      "retry_or_contact_support": "Cuba lagi atau hubungi sokongan di: support@verto.chat",
-      "server_error": "Terdapat ralat pada pelayan. {retryOrContactSupport}",
-      "default_error": "Terdapat ralat. {retryOrContactSupport}",
-      "connection_error": "Sila semak sambungan internet anda dan cuba lagi",
-      "authorization_required": "Kelayakan telah lapuk. Sila log masuk semula",
-      "upgrade_required": "Untuk berfungsi dengan baik, pasang versi baru aplikasi",
-      "insufficient_access_rights": "Tindakan tidak tersedia. Hak anda terhad"
+    "DialogPresenter": {
+      "permission_text_location": "Lokasi",
+      "permission_denied": {
+        "location": "mendapat lokasi untuk memilih alamat",
+        "title": "Akses kepada {permission:String}",
+        "description": "Akses kepada {permission:String} diperlukan untuk menggunakan fungsi ini. Anda boleh menghidupkannya dalam tetapan peranti anda.",
+        "settings": "Ke tetapan",
+        "later": "Kemudian"
+      }
     },
     "dialog_action": {
       "ok": "Okey",
@@ -209,16 +200,25 @@
       "no": "Tidak",
       "cancel": "Batal"
     },
-    "DialogPresenter": {
-      "permission_text_location": "Lokasi",
-      "permission_denied": {
-        "location": "mendapat lokasi untuk memilih alamat",
-        "title": "Akses kepada {permission:String}",
-        "description": "Akses kepada {permission:String} diperlukan untuk menggunakan fungsi ini. Anda boleh menghidupkannya dalam tetapan peranti anda.",
-        "settings": "Ke tetapan",
-        "later": "Kemudian"
-      }
+    "dialog_msg": {
+      "retry_or_contact_support": "Cuba lagi atau hubungi sokongan di: support@verto.chat",
+      "server_error": "Terdapat ralat pada pelayan. {retryOrContactSupport}",
+      "default_error": "Terdapat ralat. {retryOrContactSupport}",
+      "connection_error": "Sila semak sambungan internet anda dan cuba lagi",
+      "authorization_required": "Kelayakan telah lapuk. Sila log masuk semula",
+      "upgrade_required": "Untuk berfungsi dengan baik, pasang versi baru aplikasi",
+      "insufficient_access_rights": "Tindakan tidak tersedia. Hak anda terhad"
     },
+    "dialog_title": {
+      "error_title": "Ralat",
+      "connection_error": "Tiada sambungan",
+      "server_error": "Ralat pada pelayan",
+      "not_authorized": "Tidak dibenarkan",
+      "upgrade_required": "Versi sudah lapuk",
+      "insufficient_accessRights": "Hak akses tidak mencukupi"
+    },
+    "field_empty": "Medan tidak boleh kosong",
+    "incorrect_format": "Format tidak sah",
     "photos": {
       "GalleryScreen": {
         "title": "Galeri"
@@ -271,9 +271,10 @@
     }
   },
   "home": {
-    "main_label": "Utama",
     "chats_label": "Chat",
-    "profile_label": "Profil"
+    "profile_label": "Profil",
+    "settings_label": "Tetapan",
+    "main_label": "Utama"
   },
   "in_app": {
     "BuyProductsScreen": {

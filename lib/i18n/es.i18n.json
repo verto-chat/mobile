@@ -180,24 +180,15 @@
     }
   },
   "core": {
-    "field_empty": "El campo no puede estar vacío",
-    "incorrect_format": "Formato incorrecto",
-    "dialog_title": {
-      "error_title": "Error",
-      "connection_error": "Sin conexión",
-      "server_error": "Error en el servidor",
-      "not_authorized": "No autorizado",
-      "upgrade_required": "Versión obsoleta",
-      "insufficient_accessRights": "Derechos insuficientes"
-    },
-    "dialog_msg": {
-      "retry_or_contact_support": "Intenta de nuevo o contacta al soporte en: support@verto.chat",
-      "server_error": "Se produjo un error en el servidor. {retryOrContactSupport}",
-      "default_error": "Se produjo un error. {retryOrContactSupport}",
-      "connection_error": "Por favor, verifica tu conexión a Internet e intenta de nuevo",
-      "authorization_required": "Las credenciales han caducado. Debes iniciar sesión de nuevo",
-      "upgrade_required": "Para un funcionamiento correcto, instala la nueva versión de la aplicación",
-      "insufficient_access_rights": "La acción no está disponible. Tus derechos son limitados"
+    "DialogPresenter": {
+      "permission_text_location": "Ubicación",
+      "permission_denied": {
+        "location": "obtener ubicación para seleccionar dirección",
+        "title": "Acceso a {permission:String}",
+        "description": "Para utilizar esta función se requiere acceso a {permission:String}. Puedes habilitarlo en la configuración de tu dispositivo.",
+        "settings": "En la configuración",
+        "later": "Más tarde"
+      }
     },
     "dialog_action": {
       "ok": "Ok",
@@ -209,16 +200,25 @@
       "no": "No",
       "cancel": "Cancelar"
     },
-    "DialogPresenter": {
-      "permission_text_location": "Ubicación",
-      "permission_denied": {
-        "location": "obtener ubicación para seleccionar dirección",
-        "title": "Acceso a {permission:String}",
-        "description": "Para utilizar esta función se requiere acceso a {permission:String}. Puedes habilitarlo en la configuración de tu dispositivo.",
-        "settings": "En la configuración",
-        "later": "Más tarde"
-      }
+    "dialog_msg": {
+      "retry_or_contact_support": "Intenta de nuevo o contacta al soporte en: support@verto.chat",
+      "server_error": "Se produjo un error en el servidor. {retryOrContactSupport}",
+      "default_error": "Se produjo un error. {retryOrContactSupport}",
+      "connection_error": "Por favor, verifica tu conexión a Internet e intenta de nuevo",
+      "authorization_required": "Las credenciales han caducado. Debes iniciar sesión de nuevo",
+      "upgrade_required": "Para un funcionamiento correcto, instala la nueva versión de la aplicación",
+      "insufficient_access_rights": "La acción no está disponible. Tus derechos son limitados"
     },
+    "dialog_title": {
+      "error_title": "Error",
+      "connection_error": "Sin conexión",
+      "server_error": "Error en el servidor",
+      "not_authorized": "No autorizado",
+      "upgrade_required": "Versión obsoleta",
+      "insufficient_accessRights": "Derechos insuficientes"
+    },
+    "field_empty": "El campo no puede estar vacío",
+    "incorrect_format": "Formato incorrecto",
     "photos": {
       "GalleryScreen": {
         "title": "Galería"
@@ -271,9 +271,10 @@
     }
   },
   "home": {
-    "main_label": "Inicio",
     "chats_label": "Chats",
-    "profile_label": "Perfil"
+    "profile_label": "Perfil",
+    "settings_label": "Configuraciones",
+    "main_label": "Inicio"
   },
   "in_app": {
     "BuyProductsScreen": {

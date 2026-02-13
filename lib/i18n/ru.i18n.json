@@ -271,9 +271,9 @@
     }
   },
   "home": {
-    "main_label": "Главная",
     "chats_label": "Чаты",
-    "profile_label": "Профиль"
+    "profile_label": "Профиль",
+    "settings_label": "Настройки"
   },
   "in_app": {
     "BuyProductsScreen": {

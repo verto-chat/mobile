@@ -42,7 +42,9 @@ class ProfilePage extends StatelessWidget {
               edgeOffset: topPadding,
               onRefresh: () {
                 final completer = Completer<void>();
-                context.read<ProfileBloc>().add(ProfileEvent.load(completer: completer));
+                context.read<ProfileBloc>().add(
+                  ProfileEvent.load(completer: completer),
+                );
                 return completer.future;
               },
               child: CustomScrollView(
@@ -70,37 +72,67 @@ class ProfilePage extends StatelessWidget {
                                 : RepaintBoundary(
                                     child: ClipRect(
                                       child: ImageFiltered(
-                                        imageFilter: ImageFilter.blur(sigmaX: 15.0, sigmaY: 15.0),
-                                        child: state.userInfo.thumbnail?.isNotEmpty ?? false
-                                            ? CachedNetworkImage(imageUrl: state.userInfo.thumbnail!, fit: BoxFit.cover)
-                                            : Container(color: getUserAvatarNameColor(state.userInfo.id)),
+                                        imageFilter: ImageFilter.blur(
+                                          sigmaX: 15.0,
+                                          sigmaY: 15.0,
+                                        ),
+                                        child:
+                                            state
+                                                    .userInfo
+                                                    .thumbnail
+                                                    ?.isNotEmpty ??
+                                                false
+                                            ? CachedNetworkImage(
+                                                imageUrl:
+                                                    state.userInfo.thumbnail!,
+                                                fit: BoxFit.cover,
+                                              )
+                                            : Container(
+                                                color: getUserAvatarNameColor(
+                                                  state.userInfo.id,
+                                                ),
+                                              ),
                                       ),
                                     ),
                                   ),
                           ),
-                          Container(color: Theme.of(context).colorScheme.surface.withValues(alpha: 0.2)),
-                          _Header(state.userInfo, state.isShimmerLoading, avatarRadius),
+                          Container(
+                            color: Theme.of(
+                              context,
+                            ).colorScheme.surface.withValues(alpha: 0.2),
+                          ),
+                          _Header(
+                            state.userInfo,
+                            state.isShimmerLoading,
+                            avatarRadius,
+                          ),
                         ],
                       ),
                     ),
                   ),
                   SliverToBoxAdapter(
                     child: Padding(
-                      padding: const EdgeInsets.all(16.0).copyWith(top: 0, bottom: 80),
+                      padding: const EdgeInsets.all(
+                        16.0,
+                      ).copyWith(top: 0, bottom: 80),
                       child: ListView(
                         shrinkWrap: true,
                         physics: const NeverScrollableScrollPhysics(),
                         padding: EdgeInsets.zero,
                         children: [
                           const _SubscriptionInfo(),
-                          const Divider(),
+                          const SizedBox(height: 16),
                           CommonSettingsTitle(
-                            onTap: () => context.read<ProfileBloc>().add(const ProfileEvent.editProfile()),
+                            onTap: () => context.read<ProfileBloc>().add(
+                              const ProfileEvent.editProfile(),
+                            ),
                             title: loc.edit_profile_label,
                             icon: Icons.edit,
                           ),
-                          const Divider(),
-                          SmartAdInlineBanner(adUnitId: context.read<IAdMobId>().profileBannerId),
+                          const SizedBox(height: 16),
+                          SmartAdInlineBanner(
+                            adUnitId: context.read<IAdMobId>().profileBannerId,
+                          ),
                         ],
                       ),
                     ),
@@ -128,7 +160,12 @@ class _Username extends StatelessWidget {
 
     return Align(
       alignment: Alignment.topCenter,
-      child: Text(displayName, style: Theme.of(context).textTheme.headlineLarge!.copyWith(fontWeight: FontWeight.w600)),
+      child: Text(
+        displayName,
+        style: Theme.of(
+          context,
+        ).textTheme.headlineLarge!.copyWith(fontWeight: FontWeight.w600),
+      ),
     );
   }
 }
@@ -147,7 +184,10 @@ class _Header extends StatelessWidget {
       children: [
         Align(
           alignment: Alignment.bottomCenter,
-          child: Container(height: avatarRadius, color: Theme.of(context).colorScheme.surface),
+          child: Container(
+            height: avatarRadius,
+            color: Theme.of(context).colorScheme.surface,
+          ),
         ),
         Align(
           alignment: Alignment.bottomCenter,
@@ -155,7 +195,9 @@ class _Header extends StatelessWidget {
             avatarRadius: avatarRadius,
             userInfo: userInfo,
             isShimmerLoading: isShimmerLoading,
-            onEditTap: () => context.read<ProfileBloc>().add(const ProfileEvent.uploadAvatar()),
+            onEditTap: () => context.read<ProfileBloc>().add(
+              const ProfileEvent.uploadAvatar(),
+            ),
           ),
         ),
       ],
@@ -183,11 +225,15 @@ class _SubscriptionInfo extends StatelessWidget {
               children: [
                 Text(
                   loc.plan_name(planName: sub.plan.name),
-                  style: Theme.of(context).textTheme.titleLarge!.copyWith(color: Theme.of(context).colorScheme.tertiary),
+                  style: Theme.of(context).textTheme.titleLarge!.copyWith(
+                    color: Theme.of(context).colorScheme.tertiary,
+                  ),
                 ),
                 Text(
                   loc.credits_count(n: sub.creditsBalance),
-                  style: Theme.of(context).textTheme.titleMedium!.copyWith(color: Theme.of(context).colorScheme.secondary),
+                  style: Theme.of(context).textTheme.titleMedium!.copyWith(
+                    color: Theme.of(context).colorScheme.secondary,
+                  ),
                 ),
                 // if (sub.recommendUpgrade)
                 //   FilledButton.icon(
@@ -196,7 +242,8 @@ class _SubscriptionInfo extends StatelessWidget {
                 //     icon: const Icon(Icons.upgrade),
                 //   ),
                 FilledButton.tonalIcon(
-                  onPressed: () => context.router.push(const BuyProductsRoute()),
+                  onPressed: () =>
+                      context.router.push(const BuyProductsRoute()),
                   icon: const Icon(Icons.add),
                   label: Text(loc.buy_credits),
                 ),

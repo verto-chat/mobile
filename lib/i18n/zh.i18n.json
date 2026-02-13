@@ -180,24 +180,15 @@
     }
   },
   "core": {
-    "field_empty": "字段不能为空",
-    "incorrect_format": "格式不正确",
-    "dialog_title": {
-      "error_title": "错误",
-      "connection_error": "没有连接",
-      "server_error": "服务器错误",
-      "not_authorized": "未授权",
-      "upgrade_required": "版本过时",
-      "insufficient_accessRights": "权限不足"
-    },
-    "dialog_msg": {
-      "retry_or_contact_support": "请重试或联系支持：support@verto.chat",
-      "server_error": "服务器发生错误。{retryOrContactSupport}",
-      "default_error": "发生错误。{retryOrContactSupport}",
-      "connection_error": "请检查您的互联网连接并重试",
-      "authorization_required": "授权凭据已过期。需要重新登录",
-      "upgrade_required": "请安装新版本以正常工作",
-      "insufficient_access_rights": "操作不可用。您的权限受限"
+    "DialogPresenter": {
+      "permission_text_location": "位置",
+      "permission_denied": {
+        "location": "获取位置以选择地址",
+        "title": "访问 {permission:String}",
+        "description": "使用此功能需要访问 {permission:String}。您可以在设备设置中启用它。",
+        "settings": "去设置",
+        "later": "稍后"
+      }
     },
     "dialog_action": {
       "ok": "确定",
@@ -209,16 +200,25 @@
       "no": "否",
       "cancel": "取消"
     },
-    "DialogPresenter": {
-      "permission_text_location": "位置",
-      "permission_denied": {
-        "location": "获取位置以选择地址",
-        "title": "访问 {permission:String}",
-        "description": "使用此功能需要访问 {permission:String}。您可以在设备设置中启用它。",
-        "settings": "去设置",
-        "later": "稍后"
-      }
+    "dialog_msg": {
+      "retry_or_contact_support": "请重试或联系支持：support@verto.chat",
+      "server_error": "服务器发生错误。{retryOrContactSupport}",
+      "default_error": "发生错误。{retryOrContactSupport}",
+      "connection_error": "请检查您的互联网连接并重试",
+      "authorization_required": "授权凭据已过期。需要重新登录",
+      "upgrade_required": "请安装新版本以正常工作",
+      "insufficient_access_rights": "操作不可用。您的权限受限"
     },
+    "dialog_title": {
+      "error_title": "错误",
+      "connection_error": "没有连接",
+      "server_error": "服务器错误",
+      "not_authorized": "未授权",
+      "upgrade_required": "版本过时",
+      "insufficient_accessRights": "权限不足"
+    },
+    "field_empty": "字段不能为空",
+    "incorrect_format": "格式不正确",
     "photos": {
       "GalleryScreen": {
         "title": "图库"
@@ -271,9 +271,10 @@
     }
   },
   "home": {
-    "main_label": "首页",
     "chats_label": "聊天",
-    "profile_label": "个人资料"
+    "profile_label": "个人资料",
+    "settings_label": "设置",
+    "main_label": "首页"
   },
   "in_app": {
     "BuyProductsScreen": {

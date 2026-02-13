@@ -180,24 +180,15 @@
     }
   },
   "core": {
-    "field_empty": "השדה לא יכול להיות ריק",
-    "incorrect_format": "פורמט לא תקין",
-    "dialog_title": {
-      "error_title": "שגיאה",
-      "connection_error": "אין חיבור",
-      "server_error": "שגיאה בשרת",
-      "not_authorized": "לא מורשה",
-      "upgrade_required": "גרסה מיושנת",
-      "insufficient_accessRights": "זכויות גישה לא מספיקות"
-    },
-    "dialog_msg": {
-      "retry_or_contact_support": "נסה שוב או פנה לתמיכה בכתובת: support@verto.chat",
-      "server_error": "שגיאה בשרת. {retryOrContactSupport}",
-      "default_error": "שגיאה התרחשה. {retryOrContactSupport}",
-      "connection_error": "אנא בדוק את חיבור האינטרנט שלך ונסה שוב",
-      "authorization_required": "פרטי ההתחברות פגו. יש להיכנס מחדש",
-      "upgrade_required": "כדי לעבוד כראוי, התקן את הגרסה החדשה של האפליקציה",
-      "insufficient_access_rights": "הפעולה לא זמינה. זכויותיך מוגבלות"
+    "DialogPresenter": {
+      "permission_text_location": "מיקום",
+      "permission_denied": {
+        "location": "לקבל מיקום לבחירת כתובת",
+        "title": "גישה ל-{permission:String}",
+        "description": "כדי להשתמש בפונקציה זו דרושה גישה ל-{permission:String}. תוכל להפעיל זאת בהגדרות המכשיר שלך.",
+        "settings": "בהגדרות",
+        "later": "מאוחר יותר"
+      }
     },
     "dialog_action": {
       "ok": "אוקי",
@@ -209,16 +200,25 @@
       "no": "לא",
       "cancel": "ביטול"
     },
-    "DialogPresenter": {
-      "permission_text_location": "מיקום",
-      "permission_denied": {
-        "location": "לקבל מיקום לבחירת כתובת",
-        "title": "גישה ל-{permission:String}",
-        "description": "כדי להשתמש בפונקציה זו דרושה גישה ל-{permission:String}. תוכל להפעיל זאת בהגדרות המכשיר שלך.",
-        "settings": "בהגדרות",
-        "later": "מאוחר יותר"
-      }
+    "dialog_msg": {
+      "retry_or_contact_support": "נסה שוב או פנה לתמיכה בכתובת: support@verto.chat",
+      "server_error": "שגיאה בשרת. {retryOrContactSupport}",
+      "default_error": "שגיאה התרחשה. {retryOrContactSupport}",
+      "connection_error": "אנא בדוק את חיבור האינטרנט שלך ונסה שוב",
+      "authorization_required": "פרטי ההתחברות פגו. יש להיכנס מחדש",
+      "upgrade_required": "כדי לעבוד כראוי, התקן את הגרסה החדשה של האפליקציה",
+      "insufficient_access_rights": "הפעולה לא זמינה. זכויותיך מוגבלות"
     },
+    "dialog_title": {
+      "error_title": "שגיאה",
+      "connection_error": "אין חיבור",
+      "server_error": "שגיאה בשרת",
+      "not_authorized": "לא מורשה",
+      "upgrade_required": "גרסה מיושנת",
+      "insufficient_accessRights": "זכויות גישה לא מספיקות"
+    },
+    "field_empty": "השדה לא יכול להיות ריק",
+    "incorrect_format": "פורמט לא תקין",
     "photos": {
       "GalleryScreen": {
         "title": "גלריה"
@@ -271,9 +271,10 @@
     }
   },
   "home": {
-    "main_label": "ראשי",
     "chats_label": "צ'אטים",
-    "profile_label": "פרופיל"
+    "profile_label": "פרופיל",
+    "settings_label": "הגדרות",
+    "main_label": "ראשי"
   },
   "in_app": {
     "BuyProductsScreen": {

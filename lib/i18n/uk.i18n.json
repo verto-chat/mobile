@@ -180,24 +180,15 @@
     }
   },
   "core": {
-    "field_empty": "Поле не може бути порожнім",
-    "incorrect_format": "Неправильний формат",
-    "dialog_title": {
-      "error_title": "Помилка",
-      "connection_error": "Немає підключення",
-      "server_error": "Помилка на сервері",
-      "not_authorized": "Не авторизовано",
-      "upgrade_required": "Версія застаріла",
-      "insufficient_accessRights": "Недостатньо прав"
-    },
-    "dialog_msg": {
-      "retry_or_contact_support": "Спробуйте ще раз або зверніться до служби підтримки за адресою: support@verto.chat",
-      "server_error": "На сервері сталася помилка. {retryOrContactSupport}",
-      "default_error": "Сталася помилка. {retryOrContactSupport}",
-      "connection_error": "Будь ласка, перевірте ваше інтернет-з'єднання та спробуйте ще раз",
-      "authorization_required": "Авторизаційні дані застаріли. Необхідно знову виконати вхід",
-      "upgrade_required": "Для коректної роботи встановіть нову версію програми",
-      "insufficient_access_rights": "Дія недоступна. Ваші права обмежені"
+    "DialogPresenter": {
+      "permission_text_location": "Місцезнаходження",
+      "permission_denied": {
+        "location": "отримувати місцезнаходження для вибору адреси",
+        "title": "Доступ до {permission:String}",
+        "description": "Для використання цієї функції потрібен доступ до {permission:String}. Ви можете увімкнути його в налаштуваннях вашого пристрою.",
+        "settings": "В налаштування",
+        "later": "Пізніше"
+      }
     },
     "dialog_action": {
       "ok": "Ок",
@@ -209,16 +200,25 @@
       "no": "Ні",
       "cancel": "Скасувати"
     },
-    "DialogPresenter": {
-      "permission_text_location": "Місцезнаходження",
-      "permission_denied": {
-        "location": "отримувати місцезнаходження для вибору адреси",
-        "title": "Доступ до {permission:String}",
-        "description": "Для використання цієї функції потрібен доступ до {permission:String}. Ви можете увімкнути його в налаштуваннях вашого пристрою.",
-        "settings": "В налаштування",
-        "later": "Пізніше"
-      }
+    "dialog_msg": {
+      "retry_or_contact_support": "Спробуйте ще раз або зверніться до служби підтримки за адресою: support@verto.chat",
+      "server_error": "На сервері сталася помилка. {retryOrContactSupport}",
+      "default_error": "Сталася помилка. {retryOrContactSupport}",
+      "connection_error": "Будь ласка, перевірте ваше інтернет-з'єднання та спробуйте ще раз",
+      "authorization_required": "Авторизаційні дані застаріли. Необхідно знову виконати вхід",
+      "upgrade_required": "Для коректної роботи встановіть нову версію програми",
+      "insufficient_access_rights": "Дія недоступна. Ваші права обмежені"
     },
+    "dialog_title": {
+      "error_title": "Помилка",
+      "connection_error": "Немає підключення",
+      "server_error": "Помилка на сервері",
+      "not_authorized": "Не авторизовано",
+      "upgrade_required": "Версія застаріла",
+      "insufficient_accessRights": "Недостатньо прав"
+    },
+    "field_empty": "Поле не може бути порожнім",
+    "incorrect_format": "Неправильний формат",
     "photos": {
       "GalleryScreen": {
         "title": "Галерея"
@@ -271,9 +271,10 @@
     }
   },
   "home": {
-    "main_label": "Головна",
     "chats_label": "Чати",
-    "profile_label": "Профіль"
+    "profile_label": "Профіль",
+    "settings_label": "Налаштування",
+    "main_label": "Головна"
   },
   "in_app": {
     "BuyProductsScreen": {

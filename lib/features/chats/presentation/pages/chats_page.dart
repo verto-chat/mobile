@@ -3,6 +3,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:infinite_scroll_pagination/infinite_scroll_pagination.dart';
+import 'package:liquid_glass_widgets/liquid_glass_widgets.dart';
 import 'package:yx_state_provider/yx_state_provider.dart';
 
 import '../../../../common/common.dart';
@@ -24,51 +25,81 @@ class ChatsPage extends StatelessWidget {
       child: ProviderStateBuilder<ChatsStateManager, ChatsState>(
         builder: (context, state, _) {
           return Scaffold(
-            appBar: AppBar(title: Text(context.appTexts.chats.chats_page.title)),
+            appBar: AppBar(
+              title: Text(context.appTexts.chats.chats_page.title),
+            ),
             body: RefreshIndicator(
               edgeOffset: MediaQuery.of(context).padding.top + kToolbarHeight,
-              onRefresh: () async => context.read<ChatsStateManager>().refresh(),
+              onRefresh: () async =>
+                  context.read<ChatsStateManager>().refresh(),
               child: CustomScrollView(
                 slivers: [
                   PagedSliverList<DomainId?, Chat>.separated(
                     state: state.pagingState,
-                    fetchNextPage: () => context.read<ChatsStateManager>().fetchNextPage(),
+                    fetchNextPage: () =>
+                        context.read<ChatsStateManager>().fetchNextPage(),
                     builderDelegate: PagedChildBuilderDelegate(
                       itemBuilder: (context, item, index) {
                         return Builder(
                           builder: (context) {
                             return ChatCard(
-                              onTap: () => context.router.push(ChatRoute(chatId: item.id)),
-                              onLongTap: () => context.read<ChatsStateManager>().openChatContextMenu(item),
+                              onTap: () => context.router.push(
+                                ChatRoute(chatId: item.id),
+                              ),
+                              onLongTap: () => context
+                                  .read<ChatsStateManager>()
+                                  .openChatContextMenu(item),
                               chat: item,
                             );
                           },
                         );
                       },
                       animateTransitions: true,
-                      firstPageErrorIndicatorBuilder: (_) =>
-                          TryAgainButton(tryAgainAction: () => context.read<ChatsStateManager>().refresh()),
+                      firstPageErrorIndicatorBuilder: (_) => TryAgainButton(
+                        tryAgainAction: () =>
+                            context.read<ChatsStateManager>().refresh(),
+                      ),
                       newPageErrorIndicatorBuilder: (context) {
-                        return LastPageErrorMessageView(onTap: () => context.read<ChatsStateManager>().fetchNextPage());
+                        return LastPageErrorMessageView(
+                          onTap: () =>
+                              context.read<ChatsStateManager>().fetchNextPage(),
+                        );
                       },
                       noItemsFoundIndicatorBuilder: (_) {
-                        final loc = context.appTexts.chats.chats_page.no_items_stub;
-                        return NoItemsStub(title: loc.title, description: loc.description);
+                        final loc =
+                            context.appTexts.chats.chats_page.no_items_stub;
+                        return NoItemsStub(
+                          title: loc.title,
+                          description: loc.description,
+                        );
                       },
-                      firstPageProgressIndicatorBuilder: (_) => const DelayedSkeleton(child: _InitialSkeleton()),
+                      firstPageProgressIndicatorBuilder: (_) =>
+                          const DelayedSkeleton(child: _InitialSkeleton()),
                     ),
-                    separatorBuilder: (context, index) =>
-                        Divider(indent: 60, height: 1, color: Theme.of(context).colorScheme.surfaceContainerLowest),
+                    separatorBuilder: (context, index) => Divider(
+                      indent: 60,
+                      height: 1,
+                      color: Theme.of(
+                        context,
+                      ).colorScheme.surfaceContainerLowest,
+                    ),
                   ),
 
-                  SliverToBoxAdapter(child: SizedBox(height: MediaQuery.of(context).padding.bottom)),
+                  SliverToBoxAdapter(
+                    child: SizedBox(
+                      height: MediaQuery.of(context).padding.bottom,
+                    ),
+                  ),
                 ],
               ),
             ),
-            floatingActionButton: FloatingActionButton(
-              onPressed: () => context.router.push(const SelectChatTypeRoute()),
-              shape: const CircleBorder(),
-              child: const Icon(CupertinoIcons.chat_bubble_2_fill),
+            floatingActionButton: Padding(
+              padding: const EdgeInsets.only(bottom: 100),
+              child: GlassButton(
+                onTap: () => context.router.push(const SelectChatTypeRoute()),
+                iconColor: Theme.of(context).colorScheme.primary,
+                icon: CupertinoIcons.chat_bubble_2_fill,
+              ),
             ),
           );
         },

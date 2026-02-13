@@ -180,24 +180,15 @@
     }
   },
   "core": {
-    "field_empty": "Feld darf nicht leer sein",
-    "incorrect_format": "Ungültiges Format",
-    "dialog_title": {
-      "error_title": "Fehler",
-      "connection_error": "Keine Verbindung",
-      "server_error": "Serverfehler",
-      "not_authorized": "Nicht autorisiert",
-      "upgrade_required": "Version veraltet",
-      "insufficient_accessRights": "Nicht genügend Berechtigungen"
-    },
-    "dialog_msg": {
-      "retry_or_contact_support": "Versuchen Sie es erneut oder kontaktieren Sie den Support unter: support@verto.chat",
-      "server_error": "Es gab einen Fehler auf dem Server. {retryOrContactSupport}",
-      "default_error": "Es ist ein Fehler aufgetreten. {retryOrContactSupport}",
-      "connection_error": "Bitte überprüfen Sie Ihre Internetverbindung und versuchen Sie es erneut",
-      "authorization_required": "Anmeldedaten sind abgelaufen. Bitte melden Sie sich erneut an",
-      "upgrade_required": "Bitte installieren Sie die neueste Version der App für eine ordnungsgemäße Funktion",
-      "insufficient_access_rights": "Aktion nicht verfügbar. Ihre Berechtigungen sind eingeschränkt"
+    "DialogPresenter": {
+      "permission_text_location": "Standort",
+      "permission_denied": {
+        "location": "auf Standortdaten für die Adressauswahl zuzugreifen",
+        "title": "Zugriff auf {permission:String}",
+        "description": "Für diese Funktion ist der Zugriff auf {permission:String} erforderlich. Sie können dies in den Einstellungen Ihres Geräts aktivieren.",
+        "settings": "In die Einstellungen",
+        "later": "Später"
+      }
     },
     "dialog_action": {
       "ok": "OK",
@@ -209,16 +200,25 @@
       "no": "Nein",
       "cancel": "Abbrechen"
     },
-    "DialogPresenter": {
-      "permission_text_location": "Standort",
-      "permission_denied": {
-        "location": "auf Standortdaten für die Adressauswahl zuzugreifen",
-        "title": "Zugriff auf {permission:String}",
-        "description": "Für diese Funktion ist der Zugriff auf {permission:String} erforderlich. Sie können dies in den Einstellungen Ihres Geräts aktivieren.",
-        "settings": "In die Einstellungen",
-        "later": "Später"
-      }
+    "dialog_msg": {
+      "retry_or_contact_support": "Versuchen Sie es erneut oder kontaktieren Sie den Support unter: support@verto.chat",
+      "server_error": "Es gab einen Fehler auf dem Server. {retryOrContactSupport}",
+      "default_error": "Es ist ein Fehler aufgetreten. {retryOrContactSupport}",
+      "connection_error": "Bitte überprüfen Sie Ihre Internetverbindung und versuchen Sie es erneut",
+      "authorization_required": "Anmeldedaten sind abgelaufen. Bitte melden Sie sich erneut an",
+      "upgrade_required": "Bitte installieren Sie die neueste Version der App für eine ordnungsgemäße Funktion",
+      "insufficient_access_rights": "Aktion nicht verfügbar. Ihre Berechtigungen sind eingeschränkt"
     },
+    "dialog_title": {
+      "error_title": "Fehler",
+      "connection_error": "Keine Verbindung",
+      "server_error": "Serverfehler",
+      "not_authorized": "Nicht autorisiert",
+      "upgrade_required": "Version veraltet",
+      "insufficient_accessRights": "Nicht genügend Berechtigungen"
+    },
+    "field_empty": "Feld darf nicht leer sein",
+    "incorrect_format": "Ungültiges Format",
     "photos": {
       "GalleryScreen": {
         "title": "Galerie"
@@ -271,9 +271,10 @@
     }
   },
   "home": {
-    "main_label": "Startseite",
     "chats_label": "Chats",
-    "profile_label": "Profil"
+    "profile_label": "Profil",
+    "settings_label": "Einstellungen",
+    "main_label": "Startseite"
   },
   "in_app": {
     "BuyProductsScreen": {

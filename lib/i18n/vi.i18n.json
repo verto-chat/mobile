@@ -180,24 +180,15 @@
     }
   },
   "core": {
-    "field_empty": "Trường không thể để trống",
-    "incorrect_format": "Định dạng không hợp lệ",
-    "dialog_title": {
-      "error_title": "Lỗi",
-      "connection_error": "Không có kết nối",
-      "server_error": "Lỗi trên máy chủ",
-      "not_authorized": "Chưa được xác thực",
-      "upgrade_required": "Phiên bản đã lỗi thời",
-      "insufficient_accessRights": "Quyền truy cập không đủ"
-    },
-    "dialog_msg": {
-      "retry_or_contact_support": "Hãy thử lại hoặc liên hệ với bộ phận hỗ trợ tại: support@verto.chat",
-      "server_error": "Đã xảy ra lỗi trên máy chủ. {retryOrContactSupport}",
-      "default_error": "Đã xảy ra lỗi. {retryOrContactSupport}",
-      "connection_error": "Vui lòng kiểm tra kết nối internet của bạn và thử lại",
-      "authorization_required": "Thông tin xác thực đã lỗi thời. Cần đăng nhập lại",
-      "upgrade_required": "Để hoạt động chính xác, hãy cài đặt phiên bản mới của ứng dụng",
-      "insufficient_access_rights": "Hành động không khả dụng. Quyền của bạn bị hạn chế"
+    "DialogPresenter": {
+      "permission_text_location": "Vị trí",
+      "permission_denied": {
+        "location": "nhận vị trí để chọn địa chỉ",
+        "title": "Quyền truy cập {permission:String}",
+        "description": "Để sử dụng tính năng này, cần quyền truy cập vào {permission:String}. Bạn có thể bật nó trong cài đặt thiết bị của bạn.",
+        "settings": "Vào cài đặt",
+        "later": "Sau"
+      }
     },
     "dialog_action": {
       "ok": "OK",
@@ -209,16 +200,25 @@
       "no": "Không",
       "cancel": "Hủy"
     },
-    "DialogPresenter": {
-      "permission_text_location": "Vị trí",
-      "permission_denied": {
-        "location": "nhận vị trí để chọn địa chỉ",
-        "title": "Quyền truy cập {permission:String}",
-        "description": "Để sử dụng tính năng này, cần quyền truy cập vào {permission:String}. Bạn có thể bật nó trong cài đặt thiết bị của bạn.",
-        "settings": "Vào cài đặt",
-        "later": "Sau"
-      }
+    "dialog_msg": {
+      "retry_or_contact_support": "Hãy thử lại hoặc liên hệ với bộ phận hỗ trợ tại: support@verto.chat",
+      "server_error": "Đã xảy ra lỗi trên máy chủ. {retryOrContactSupport}",
+      "default_error": "Đã xảy ra lỗi. {retryOrContactSupport}",
+      "connection_error": "Vui lòng kiểm tra kết nối internet của bạn và thử lại",
+      "authorization_required": "Thông tin xác thực đã lỗi thời. Cần đăng nhập lại",
+      "upgrade_required": "Để hoạt động chính xác, hãy cài đặt phiên bản mới của ứng dụng",
+      "insufficient_access_rights": "Hành động không khả dụng. Quyền của bạn bị hạn chế"
     },
+    "dialog_title": {
+      "error_title": "Lỗi",
+      "connection_error": "Không có kết nối",
+      "server_error": "Lỗi trên máy chủ",
+      "not_authorized": "Chưa được xác thực",
+      "upgrade_required": "Phiên bản đã lỗi thời",
+      "insufficient_accessRights": "Quyền truy cập không đủ"
+    },
+    "field_empty": "Trường không thể để trống",
+    "incorrect_format": "Định dạng không hợp lệ",
     "photos": {
       "GalleryScreen": {
         "title": "Thư viện"
@@ -271,9 +271,10 @@
     }
   },
   "home": {
-    "main_label": "Trang chính",
     "chats_label": "Chat",
-    "profile_label": "Hồ sơ"
+    "profile_label": "Hồ sơ",
+    "settings_label": "Cài đặt",
+    "main_label": "Trang chính"
   },
   "in_app": {
     "BuyProductsScreen": {

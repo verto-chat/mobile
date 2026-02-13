@@ -180,24 +180,15 @@
     }
   },
   "core": {
-    "field_empty": "Pole nemůže být prázdné",
-    "incorrect_format": "Neplatný formát",
-    "dialog_title": {
-      "error_title": "Chyba",
-      "connection_error": "Žádné připojení",
-      "server_error": "Chyba na serveru",
-      "not_authorized": "Není autorizován",
-      "upgrade_required": "Verze je zastaralá",
-      "insufficient_accessRights": "Nedostatečná práva"
-    },
-    "dialog_msg": {
-      "retry_or_contact_support": "Zkuste to znovu nebo kontaktujte podporu na adrese: support@verto.chat",
-      "server_error": "Na serveru došlo k chybě. {retryOrContactSupport}",
-      "default_error": "Došlo k chybě. {retryOrContactSupport}",
-      "connection_error": "Zkontrolujte prosím své internetové připojení a zkuste to znovu",
-      "authorization_required": "Autorizace vypršela. Je nutné se znovu přihlásit",
-      "upgrade_required": "Pro správnou funkci nainstalujte novou verzi aplikace",
-      "insufficient_access_rights": "Akce není dostupná. Vaše práva jsou omezená"
+    "DialogPresenter": {
+      "permission_text_location": "Umístění",
+      "permission_denied": {
+        "location": "získat umístění pro výběr adresy",
+        "title": "Přístup k {permission:String}",
+        "description": "Pro použití této funkce je vyžadován přístup k {permission:String}. Můžete jej povolit v nastavení vašeho zařízení.",
+        "settings": "V nastavení",
+        "later": "Později"
+      }
     },
     "dialog_action": {
       "ok": "OK",
@@ -209,16 +200,25 @@
       "no": "Ne",
       "cancel": "Zrušit"
     },
-    "DialogPresenter": {
-      "permission_text_location": "Umístění",
-      "permission_denied": {
-        "location": "získat umístění pro výběr adresy",
-        "title": "Přístup k {permission:String}",
-        "description": "Pro použití této funkce je vyžadován přístup k {permission:String}. Můžete jej povolit v nastavení vašeho zařízení.",
-        "settings": "V nastavení",
-        "later": "Později"
-      }
+    "dialog_msg": {
+      "retry_or_contact_support": "Zkuste to znovu nebo kontaktujte podporu na adrese: support@verto.chat",
+      "server_error": "Na serveru došlo k chybě. {retryOrContactSupport}",
+      "default_error": "Došlo k chybě. {retryOrContactSupport}",
+      "connection_error": "Zkontrolujte prosím své internetové připojení a zkuste to znovu",
+      "authorization_required": "Autorizace vypršela. Je nutné se znovu přihlásit",
+      "upgrade_required": "Pro správnou funkci nainstalujte novou verzi aplikace",
+      "insufficient_access_rights": "Akce není dostupná. Vaše práva jsou omezená"
     },
+    "dialog_title": {
+      "error_title": "Chyba",
+      "connection_error": "Žádné připojení",
+      "server_error": "Chyba na serveru",
+      "not_authorized": "Není autorizován",
+      "upgrade_required": "Verze je zastaralá",
+      "insufficient_accessRights": "Nedostatečná práva"
+    },
+    "field_empty": "Pole nemůže být prázdné",
+    "incorrect_format": "Neplatný formát",
     "photos": {
       "GalleryScreen": {
         "title": "Galerie"
@@ -271,9 +271,10 @@
     }
   },
   "home": {
-    "main_label": "Hlavní",
     "chats_label": "Chaty",
-    "profile_label": "Profil"
+    "profile_label": "Profil",
+    "settings_label": "Nastavení",
+    "main_label": "Hlavní"
   },
   "in_app": {
     "BuyProductsScreen": {

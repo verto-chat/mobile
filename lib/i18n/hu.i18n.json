@@ -180,24 +180,15 @@
     }
   },
   "core": {
-    "field_empty": "A mező nem lehet üres",
-    "incorrect_format": "Érvénytelen formátum",
-    "dialog_title": {
-      "error_title": "Hiba",
-      "connection_error": "Nincs kapcsolat",
-      "server_error": "Hiba a szerveren",
-      "not_authorized": "Nem hitelesített",
-      "upgrade_required": "Elavult verzió",
-      "insufficient_accessRights": "Nem elegendő jogosultság"
-    },
-    "dialog_msg": {
-      "retry_or_contact_support": "Próbálja újra, vagy lépjen kapcsolatba a támogatással a következő címen: support@verto.chat",
-      "server_error": "Hiba történt a szerveren. {retryOrContactSupport}",
-      "default_error": "Hiba történt. {retryOrContactSupport}",
-      "connection_error": "Kérjük, ellenőrizze az internetkapcsolatát, és próbálja újra",
-      "authorization_required": "A hitelesítő adatok elavultak. Újra be kell jelentkeznie",
-      "upgrade_required": "A megfelelő működéshez frissítse az alkalmazás új verzióját",
-      "insufficient_access_rights": "A művelet nem elérhető. A jogosultságai korlátozottak"
+    "DialogPresenter": {
+      "permission_text_location": "Helymeghatározás",
+      "permission_denied": {
+        "location": "a cím kiválasztásához szükséges helymeghatározás",
+        "title": "{permission:String} hozzáférés",
+        "description": "E funkció használatához szükséges a {permission:String} hozzáférés. Ezt a készülék beállításaiban engedélyezheti.",
+        "settings": "Beállítások",
+        "later": "Később"
+      }
     },
     "dialog_action": {
       "ok": "Ok",
@@ -209,16 +200,25 @@
       "no": "Nem",
       "cancel": "Mégse"
     },
-    "DialogPresenter": {
-      "permission_text_location": "Helymeghatározás",
-      "permission_denied": {
-        "location": "a cím kiválasztásához szükséges helymeghatározás",
-        "title": "{permission:String} hozzáférés",
-        "description": "E funkció használatához szükséges a {permission:String} hozzáférés. Ezt a készülék beállításaiban engedélyezheti.",
-        "settings": "Beállítások",
-        "later": "Később"
-      }
+    "dialog_msg": {
+      "retry_or_contact_support": "Próbálja újra, vagy lépjen kapcsolatba a támogatással a következő címen: support@verto.chat",
+      "server_error": "Hiba történt a szerveren. {retryOrContactSupport}",
+      "default_error": "Hiba történt. {retryOrContactSupport}",
+      "connection_error": "Kérjük, ellenőrizze az internetkapcsolatát, és próbálja újra",
+      "authorization_required": "A hitelesítő adatok elavultak. Újra be kell jelentkeznie",
+      "upgrade_required": "A megfelelő működéshez frissítse az alkalmazás új verzióját",
+      "insufficient_access_rights": "A művelet nem elérhető. A jogosultságai korlátozottak"
     },
+    "dialog_title": {
+      "error_title": "Hiba",
+      "connection_error": "Nincs kapcsolat",
+      "server_error": "Hiba a szerveren",
+      "not_authorized": "Nem hitelesített",
+      "upgrade_required": "Elavult verzió",
+      "insufficient_accessRights": "Nem elegendő jogosultság"
+    },
+    "field_empty": "A mező nem lehet üres",
+    "incorrect_format": "Érvénytelen formátum",
     "photos": {
       "GalleryScreen": {
         "title": "Galéria"
@@ -271,9 +271,10 @@
     }
   },
   "home": {
-    "main_label": "Főoldal",
     "chats_label": "Chatok",
-    "profile_label": "Profil"
+    "profile_label": "Profil",
+    "settings_label": "Beállítások",
+    "main_label": "Főoldal"
   },
   "in_app": {
     "BuyProductsScreen": {

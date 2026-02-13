@@ -180,24 +180,15 @@
     }
   },
   "core": {
-    "field_empty": "Câmpul nu poate fi gol",
-    "incorrect_format": "Format incorect",
-    "dialog_title": {
-      "error_title": "Eroare",
-      "connection_error": "Fără conexiune",
-      "server_error": "Eroare pe server",
-      "not_authorized": "Neautorizat",
-      "upgrade_required": "Versiune învechită",
-      "insufficient_accessRights": "Drepturi insuficiente"
-    },
-    "dialog_msg": {
-      "retry_or_contact_support": "Încercați din nou sau contactați suportul la: support@verto.chat",
-      "server_error": "A apărut o eroare pe server. {retryOrContactSupport}",
-      "default_error": "A apărut o eroare. {retryOrContactSupport}",
-      "connection_error": "Vă rugăm să verificați conexiunea la internet și să încercați din nou",
-      "authorization_required": "Datele de autentificare sunt învechite. Trebuie să vă reconectați",
-      "upgrade_required": "Pentru a funcționa corect, instalați cea mai recentă versiune a aplicației",
-      "insufficient_access_rights": "Acțiunea nu este disponibilă. Drepturile dumneavoastră sunt limitate"
+    "DialogPresenter": {
+      "permission_text_location": "Locație",
+      "permission_denied": {
+        "location": "a obține locația pentru a selecta adresa",
+        "title": "Acces la {permission:String}",
+        "description": "Pentru a utiliza această funcție, este necesar accesul la {permission:String}. Puteți activa acest lucru în setările dispozitivului dumneavoastră.",
+        "settings": "În setări",
+        "later": "Mai târziu"
+      }
     },
     "dialog_action": {
       "ok": "Ok",
@@ -209,16 +200,25 @@
       "no": "Nu",
       "cancel": "Anulare"
     },
-    "DialogPresenter": {
-      "permission_text_location": "Locație",
-      "permission_denied": {
-        "location": "a obține locația pentru a selecta adresa",
-        "title": "Acces la {permission:String}",
-        "description": "Pentru a utiliza această funcție, este necesar accesul la {permission:String}. Puteți activa acest lucru în setările dispozitivului dumneavoastră.",
-        "settings": "În setări",
-        "later": "Mai târziu"
-      }
+    "dialog_msg": {
+      "retry_or_contact_support": "Încercați din nou sau contactați suportul la: support@verto.chat",
+      "server_error": "A apărut o eroare pe server. {retryOrContactSupport}",
+      "default_error": "A apărut o eroare. {retryOrContactSupport}",
+      "connection_error": "Vă rugăm să verificați conexiunea la internet și să încercați din nou",
+      "authorization_required": "Datele de autentificare sunt învechite. Trebuie să vă reconectați",
+      "upgrade_required": "Pentru a funcționa corect, instalați cea mai recentă versiune a aplicației",
+      "insufficient_access_rights": "Acțiunea nu este disponibilă. Drepturile dumneavoastră sunt limitate"
     },
+    "dialog_title": {
+      "error_title": "Eroare",
+      "connection_error": "Fără conexiune",
+      "server_error": "Eroare pe server",
+      "not_authorized": "Neautorizat",
+      "upgrade_required": "Versiune învechită",
+      "insufficient_accessRights": "Drepturi insuficiente"
+    },
+    "field_empty": "Câmpul nu poate fi gol",
+    "incorrect_format": "Format incorect",
     "photos": {
       "GalleryScreen": {
         "title": "Galerie"
@@ -271,9 +271,10 @@
     }
   },
   "home": {
-    "main_label": "Acasă",
     "chats_label": "Chat-uri",
-    "profile_label": "Profil"
+    "profile_label": "Profil",
+    "settings_label": "Setări",
+    "main_label": "Acasă"
   },
   "in_app": {
     "BuyProductsScreen": {
