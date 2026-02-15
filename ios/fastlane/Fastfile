@@ -36,6 +36,7 @@ platform :ios do
       screenshots_path: screenshots_path,
       skip_metadata: !has_metadata,
       skip_screenshots: !has_screenshots,
+      overwrite_screenshots: has_screenshots,
       submit_for_review: false,
       automatic_release: false,
     )
