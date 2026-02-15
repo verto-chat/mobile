@@ -1,1 +1,1 @@
-﻿Bug fixes and performance improvements.
+﻿Added a bottom navigation bar for easier app navigation and fixed minor chat pagination issues.
