@@ -82,7 +82,7 @@ jobs:
           EOF
 
       - name: Build AAB
-        run: flutter build appbundle
+        run: flutter build appbundle --build-number ${{ github.run_number }}
         
       - name: Upload to Google Play
         working-directory: android
