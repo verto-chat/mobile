@@ -1,4 +1,4 @@
-name: Android Publish
+﻿name: Android Publish
 
 on:
   workflow_dispatch:
@@ -82,12 +82,38 @@ jobs:
           EOF
 
       - name: Build AAB
-        run: flutter build appbundle
-        
+        run: flutter build appbundle --build-number ${{ github.run_number }}
+
+      - name: Prepare Google Play release notes
+        if: github.ref == 'refs/heads/main' && ((github.event_name == 'workflow_dispatch' && github.event.inputs.play_track == 'production') || github.event_name != 'workflow_dispatch') && (github.event_name != 'workflow_dispatch' || github.event.inputs.validate_only != 'true')
+        shell: bash
+        run: |
+          set -euo pipefail
+          VERSION_CODE="${GITHUB_RUN_NUMBER}"
+          EN_DIR="android/fastlane/metadata/android/en-US/changelogs"
+          RU_DIR="android/fastlane/metadata/android/ru-RU/changelogs"
+          mkdir -p "$EN_DIR" "$RU_DIR"
+
+          EN_DEFAULT="$EN_DIR/default.txt"
+          RU_DEFAULT="$RU_DIR/default.txt"
+          if [ ! -f "$EN_DEFAULT" ]; then
+            echo "Missing release notes file: $EN_DEFAULT" >&2
+            exit 1
+          fi
+          if [ ! -f "$RU_DEFAULT" ]; then
+            echo "Missing release notes file: $RU_DEFAULT" >&2
+            exit 1
+          fi
+
+          cp "$EN_DEFAULT" "$EN_DIR/$VERSION_CODE.txt"
+          cp "$RU_DEFAULT" "$RU_DIR/$VERSION_CODE.txt"
+
       - name: Upload to Google Play
         working-directory: android
         env:
           GOOGLE_PLAY_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_PLAY_SERVICE_ACCOUNT_JSON }}
           PLAY_TRACK: ${{ github.event_name == 'workflow_dispatch' && github.event.inputs.play_track || (github.ref == 'refs/heads/main' && 'production' || 'internal') }}
           PLAY_VALIDATE_ONLY: ${{ github.event_name == 'workflow_dispatch' && github.event.inputs.validate_only || 'false' }}
+          PLAY_UPLOAD_METADATA: ${{ github.ref == 'refs/heads/main' && ((github.event_name == 'workflow_dispatch' && github.event.inputs.play_track == 'production') || github.event_name != 'workflow_dispatch') && (github.event_name != 'workflow_dispatch' || github.event.inputs.validate_only != 'true') }}
+          PLAY_UPLOAD_RELEASE_NOTES: ${{ github.ref == 'refs/heads/main' && ((github.event_name == 'workflow_dispatch' && github.event.inputs.play_track == 'production') || github.event_name != 'workflow_dispatch') && (github.event_name != 'workflow_dispatch' || github.event.inputs.validate_only != 'true') }}
         run: bundle exec fastlane android deploy

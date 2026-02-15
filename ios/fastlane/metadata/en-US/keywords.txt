@@ -1,0 +1,1 @@
+﻿voice,chat,translator,translation,ai,asr,tts,speech,local,group,direct,bilingual,multilingual,lang

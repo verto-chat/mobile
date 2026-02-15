@@ -1,0 +1,48 @@
+﻿Meet Verto.chat — the AI-powered messenger that lets people talk in their own language and be understood. Press and hold to speak, get instant transcription and translation, and (only when you want it) text-to-speech playback. Works nearby on one phone or remotely in 1:1 and group chats.
+
+Why Verto.chat
+• Talk naturally: hold the mic, speak, release — your message appears with translation
+• See both sides: translation shows by default; tap to reveal the original
+• Play on demand: generate TTS only when you tap ▶ to save data and battery
+• Three modes: Local (one phone, take turns), Direct (1:1), Group (multi-user)
+• Multiple languages per chat with a clear default language
+• Clean, accessible UI with large touch targets and dark mode by default
+
+How it works
+
+1. Speech-to-text (ASR) turns voice into text
+2. AI translation rewrites it for the other language
+3. Optional TTS plays a natural voice when you tap ▶
+
+Great for
+• Daily life abroad, travel, and mixed-language families
+• Shops, services, and small teams chatting with customers
+• Language practice and pronunciation drills (learning tools coming soon)
+
+Key features
+• Two big mic buttons for the main language pair
+• Message status: sending → transcribed → translated → TTS ready
+• Show Original / Return Translation toggle per message
+• Local, Direct, and Group chats with avatars and language chips
+• Private media storage; downloads via signed links
+• Simple credit balance for AI features (free starter credits included)
+
+Getting started
+
+1. Pick your two languages
+2. Start a Local, Direct, or Group chat
+3. Hold to speak and release — translation appears instantly
+4. Tap ▶ if you want the message read aloud
+
+Permissions
+• Microphone — to record your voice messages
+• Optional notifications — to alert you about new messages
+
+Privacy
+Your audio and generated media are stored privately and shared only with chat participants. TTS audio is created on demand and cached securely.
+
+Support & community
+Website: [https://verto.chat/](https://verto.chat/)
+Community chat: t.me/verto_chat_community
+
+Verto.chat makes cross-language conversations simple: speak in your language, hear in theirs.

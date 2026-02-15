@@ -66,13 +66,17 @@ jobs:
       - name: Generate code with build_runner
         run: dart run build_runner build --delete-conflicting-outputs
 
-      - name: Derive iOS build info from pubspec
+      - name: Set iOS build number
         shell: bash
         env:
           INPUT_BUILD_NUMBER: ${{ github.event.inputs.build_number }}
         run: |
           set -euo pipefail
-          ruby -e 'v=File.read("pubspec.yaml")[/^\s*version:\s*([^\s#]+)/,1]; abort("version not found in pubspec.yaml") unless v; name, number = v.split("+",2); input = ENV["INPUT_BUILD_NUMBER"].to_s.strip; number = input unless input.empty?; number = ENV["GITHUB_RUN_NUMBER"] if number.nil? || number.strip.empty?; puts "IOS_BUILD_NAME=#{name}"; puts "IOS_BUILD_NUMBER=#{number}";' >> "$GITHUB_ENV"
+          number="${INPUT_BUILD_NUMBER:-}"
+          if [ -z "${number}" ]; then
+            number="${GITHUB_RUN_NUMBER}"
+          fi
+          echo "IOS_BUILD_NUMBER=${number}" >> "$GITHUB_ENV"
 
       - name: Install CocoaPods
         working-directory: ios
@@ -176,7 +180,7 @@ jobs:
           echo "XCODE_XCCONFIG_FILE=$XCODE_CONFIG_PATH" >> "$GITHUB_ENV"
 
       - name: Build IPA
-        run: flutter build ipa --export-options-plist "$IOS_EXPORT_OPTIONS_PLIST" --build-name "$IOS_BUILD_NAME" --build-number "$IOS_BUILD_NUMBER"
+        run: flutter build ipa --export-options-plist "$IOS_EXPORT_OPTIONS_PLIST" --build-number "$IOS_BUILD_NUMBER"
 
       - name: Upload to TestFlight (develop)
         if: github.ref == 'refs/heads/develop'
