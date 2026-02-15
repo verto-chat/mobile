@@ -20,15 +20,19 @@ platform :android do
   lane :deploy do |options|
     track = options[:track] || ENV["PLAY_TRACK"] || "internal"
     validate_only = (ENV["PLAY_VALIDATE_ONLY"] || "false").downcase == "true"
+    upload_metadata = (ENV["PLAY_UPLOAD_METADATA"] || "false").downcase == "true"
+    upload_release_notes = (ENV["PLAY_UPLOAD_RELEASE_NOTES"] || "false").downcase == "true"
 
     upload_to_play_store(
       track: track,
       aab: "../build/app/outputs/bundle/release/app-release.aab",
+      metadata_path: "fastlane/metadata/android",
       validate_only: validate_only,
-      skip_upload_changelogs: true,
+      skip_upload_changelogs: !upload_release_notes,
       skip_upload_images: true,
-      skip_upload_metadata: true,
-      skip_upload_screenshots: true,
+      skip_upload_metadata: !upload_metadata,
+      skip_upload_screenshots: !upload_metadata,
+      sync_image_upload: upload_metadata,
     )
   end
 end
