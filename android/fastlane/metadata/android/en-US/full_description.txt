@@ -1,4 +1,4 @@
-﻿Meet Verto.chat — the AI-powered messenger that lets people talk in their own language and be understood. Press and hold to speak, get instant transcription and translation, and (only when you want it) text-to-speech playback. Works nearby on one phone or remotely in 1:1 and group chats.
+Meet Verto.chat — the AI-powered messenger that lets people talk in their own language and be understood. Press and hold to speak, get instant transcription and translation, and (only when you want it) text-to-speech playback. Works nearby on one phone or remotely in 1:1 and group chats.
 
 Why Verto.chat
 • Talk naturally: hold the mic, speak, release — your message appears with translation

@@ -42,3 +42,25 @@ Run commands from repository root.
   - linked issue/task,
   - screenshots/video for UI updates,
   - validation notes (commands run: analyze/test/build_runner/slang).
+
+## Store Metadata Limits (Fastlane iOS/Android)
+- Before production upload (`upload_to_app_store` / `upload_to_play_store`), validate metadata lengths and URL format.
+
+- iOS (`ios/fastlane/metadata/<locale>/*.txt`):
+  - `name.txt`: max 30 chars
+  - `subtitle.txt`: max 30 chars
+  - `promotional_text.txt`: max 170 chars
+  - `description.txt`: max 4000 chars
+  - `keywords.txt`: max 100 chars
+  - `release_notes.txt`: max 4000 chars
+  - `support_url.txt`, `marketing_url.txt`, `privacy_url.txt`: valid RFC 3986 URI with `https://`
+
+- Android (`fastlane/metadata/android/<locale>/*.txt`):
+  - `title.txt`: max 30 chars
+  - `short_description.txt`: max 80 chars
+  - `full_description.txt`: max 4000 chars
+  - `changelogs/<versionCode>.txt` (What's new): max 500 chars
+
+- Encoding rules for all metadata text files:
+  - UTF-8 without BOM
+  - URL files contain a single URL line without hidden leading/trailing characters
