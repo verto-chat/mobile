@@ -1,1 +1,1 @@
-﻿Verto Chat
+﻿Verto.chat: Голосовой AI-чат
