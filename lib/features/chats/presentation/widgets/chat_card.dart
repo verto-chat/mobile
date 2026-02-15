@@ -11,84 +11,61 @@ class ChatCard extends StatelessWidget {
     super.key,
     required this.onTap,
     required this.chat,
+    required this.onLongTap,
     this.isShimmerLoading = false,
-    required this.isAdvertChats,
   });
 
   factory ChatCard.skeleton({Key? key}) {
-    return ChatCard(
-      onTap: (_, _) {},
-      chat: Chat(
-        id: const DomainId.fromString(id: "12"),
-        name: '',
-        avatarUrl: '',
-        createdAt: DateTime.now(),
-        updatedAt: DateTime.now(),
-        type: ChatType.p2p,
-        thumbnailAvatarUrl: '',
-      ),
-      isShimmerLoading: true,
-      isAdvertChats: false,
-    );
+    return ChatCard(onTap: () {}, onLongTap: () {}, chat: emptyChat, isShimmerLoading: true);
   }
 
-  final void Function(DomainId chatId, String chatName) onTap;
+  final void Function() onTap;
+  final void Function() onLongTap;
   final Chat chat;
   final bool isShimmerLoading;
-  final bool isAdvertChats;
 
   @override
   Widget build(BuildContext context) {
     if (isShimmerLoading) {
-      return Container(
-        padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-        child: Row(
-          children: [
-            CustomShimmer(
-              child: CircleAvatar(
-                backgroundColor: Theme.of(context).colorScheme.surface.withValues(alpha: 0.7),
-                radius: 20,
-              ),
-            ),
-            const SizedBox(width: 16),
-            const ShimmerContainer(height: 18, width: 140),
-            const Spacer(),
-            const ShimmerContainer(height: 12, width: 40),
-          ],
-        ),
-      );
+      return const _Skeleton();
     }
 
+    final firstLanguageCode = chat.languages?.firstWhere((element) => element.isDefault).languageCode;
+    final secondLanguageCode = chat.languages?.firstWhere((element) => !element.isDefault).languageCode;
+
+    final firstFlag = firstLanguageCode != null
+        ? getFlag(AppLocaleUtils.parseLocaleParts(languageCode: firstLanguageCode))
+        : '';
+    final secondFlag = secondLanguageCode != null
+        ? getFlag(AppLocaleUtils.parseLocaleParts(languageCode: secondLanguageCode))
+        : '';
+
     final chatName = switch (chat.type) {
-      ChatType.favorites => context.appTexts.chats.chats_page.chat_card.favorites_chat_name,
-      ChatType.support => chat.name ?? context.appTexts.chats.chats_page.chat_card.support_chat_name,
+      ChatType.local => chat.name ?? "Local - $firstFlag - $secondFlag",
       _ => (chat.name ?? ''),
     };
 
-    return GestureDetector(
-      behavior: HitTestBehavior.translucent,
-      onTap: () => onTap(chat.id, chatName),
+    return InkWell(
+      onTap: onTap,
+      onLongPress: onLongTap,
       child: Container(
         padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
         child: Row(
           children: [
             switch (chat.type) {
-              ChatType.favorites => CircleAvatar(
-                backgroundColor: Colors.blue.shade400,
+              ChatType.local => CircleAvatar(
+                backgroundColor: Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.7),
                 radius: 20,
-                child: const Icon(Icons.bookmark_border),
+                child: Row(
+                  spacing: 4,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text(firstFlag, style: const TextStyle(fontSize: 12)),
+                    Text(secondFlag, style: const TextStyle(fontSize: 12)),
+                  ],
+                ),
               ),
-              ChatType.support => Stack(
-                children: [
-                  if (chat.name != null) CustomAvatar(id: chat.id, name: chat.name, avatarUrl: chat.thumbnail),
 
-                  CircleAvatar(
-                    backgroundColor: Colors.green.shade400,
-                    radius: chat.name != null ? 8 : 20,
-                    child: Icon(Icons.help_outline, size: chat.name != null ? 12 : 24),
-                  ),
-                ],
-              ),
               _ => CustomAvatar(id: chat.id, name: chat.name, avatarUrl: chat.thumbnail),
             },
             const SizedBox(width: 16),
@@ -96,12 +73,7 @@ class ChatCard extends StatelessWidget {
               child: Text(chatName, style: Theme.of(context).textTheme.titleMedium, overflow: TextOverflow.ellipsis),
             ),
             Text(
-              chat.updatedAt != null
-                  ? formatChatMessageDate(
-                      chat.updatedAt!,
-                      locale: TranslationProvider.of(context).flutterLocale.toString(),
-                    )
-                  : "",
+              formatChatMessageDate(chat.updatedAt, locale: TranslationProvider.of(context).flutterLocale.toString()),
               style: Theme.of(context).textTheme.labelSmall,
             ),
           ],
@@ -126,5 +98,30 @@ class ChatCard extends StatelessWidget {
 
     // Если сообщение старше недели, выводим месяц и число, например "Feb 11" или "11 фев."
     return DateFormat.MMMd(locale).format(messageDate);
+  }
+}
+
+class _Skeleton extends StatelessWidget {
+  const _Skeleton();
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+      child: Row(
+        children: [
+          CustomShimmer(
+            child: CircleAvatar(
+              backgroundColor: Theme.of(context).colorScheme.surface.withValues(alpha: 0.7),
+              radius: 20,
+            ),
+          ),
+          const SizedBox(width: 16),
+          const ShimmerContainer(height: 18, width: 140),
+          const Spacer(),
+          const ShimmerContainer(height: 12, width: 40),
+        ],
+      ),
+    );
   }
 }

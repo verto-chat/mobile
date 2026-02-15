@@ -1,0 +1,6 @@
+report.xml
+Preview.html
+test_output
+tmp_*
+*.p12
+*.mobileprovision

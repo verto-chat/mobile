@@ -1,0 +1,381 @@
+{
+  "auth": {
+    "SignInScreen": {
+      "email_label": "البريد الإلكتروني",
+      "password_label": "كلمة المرور",
+      "forgot_password": "نسيت كلمة المرور؟",
+      "sign_in": "تسجيل الدخول",
+      "sign_up": "إنشاء حساب",
+      "sign_in_with_google": "تسجيل الدخول عبر Google",
+      "sign_in_with_apple": "تسجيل الدخول عبر Apple",
+      "login_error": {
+        "invalid_credentials": "بيانات الاعتماد غير صحيحة",
+        "email_not_confirmed": "البريد الإلكتروني غير مؤكد"
+      },
+      "OAuthAcceptRegulationsSheet": {
+        "title": "للمتابعة، يرجى التسجيل",
+        "regulations(rich)": "يرجى قبول {terms(شروط الاستخدام)} و {policy(سياسة الخصوصية)}",
+        "accept": "موافق",
+        "cancel": "إلغاء",
+        "failed_get_regulations": "فشل في الحصول على القواعد."
+      }
+    },
+    "SignUpScreen": {
+      "title": "إنشاء حساب",
+      "first_name_label": "الاسم الأول",
+      "last_name_label": "اسم العائلة",
+      "email_label": "البريد الإلكتروني",
+      "password_label": "كلمة المرور",
+      "repeat_password": "أعد إدخال كلمة المرور",
+      "sign_up": "إنشاء حساب",
+      "password_not_equal": "كلمات المرور غير متطابقة",
+      "regulations(rich)": "أوافق على {terms(شروط الاستخدام)} و {policy(سياسة الخصوصية)}",
+      "after_registration_toast": "✔️ تم إرسال رسالة تأكيد! تحقق من بريدك الإلكتروني وأكد العنوان.",
+      "register_error": {
+        "incorrect_email": "البريد الإلكتروني غير صحيح",
+        "incorrect_name": "الاسم غير صحيح",
+        "incorrect_password": "يجب أن تكون كلمة المرور لا تقل عن 8 أحرف وتحتوي على أحرف كبيرة وصغيرة وأرقام",
+        "email_already_used": "تم استخدام عنوان البريد الإلكتروني بالفعل",
+        "create_error": "حدث خطأ أثناء إنشاء المستخدم",
+        "emailRateLimitExceeded": "تم تجاوز حد إرسال الرسائل عبر البريد الإلكتروني"
+      }
+    },
+    "reset_password": {
+      "CodeScreen": {
+        "title": "استعادة كلمة المرور",
+        "description": "تم إرسال رمز الاستعادة إلى بريدك الإلكتروني {email:String}",
+        "submit": "التالي",
+        "field_label": "رمز الاستعادة",
+        "field_error": "رمز غير صحيح",
+        "check_error_description": "فشل في التحقق من رمز الاستعادة"
+      },
+      "ForgotPasswordScreen": {
+        "title": "استعادة كلمة المرور",
+        "email_label": "البريد الإلكتروني",
+        "send_reset_link": "إرسال الرابط",
+        "check_error_description": "فشل في إرسال رمز استعادة كلمة المرور"
+      },
+      "NewPasswordScreen": {
+        "title": "كلمة مرور جديدة",
+        "reset_submit": "تسجيل الدخول",
+        "edit_submit": "تعديل",
+        "current_password": "كلمة المرور الحالية",
+        "new_password": "كلمة المرور الجديدة",
+        "repeat_new_password": "أعد إدخال كلمة المرور الجديدة",
+        "password_label": "كلمة المرور",
+        "repeat_password": "أعد إدخال كلمة المرور",
+        "failed_change_password": "فشل في تغيير كلمة المرور",
+        "failed_reset_password": "فشل في إعادة تعيين كلمة المرور",
+        "errors": {
+          "wrong_current_password": "كلمة المرور الحالية غير صحيحة",
+          "same_password": "يجب ألا تتطابق كلمة المرور الجديدة مع الحالية"
+        }
+      }
+    }
+  },
+  "chats": {
+    "ChatPage": {
+      "SlangChatL10n": {
+        "and": "و",
+        "attachmentButtonAccessibilityLabel": "إرسال وسائط",
+        "emptyChatPlaceholder": "لا توجد لديك رسائل حتى الآن",
+        "fileButtonAccessibilityLabel": "ملف",
+        "inputPlaceholder": "رسالة",
+        "isTyping": "يكتب…",
+        "others": "آخرون",
+        "sendButtonAccessibilityLabel": "إرسال",
+        "unreadMessagesLabel": "رسائل غير مقروءة"
+      },
+      "advert_chat": "دردشة الإعلان",
+      "attachment_type_file": "ملف",
+      "attachment_type_image": "صورة",
+      "failure": "حدث خطأ أثناء تحميل الدردشة",
+      "no_messages_yet": "لا توجد رسائل حتى الآن",
+      "return_translation": "إرجاع الترجمة",
+      "show_original": "عرض الأصل",
+      "tts_play_failed": "فشل في التشغيل: {error:String}",
+      "tts_play_original": "قراءة الأصل",
+      "tts_play_translation": "قراءة الترجمة"
+    },
+    "ChatsPage": {
+      "ChatCard": {
+        "favorites_chat_name": "المفضلة",
+        "support_chat_name": "الدعم"
+      },
+      "NoItemsStub": {
+        "description": "لا توجد لديك دردشات حتى الآن",
+        "title": "لا توجد دردشات"
+      },
+      "create_direct_chat": "إنشاء دردشة مع المستخدم",
+      "create_group_chat": "إنشاء دردشة جماعية",
+      "delete_action": "حذف",
+      "empty": "لا توجد دردشات حتى الآن",
+      "failure": "حدث خطأ أثناء تحميل الدردشات",
+      "title": "الدردشات"
+    },
+    "CreateDirectChatPage": {
+      "failure_create_chat": "فشل في إنشاء الدردشة",
+      "title": "إنشاء دردشة"
+    },
+    "CreateLocalChatPage": {
+      "languages_section": "اللغات",
+      "my_language_label": "لغتي",
+      "partner_language_label": "لغة الشريك",
+      "show_both_subtitle": "عرض النصين معًا لتسهيل التحقق",
+      "show_both_title": "عرض الأصل والترجمة",
+      "start_button": "بدء دردشة محلية",
+      "swap_languages": "تبديل اللغات",
+      "tips_item_1": "• أنت والشريك تتحدثان بالتناوب على جهاز واحد.",
+      "tips_item_2": "• يتم ترجمة الرسائل تلقائيًا، ويمكن عرض الأصل والترجمة.",
+      "tips_item_3": "• قم بتفعيل TTS لقراءة الترجمة بصوت عالٍ.",
+      "tips_title": "كيف تعمل الدردشة المحلية",
+      "title": "دردشة محلية جديدة",
+      "title_hint": "على سبيل المثال: حديث مع مالك الشقة",
+      "title_label": "العنوان (اختياري)",
+      "translation_section": "الترجمة والعرض",
+      "tts_subtitle": "قراءة الترجمة بصوت عالٍ عند العرض",
+      "tts_title": "قراءة الترجمة (TTS)"
+    },
+    "RecordHoldButton": {
+      "hold_to_record": "اضغط\nلتسجيل",
+      "semantics_label": "{label:String}: اضغط لتسجيل"
+    },
+    "SelectChatTypePage": {
+      "continue_button": "متابعة",
+      "details": {
+        "direct": {
+          "can_do": "الترجمة التلقائية للرسائل الواردة والصادرة، الرسائل الصوتية، المرفقات.",
+          "for_whom": "للتواصل مع شخص واحد بلغات مختلفة.",
+          "scenarios": "المراسلات التجارية، المحادثات الشخصية، دعم العملاء."
+        },
+        "group": {
+          "can_do": "الترجمة التلقائية لجميع المشاركين، الأدوار والحقوق، تثبيت الرسائل والتفاعلات.",
+          "for_whom": "للفرق، العائلات والمجتمعات مع مشاركين من دول مختلفة.",
+          "scenarios": "دردشات المشاريع، المجتمعات، المراسلات التنظيمية."
+        },
+        "local": {
+          "can_do": "تترك رسائل بالتناوب على جهاز واحد — يتم ترجمتها على الفور للشريك.",
+          "for_whom": "للسياح والمحادثات غير المتصلة على جهاز واحد.",
+          "scenarios": "التواصل مع سائق سيارة الأجرة/مالك العقار، طلب الطعام، المساعدة في التنقل."
+        },
+        "learning": {
+          "can_do": "احفظ الكلمات والعبارات، شاهد معاني وأمثلة مختلفة، تدرب في أوضاع القراءة/الإملاء.",
+          "for_whom": "لتعلم اللغات على جهاز واحد — مثل \"الدردشة المحلية\"، ولكن مع التركيز على الممارسة.",
+          "scenarios": "التعلم الذاتي أثناء الرحلة، التحضير للاجتماع، تحليل المراسلات، قاموس شخصي."
+        }
+      },
+      "labels": {
+        "can_do": "ما يمكن القيام به",
+        "for_whom": "لمن",
+        "scenarios": "السيناريوهات"
+      },
+      "soon_tag": "قريبًا",
+      "title": "إنشاء دردشة",
+      "types": {
+        "direct": "مباشر (1-على-1)",
+        "group": "مجموعة",
+        "learning": "تعلم",
+        "local": "دردشة محلية"
+      }
+    }
+  },
+  "core": {
+    "DialogPresenter": {
+      "permission_text_location": "الموقع",
+      "permission_denied": {
+        "location": "الحصول على الموقع لاختيار العنوان",
+        "title": "الوصول إلى {permission:String}",
+        "description": "للاستخدام هذه الميزة، تحتاج إلى الوصول إلى {permission:String}. يمكنك تمكينه في إعدادات جهازك.",
+        "settings": "إلى الإعدادات",
+        "later": "لاحقاً"
+      }
+    },
+    "dialog_action": {
+      "ok": "حسناً",
+      "login": "تسجيل الدخول",
+      "retry": "حاول مرة أخرى",
+      "upgrade": "تحديث",
+      "back": "عودة",
+      "yes": "نعم",
+      "no": "لا",
+      "cancel": "إلغاء"
+    },
+    "dialog_msg": {
+      "retry_or_contact_support": "حاول مرة أخرى أو اتصل بالدعم على: support@verto.chat",
+      "server_error": "حدث خطأ في الخادم. {retryOrContactSupport}",
+      "default_error": "حدث خطأ. {retryOrContactSupport}",
+      "connection_error": "يرجى التحقق من اتصال الإنترنت الخاص بك وحاول مرة أخرى",
+      "authorization_required": "بيانات الاعتماد قديمة. يجب تسجيل الدخول مرة أخرى",
+      "upgrade_required": "لتعمل بشكل صحيح، قم بتثبيت الإصدار الجديد من التطبيق",
+      "insufficient_access_rights": "الإجراء غير متاح. حقوقك محدودة"
+    },
+    "dialog_title": {
+      "error_title": "خطأ",
+      "connection_error": "لا يوجد اتصال",
+      "server_error": "خطأ في الخادم",
+      "not_authorized": "غير مصرح",
+      "upgrade_required": "الإصدار قديم",
+      "insufficient_accessRights": "حقوق الوصول غير كافية"
+    },
+    "field_empty": "لا يمكن أن يكون الحقل فارغًا",
+    "incorrect_format": "تنسيق غير صحيح",
+    "photos": {
+      "GalleryScreen": {
+        "title": "المعرض"
+      }
+    },
+    "upload": {
+      "select_photo": {
+        "select_source_photo": {
+          "title": "اختر صورة",
+          "from": {
+            "camera": "الكاميرا",
+            "gallery": "من المعرض"
+          }
+        }
+      },
+      "AddPhotoButton": {
+        "add_photo": "إضافة صورة"
+      }
+    },
+    "widgets": {
+      "LastPageErrorMessageView": {
+        "something_wrong_try_again": "حدث خطأ ما، حاول مرة أخرى:"
+      },
+      "TryAgainButton": {
+        "something_wrong": "حدث خطأ ما",
+        "try_again": "حاول مرة أخرى"
+      },
+      "AttachDocuments": {
+        "title": "إضافة مستندات"
+      }
+    }
+  },
+  "feedback": {
+    "feedback_page": {
+      "title": "ملاحظات",
+      "type_label": "نوع الاستفسار",
+      "description_label": "الوصف",
+      "description_hint": "يرجى وصف مشكلتك أو فكرتك بمزيد من التفصيل",
+      "description_error": "يرجى كتابة نص الاستفسار",
+      "submit": "إرسال",
+      "success": "تم إرسال الاستفسار",
+      "failed_send_feedback": "فشل في إرسال الملاحظات",
+      "types": {
+        "bug": "الإبلاغ عن خطأ",
+        "feature": "اقتراح ميزة",
+        "category": "اقتراح فئة جديدة للإعلانات",
+        "question": "طرح سؤال",
+        "general": "ملاحظات عامة ورغبات"
+      }
+    }
+  },
+  "home": {
+    "chats_label": "الدردشات",
+    "profile_label": "الملف الشخصي",
+    "settings_label": "الإعدادات",
+    "main_label": "الرئيسية"
+  },
+  "in_app": {
+    "BuyProductsScreen": {
+      "buy_button": "شراء",
+      "title": "اختر المنتج",
+      "unavailable": "غير متوفر"
+    }
+  },
+  "legal": {
+    "failed_get_regulations": "فشل في الحصول على القوانين.",
+    "LegalScreen": {
+      "title": "المعلومات القانونية",
+      "policy_label": "سياسة الخصوصية",
+      "terms_label": "شروط الاستخدام",
+      "gdpr_label": "سياسة الخصوصية GDPR"
+    }
+  },
+  "logger": {
+    "SessionScreen": {
+      "no_space_line_1": "لا يوجد مساحة كافية على الجهاز.",
+      "no_space_line_2": "يرجى تحرير بعض المساحة وحاول مرة أخرى.",
+      "ok": "حسناً",
+      "title": "قائمة الجلسات",
+      "unknown_error": "خطأ غير معروف."
+    }
+  },
+  "profile": {
+    "EditProfileScreen": {
+      "edit_password": "تغيير كلمة المرور",
+      "first_name_label": "الاسم الأول",
+      "last_name_label": "اسم العائلة",
+      "save_button_text": "حفظ",
+      "success_toast": "تم تحديث اسمك بنجاح",
+      "title": "تعديل الملف الشخصي"
+    },
+    "ProfilePage": {
+      "create_support_chat": "التواصل مع دعم العملاء",
+      "failed_create_support_chat": "فشل في إنشاء دردشة الدعم",
+      "failed_loading_profile": "فشل في تحميل معلومات المستخدم",
+      "plan": {
+        "buy_credits": "شراء أرصدة",
+        "credits_count": {
+          "one": "{n} رصيد",
+          "few": "{n} أرصدة",
+          "other": "{n} رصيد"
+        },
+        "plan_name": "الخطة: {planName:String}",
+        "upgrade": "ترقية الخطة"
+      }
+    },
+    "SafetyScreen": {
+      "delete_account_error": {
+        "requires_recent_login": "لإزالة الحساب، يجب تسجيل الدخول مرة أخرى"
+      },
+      "delete_account_label": "حذف الحساب",
+      "delete_confirm": {
+        "description": "هل أنت متأكد أنك تريد حذف الحساب؟",
+        "title": "حذف الحساب"
+      },
+      "edit_password": "تغيير كلمة المرور",
+      "title": "الأمان"
+    },
+    "delete_account_label": "حذف الحساب",
+    "edit_avatar_title": "تعديل الصورة الرمزية",
+    "edit_profile_label": "تعديل الملف الشخصي",
+    "failed_update_avatar": "فشل في تحديث الصورة الرمزية",
+    "failed_upload_avatar": "فشل في تحميل الصورة الرمزية",
+    "feedback_label": "ملاحظات",
+    "language_label": "اللغة",
+    "legal_label": "المعلومات القانونية",
+    "logout_label": "تسجيل الخروج",
+    "safety_label": "الأمان",
+    "select_language_title": "اختر اللغة",
+    "theme": {
+      "title": "المظهر",
+      "light": "فاتح",
+      "dark": "داكن",
+      "system": "نظامي"
+    },
+    "to_favorites_adverts_label": "الإعلانات المفضلة",
+    "to_my_adverts_label": "إعلاناتي",
+    "version": "الإصدار {version}"
+  },
+  "report": {
+    "ReportSheet": {
+      "description_label": "الوصف",
+      "reasons": {
+        "abuse": "إهانات أو تحريض على الكراهية",
+        "inappropriate": "سلوك غير لائق",
+        "other": "آخر",
+        "spam": "بريد عشوائي"
+      },
+      "submit": "إرسال",
+      "success": "تم إرسال الشكوى",
+      "title": "الإبلاغ عن انتهاك"
+    }
+  },
+  "users": {
+    "user_select_screen": {
+      "empty": "لا يوجد مستخدمون حتى الآن",
+      "failure": "حدث خطأ أثناء تحميل المستخدمين"
+    }
+  }
+}

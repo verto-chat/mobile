@@ -1,6 +1,7 @@
 ﻿import 'package:context_di/context_di.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter/foundation.dart';
+import 'package:openapi/openapi.dart';
 import 'package:provider/provider.dart';
 import 'package:talker_dio_logger/talker_dio_logger.dart';
 
@@ -18,10 +19,6 @@ import '../upload/data/supabase_upload_api.dart';
 export 'app_bloc.dart';
 
 part 'app.g.dart';
-
-typedef CreateDioParams = ({bool backendSupport});
-
-typedef CreateDio = Dio Function(BuildContext context, CreateDioParams params);
 
 @Feature()
 @Singleton(SafeDio)
@@ -43,46 +40,36 @@ class AppFeature extends FeatureDependencies with _$AppFeatureMixin {
   @override
   List<Registration> register() => [
     ...initialDependencies,
-    registerParamsFactory((c, CreateDioParams params) {
+
+    registerSingleton<SupabaseUploadApi>((c) => SupabaseUploadApi(c.read())),
+
+    registerSingleton((c) {
       final dio = Dio(
         BaseOptions(
+          baseUrl: c.read<IEndpoints>().baseUrl,
           receiveTimeout: const Duration(seconds: 30),
           sendTimeout: const Duration(seconds: 30),
           connectTimeout: const Duration(seconds: 30),
         ),
       );
 
-      dio.interceptors.add(c.read<TalkerDioLogger>());
+      dio.interceptors
+        ..add(c.read<TalkerDioLogger>())
+        ..add(SupabaseTokenInterceptor(c.read()));
 
-      if (params.backendSupport) {
-        final interceptor = SupabaseTokenInterceptor(c.read());
-        dio.interceptors.add(interceptor);
-      }
-
-      return dio;
-    }),
-    registerSingleton<SupabaseUploadApi>((c) => SupabaseUploadApi(c.read())),
-
-    registerSingleton((context) {
-      final dio = context.read<CreateDio>().call(context, const (backendSupport: true));
-
-      final endpoints = context.read<IEndpoints>();
-
-      return TokenApi(dio, baseUrl: "${endpoints.baseUrl}/device");
+      return Openapi(dio: dio);
     }),
 
-    registerSingleton((context) {
-      final dio = context.read<CreateDio>().call(context, const (backendSupport: true));
-
-      final endpoints = context.read<IEndpoints>();
-
-      return AuthApi(dio, baseUrl: "${endpoints.baseUrl}/users");
-    }),
+    registerSingleton((context) => context.read<Openapi>().getDeviceApi()),
+    registerSingleton((context) => context.read<Openapi>().getAuthApi()),
+    registerSingleton((context) => context.read<Openapi>().getUserApi()),
 
     ...super.register(),
+
     registerSingleton<AppBloc>((c) => AppBloc(c, c.read(), c.read()), dispose: (c, bloc) => bloc.close()),
     registerSingleton<AuthBloc>((c) => AuthBloc(c, c.read()), dispose: (c, bloc) => bloc.close()),
     SingletonRegistration<IMetrica>((c) => kReleaseMode ? AppMetricaMetrica() : FakeMetrica(), lazy: false),
-    SingletonRegistration<IAdMobId>((c) => kReleaseMode ? ProductionAdMobId() : TestAdMobId(), lazy: false),
+    SingletonRegistration<IAdMobId>((c) => TestAdMobId(), lazy: false),
+    // SingletonRegistration<IAdMobId>((c) => kReleaseMode ? ProductionAdMobId() : TestAdMobId(), lazy: false),
   ];
 }

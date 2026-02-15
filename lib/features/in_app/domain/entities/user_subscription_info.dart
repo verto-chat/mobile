@@ -5,13 +5,20 @@ part 'user_subscription_info.freezed.dart';
 @freezed
 sealed class UserSubscriptionInfo with _$UserSubscriptionInfo {
   const factory UserSubscriptionInfo({
-    required String subscriptionName,
-    required int activeAdvertsCount,
-    required int? advertLimit,
-    required bool showAd,
+    required int creditsBalance,
+    required UserPlanInfo plan,
     required bool recommendUpgrade,
-    required int? subscriptionPromoteLimit,
-    required int singlePromotionLimit,
-    required bool isFree,
   }) = _UserSubscriptionInfo;
+}
+
+@freezed
+sealed class UserPlanInfo with _$UserPlanInfo {
+  const factory UserPlanInfo({
+    required String code,
+    required String name,
+    required bool isFree,
+    required bool showAd,
+    required int monthlyCreditsGrant,
+    required int asrSecondsPerClipLimit,
+  }) = _UserPlanInfo;
 }

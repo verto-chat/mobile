@@ -8,9 +8,14 @@ part 'short_chat_info.freezed.dart';
 @freezed
 sealed class ShortChatInfo with _$ShortChatInfo {
   const factory ShortChatInfo({
-    required String name,
+    required DomainId id,
+    required String? name,
     required ChatType type,
     required DomainId currentUserId,
-    required DomainId? advertId,
+    required DateTime createdAt,
+    required DateTime updatedAt,
+    required List<ChatLanguage> languages,
+    required String? avatarUrl,
+    required String? thumbnailAvatarUrl,
   }) = _ShortChatInfo;
 }

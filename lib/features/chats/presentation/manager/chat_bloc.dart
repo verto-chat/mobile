@@ -7,6 +7,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_chat_core/flutter_chat_core.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:just_audio/just_audio.dart';
 import 'package:mime/mime.dart';
 import 'package:open_filex/open_filex.dart';
 import 'package:path_provider/path_provider.dart';
@@ -26,6 +27,8 @@ const int _limit = 20;
 
 class ChatBloc extends ContextBloc<ChatEvent, ChatState> {
   final ChatController _chatController = InMemoryChatController();
+
+  final AudioPlayer _player = AudioPlayer();
 
   final IChatsRepository _chatsRepository;
   final IUploadRepository _uploadRepository;
@@ -47,6 +50,8 @@ class ChatBloc extends ContextBloc<ChatEvent, ChatState> {
     on<_AddAttachment>(_onAddAttachment);
     on<_TapMessage>(_onTapMessage);
     on<_LongTapMessage>(_onLongTapMessage);
+    on<_VoiceCompleted>(_onVoiceCompleted);
+    on<_PlayTts>(_onPlayTts);
     // on<_LoadPreview>(_onLoadPreview);
   }
 
@@ -61,19 +66,11 @@ class ChatBloc extends ContextBloc<ChatEvent, ChatState> {
   Future<void> _onStarted(_Started event, Emitter<ChatState> emit) async {
     _chatId = event.chatId;
 
-    final result = await _chatsRepository.getShortChatInfo(_chatId, languageCode);
+    final result = await _chatsRepository.getShortChatInfo(_chatId);
 
     switch (result) {
       case Success():
-        emit(
-          ChatState.initilized(
-            chatController: _chatController,
-            currentUserId: result.data.currentUserId.toString(),
-            chatType: result.data.type,
-            title: result.data.name,
-            advertId: result.data.advertId,
-          ),
-        );
+        emit(ChatState.initilized(chatController: _chatController, chat: result.data));
 
         _subscription = _chatsRepository
             .onMessagesChanges(_chatId, _limit)
@@ -94,6 +91,20 @@ class ChatBloc extends ContextBloc<ChatEvent, ChatState> {
     }
   }
 
+  String _resolveAuthorId(String authorId, String originalLanguageCode) {
+    if (state case Initilized initState) {
+      if (initState.chat.type == ChatType.local) {
+        final secondLanguage = initState.chat.languages.firstWhere((element) => !element.isDefault).languageCode;
+
+        final isOwnMessage = originalLanguageCode == secondLanguage;
+
+        return isOwnMessage ? authorId : "$authorId:localMember";
+      }
+    }
+
+    return authorId;
+  }
+
   Future<void> _onOnEndReached(_OnEndReached event, Emitter<ChatState> emit) async {
     if (!_hasMore || _isLoading) {
       event.completer?.complete();
@@ -106,6 +117,7 @@ class ChatBloc extends ContextBloc<ChatEvent, ChatState> {
       _chatId,
       _limit,
       lastMessageId: event.completer != null ? _lastMessageId : null,
+      resolveAuthor: _resolveAuthorId,
     );
 
     switch (result) {
@@ -140,7 +152,7 @@ class ChatBloc extends ContextBloc<ChatEvent, ChatState> {
     if (state case Initilized initilizedState) {
       final Message message = TextMessage(
         id: const Uuid().v4(),
-        authorId: initilizedState.currentUserId,
+        authorId: initilizedState.chat.currentUserId.toString(),
         text: event.text,
         metadata: {'sending': true},
       );
@@ -155,6 +167,52 @@ class ChatBloc extends ContextBloc<ChatEvent, ChatState> {
         case Error():
         //emit(initilizedState.copyWith(messages: [message.copyWith(status: Status.error), ...oldMessages]));
       }
+    }
+  }
+
+  Future<void> _onVoiceCompleted(_VoiceCompleted event, Emitter<ChatState> emit) async {
+    final state = this.state;
+
+    if (state is! Initilized) return;
+
+    final messageId = const Uuid().v4();
+
+    final Message message = TextMessage(
+      id: const Uuid().v4(),
+      authorId: state.chat.currentUserId.toString(),
+      createdAt: DateTime.now(),
+      text: "",
+      metadata: TextMessageMetadata(
+        original: "",
+        hasTranslated: false,
+        user: emptyChatUser,
+        originalLanguageCode: event.originalLanguageCode,
+        translatedLanguageCode: event.translatedLanguageCode,
+        sending: true,
+      ).toJson(),
+    );
+
+    _chatController.insertMessage(message);
+
+    final ttsStorageKey = _chatsRepository.getTtsStorageKey(
+      languageCode: event.originalLanguageCode,
+      chatId: _chatId,
+      messageId: messageId,
+    );
+
+    final uploadResult = await _uploadRepository.uploadChatVoice(File(event.filePath), ttsStorageKey);
+
+    switch (uploadResult) {
+      case Success():
+        await _chatsRepository.sendVoiceMessage(
+          chatId: _chatId,
+          messageId: messageId,
+          ttsStorageKey: ttsStorageKey,
+          originalLanguageCode: event.originalLanguageCode,
+          translatedLanguageCode: event.translatedLanguageCode,
+        );
+      case Error():
+        showError(uploadResult.errorData);
     }
   }
 
@@ -279,19 +337,20 @@ class ChatBloc extends ContextBloc<ChatEvent, ChatState> {
 
     if (state is! Initilized) return;
 
-    if (event.message.authorId == state.currentUserId) return;
+    bool isSelfMessage = event.message.authorId == state.chat.currentUserId.toString();
 
-    final loc = appTexts.shop.detail.advert_detail_page.menu;
+    if (isSelfMessage) return;
 
     final result = await showModalBottomSheet<_MenuAction>(
       context: context,
       builder: (BuildContext context) => SelectSheetContainer(
         children: [
-          if (event.message.authorId != state.currentUserId) ...[
+          if (!isSelfMessage) ...[
             CommonSelectTile.fromIcons(
               onTap: () => Navigator.pop(context, _MenuAction.report),
               icon: Icons.report,
-              title: loc.report,
+              title: "Report",
+              //title: loc.report,
             ),
           ] else
             ...[],
@@ -314,6 +373,21 @@ class ChatBloc extends ContextBloc<ChatEvent, ChatState> {
       builder: (BuildContext context) => ReportSheet(targetType: TargetType.chatMessage, targetId: messageId),
     );
   }
+
+  Future<void> _onPlayTts(_PlayTts event, Emitter<ChatState> emit) async {
+    final result = await _chatsRepository.getTtsLink(chatId: _chatId, messageId: event.id);
+
+    switch (result) {
+      case Success<String, DomainErrorType>():
+        await _player.setUrl(result.data);
+        _player.play();
+      case Error<String, DomainErrorType>():
+        showError(result.errorData);
+    }
+
+    event.completer.complete();
+  }
+
   // void _setAttachmentUploading(bool isAttachmentUploading, Emitter<ChatState> emit) {
   //   // if (state case Initilized initilizedState) {
   //   //   emit(initilizedState.copyWith(isAttachmentUploading: isAttachmentUploading));

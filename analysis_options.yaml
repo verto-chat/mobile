@@ -19,5 +19,3 @@ linter:
     prefer_const_constructors: true
     prefer_relative_imports: true
 
-formatter:
-  page_width: 120

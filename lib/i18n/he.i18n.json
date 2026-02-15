@@ -1,0 +1,381 @@
+{
+  "auth": {
+    "SignInScreen": {
+      "email_label": "אימייל",
+      "password_label": "סיסמה",
+      "forgot_password": "שכחת סיסמה?",
+      "sign_in": "התחבר",
+      "sign_up": "הרשמה",
+      "sign_in_with_google": "התחבר עם Google",
+      "sign_in_with_apple": "התחבר עם Apple",
+      "login_error": {
+        "invalid_credentials": "פרטי ההתחברות אינם נכונים",
+        "email_not_confirmed": "האימייל לא אושר"
+      },
+      "OAuthAcceptRegulationsSheet": {
+        "title": "כדי להמשיך, הירשם",
+        "regulations(rich)": "אנא קבל את {terms(תנאי השימוש)} ו-{policy(מדיניות הפרטיות)}",
+        "accept": "קבל",
+        "cancel": "ביטול",
+        "failed_get_regulations": "לא הצלחנו לקבל את התקנות."
+      }
+    },
+    "SignUpScreen": {
+      "title": "הרשמה",
+      "first_name_label": "שם פרטי",
+      "last_name_label": "שם משפחה",
+      "email_label": "אימייל",
+      "password_label": "סיסמה",
+      "repeat_password": "חזור על הסיסמה",
+      "sign_up": "הרשמה",
+      "password_not_equal": "הסיסמאות אינן תואמות",
+      "regulations(rich)": "אני מסכים ל-{terms(תנאי השימוש)} ול-{policy(מדיניות הפרטיות)}",
+      "after_registration_toast": "✔️ מכתב אישור נשלח! בדוק את האימייל ואשר את הכתובת.",
+      "register_error": {
+        "incorrect_email": "אימייל לא תקין",
+        "incorrect_name": "שם לא תקין",
+        "incorrect_password": "הסיסמה חייבת להיות באורך של לפחות 8 תווים ולכלול אותיות גדולות וקטנות ומספרים",
+        "email_already_used": "כתובת האימייל כבר בשימוש",
+        "create_error": "שגיאה ביצירת משתמש",
+        "emailRateLimitExceeded": "הוגבל מספר שליחת האימיילים"
+      }
+    },
+    "reset_password": {
+      "CodeScreen": {
+        "title": "שחזור סיסמה",
+        "description": "נשלח קוד שחזור לאימייל שלך {email:String}",
+        "submit": "המשך",
+        "field_label": "קוד שחזור",
+        "field_error": "קוד לא תקין",
+        "check_error_description": "לא הצלחנו לבדוק את קוד השחזור"
+      },
+      "ForgotPasswordScreen": {
+        "title": "שחזור סיסמה",
+        "email_label": "אימייל",
+        "send_reset_link": "שלח קישור",
+        "check_error_description": "לא הצלחנו לשלוח את הקוד לשחזור הסיסמה"
+      },
+      "NewPasswordScreen": {
+        "title": "סיסמה חדשה",
+        "reset_submit": "התחבר",
+        "edit_submit": "שנה",
+        "current_password": "סיסמה נוכחית",
+        "new_password": "סיסמה חדשה",
+        "repeat_new_password": "חזור על הסיסמה החדשה",
+        "password_label": "סיסמה",
+        "repeat_password": "חזור על הסיסמה",
+        "failed_change_password": "לא הצלחנו לשנות את הסיסמה",
+        "failed_reset_password": "לא הצלחנו לאפס את הסיסמה",
+        "errors": {
+          "wrong_current_password": "סיסמה נוכחית לא נכונה",
+          "same_password": "הסיסמה החדשה לא יכולה להיות תואמת לנוכחית"
+        }
+      }
+    }
+  },
+  "chats": {
+    "ChatPage": {
+      "SlangChatL10n": {
+        "and": "וגם",
+        "attachmentButtonAccessibilityLabel": "שלח מדיה",
+        "emptyChatPlaceholder": "עדיין אין לך הודעות",
+        "fileButtonAccessibilityLabel": "קובץ",
+        "inputPlaceholder": "הודעה",
+        "isTyping": "כותב…",
+        "others": "אחרים",
+        "sendButtonAccessibilityLabel": "שלח",
+        "unreadMessagesLabel": "הודעות לא נקראו"
+      },
+      "advert_chat": "צ'אט על המודעות",
+      "attachment_type_file": "קובץ",
+      "attachment_type_image": "תמונה",
+      "failure": "שגיאה בהעלאת הצ'אט",
+      "no_messages_yet": "עדיין אין הודעות",
+      "return_translation": "החזר תרגום",
+      "show_original": "הצג מקור",
+      "tts_play_failed": "לא הצלחנו לנגן: {error:String}",
+      "tts_play_original": "קרא את המקור",
+      "tts_play_translation": "קרא את התרגום"
+    },
+    "ChatsPage": {
+      "ChatCard": {
+        "favorites_chat_name": "מועדפים",
+        "support_chat_name": "תמיכה"
+      },
+      "NoItemsStub": {
+        "description": "עדיין אין לך צ'אטים",
+        "title": "עדיין אין צ'אטים"
+      },
+      "create_direct_chat": "צור צ'אט עם משתמש",
+      "create_group_chat": "צור צ'אט קבוצתי",
+      "delete_action": "מחק",
+      "empty": "עדיין אין צ'אטים",
+      "failure": "שגיאה בהעלאת הצ'אטים",
+      "title": "צ'אטים"
+    },
+    "CreateDirectChatPage": {
+      "failure_create_chat": "לא הצלחנו ליצור צ'אט",
+      "title": "צור צ'אט"
+    },
+    "CreateLocalChatPage": {
+      "languages_section": "שפות",
+      "my_language_label": "השפה שלך",
+      "partner_language_label": "שפת השותף",
+      "show_both_subtitle": "הצג את שני הטקסטים לנוחות הבדיקה",
+      "show_both_title": "הצג מקור ותרגום",
+      "start_button": "התחל צ'אט מקומי",
+      "swap_languages": "החלף שפות",
+      "tips_item_1": "• אתה ושותפך מדברים בתור על מכשיר אחד.",
+      "tips_item_2": "• ההודעות מתורגמות אוטומטית, אפשר להציג מקור ותרגום.",
+      "tips_item_3": "• הפעל TTS כדי שהתירגום יוקרא בקול.",
+      "tips_title": "איך עובד הצ'אט המקומי",
+      "title": "צ'אט מקומי חדש",
+      "title_hint": "למשל: שיחה עם בעל הדירה",
+      "title_label": "שם (אופציונלי)",
+      "translation_section": "תרגום והצגה",
+      "tts_subtitle": "קרא את התרגום בקול כאשר מוצג",
+      "tts_title": "קרא תרגום (TTS)"
+    },
+    "RecordHoldButton": {
+      "hold_to_record": "החזק\nכדי להקליט",
+      "semantics_label": "{label:String}: החזק כדי להקליט"
+    },
+    "SelectChatTypePage": {
+      "continue_button": "המשך",
+      "details": {
+        "direct": {
+          "can_do": "תרגום אוטומטי של הודעות נכנסות ויוצאות, הודעות קוליות, קבצים.",
+          "for_whom": "לשיחה עם אדם אחד בשפות שונות.",
+          "scenarios": "התכתבויות עסקיות, שיחות אישיות, תמיכת לקוחות."
+        },
+        "group": {
+          "can_do": "תרגום אוטומטי לכל המשתתפים, תפקידים וזכויות, פינים ותגובות.",
+          "for_whom": "לקבוצות, משפחות וקהילות עם משתתפים ממדינות שונות.",
+          "scenarios": "צ'אט פרויקטים, קהילות, התכתבויות ארגוניות."
+        },
+        "local": {
+          "can_do": "אתם משאירים הודעות בתור על טלפון אחד — הן מתורגמות מיד לשותף.",
+          "for_whom": "לתיירים ולשיחות לא מקוונות על מכשיר אחד.",
+          "scenarios": "שיחה עם נהג מונית/משכיר דירה, הזמנת אוכל, עזרה בניווט."
+        },
+        "learning": {
+          "can_do": "שמור מילים וביטויים, ראה משמעויות ודוגמאות שונות, התאמן במצבי קריאה/הכתבה.",
+          "for_whom": "ללמוד שפות על מכשיר אחד — כמו 'צ'אט מקומי', אבל עם דגש על תרגול.",
+          "scenarios": "למידה עצמית במהלך טיול, הכנה לפגישה, ניתוח התכתבויות, מילון אישי."
+        }
+      },
+      "labels": {
+        "can_do": "מה אפשר",
+        "for_whom": "למי",
+        "scenarios": "תסריטים"
+      },
+      "soon_tag": "בקרוב",
+      "title": "צור צ'אט",
+      "types": {
+        "direct": "ישיר (1-על-1)",
+        "group": "קבוצתי",
+        "learning": "לימוד",
+        "local": "צ'אט מקומי"
+      }
+    }
+  },
+  "core": {
+    "DialogPresenter": {
+      "permission_text_location": "מיקום",
+      "permission_denied": {
+        "location": "לקבל מיקום לבחירת כתובת",
+        "title": "גישה ל-{permission:String}",
+        "description": "כדי להשתמש בפונקציה זו דרושה גישה ל-{permission:String}. תוכל להפעיל זאת בהגדרות המכשיר שלך.",
+        "settings": "בהגדרות",
+        "later": "מאוחר יותר"
+      }
+    },
+    "dialog_action": {
+      "ok": "אוקי",
+      "login": "התחבר",
+      "retry": "נסה שוב",
+      "upgrade": "שדרג",
+      "back": "חזרה",
+      "yes": "כן",
+      "no": "לא",
+      "cancel": "ביטול"
+    },
+    "dialog_msg": {
+      "retry_or_contact_support": "נסה שוב או פנה לתמיכה בכתובת: support@verto.chat",
+      "server_error": "שגיאה בשרת. {retryOrContactSupport}",
+      "default_error": "שגיאה התרחשה. {retryOrContactSupport}",
+      "connection_error": "אנא בדוק את חיבור האינטרנט שלך ונסה שוב",
+      "authorization_required": "פרטי ההתחברות פגו. יש להיכנס מחדש",
+      "upgrade_required": "כדי לעבוד כראוי, התקן את הגרסה החדשה של האפליקציה",
+      "insufficient_access_rights": "הפעולה לא זמינה. זכויותיך מוגבלות"
+    },
+    "dialog_title": {
+      "error_title": "שגיאה",
+      "connection_error": "אין חיבור",
+      "server_error": "שגיאה בשרת",
+      "not_authorized": "לא מורשה",
+      "upgrade_required": "גרסה מיושנת",
+      "insufficient_accessRights": "זכויות גישה לא מספיקות"
+    },
+    "field_empty": "השדה לא יכול להיות ריק",
+    "incorrect_format": "פורמט לא תקין",
+    "photos": {
+      "GalleryScreen": {
+        "title": "גלריה"
+      }
+    },
+    "upload": {
+      "select_photo": {
+        "select_source_photo": {
+          "title": "בחר תמונה",
+          "from": {
+            "camera": "מצלמה",
+            "gallery": "מהגלריה"
+          }
+        }
+      },
+      "AddPhotoButton": {
+        "add_photo": "הוסף תמונה"
+      }
+    },
+    "widgets": {
+      "LastPageErrorMessageView": {
+        "something_wrong_try_again": "משהו השתבש, נסה שוב:"
+      },
+      "TryAgainButton": {
+        "something_wrong": "משהו השתבש",
+        "try_again": "נסה שוב"
+      },
+      "AttachDocuments": {
+        "title": "הוסף מסמכים"
+      }
+    }
+  },
+  "feedback": {
+    "feedback_page": {
+      "title": "משוב",
+      "type_label": "סוג הפנייה",
+      "description_label": "תיאור",
+      "description_hint": "אנא פרט יותר על הבעיה או הרעיון שלך",
+      "description_error": "אנא כתוב את טקסט הפנייה",
+      "submit": "שלח",
+      "success": "הפנייה נשלחה",
+      "failed_send_feedback": "לא הצלחנו לשלוח את המשוב",
+      "types": {
+        "bug": "דווח על באג",
+        "feature": "הצע פונקציה",
+        "category": "הצע קטגוריה חדשה למודעות",
+        "question": "שאל שאלה",
+        "general": "הערות ובקשות כלליות"
+      }
+    }
+  },
+  "home": {
+    "chats_label": "צ'אטים",
+    "profile_label": "פרופיל",
+    "settings_label": "הגדרות",
+    "main_label": "ראשי"
+  },
+  "in_app": {
+    "BuyProductsScreen": {
+      "buy_button": "קנה",
+      "title": "בחר מוצר",
+      "unavailable": "לא זמין"
+    }
+  },
+  "legal": {
+    "failed_get_regulations": "לא הצלחנו לקבל את התקנות.",
+    "LegalScreen": {
+      "title": "מידע משפטי",
+      "policy_label": "מדיניות פרטיות",
+      "terms_label": "תנאי שימוש",
+      "gdpr_label": "מדיניות פרטיות GDPR"
+    }
+  },
+  "logger": {
+    "SessionScreen": {
+      "no_space_line_1": "אין מספיק זיכרון במכשיר.",
+      "no_space_line_2": "אנא פנה מקום ונסה שוב.",
+      "ok": "אוקי",
+      "title": "רשימת סשנים",
+      "unknown_error": "שגיאה לא ידועה."
+    }
+  },
+  "profile": {
+    "EditProfileScreen": {
+      "edit_password": "שנה סיסמה",
+      "first_name_label": "שם פרטי",
+      "last_name_label": "שם משפחה",
+      "save_button_text": "שמור",
+      "success_toast": "שמך עודכן בהצלחה",
+      "title": "ערוך פרופיל"
+    },
+    "ProfilePage": {
+      "create_support_chat": "כתוב לצ'אט התמיכה",
+      "failed_create_support_chat": "לא הצלחנו ליצור צ'אט תמיכה",
+      "failed_loading_profile": "לא הצלחנו לטעון את המידע על המשתמש",
+      "plan": {
+        "buy_credits": "קנה קרדיטים",
+        "credits_count": {
+          "one": "{n} קרדיט",
+          "few": "{n} קרדיטים",
+          "other": "{n} קרדיטים"
+        },
+        "plan_name": "תוכנית: {planName:String}",
+        "upgrade": "שדרג תוכנית"
+      }
+    },
+    "SafetyScreen": {
+      "delete_account_error": {
+        "requires_recent_login": "כדי למחוק את החשבון יש להיכנס מחדש לאפליקציה"
+      },
+      "delete_account_label": "מחק חשבון",
+      "delete_confirm": {
+        "description": "האם אתה בטוח שברצונך למחוק את החשבון?",
+        "title": "מחיקת חשבון"
+      },
+      "edit_password": "שנה סיסמה",
+      "title": "אבטחה"
+    },
+    "delete_account_label": "מחק חשבון",
+    "edit_avatar_title": "עריכת תמונת פרופיל",
+    "edit_profile_label": "ערוך פרופיל",
+    "failed_update_avatar": "לא הצלחנו לעדכן את תמונת הפרופיל",
+    "failed_upload_avatar": "לא הצלחנו להעלות את תמונת הפרופיל",
+    "feedback_label": "משוב",
+    "language_label": "שפה",
+    "legal_label": "מידע משפטי",
+    "logout_label": "התנתק מהחשבון",
+    "safety_label": "אבטחה",
+    "select_language_title": "בחר שפה",
+    "theme": {
+      "title": "נושא",
+      "light": "בהיר",
+      "dark": "כהה",
+      "system": "מערכת"
+    },
+    "to_favorites_adverts_label": "מודעות מועדפות",
+    "to_my_adverts_label": "המודעות שלי",
+    "version": "גרסה {version}"
+  },
+  "report": {
+    "ReportSheet": {
+      "description_label": "תיאור",
+      "reasons": {
+        "abuse": "העלבות או הסתה לשנאה",
+        "inappropriate": "התנהגות לא הולמת",
+        "other": "אחר",
+        "spam": "ספאם"
+      },
+      "submit": "שלח",
+      "success": "הדיווח נשלח",
+      "title": "דווח על הפרה"
+    }
+  },
+  "users": {
+    "user_select_screen": {
+      "empty": "עדיין אין משתמשים",
+      "failure": "שגיאה בהעלאת משתמשים"
+    }
+  }
+}

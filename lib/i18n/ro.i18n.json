@@ -6,15 +6,15 @@
       "forgot_password": "Ați uitat parola?",
       "sign_in": "Conectare",
       "sign_up": "Înscriere",
-      "sign_in_with_google": "Conectare cu Google",
-      "sign_in_with_apple": "Conectează-te cu Apple",
+      "sign_in_with_google": "Conectați-vă cu Google",
+      "sign_in_with_apple": "Conectați-vă cu Apple",
       "login_error": {
         "invalid_credentials": "Date de autentificare invalide",
-        "email_not_confirmed": "Emailul nu este confirmat"
+        "email_not_confirmed": "Email-ul nu este confirmat"
       },
       "OAuthAcceptRegulationsSheet": {
         "title": "Pentru a continua, vă rugăm să vă înregistrați",
-        "regulations(rich)": "Vă rugăm să acceptați {terms(Termenii de utilizare)} și {policy(Politica de confidențialitate)}",
+        "regulations(rich)": "Vă rugăm să acceptați {terms(termenii de utilizare)} și {policy(politica de confidențialitate)}",
         "accept": "Accept",
         "cancel": "Anulare",
         "failed_get_regulations": "Nu s-au putut obține reglementările."
@@ -22,107 +22,192 @@
     },
     "SignUpScreen": {
       "title": "Înscriere",
-      "first_name_label": "Nume",
-      "last_name_label": "Prenume",
+      "first_name_label": "Prenume",
+      "last_name_label": "Nume",
       "email_label": "Email",
       "password_label": "Parolă",
       "repeat_password": "Repetă parola",
       "sign_up": "Înscriere",
       "password_not_equal": "Parolele nu se potrivesc",
       "regulations(rich)": "Sunt de acord cu {terms(termenii de utilizare)} și {policy(politica de confidențialitate)}",
-      "after_registration_toast": "✔️ Un email de confirmare a fost trimis! Verificați-vă căsuța poștală și confirmați adresa.",
+      "after_registration_toast": "✔️ Email-ul de confirmare a fost trimis! Verificați-vă email-ul și confirmați adresa.",
       "register_error": {
         "incorrect_email": "Email invalid",
         "incorrect_name": "Nume invalid",
-        "incorrect_password": "Parola trebuie să aibă cel puțin 8 caractere și să conțină litere mari și mici și cifre.",
-        "email_already_used": "Adresa de email este deja folosită",
+        "incorrect_password": "Parola trebuie să aibă cel puțin 8 caractere și să conțină litere mari, litere mici și cifre",
+        "email_already_used": "Adresa de email este deja utilizată",
         "create_error": "Eroare la crearea utilizatorului",
-        "emailRateLimitExceeded": "Limita de trimitere a emailurilor a fost depășită."
+        "emailRateLimitExceeded": "Limită depășită pentru trimiterea email-urilor"
       }
     },
     "reset_password": {
+      "CodeScreen": {
+        "title": "Recuperare parolă",
+        "description": "Un cod de recuperare a fost trimis la email-ul dumneavoastră {email:String}",
+        "submit": "Continuare",
+        "field_label": "Cod de recuperare",
+        "field_error": "Cod invalid",
+        "check_error_description": "Nu s-a putut verifica codul de recuperare"
+      },
       "ForgotPasswordScreen": {
-        "title": "Recuperarea parolei",
+        "title": "Recuperare parolă",
         "email_label": "Email",
         "send_reset_link": "Trimiteți linkul",
         "check_error_description": "Nu s-a putut trimite codul pentru recuperarea parolei"
       },
-      "CodeScreen": {
-        "title": "Recuperarea parolei",
-        "description": "Un cod de recuperare a fost trimis pe emailul {email:String}",
-        "submit": "Înainte",
-        "field_label": "Cod de recuperare",
-        "field_error": "Cod incorect",
-        "check_error_description": "Nu s-a putut verifica codul de recuperare"
-      },
       "NewPasswordScreen": {
-        "title": "Parola nouă",
+        "title": "Parolă nouă",
         "reset_submit": "Conectare",
         "edit_submit": "Modificare",
         "current_password": "Parola curentă",
         "new_password": "Parola nouă",
         "repeat_new_password": "Repetă parola nouă",
-        "password_label": "Parola",
+        "password_label": "Parolă",
         "repeat_password": "Repetă parola",
         "failed_change_password": "Nu s-a putut schimba parola",
         "failed_reset_password": "Nu s-a putut reseta parola",
         "errors": {
-          "wrong_current_password": "Parola curentă este incorectă",
-          "same_password": "Parola nouă nu trebuie să fie aceeași cu cea curentă."
+          "wrong_current_password": "Parola curentă este greșită",
+          "same_password": "Parola nouă nu trebuie să fie aceeași cu cea curentă"
         }
       }
     }
   },
-  "core": {
-    "field_empty": "Câmpul nu poate fi gol",
-    "incorrect_format": "Format incorect",
-    "address": {
-      "house_abbreviation": "nr.",
-      "map_address_title": "Adresa ta",
-      "map_await_user_location": "Determinăm adresa ta...",
-      "map_cant_get_user_location": "Nu am reușit să recunoaștem adresa",
-      "map_cant_access_user_location": "Nu am reușit să determinăm locația ta",
-      "map_confirm_address": "Confirmă adresa",
-      "map_address_not_contain_house": "Numărul casei nu este specificat",
-      "map_not_found": "nu a fost găsit",
-      "BaseMapScreen": {
-        "map_type_normal": "Hartă",
-        "map_type_hybrid": "Satelit"
+  "chats": {
+    "ChatPage": {
+      "SlangChatL10n": {
+        "and": "și",
+        "attachmentButtonAccessibilityLabel": "Trimiteți media",
+        "emptyChatPlaceholder": "Încă nu aveți mesaje",
+        "fileButtonAccessibilityLabel": "Fișier",
+        "inputPlaceholder": "Mesaj",
+        "isTyping": "scrie...",
+        "others": "alții",
+        "sendButtonAccessibilityLabel": "Trimiteți",
+        "unreadMessagesLabel": "Mesaje necitite"
       },
-      "mapAddressesSheet": {
-        "input_address": "Introdu adresa"
+      "advert_chat": "Chat pentru anunț",
+      "attachment_type_file": "Fișier",
+      "attachment_type_image": "Imagine",
+      "failure": "Eroare la încărcarea chat-ului",
+      "no_messages_yet": "Încă nu sunt mesaje",
+      "return_translation": "Întoarceți traducerea",
+      "show_original": "Arată originalul",
+      "tts_play_failed": "Nu s-a putut reda: {error:String}",
+      "tts_play_original": "Redați originalul",
+      "tts_play_translation": "Redați traducerea"
+    },
+    "ChatsPage": {
+      "ChatCard": {
+        "favorites_chat_name": "Favorit",
+        "support_chat_name": "Asistență"
       },
-      "SavedAddressesScreen": {
-        "title": "Adresele mele",
-        "no_items_stub": {
-          "title": "Nu aveți adrese salvate încă",
-          "description": "Adăugați o adresă în listă"
+      "NoItemsStub": {
+        "description": "Încă nu aveți chat-uri",
+        "title": "Încă nu sunt chat-uri"
+      },
+      "create_direct_chat": "Creează chat cu utilizatorul",
+      "create_group_chat": "Creează chat de grup",
+      "delete_action": "Șterge",
+      "empty": "Încă nu sunt chat-uri",
+      "failure": "Eroare la încărcarea chat-urilor",
+      "title": "Chat-uri"
+    },
+    "CreateDirectChatPage": {
+      "failure_create_chat": "Nu s-a putut crea chat-ul",
+      "title": "Creează chat"
+    },
+    "CreateLocalChatPage": {
+      "languages_section": "Limbi",
+      "my_language_label": "Limba dumneavoastră",
+      "partner_language_label": "Limba partenerului",
+      "show_both_subtitle": "Afișați ambele texte pentru o verificare ușoară",
+      "show_both_title": "Afișați originalul și traducerea",
+      "start_button": "Începeți chat-ul local",
+      "swap_languages": "Schimbați limbile",
+      "tips_item_1": "• Dumneavoastră și partenerul vorbiți pe rând pe același dispozitiv.",
+      "tips_item_2": "• Mesajele sunt traduse automat, se pot afișa originalul și traducerea.",
+      "tips_item_3": "• Activați TTS pentru ca traducerea să fie citită cu voce tare.",
+      "tips_title": "Cum funcționează chat-ul local",
+      "title": "Chat local nou",
+      "title_hint": "De exemplu: Discuție cu proprietarul apartamentului",
+      "title_label": "Titlu (opțional)",
+      "translation_section": "Traducere și afișare",
+      "tts_subtitle": "Citiți traducerea cu voce tare la afișare",
+      "tts_title": "Redați traducerea (TTS)"
+    },
+    "RecordHoldButton": {
+      "hold_to_record": "Țineți apăsat\npentru a înregistra",
+      "semantics_label": "{label:String}: țineți apăsat pentru a înregistra"
+    },
+    "SelectChatTypePage": {
+      "continue_button": "Continuare",
+      "details": {
+        "direct": {
+          "can_do": "Traducere automată a mesajelor primite și trimise, mesaje vocale, atașamente.",
+          "for_whom": "Pentru comunicarea cu o singură persoană în limbi diferite.",
+          "scenarios": "Corespondență de afaceri, conversații personale, asistență pentru clienți."
         },
-        "add_address": "Adăugați adresă",
-        "success_toast": "Adresa a fost eliminată cu succes",
-        "confirm_remove": {
-          "title": "Șterge adresa?",
-          "description": "Doriți să ștergeți această adresă din cele salvate? O veți putea adăuga din nou mai târziu.",
-          "ok": "Șterge",
-          "cancel": "Anulare"
+        "group": {
+          "can_do": "Traducere automată pentru toți participanții, roluri și drepturi, pini și reacții.",
+          "for_whom": "Pentru echipe, familii și comunități cu participanți din diferite țări.",
+          "scenarios": "Chat-uri de proiect, comunități, corespondență organizațională."
+        },
+        "local": {
+          "can_do": "Lăsați mesaje pe rând pe același telefon — acestea sunt traduse imediat partenerului.",
+          "for_whom": "Pentru turiști și negocieri offline pe un singur dispozitiv.",
+          "scenarios": "Comunicare cu taximetristul/proprietarul, comandarea de mâncare, ajutor cu navigația."
+        },
+        "learning": {
+          "can_do": "Salvați cuvinte și expresii, vizualizați diferite semnificații și exemple, exersați în moduri de citire/dictare.",
+          "for_whom": "Pentru învățarea limbilor pe un singur dispozitiv — ca un „chat local”, dar axat pe practică.",
+          "scenarios": "Autoînvățare în călătorie, pregătire pentru întâlnire, analizarea corespondenței, dicționar personal."
         }
       },
-      "AddressActionsSheet": {
-        "remove": "Șterge adresa"
+      "labels": {
+        "can_do": "Ce se poate",
+        "for_whom": "Pentru cine",
+        "scenarios": "Scenarii"
       },
-      "SelectAddressSheet": {
-        "current_address_title": "Adresa curentă",
-        "saved_addresses_title": "Adresele salvate",
-        "add_address_label": "Adaugă adresă"
-      },
-      "FillAddressScreen": {
-        "title": "Adăugarea adresei",
-        "address_label": "Adresă",
-        "name_label": "Numele adresei",
-        "save_address": "Salvează și adaugă",
-        "add_without_save": "Adaugă fără salvare",
-        "failed_save_address": "Nu s-a putut salva adresa"
+      "soon_tag": "În curând",
+      "title": "Creează chat",
+      "types": {
+        "direct": "Direct (1-la-1)",
+        "group": "Grup",
+        "learning": "Învățare",
+        "local": "Chat local"
       }
+    }
+  },
+  "core": {
+    "DialogPresenter": {
+      "permission_text_location": "Locație",
+      "permission_denied": {
+        "location": "a obține locația pentru a selecta adresa",
+        "title": "Acces la {permission:String}",
+        "description": "Pentru a utiliza această funcție, este necesar accesul la {permission:String}. Puteți activa acest lucru în setările dispozitivului dumneavoastră.",
+        "settings": "În setări",
+        "later": "Mai târziu"
+      }
+    },
+    "dialog_action": {
+      "ok": "Ok",
+      "login": "Conectare",
+      "retry": "Încercați din nou",
+      "upgrade": "Actualizați",
+      "back": "Înapoi",
+      "yes": "Da",
+      "no": "Nu",
+      "cancel": "Anulare"
+    },
+    "dialog_msg": {
+      "retry_or_contact_support": "Încercați din nou sau contactați suportul la: support@verto.chat",
+      "server_error": "A apărut o eroare pe server. {retryOrContactSupport}",
+      "default_error": "A apărut o eroare. {retryOrContactSupport}",
+      "connection_error": "Vă rugăm să verificați conexiunea la internet și să încercați din nou",
+      "authorization_required": "Datele de autentificare sunt învechite. Trebuie să vă reconectați",
+      "upgrade_required": "Pentru a funcționa corect, instalați cea mai recentă versiune a aplicației",
+      "insufficient_access_rights": "Acțiunea nu este disponibilă. Drepturile dumneavoastră sunt limitate"
     },
     "dialog_title": {
       "error_title": "Eroare",
@@ -132,35 +217,8 @@
       "upgrade_required": "Versiune învechită",
       "insufficient_accessRights": "Drepturi insuficiente"
     },
-    "dialog_msg": {
-      "retry_or_contact_support": "Încearcă din nou sau contactează suportul",
-      "server_error": "A apărut o eroare pe server. {retryOrContactSupport}",
-      "default_error": "A apărut o eroare. {retryOrContactSupport}",
-      "connection_error": "Te rugăm să verifici conexiunea la internet și să încerci din nou",
-      "authorization_required": "Datele de autentificare sunt învechite. Trebuie să te reconectezi",
-      "upgrade_required": "Pentru o funcționare corectă, instalează o versiune nouă a aplicației",
-      "insufficient_access_rights": "Acțiunea nu este disponibilă. Drepturile tale sunt limitate"
-    },
-    "dialog_action": {
-      "ok": "Ok",
-      "login": "Conectare",
-      "retry": "Încearcă din nou",
-      "upgrade": "Actualizează",
-      "back": "Înapoi",
-      "yes": "Da",
-      "no": "Nu",
-      "cancel": "Anulare"
-    },
-    "DialogPresenter": {
-      "permission_text_location": "Locație",
-      "permission_denied": {
-        "location": "a primi locația pentru selectarea adresei",
-        "title": "Acces la {permission:String}",
-        "description": "{permission:String} acces este necesar pentru a utiliza această funcție. Îl poți activa în setările dispozitivului tău.",
-        "settings": "În setări",
-        "later": "Mai târziu"
-      }
-    },
+    "field_empty": "Câmpul nu poate fi gol",
+    "incorrect_format": "Format incorect",
     "photos": {
       "GalleryScreen": {
         "title": "Galerie"
@@ -169,7 +227,7 @@
     "upload": {
       "select_photo": {
         "select_source_photo": {
-          "title": "Selectează imaginea",
+          "title": "Selectați imaginea",
           "from": {
             "camera": "Cameră",
             "gallery": "Din galerie"
@@ -177,123 +235,51 @@
         }
       },
       "AddPhotoButton": {
-        "add_photo": "Adaugă"
+        "add_photo": "Adăugați"
       }
     },
     "widgets": {
       "LastPageErrorMessageView": {
-        "something_wrong_try_again": "Ceva nu a mers bine, încearcă din nou:"
+        "something_wrong_try_again": "Ceva nu a mers bine, încercați din nou:"
       },
       "TryAgainButton": {
         "something_wrong": "Ceva nu a mers bine",
-        "try_again": "Încearcă din nou"
-      }
-    }
-  },
-  "chats": {
-    "ChatPage": {
-      "no_messages_yet": "Încă nu sunt mesaje",
-      "SlangChatL10n": {
-        "and": "și",
-        "attachmentButtonAccessibilityLabel": "Trimite media",
-        "emptyChatPlaceholder": "Încă nu ai mesaje",
-        "fileButtonAccessibilityLabel": "Fișier",
-        "inputPlaceholder": "Mesaj",
-        "isTyping": "scrie...",
-        "others": "alții",
-        "sendButtonAccessibilityLabel": "Trimite",
-        "unreadMessagesLabel": "Mesaje necitite"
+        "try_again": "Încercați din nou"
       },
-      "failure": "Eroare la încărcarea chatului",
-      "attachment_type_image": "Imagine",
-      "attachment_type_file": "Fișier",
-      "show_original": "Afișați originalul",
-      "return_translation": "Returnați traducerea",
-      "advert_chat": "Chat pentru anunț"
-    },
-    "ChatsPage": {
-      "title": "Chat-uri",
-      "failure": "Eroare la încărcarea chat-urilor",
-      "empty": "Încă nu sunt chat-uri",
-      "create_direct_chat": "Creează chat cu utilizatorul",
-      "create_group_chat": "Creează chat de grup",
-      "ChatCard": {
-        "favorites_chat_name": "Favorit",
-        "support_chat_name": "Suport"
-      },
-      "NoItemsStub": {
-        "title": "Încă nu sunt chat-uri",
-        "description": "Încă nu ai chat-uri"
+      "AttachDocuments": {
+        "title": "Adăugați documente"
       }
-    },
-    "CreateDirectChatPage": {
-      "title": "Creează chat",
-      "failure_create_chat": "Nu am reușit să creez chat"
     }
   },
   "feedback": {
     "feedback_page": {
       "title": "Feedback",
-      "type_label": "Tipul de solicitare",
+      "type_label": "Tipul solicitării",
       "description_label": "Descriere",
       "description_hint": "Descrieți mai detaliat problema sau ideea dumneavoastră",
-      "description_error": "Vă rugăm să scrieți textul mesajului",
-      "submit": "Trimite",
-      "success": "Mesajul a fost trimis",
+      "description_error": "Vă rugăm să scrieți textul solicitării",
+      "submit": "Trimiteți",
+      "success": "Solicitarea a fost trimisă",
       "failed_send_feedback": "Nu s-a putut trimite feedback-ul",
       "types": {
-        "bug": "Raportează o eroare",
-        "feature": "Propune o funcționalitate",
-        "category": "Propune o nouă categorie de anunțuri",
-        "question": "Pune o întrebare",
+        "bug": "Raportați o eroare",
+        "feature": "Propuneți o funcționalitate",
+        "category": "Propuneți o nouă categorie de anunțuri",
+        "question": "Puneți o întrebare",
         "general": "Observații și sugestii generale"
       }
     }
   },
   "home": {
-    "main_label": "Acasă",
-    "favorites_label": "Preferate",
-    "my_adverts_label": "Anunțurile mele",
     "chats_label": "Chat-uri",
     "profile_label": "Profil",
-    "shop_label": "Magazin"
+    "settings_label": "Setări",
+    "main_label": "Acasă"
   },
   "in_app": {
-    "suppose_subscription_screen": {
-      "title": "Obțineți un trial gratuit Ovdix Plus timp de 7 zile",
-      "description": "Puteți anula în orice moment fără costuri suplimentare",
-      "accept_button": "Încercați gratuit",
-      "cancel_button": "Nu, mulțumesc"
-    },
-    "SupposePromoteScreen": {
-      "title": "Promovează anunțul",
-      "description": "Alegeți metoda de promovare",
-      "subscription_card": {
-        "title": "Promovare prin abonament",
-        "description": "Face parte din planul dumneavoastră tarifar. Se reînnoiește după vânzare.",
-        "promote_button": "Promovează",
-        "not_available_title": "Promovarea prin abonament nu este disponibilă",
-        "upgrade_button": "Îmbunătățește",
-        "not_available_subtitle": "Ați folosit deja promovarea disponibilă pentru planul dumneavoastră.\nEliberați-o, dezactivând unul dintre anunțurile promovate sau alegeți o promovare unică.",
-        "subscription_not_include_promotion": "Promovările sunt disponibile la planuri mai înalte. Îmbunătățiți planul pentru a evidenția anunțurile."
-      },
-      "single_promotion_card": {
-        "title": "Promovare unică",
-        "description": "Nu se restaurează după eliminarea sau editarea anunțului.",
-        "available": "Disponibil: {available:int}",
-        "promote_button": "Promovează",
-        "buy_button": "Cumpără"
-      },
-      "description_footer": "⚠️ Promovarea este valabilă atâta timp cât anunțul este activ.\nLa eliminare sau editare, promovarea unică nu se păstrează.\nPe bază de abonament - se suspendă și se restituie la republicare."
-    },
-    "select_subscription_screen": {
-      "title": "Alegeți abonamentul",
-      "description": "Anulați în orice moment în {storeName:String}",
-      "try_1_week_free": "Încercați 1 săptămână gratuit"
-    },
     "BuyProductsScreen": {
-      "title": "Alegeți produsul",
-      "buy_button": "Cumpără",
+      "buy_button": "Cumpărați",
+      "title": "Selectați produsul",
       "unavailable": "Indisponibil"
     }
   },
@@ -306,329 +292,84 @@
       "gdpr_label": "Politica de confidențialitate GDPR"
     }
   },
+  "logger": {
+    "SessionScreen": {
+      "no_space_line_1": "Nu este suficient spațiu pe dispozitiv.",
+      "no_space_line_2": "Vă rugăm să eliberați spațiu și să încercați din nou.",
+      "ok": "OK",
+      "title": "Lista sesiunilor",
+      "unknown_error": "Eroare necunoscută."
+    }
+  },
   "profile": {
-    "edit_profile_label": "Editează profilul",
-    "to_my_adverts_label": "Anunțurile mele",
-    "to_favorites_adverts_label": "Anunțuri favorite",
-    "logout_label": "Deconectare",
-    "language_label": "Limba",
-    "legal_label": "Informații legale",
-    "feedback_label": "Feedback",
-    "safety_label": "Siguranță",
-    "select_language_title": "Selectează limba",
-    "version": "Versiunea {version}",
-    "theme": {
-      "title": "Temă",
-      "light": "Deschis",
-      "dark": "Întunecat",
-      "system": "Sistem"
+    "EditProfileScreen": {
+      "edit_password": "Schimbați parola",
+      "first_name_label": "Prenume",
+      "last_name_label": "Nume",
+      "save_button_text": "Salvați",
+      "success_toast": "Numele dumneavoastră a fost actualizat cu succes",
+      "title": "Editați profilul"
     },
-    "edit_avatar_title": "Editarea avatarului",
-    "failed_upload_avatar": "Nu s-a putut încărca avatarul",
-    "failed_update_avatar": "Nu s-a putut actualiza avatarul",
     "ProfilePage": {
-      "my_addresses": "Adresele mele",
-      "create_support_chat": "Scrie în chatul de suport",
-      "failed_loading_profile": "Nu am reușit să încarc informațiile utilizatorului",
-      "failed_create_support_chat": "Nu am reușit să creez chatul de suport",
-      "delete_account_error": {
-        "requires_recent_login": "Pentru a șterge contul, trebuie să te reconectezi în aplicație"
-      },
-      "delete_confirm": {
-        "title": "Ștergerea contului",
-        "description": "Ești sigur că vrei să ștergi contul?"
-      },
-      "subscription": {
-        "upgrade": "Îmbunătățește abonamentul",
-        "subscription_name": "Abonament: {subscriptionName:String}",
-        "promotions_count": {
-          "one": "{n} promovare",
-          "few": "{n} promovări",
-          "other": "{n} promovări"
+      "create_support_chat": "Scrieți în chat-ul de asistență",
+      "failed_create_support_chat": "Nu s-a putut crea chat-ul de asistență",
+      "failed_loading_profile": "Nu s-a putut încărca informația utilizatorului",
+      "plan": {
+        "buy_credits": "Cumpărați credite",
+        "credits_count": {
+          "one": "{n} credit",
+          "few": "{n} credite",
+          "other": "{n} credite"
         },
-        "sub_promotion_limit": "{count:int} pe abonament",
-        "buy_promotion": "Cumpără promovare"
+        "plan_name": "Plan: {planName:String}",
+        "upgrade": "Îmbunătățiți planul"
       }
     },
-    "EditProfileScreen": {
-      "title": "Editează profilul",
-      "first_name_label": "Nume",
-      "last_name_label": "Prenume",
-      "save_button_text": "Salvează",
-      "success_toast": "Numele dumneavoastră a fost actualizat cu succes.",
-      "edit_password": "Schimbați parola"
-    },
     "SafetyScreen": {
-      "title": "Siguranță",
-      "edit_password": "Schimbă parola",
-      "delete_account_label": "Șterge contul"
+      "delete_account_error": {
+        "requires_recent_login": "Pentru a șterge contul, trebuie să vă reconectați în aplicație"
+      },
+      "delete_account_label": "Ștergeți contul",
+      "delete_confirm": {
+        "description": "Sunteți sigur că doriți să ștergeți contul?",
+        "title": "Ștergerea contului"
+      },
+      "edit_password": "Schimbați parola",
+      "title": "Securitate"
     },
-    "delete_account_label": "Șterge contul"
+    "delete_account_label": "Ștergeți contul",
+    "edit_avatar_title": "Editare avatar",
+    "edit_profile_label": "Editați profilul",
+    "failed_update_avatar": "Nu s-a putut actualiza avatarul",
+    "failed_upload_avatar": "Nu s-a putut încărca avatarul",
+    "feedback_label": "Feedback",
+    "language_label": "Limba",
+    "legal_label": "Informații legale",
+    "logout_label": "Deconectare",
+    "safety_label": "Securitate",
+    "select_language_title": "Selectați limba",
+    "theme": {
+      "title": "Temă",
+      "light": "Deschisă",
+      "dark": "Întunecată",
+      "system": "Sistem"
+    },
+    "to_favorites_adverts_label": "Anunțuri favorite",
+    "to_my_adverts_label": "Anunțurile mele",
+    "version": "Versiunea {version}"
   },
   "report": {
     "ReportSheet": {
-      "title": "Raportează o încălcare",
-      "reasons": {
-        "spam": "Spam",
-        "inappropriate": "Comportament inadecvat",
-        "abuse": "Insulte sau incitare la ură",
-        "other": "Altele"
-      },
       "description_label": "Descriere",
-      "submit": "Trimite",
-      "success": "Plângerea a fost trimisă"
-    }
-  },
-  "shop": {
-    "core": {
-      "AddressCard": {
-        "title": "Adresa anunțului"
+      "reasons": {
+        "abuse": "Insulte sau incitare la ură",
+        "inappropriate": "Comportament inadecvat",
+        "other": "Altele",
+        "spam": "Spam"
       },
-      "upload_photo_help_text": "Apăsați și mențineți apăsat fotografia pentru a o face coperta",
-      "PhotoActionsSheet": {
-        "setAsMain": "Setează ca principal",
-        "remove": "Șterge"
-      },
-      "BaseEditAdvertScreen": {
-        "photos_empty_help_text": "Trebuie să adăugați cel puțin o fotografie",
-        "photos_label": "Fotografii ({count:int} / {limit:int})"
-      }
-    },
-    "price": {
-      "free": "Gratuit",
-      "agreed_price": "Preț negociabil",
-      "starting_price": "De la {price:String} €",
-      "for_price": "{price:String} €"
-    },
-    "adverts": {
-      "ShopCard": {
-        "promotion_label": "Promo"
-      },
-      "AdvertsPage": {
-        "allCategoriesTitle": "Toate categoriile",
-        "menu": {
-          "create_advert": "Creează anunț",
-          "my_adverts": "Anunțurile mele"
-        }
-      },
-      "ShopPage": {
-        "address_not_selected": "Adresa nu a fost selectată",
-        "getting_address": "Stabilim locația dumneavoastră...",
-        "getting_address_helper": "Verificăm ce este în apropiere",
-        "all_categories": "Toate categoriile",
-        "select_address_manually": "Selectați adresa manual",
-        "failed_get_address_message": "Nu s-a reușit obținerea adresei curente",
-        "failed_load_last_saved_address": "Nu s-a putut obține informația despre ultima adresă",
-        "failed_load_saved_addresses": "Nu s-a putut obține lista adreselor salvate"
-      },
-      "AdvertsFilterSheet": {
-        "title": "Filtru",
-        "category_label": "Categorie",
-        "address_label": "Adresă",
-        "condition_label": "Stare",
-        "sort_label": "Sortare",
-        "apply_filter": "Aplică",
-        "clear_filter": "Resetare",
-        "category_not_selected": "Nu a fost selectată nicio categorie",
-        "conditions": {
-          "new_item": "Nou",
-          "used": "Utilizat",
-          "all": "Orice"
-        },
-        "sorts": {
-          "by_distance": "După distanță",
-          "by_price": "După preț",
-          "by_date": "După dată"
-        },
-        "sort_directions": {
-          "ascending": "În ordine crescătoare",
-          "descending": "În ordine descrescătoare",
-          "ascending_date": "Cele mai noi întâi",
-          "descending_date": "Cele mai vechi întâi"
-        },
-        "radius": {
-          "title": "Raza",
-          "description": "Afișați anunțurile într-o rază oricare",
-          "unlimited": "Fără limită",
-          "radius_text": "Raza: {radiusKm:int} km",
-          "radius_label": "{radiusKm:int} km"
-        },
-        "catefory_not_selected": "Nu a fost selectată nicio categorie"
-      }
-    },
-    "create_advert": {
-      "CreateAdvertStepperScreen": {
-        "title": "Creează anunț",
-        "general_tab_title": "General",
-        "photo_tab_title": "Fotografii",
-        "price_tab_title": "Preț",
-        "SelectInfoStepView": {
-          "name_label": "Nume",
-          "description_label": "Descriere, caracteristici",
-          "attach_documents_title": "Adaugă documente",
-          "attach_documents_description": "De exemplu, certificate pentru produs",
-          "product_condition_label": {
-            "title": "Starea",
-            "new_item": "Nou",
-            "used": "Folosit",
-            "not_set": "A nu specifica"
-          }
-        },
-        "SelectPhotoStepView": {
-          "add_photo_button": "Adaugă",
-          "photo_limit": "Până la {limit:int} fotografii."
-        },
-        "SelectPriceStepView": {
-          "price_label": "Preț",
-          "empty_price_hint": "La înțelegere",
-          "for_empty_price_label": "Pentru preț negociabil, lasă câmpul gol.",
-          "negotiable_label": "Negociabil",
-          "local_currency_label": "Plată în moneda locală",
-          "local_currency_subtitle": "Se poate plăti și în altă monedă la cursul actual",
-          "starting_price_label": "Aceasta este prețul de început",
-          "not_valid_price": "Format de preț invalid",
-          "max_range": "Prețul nu poate fi mai mare de 1.000.000.000 €",
-          "min_range": "Prețul nu poate fi mai mic de 0 €"
-        }
-      },
-      "SelectAdvertAddressPage": {
-        "title": "Selectați adresa"
-      },
-      "SelectCategoriesScreen": {
-        "title": "Selectare categorie",
-        "search_hint": "Căutare",
-        "failed_loading_categories": "Nu am reușit să încarc categoriile",
-        "all_categories": "Toate categoriile",
-        "not_find_category": "Nu ați găsit o categorie potrivită?",
-        "closing_confirm": {
-          "title": "Ieșire din proces",
-          "description": "Ești sigur că vrei să ieși din procesul de creare a anunțului?"
-        }
-      },
-      "PreviewAdvertScreen": {
-        "title": "Previzualizare",
-        "create_advert": "Creează anunț",
-        "create_advert_success": "Anunțul a fost creat cu succes"
-      },
-      "EditAdvertScreen": {
-        "title": "Editarea anunțului",
-        "save_button": "Salvează"
-      }
-    },
-    "detail": {
-      "AdvertDetailPage": {
-        "sell_title": "Vând",
-        "buy_title": "Cumpăr",
-        "is_archived": "Anunțul a fost retras",
-        "create_chat": "Contactați",
-        "restore": "Restaurare",
-        "remove_promotion": "Înlăturare promovare",
-        "promote": "Promovare",
-        "author_title": "Proprietarul anunțului",
-        "failed_get_detail": "Nu s-a putut obține informațiile detaliate despre anunț",
-        "menu": {
-          "edit": "Modifică anunțul",
-          "archive": "Scoatere din publicație",
-          "restore": "Restaurare din arhivă",
-          "promote": "Promovează anunțul",
-          "remove_promotion": "Înlăturare promovare",
-          "report": "Raportați o încălcare",
-          "share": "Împărtășește"
-        },
-        "edit_promotion_confirmation": {
-          "title": "✏️ Această anunț are activă promovare.",
-          "description": "La editarea anunțului, promovarea va fi îndepărtată și nu va putea fi restaurată.\nSunteți sigur că doriți să modificați anunțul?",
-          "archive": "Editează",
-          "cancel": "Anulare"
-        },
-        "is_new": "Nou",
-        "is_used": "Folosit",
-        "is_negotiable": "Negociabil",
-        "accepts_local_currency": "Plata se poate face în moneda locală",
-        "share_text": "Vezi anunțul „{title:String}” 👉 {shareUrl:String}"
-      }
-    },
-    "favorites": {
-      "FavoritesAdvertsScreen": {
-        "title": "Favorite",
-        "failed_create_chat": "Nu am reușit să creez chat",
-        "no_items_stub": {
-          "title": "Nu sunt anunțuri",
-          "description": "Încă nu ai adăugat niciun anunț la favorite."
-        },
-        "FavoriteAdvertCard": {
-          "is_archived": "Sters de la publicare",
-          "chat": "Contactează"
-        }
-      }
-    },
-    "my_adverts": {
-      "MyAdvertsScreen": {
-        "title": "Anunțurile mele",
-        "active_tab_title": "Active",
-        "archived_tab_title": "Arhivă"
-      },
-      "MyAdvertsListView": {
-        "no_active_items_stub": {
-          "title": "Nu sunt anunțuri",
-          "description": "Creează primul anunț",
-          "create_advert": "Creează anunț"
-        },
-        "no_archived_items_stub": {
-          "title": "Arhiva este goală",
-          "description": "Aici vor fi afișate anunțurile șterse de la publicare"
-        },
-        "MyAdvertCard": {
-          "to_archive": "Șterge de la publicare",
-          "to_restore": "Restaurare",
-          "to_promote": "Promovează",
-          "to_remove_promotion": "Elimină promovarea",
-          "promoted_by_subscription": "Promovat prin abonament - valabil până la vânzare sau retragere.",
-          "single_promotion": "Promovarea este activă până la retragerea din publicare sau editare."
-        },
-        "restore_limit_confirmation": {
-          "title": "⚠️ Nu se poate publica anunțul",
-          "description": "Limita anunțurilor active a fost atinsă.\nMai întâi, dezactivează un alt anunț sau crește limita.",
-          "upgrade": "Crește limita"
-        },
-        "archive_promote_confirmation": {
-          "title": "⚠️ Anunțul va fi mutat în arhivă",
-          "description": "Promovarea activă va fi eliminată fără returnare.\nContinuați?",
-          "archive": "Arhivare",
-          "cancel": "Anulare"
-        },
-        "TariffInfo": {
-          "no_limit_tariff": "🚀 {subscriptionName:String} — anunțuri nelimitate active.",
-          "limit_tariff": "🚀 Utilizate {activeAdvertsCount:int} din {limit:int} anunțuri active.",
-          "limit_reached": "Îndepărtați unul de la publicare sau creșteți limita!",
-          "limit_not_reached": "Vreți să publicați mai multe?",
-          "upgrade_tariff": "Creșteți limita!"
-        }
-      }
-    },
-    "distance": {
-      "in_meters": "{value:int} m",
-      "in_kilometers": "{value:int} km"
-    },
-    "SelectAdvertTypeSheet": {
-      "sell_title": "Vând",
-      "buy_title": "Cumpăr",
-      "LimitInfo": {
-        "title": "⚠️ Limita anunțurilor active a fost atinsă.",
-        "description": "Un nou anunț va fi salvat în arhivă.\nPuteți dezactiva un alt anunț sau puteți crește limita pentru publicare."
-      }
-    },
-    "ShopPage": {
-      "create_advert": "Creează anunț",
-      "sell_tab_title": "Vând",
-      "buy_tab_title": "Cumpăr",
-      "failed_loading_categories": "Nu am reușit să încarc categoriile",
-      "advert_is_self": "Anunțul tău",
-      "search_hint": "Căutare"
-    },
-    "NoItemsStub": {
-      "title": "Încă nu sunt anunțuri",
-      "create_advert": "Creează un anunț"
+      "submit": "Trimiteți",
+      "success": "Plângerea a fost trimisă",
+      "title": "Raportați o încălcare"
     }
   },
   "users": {

@@ -14,7 +14,7 @@ class SmartAdInlineBanner extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocBuilder<SubscriptionBloc, SubscriptionState>(
       builder: (context, state) {
-        return state.subscription.showAd ? AdInlineBanner(adUnitId: adUnitId) : const SizedBox.shrink();
+        return state.subscription.plan.showAd ? AdInlineBanner(adUnitId: adUnitId) : const SizedBox.shrink();
       },
     );
   }

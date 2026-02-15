@@ -1,0 +1,381 @@
+{
+  "auth": {
+    "SignInScreen": {
+      "email_label": "E-post",
+      "password_label": "Lösenord",
+      "forgot_password": "Glömt lösenord?",
+      "sign_in": "Logga in",
+      "sign_up": "Registrera",
+      "sign_in_with_google": "Logga in med Google",
+      "sign_in_with_apple": "Logga in med Apple",
+      "login_error": {
+        "invalid_credentials": "Ogiltiga inloggningsuppgifter",
+        "email_not_confirmed": "E-postadress inte bekräftad"
+      },
+      "OAuthAcceptRegulationsSheet": {
+        "title": "Registrera dig för att fortsätta",
+        "regulations(rich)": "Vänligen acceptera {terms(Användarvillkor)} och {policy(Integritetspolicy)}",
+        "accept": "Acceptera",
+        "cancel": "Avbryt",
+        "failed_get_regulations": "Kunde inte hämta regler."
+      }
+    },
+    "SignUpScreen": {
+      "title": "Registrering",
+      "first_name_label": "Förnamn",
+      "last_name_label": "Efternamn",
+      "email_label": "E-post",
+      "password_label": "Lösenord",
+      "repeat_password": "Upprepa lösenord",
+      "sign_up": "Registrera",
+      "password_not_equal": "Lösenorden matchar inte",
+      "regulations(rich)": "Jag godkänner {terms(användarvillkoren)} och {policy(privacy policy)}",
+      "after_registration_toast": "✔️ Bekräftelsemail har skickats! Kontrollera din e-post och bekräfta adressen.",
+      "register_error": {
+        "incorrect_email": "Ogiltig e-postadress",
+        "incorrect_name": "Ogiltigt namn",
+        "incorrect_password": "Lösenordet måste vara minst 8 tecken långt och innehålla både stora och små bokstäver samt siffror",
+        "email_already_used": "E-postadressen används redan",
+        "create_error": "Fel vid skapande av användare",
+        "emailRateLimitExceeded": "E-postutskick har överskridit gränsen"
+      }
+    },
+    "reset_password": {
+      "CodeScreen": {
+        "title": "Återställ lösenord",
+        "description": "Återställningskoden har skickats till din e-post {email:String}",
+        "submit": "Fortsätt",
+        "field_label": "Återställningskod",
+        "field_error": "Ogiltig kod",
+        "check_error_description": "Kunde inte verifiera återställningskoden"
+      },
+      "ForgotPasswordScreen": {
+        "title": "Återställ lösenord",
+        "email_label": "E-post",
+        "send_reset_link": "Skicka länk",
+        "check_error_description": "Kunde inte skicka koden för att återställa lösenordet"
+      },
+      "NewPasswordScreen": {
+        "title": "Nytt lösenord",
+        "reset_submit": "Logga in",
+        "edit_submit": "Ändra",
+        "current_password": "Nuvarande lösenord",
+        "new_password": "Nytt lösenord",
+        "repeat_new_password": "Upprepa nytt lösenord",
+        "password_label": "Lösenord",
+        "repeat_password": "Upprepa lösenord",
+        "failed_change_password": "Kunde inte ändra lösenord",
+        "failed_reset_password": "Kunde inte återställa lösenord",
+        "errors": {
+          "wrong_current_password": "Fel nuvarande lösenord",
+          "same_password": "Nytt lösenord får inte vara detsamma som det nuvarande"
+        }
+      }
+    }
+  },
+  "chats": {
+    "ChatPage": {
+      "SlangChatL10n": {
+        "and": "och",
+        "attachmentButtonAccessibilityLabel": "Skicka media",
+        "emptyChatPlaceholder": "Du har inga meddelanden än",
+        "fileButtonAccessibilityLabel": "Fil",
+        "inputPlaceholder": "Meddelande",
+        "isTyping": "skriver…",
+        "others": "andra",
+        "sendButtonAccessibilityLabel": "Skicka",
+        "unreadMessagesLabel": "Olästa meddelanden"
+      },
+      "advert_chat": "Annonschatt",
+      "attachment_type_file": "Fil",
+      "attachment_type_image": "Bild",
+      "failure": "Fel vid inläsning av chatt",
+      "no_messages_yet": "Inga meddelanden än",
+      "return_translation": "Återgå till översättning",
+      "show_original": "Visa original",
+      "tts_play_failed": "Kunde inte spela upp: {error:String}",
+      "tts_play_original": "Läsa upp original",
+      "tts_play_translation": "Läsa upp översättning"
+    },
+    "ChatsPage": {
+      "ChatCard": {
+        "favorites_chat_name": "Favoriter",
+        "support_chat_name": "Support"
+      },
+      "NoItemsStub": {
+        "description": "Du har inga chattar än",
+        "title": "Inga chattar"
+      },
+      "create_direct_chat": "Skapa chatt med användare",
+      "create_group_chat": "Skapa gruppchatt",
+      "delete_action": "Ta bort",
+      "empty": "Inga chattar än",
+      "failure": "Fel vid inläsning av chattar",
+      "title": "Chattar"
+    },
+    "CreateDirectChatPage": {
+      "failure_create_chat": "Kunde inte skapa chatt",
+      "title": "Skapa chatt"
+    },
+    "CreateLocalChatPage": {
+      "languages_section": "Språk",
+      "my_language_label": "Ditt språk",
+      "partner_language_label": "Samtalspartnerns språk",
+      "show_both_subtitle": "Visa båda texterna för enkel kontroll",
+      "show_both_title": "Visa original och översättning",
+      "start_button": "Börja lokal chatt",
+      "swap_languages": "Byt språk",
+      "tips_item_1": "• Du och samtalspartnern talar turvis på en enhet.",
+      "tips_item_2": "• Meddelanden översätts automatiskt, kan visa original och översättning.",
+      "tips_item_3": "• Aktivera TTS för att få översättningen uppläst.",
+      "tips_title": "Så här fungerar lokal chatt",
+      "title": "Ny lokal chatt",
+      "title_hint": "Till exempel: Samtal med hyresvärden",
+      "title_label": "Titel (valfritt)",
+      "translation_section": "Översättning och visning",
+      "tts_subtitle": "Läsa upp översättningen högt vid visning",
+      "tts_title": "Läsa upp översättning (TTS)"
+    },
+    "RecordHoldButton": {
+      "hold_to_record": "Håll\nför att spela in",
+      "semantics_label": "{label:String}: håll för att spela in"
+    },
+    "SelectChatTypePage": {
+      "continue_button": "Fortsätt",
+      "details": {
+        "direct": {
+          "can_do": "Automatisk översättning av inkommande och utgående, röstmeddelanden, bilagor.",
+          "for_whom": "För att kommunicera med en person på olika språk.",
+          "scenarios": "Affärskommunikation, personliga samtal, kundsupport."
+        },
+        "group": {
+          "can_do": "Automatisk översättning för alla deltagare, roller och rättigheter, pins och reaktioner.",
+          "for_whom": "För team, familjer och samhällen med deltagare från olika länder.",
+          "scenarios": "Projektchattar, gemenskaper, organisatorisk kommunikation."
+        },
+        "local": {
+          "can_do": "Du lämnar meddelanden turvis på en telefon — de översätts direkt till samtalspartnern.",
+          "for_whom": "För turister och offline-samtal på en enhet.",
+          "scenarios": "Kommunikation med taxichaufför/uthyrare, beställning av mat, hjälp med navigering."
+        },
+        "learning": {
+          "can_do": "Spara ord och fraser, se olika betydelser och exempel, öva i läsning/diktat-lägen.",
+          "for_whom": "För att lära sig språk på en enhet — som \"lokal chatt\", men med fokus på praktik.",
+          "scenarios": "Självstudier på resan, förberedelse inför möte, analys av konversationer, personlig ordlista."
+        }
+      },
+      "labels": {
+        "can_do": "Vad som kan göras",
+        "for_whom": "För vem",
+        "scenarios": "Scenarier"
+      },
+      "soon_tag": "Kommer snart",
+      "title": "Skapa chatt",
+      "types": {
+        "direct": "Direkt (1-till-1)",
+        "group": "Grupp",
+        "learning": "Lärande",
+        "local": "Lokal chatt"
+      }
+    }
+  },
+  "core": {
+    "DialogPresenter": {
+      "permission_text_location": "Plats",
+      "permission_denied": {
+        "location": "att få plats för att välja adress",
+        "title": "Åtkomst till {permission:String}",
+        "description": "För att använda denna funktion krävs åtkomst till {permission:String}. Du kan aktivera det i inställningarna på din enhet.",
+        "settings": "I inställningarna",
+        "later": "Senare"
+      }
+    },
+    "dialog_action": {
+      "ok": "OK",
+      "login": "Logga in",
+      "retry": "Försök igen",
+      "upgrade": "Uppgradera",
+      "back": "Tillbaka",
+      "yes": "Ja",
+      "no": "Nej",
+      "cancel": "Avbryt"
+    },
+    "dialog_msg": {
+      "retry_or_contact_support": "Försök igen eller kontakta supporten på: support@verto.chat",
+      "server_error": "Ett fel inträffade på servern. {retryOrContactSupport}",
+      "default_error": "Ett fel inträffade. {retryOrContactSupport}",
+      "connection_error": "Kontrollera din internetanslutning och försök igen",
+      "authorization_required": "Inloggningsuppgifterna har gått ut. Du måste logga in igen",
+      "upgrade_required": "Installera den senaste versionen av appen för korrekt funktion",
+      "insufficient_access_rights": "Åtgärden är inte tillgänglig. Dina rättigheter är begränsade"
+    },
+    "dialog_title": {
+      "error_title": "Fel",
+      "connection_error": "Ingen anslutning",
+      "server_error": "Serverfel",
+      "not_authorized": "Inte auktoriserad",
+      "upgrade_required": "Versionen är föråldrad",
+      "insufficient_accessRights": "Otillräckliga rättigheter"
+    },
+    "field_empty": "Fältet kan inte vara tomt",
+    "incorrect_format": "Ogiltigt format",
+    "photos": {
+      "GalleryScreen": {
+        "title": "Galleri"
+      }
+    },
+    "upload": {
+      "select_photo": {
+        "select_source_photo": {
+          "title": "Välj bild",
+          "from": {
+            "camera": "Kamera",
+            "gallery": "Från galleriet"
+          }
+        }
+      },
+      "AddPhotoButton": {
+        "add_photo": "Lägg till"
+      }
+    },
+    "widgets": {
+      "LastPageErrorMessageView": {
+        "something_wrong_try_again": "Något gick fel, försök igen:"
+      },
+      "TryAgainButton": {
+        "something_wrong": "Något gick fel",
+        "try_again": "Försök igen"
+      },
+      "AttachDocuments": {
+        "title": "Lägg till dokument"
+      }
+    }
+  },
+  "feedback": {
+    "feedback_page": {
+      "title": "Feedback",
+      "type_label": "Typ av ärende",
+      "description_label": "Beskrivning",
+      "description_hint": "Beskriv ditt problem eller idé mer detaljerat",
+      "description_error": "Vänligen skriv texten för ärendet",
+      "submit": "Skicka",
+      "success": "Ärendet har skickats",
+      "failed_send_feedback": "Kunde inte skicka feedback",
+      "types": {
+        "bug": "Rapportera en bugg",
+        "feature": "Föreslå funktionalitet",
+        "category": "Föreslå en ny kategori av annonser",
+        "question": "Ställa en fråga",
+        "general": "Allmänna kommentarer och önskemål"
+      }
+    }
+  },
+  "home": {
+    "chats_label": "Chattar",
+    "profile_label": "Profil",
+    "settings_label": "Inställningar",
+    "main_label": "Huvud"
+  },
+  "in_app": {
+    "BuyProductsScreen": {
+      "buy_button": "Köp",
+      "title": "Välj produkt",
+      "unavailable": "Inte tillgänglig"
+    }
+  },
+  "legal": {
+    "failed_get_regulations": "Kunde inte hämta regler.",
+    "LegalScreen": {
+      "title": "Juridisk information",
+      "policy_label": "Integritetspolicy",
+      "terms_label": "Användarvillkor",
+      "gdpr_label": "GDPR Integritetspolicy"
+    }
+  },
+  "logger": {
+    "SessionScreen": {
+      "no_space_line_1": "Det finns inte tillräckligt med minne på enheten.",
+      "no_space_line_2": "Vänligen frigör utrymme och försök igen.",
+      "ok": "OK",
+      "title": "Sessionslista",
+      "unknown_error": "Okänt fel."
+    }
+  },
+  "profile": {
+    "EditProfileScreen": {
+      "edit_password": "Ändra lösenord",
+      "first_name_label": "Förnamn",
+      "last_name_label": "Efternamn",
+      "save_button_text": "Spara",
+      "success_toast": "Ditt namn har uppdaterats",
+      "title": "Redigera profil"
+    },
+    "ProfilePage": {
+      "create_support_chat": "Skriv till supportchatt",
+      "failed_create_support_chat": "Kunde inte skapa supportchatt",
+      "failed_loading_profile": "Kunde inte ladda användarinformation",
+      "plan": {
+        "buy_credits": "Köp krediter",
+        "credits_count": {
+          "one": "{n} kredit",
+          "few": "{n} krediter",
+          "other": "{n} krediter"
+        },
+        "plan_name": "Plan: {planName:String}",
+        "upgrade": "Uppgradera planen"
+      }
+    },
+    "SafetyScreen": {
+      "delete_account_error": {
+        "requires_recent_login": "För att ta bort kontot måste du logga in igen"
+      },
+      "delete_account_label": "Ta bort konto",
+      "delete_confirm": {
+        "description": "Är du säker på att du vill ta bort kontot?",
+        "title": "Ta bort konto"
+      },
+      "edit_password": "Ändra lösenord",
+      "title": "Säkerhet"
+    },
+    "delete_account_label": "Ta bort konto",
+    "edit_avatar_title": "Redigera avatar",
+    "edit_profile_label": "Redigera profil",
+    "failed_update_avatar": "Kunde inte uppdatera avatar",
+    "failed_upload_avatar": "Kunde inte ladda upp avatar",
+    "feedback_label": "Feedback",
+    "language_label": "Språk",
+    "legal_label": "Juridisk information",
+    "logout_label": "Logga ut",
+    "safety_label": "Säkerhet",
+    "select_language_title": "Välj språk",
+    "theme": {
+      "title": "Tema",
+      "light": "Ljust",
+      "dark": "Mörkt",
+      "system": "System"
+    },
+    "to_favorites_adverts_label": "Favoritannonser",
+    "to_my_adverts_label": "Mina annonser",
+    "version": "Version {version}"
+  },
+  "report": {
+    "ReportSheet": {
+      "description_label": "Beskrivning",
+      "reasons": {
+        "abuse": "Kränkningar eller hatpropaganda",
+        "inappropriate": "Oanständigt beteende",
+        "other": "Annat",
+        "spam": "Spam"
+      },
+      "submit": "Skicka",
+      "success": "Klagomål har skickats",
+      "title": "Rapportera överträdelse"
+    }
+  },
+  "users": {
+    "user_select_screen": {
+      "empty": "Inga användare än",
+      "failure": "Fel vid inläsning av användare"
+    }
+  }
+}

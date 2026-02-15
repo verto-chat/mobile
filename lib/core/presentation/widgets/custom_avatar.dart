@@ -23,10 +23,9 @@ class CustomAvatar extends StatelessWidget {
       backgroundColor: hasImage ? Colors.transparent : color,
       backgroundImage: hasImage ? CachedNetworkImageProvider(avatarUrl!) : null,
       radius: radius,
-      child:
-          !hasImage
-              ? Text(name?.isEmpty ?? false ? '' : name![0].toUpperCase(), style: const TextStyle(color: Colors.white))
-              : null,
+      child: !hasImage
+          ? Text((name?.isEmpty ?? true) ? '' : name![0].toUpperCase(), style: const TextStyle(color: Colors.white))
+          : null,
     );
   }
 }

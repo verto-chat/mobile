@@ -7,14 +7,14 @@ class EditBorderedAvatar extends StatelessWidget {
     super.key,
     required this.avatarRadius,
     required this.userInfo,
-    required this.onEditTap,
+    this.onEditTap,
     required this.isShimmerLoading,
   });
 
   final double avatarRadius;
   final UserInfo userInfo;
   final bool isShimmerLoading;
-  final GestureTapCallback onEditTap;
+  final GestureTapCallback? onEditTap;
 
   @override
   Widget build(BuildContext context) {
@@ -33,7 +33,9 @@ class EditBorderedAvatar extends StatelessWidget {
       ),
       child: Stack(
         children: [
-          Center(child: UserAvatar(radius: avatarRadius, user: userInfo, isShimmerLoading: isShimmerLoading)),
+          Center(
+            child: UserAvatar(radius: avatarRadius, user: userInfo, isShimmerLoading: isShimmerLoading),
+          ),
           Align(
             alignment: Alignment.bottomRight,
             child: Padding(

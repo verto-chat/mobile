@@ -1,0 +1,381 @@
+{
+  "auth": {
+    "SignInScreen": {
+      "email_label": "Emel",
+      "password_label": "Kata laluan",
+      "forgot_password": "Lupa kata laluan?",
+      "sign_in": "Log masuk",
+      "sign_up": "Daftar",
+      "sign_in_with_google": "Log masuk dengan Google",
+      "sign_in_with_apple": "Log masuk dengan Apple",
+      "login_error": {
+        "invalid_credentials": "Kelayakan tidak sah",
+        "email_not_confirmed": "Emel belum disahkan"
+      },
+      "OAuthAcceptRegulationsSheet": {
+        "title": "Untuk meneruskan, sila daftar",
+        "regulations(rich)": "Sila terima {terms(Permohonan penggunaan)} dan {policy(POLISI PRIVASI)}",
+        "accept": "Terima",
+        "cancel": "Batal",
+        "failed_get_regulations": "Gagal mendapatkan peraturan."
+      }
+    },
+    "SignUpScreen": {
+      "title": "Daftar",
+      "first_name_label": "Nama",
+      "last_name_label": "Nama keluarga",
+      "email_label": "Emel",
+      "password_label": "Kata laluan",
+      "repeat_password": "Ulang kata laluan",
+      "sign_up": "Daftar",
+      "password_not_equal": "Kata laluan tidak sepadan",
+      "regulations(rich)": "Saya bersetuju dengan {terms(peraturan penggunaan)} dan {policy(polis privasi)}",
+      "after_registration_toast": "✔️ Emel pengesahan telah dihantar! Semak emel anda dan sahkan alamat.",
+      "register_error": {
+        "incorrect_email": "Emel tidak sah",
+        "incorrect_name": "Nama tidak sah",
+        "incorrect_password": "Kata laluan mesti sekurang-kurangnya 8 aksara dan mengandungi huruf besar, huruf kecil dan nombor",
+        "email_already_used": "Alamat emel sudah digunakan",
+        "create_error": "Ralat semasa mencipta pengguna",
+        "emailRateLimitExceeded": "Had penghantaran emel telah melebihi"
+      }
+    },
+    "reset_password": {
+      "CodeScreen": {
+        "title": "Pemulihan kata laluan",
+        "description": "Kod pemulihan telah dihantar ke emel anda {email:String}",
+        "submit": "Seterusnya",
+        "field_label": "Kod pemulihan",
+        "field_error": "Kod tidak sah",
+        "check_error_description": "Gagal mengesahkan kod pemulihan"
+      },
+      "ForgotPasswordScreen": {
+        "title": "Pemulihan kata laluan",
+        "email_label": "Emel",
+        "send_reset_link": "Hantar pautan",
+        "check_error_description": "Gagal menghantar kod untuk pemulihan kata laluan"
+      },
+      "NewPasswordScreen": {
+        "title": "Kata laluan baru",
+        "reset_submit": "Log masuk",
+        "edit_submit": "Ubah",
+        "current_password": "Kata laluan semasa",
+        "new_password": "Kata laluan baru",
+        "repeat_new_password": "Ulang kata laluan baru",
+        "password_label": "Kata laluan",
+        "repeat_password": "Ulang kata laluan",
+        "failed_change_password": "Gagal mengubah kata laluan",
+        "failed_reset_password": "Gagal menetapkan semula kata laluan",
+        "errors": {
+          "wrong_current_password": "Kata laluan semasa tidak sah",
+          "same_password": "Kata laluan baru tidak boleh sama dengan yang semasa"
+        }
+      }
+    }
+  },
+  "chats": {
+    "ChatPage": {
+      "SlangChatL10n": {
+        "and": "dan",
+        "attachmentButtonAccessibilityLabel": "Hantar media",
+        "emptyChatPlaceholder": "Tiada mesej buat masa ini",
+        "fileButtonAccessibilityLabel": "Fail",
+        "inputPlaceholder": "Mesej",
+        "isTyping": "sedang menaip…",
+        "others": "lain-lain",
+        "sendButtonAccessibilityLabel": "Hantar",
+        "unreadMessagesLabel": "Mesej yang belum dibaca"
+      },
+      "advert_chat": "Chat iklan",
+      "attachment_type_file": "Fail",
+      "attachment_type_image": "Imej",
+      "failure": "Ralat semasa memuatkan chat",
+      "no_messages_yet": "Tiada mesej lagi",
+      "return_translation": "Kembali ke terjemahan",
+      "show_original": "Tunjukkan asal",
+      "tts_play_failed": "Gagal memainkan: {error:String}",
+      "tts_play_original": "Baca asal",
+      "tts_play_translation": "Baca terjemahan"
+    },
+    "ChatsPage": {
+      "ChatCard": {
+        "favorites_chat_name": "Kegemaran",
+        "support_chat_name": "Sokongan"
+      },
+      "NoItemsStub": {
+        "description": "Anda belum mempunyai chat",
+        "title": "Tiada chat buat masa ini"
+      },
+      "create_direct_chat": "Cipta chat dengan pengguna",
+      "create_group_chat": "Cipta chat kumpulan",
+      "delete_action": "Hapus",
+      "empty": "Tiada chat buat masa ini",
+      "failure": "Ralat semasa memuatkan chat",
+      "title": "Chat"
+    },
+    "CreateDirectChatPage": {
+      "failure_create_chat": "Gagal mencipta chat",
+      "title": "Cipta chat"
+    },
+    "CreateLocalChatPage": {
+      "languages_section": "Bahasa",
+      "my_language_label": "Bahasa anda",
+      "partner_language_label": "Bahasa rakan",
+      "show_both_subtitle": "Tunjukkan kedua-dua teks untuk memudahkan semakan",
+      "show_both_title": "Tunjukkan asal dan terjemahan",
+      "start_button": "Mula chat tempatan",
+      "swap_languages": "Tukar tempat",
+      "tips_item_1": "• Anda dan rakan bercakap secara bergilir-gilir pada satu peranti.",
+      "tips_item_2": "• Mesej diterjemahkan secara automatik, boleh menunjukkan asal dan terjemahan.",
+      "tips_item_3": "• Hidupkan TTS untuk membaca terjemahan dengan kuat.",
+      "tips_title": "Bagaimana chat tempatan berfungsi",
+      "title": "Chat tempatan baru",
+      "title_hint": "Contoh: Perbualan dengan tuan rumah",
+      "title_label": "Tajuk (pilihan)",
+      "translation_section": "Terjemahan dan paparan",
+      "tts_subtitle": "Baca terjemahan dengan kuat semasa ditunjukkan",
+      "tts_title": "Baca terjemahan (TTS)"
+    },
+    "RecordHoldButton": {
+      "hold_to_record": "Tahan\nuntuk merakam",
+      "semantics_label": "{label:String}: tahan untuk merakam"
+    },
+    "SelectChatTypePage": {
+      "continue_button": "Teruskan",
+      "details": {
+        "direct": {
+          "can_do": "Terjemahan automatik untuk mesej masuk dan keluar, mesej suara, lampiran.",
+          "for_whom": "Untuk berkomunikasi dengan seorang individu dalam pelbagai bahasa.",
+          "scenarios": "Perbualan perniagaan, perbualan peribadi, sokongan pelanggan."
+        },
+        "group": {
+          "can_do": "Terjemahan automatik untuk semua peserta, peranan dan hak, pin dan reaksi.",
+          "for_whom": "Untuk pasukan, keluarga dan komuniti dengan peserta dari pelbagai negara.",
+          "scenarios": "Chat projek, komuniti, perbualan organisasi."
+        },
+        "local": {
+          "can_do": "Anda bergilir-gilir meninggalkan mesej pada satu telefon — ia segera diterjemahkan kepada rakan.",
+          "for_whom": "Untuk pelancong dan perbualan luar talian pada satu peranti.",
+          "scenarios": "Berkomunikasi dengan pemandu teksi/pemilik, memesan makanan, bantuan dengan navigasi."
+        },
+        "learning": {
+          "can_do": "Simpan perkataan dan frasa, lihat pelbagai makna dan contoh, berlatih dalam mod membaca/dikta.",
+          "for_whom": "Untuk mempelajari bahasa pada satu peranti — seperti 'chat tempatan', tetapi dengan penekanan pada latihan.",
+          "scenarios": "Pembelajaran sendiri dalam perjalanan, persiapan untuk mesyuarat, analisis perbualan, kamus peribadi."
+        }
+      },
+      "labels": {
+        "can_do": "Apa yang boleh",
+        "for_whom": "Untuk siapa",
+        "scenarios": "Senario"
+      },
+      "soon_tag": "Akan datang",
+      "title": "Cipta chat",
+      "types": {
+        "direct": "Langsung (1-1)",
+        "group": "Kumpulan",
+        "learning": "Pembelajaran",
+        "local": "Chat tempatan"
+      }
+    }
+  },
+  "core": {
+    "DialogPresenter": {
+      "permission_text_location": "Lokasi",
+      "permission_denied": {
+        "location": "mendapat lokasi untuk memilih alamat",
+        "title": "Akses kepada {permission:String}",
+        "description": "Akses kepada {permission:String} diperlukan untuk menggunakan fungsi ini. Anda boleh menghidupkannya dalam tetapan peranti anda.",
+        "settings": "Ke tetapan",
+        "later": "Kemudian"
+      }
+    },
+    "dialog_action": {
+      "ok": "Okey",
+      "login": "Log masuk",
+      "retry": "Cuba lagi",
+      "upgrade": "Tingkatkan",
+      "back": "Kembali",
+      "yes": "Ya",
+      "no": "Tidak",
+      "cancel": "Batal"
+    },
+    "dialog_msg": {
+      "retry_or_contact_support": "Cuba lagi atau hubungi sokongan di: support@verto.chat",
+      "server_error": "Terdapat ralat pada pelayan. {retryOrContactSupport}",
+      "default_error": "Terdapat ralat. {retryOrContactSupport}",
+      "connection_error": "Sila semak sambungan internet anda dan cuba lagi",
+      "authorization_required": "Kelayakan telah lapuk. Sila log masuk semula",
+      "upgrade_required": "Untuk berfungsi dengan baik, pasang versi baru aplikasi",
+      "insufficient_access_rights": "Tindakan tidak tersedia. Hak anda terhad"
+    },
+    "dialog_title": {
+      "error_title": "Ralat",
+      "connection_error": "Tiada sambungan",
+      "server_error": "Ralat pada pelayan",
+      "not_authorized": "Tidak dibenarkan",
+      "upgrade_required": "Versi sudah lapuk",
+      "insufficient_accessRights": "Hak akses tidak mencukupi"
+    },
+    "field_empty": "Medan tidak boleh kosong",
+    "incorrect_format": "Format tidak sah",
+    "photos": {
+      "GalleryScreen": {
+        "title": "Galeri"
+      }
+    },
+    "upload": {
+      "select_photo": {
+        "select_source_photo": {
+          "title": "Pilih imej",
+          "from": {
+            "camera": "Kamera",
+            "gallery": "Dari galeri"
+          }
+        }
+      },
+      "AddPhotoButton": {
+        "add_photo": "Tambah"
+      }
+    },
+    "widgets": {
+      "LastPageErrorMessageView": {
+        "something_wrong_try_again": "Ada yang tidak kena, cuba lagi:"
+      },
+      "TryAgainButton": {
+        "something_wrong": "Ada yang tidak kena",
+        "try_again": "Cuba lagi"
+      },
+      "AttachDocuments": {
+        "title": "Tambah dokumen"
+      }
+    }
+  },
+  "feedback": {
+    "feedback_page": {
+      "title": "Maklum balas",
+      "type_label": "Jenis aduan",
+      "description_label": "Penerangan",
+      "description_hint": "Sila terangkan masalah atau idea anda dengan lebih terperinci",
+      "description_error": "Sila tulis teks aduan",
+      "submit": "Hantar",
+      "success": "Aduan telah dihantar",
+      "failed_send_feedback": "Gagal menghantar maklum balas",
+      "types": {
+        "bug": "Laporkan pepijat",
+        "feature": "Cadangkan fungsi",
+        "category": "Cadangkan kategori iklan baru",
+        "question": "Ajukan soalan",
+        "general": "Teguran dan cadangan umum"
+      }
+    }
+  },
+  "home": {
+    "chats_label": "Chat",
+    "profile_label": "Profil",
+    "settings_label": "Tetapan",
+    "main_label": "Utama"
+  },
+  "in_app": {
+    "BuyProductsScreen": {
+      "buy_button": "Beli",
+      "title": "Pilih produk",
+      "unavailable": "Tidak tersedia"
+    }
+  },
+  "legal": {
+    "failed_get_regulations": "Gagal mendapatkan peraturan.",
+    "LegalScreen": {
+      "title": "Maklumat undang-undang",
+      "policy_label": "Polisi privasi",
+      "terms_label": "Terma penggunaan",
+      "gdpr_label": "Polisi privasi GDPR"
+    }
+  },
+  "logger": {
+    "SessionScreen": {
+      "no_space_line_1": "Tiada memori yang cukup pada peranti.",
+      "no_space_line_2": "Sila kosongkan ruang dan cuba lagi.",
+      "ok": "Okey",
+      "title": "Senarai sesi",
+      "unknown_error": "Ralat tidak diketahui."
+    }
+  },
+  "profile": {
+    "EditProfileScreen": {
+      "edit_password": "Tukar kata laluan",
+      "first_name_label": "Nama",
+      "last_name_label": "Nama keluarga",
+      "save_button_text": "Simpan",
+      "success_toast": "Nama anda telah dikemas kini dengan jayanya",
+      "title": "Edit profil"
+    },
+    "ProfilePage": {
+      "create_support_chat": "Hantar mesej ke chat sokongan",
+      "failed_create_support_chat": "Gagal mencipta chat sokongan",
+      "failed_loading_profile": "Gagal memuatkan maklumat pengguna",
+      "plan": {
+        "buy_credits": "Beli kredit",
+        "credits_count": {
+          "one": "{n} kredit",
+          "few": "{n} kredit",
+          "other": "{n} kredit"
+        },
+        "plan_name": "Pelan: {planName:String}",
+        "upgrade": "Tingkatkan pelan"
+      }
+    },
+    "SafetyScreen": {
+      "delete_account_error": {
+        "requires_recent_login": "Untuk memadam akaun, anda perlu log masuk semula ke aplikasi"
+      },
+      "delete_account_label": "Padam akaun",
+      "delete_confirm": {
+        "description": "Adakah anda pasti ingin memadam akaun?",
+        "title": "Penghapusan akaun"
+      },
+      "edit_password": "Tukar kata laluan",
+      "title": "Keselamatan"
+    },
+    "delete_account_label": "Padam akaun",
+    "edit_avatar_title": "Edit avatar",
+    "edit_profile_label": "Edit profil",
+    "failed_update_avatar": "Gagal mengemas kini avatar",
+    "failed_upload_avatar": "Gagal memuat naik avatar",
+    "feedback_label": "Maklum balas",
+    "language_label": "Bahasa",
+    "legal_label": "Maklumat undang-undang",
+    "logout_label": "Log keluar",
+    "safety_label": "Keselamatan",
+    "select_language_title": "Pilih bahasa",
+    "theme": {
+      "title": "Tema",
+      "light": "Cerah",
+      "dark": "Gelap",
+      "system": "Sistem"
+    },
+    "to_favorites_adverts_label": "Iklan kegemaran",
+    "to_my_adverts_label": "Iklan saya",
+    "version": "Versi {version}"
+  },
+  "report": {
+    "ReportSheet": {
+      "description_label": "Penerangan",
+      "reasons": {
+        "abuse": "Kata-kata kesat atau hasutan kebencian",
+        "inappropriate": "Tingkah laku tidak sesuai",
+        "other": "Lain-lain",
+        "spam": "Spam"
+      },
+      "submit": "Hantar",
+      "success": "Aduan telah dihantar",
+      "title": "Laporkan pelanggaran"
+    }
+  },
+  "users": {
+    "user_select_screen": {
+      "empty": "Tiada pengguna buat masa ini",
+      "failure": "Ralat semasa memuatkan pengguna"
+    }
+  }
+}

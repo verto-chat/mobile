@@ -1,9 +1,11 @@
 export 'analytics/analytics.dart';
 export 'auth/auth.dart';
 export 'chats/chats.dart';
+export 'create/create.dart';
 export 'feedback/feedback.dart';
 export 'home/home.dart';
 export 'in_app/in_app.dart';
 export 'legal/legal.dart';
 export 'profile/profile.dart';
 export 'users/users.dart';
+export 'settings/settings.dart';

@@ -1,0 +1,381 @@
+{
+  "auth": {
+    "SignInScreen": {
+      "email_label": "Электронная пошта",
+      "password_label": "Пароль",
+      "forgot_password": "Забыли пароль?",
+      "sign_in": "Увайсці",
+      "sign_up": "Рэгістрацыя",
+      "sign_in_with_google": "Увайсці праз Google",
+      "sign_in_with_apple": "Увайсці праз Apple",
+      "login_error": {
+        "invalid_credentials": "Неправільныя ўліковыя даныя",
+        "email_not_confirmed": "Электронная пошта не пацверджана"
+      },
+      "OAuthAcceptRegulationsSheet": {
+        "title": "Каб працягнуць, зарэгіструйцеся",
+        "regulations(rich)": "Калі ласка, прымеце {terms(Умовы выкарыстання)} і {policy(Палітыка канфідэнцыяльнасці)}",
+        "accept": "Согласны",
+        "cancel": "Скасаванне",
+        "failed_get_regulations": "Не ўдалося атрымаць правілы."
+      }
+    },
+    "SignUpScreen": {
+      "title": "Рэгістрацыя",
+      "first_name_label": "Імя",
+      "last_name_label": "Прозвішча",
+      "email_label": "Электронная пошта",
+      "password_label": "Пароль",
+      "repeat_password": "Паўтарыце пароль",
+      "sign_up": "Рэгістрацыя",
+      "password_not_equal": "Паролі не супадаюць",
+      "regulations(rich)": "Саглашаюся з {terms(умовамі выкарыстання)} і {policy(палітыкай канфідэнцыяльнасці)}",
+      "after_registration_toast": "✔️ Ліст з пацверджаннем адпраўлены! Праверце пошту і пацвердзіце адрас.",
+      "register_error": {
+        "incorrect_email": "Некарэктная электронная пошта",
+        "incorrect_name": "Некарэктнае імя",
+        "incorrect_password": "Пароль павінен быць не менш за 8 сімвалаў і ўтрымліваць літары верхняга і ніжняга рэгістра і лічбы",
+        "email_already_used": "Адрас электроннай пошты ўжо выкарыстоўваецца",
+        "create_error": "Памылка пры стварэнні карыстальніка",
+        "emailRateLimitExceeded": "Перасягнуты ліміт адпраўкі лістоў па электроннай пошце"
+      }
+    },
+    "reset_password": {
+      "CodeScreen": {
+        "title": "Аднаўленне пароля",
+        "description": "На вашу пошту {email:String} быў адпраўлены код аднаўлення",
+        "submit": "Далей",
+        "field_label": "Код аднаўлення",
+        "field_error": "Некарэктны код",
+        "check_error_description": "Не ўдалося праверыць код аднаўлення"
+      },
+      "ForgotPasswordScreen": {
+        "title": "Аднаўленне пароля",
+        "email_label": "Электронная пошта",
+        "send_reset_link": "Адправіць спасылку",
+        "check_error_description": "Не ўдалося адправіць код для аднаўлення пароля"
+      },
+      "NewPasswordScreen": {
+        "title": "Новы пароль",
+        "reset_submit": "Увайсці",
+        "edit_submit": "Змяніць",
+        "current_password": "Цяперашні пароль",
+        "new_password": "Новы пароль",
+        "repeat_new_password": "Паўтарыце новы пароль",
+        "password_label": "Пароль",
+        "repeat_password": "Паўтарыце пароль",
+        "failed_change_password": "Не ўдалося змяніць пароль",
+        "failed_reset_password": "Не ўдалося скідаць пароль",
+        "errors": {
+          "wrong_current_password": "Неправільны цяперашні пароль",
+          "same_password": "Новы пароль не павінен супадаць з цяперашнім"
+        }
+      }
+    }
+  },
+  "chats": {
+    "ChatPage": {
+      "SlangChatL10n": {
+        "and": "і",
+        "attachmentButtonAccessibilityLabel": "Адправіць медыя",
+        "emptyChatPlaceholder": "Пакуль што ў вас няма паведамленняў",
+        "fileButtonAccessibilityLabel": "Файл",
+        "inputPlaceholder": "Паведамленне",
+        "isTyping": "друкуе…",
+        "others": "іншыя",
+        "sendButtonAccessibilityLabel": "Адправіць",
+        "unreadMessagesLabel": "Непрачытаныя паведамленні"
+      },
+      "advert_chat": "Чат па аб'яве",
+      "attachment_type_file": "Файл",
+      "attachment_type_image": "Выява",
+      "failure": "Памылка пры загрузцы чата",
+      "no_messages_yet": "Пакуль няма паведамленняў",
+      "return_translation": "Вярнуць пераклад",
+      "show_original": "Паказаць арыгінал",
+      "tts_play_failed": "Не ўдалося прайграць: {error:String}",
+      "tts_play_original": "Азвучыць арыгінал",
+      "tts_play_translation": "Азвучыць пераклад"
+    },
+    "ChatsPage": {
+      "ChatCard": {
+        "favorites_chat_name": "Улюбленае",
+        "support_chat_name": "Падтрымка"
+      },
+      "NoItemsStub": {
+        "description": "У вас пакуль няма чатаў",
+        "title": "Пакуль няма чатаў"
+      },
+      "create_direct_chat": "Стварыць чат з карыстальнікам",
+      "create_group_chat": "Стварыць групавы чат",
+      "delete_action": "Выдаліць",
+      "empty": "Пакуль няма чатаў",
+      "failure": "Памылка пры загрузцы чатаў",
+      "title": "Чаты"
+    },
+    "CreateDirectChatPage": {
+      "failure_create_chat": "Не ўдалося стварыць чат",
+      "title": "Стварыць чат"
+    },
+    "CreateLocalChatPage": {
+      "languages_section": "Мовы",
+      "my_language_label": "Ваша мова",
+      "partner_language_label": "Мова суразмоўцы",
+      "show_both_subtitle": "Паказваць абодва тэксты для зручнасці праверкі",
+      "show_both_title": "Паказваць арыгінал і пераклад",
+      "start_button": "Пачаць лакальны чат",
+      "swap_languages": "Памяняць месцамі",
+      "tips_item_1": "• Вы і суразмоўца гаворыце па чарзе на адным прыладзе.",
+      "tips_item_2": "• Паведамленні перакладаюцца аўтаматычна, можна паказваць арыгінал і пераклад.",
+      "tips_item_3": "• Уключыце TTS, каб пераклад зачытаўўся ўголас.",
+      "tips_title": "Як працуе лакальны чат",
+      "title": "Новы лакальны чат",
+      "title_hint": "Напрыклад: Размова з гаспадаром кватэры",
+      "title_label": "Назва (неабавязкова)",
+      "translation_section": "Пераклад і адлюстраванне",
+      "tts_subtitle": "Чытаць пераклад уголас пры паказе",
+      "tts_title": "Азвучваць пераклад (TTS)"
+    },
+    "RecordHoldButton": {
+      "hold_to_record": "Утрымлівайце\nдля запісу",
+      "semantics_label": "{label:String}: утрымлівайце для запісу"
+    },
+    "SelectChatTypePage": {
+      "continue_button": "Працягнуць",
+      "details": {
+        "direct": {
+          "can_do": "Аўтапераклад уваходзячых і выходзячых, галасавыя паведамленні, укладанні.",
+          "for_whom": "Для зносін з адной асобай на розных мовах.",
+          "scenarios": "Бізнес‑перепіска, асабістыя размовы, падтрымка кліентаў."
+        },
+        "group": {
+          "can_do": "Аўтапераклад для ўсіх удзельнікаў, ролі і правы, піны і рэакцыі.",
+          "for_whom": "Для каманд, сем'яў і супольнасцяў з удзельнікамі з розных краін.",
+          "scenarios": "Праектныя чаты, супольнасці, арганізацыйныя перапіскі."
+        },
+        "local": {
+          "can_do": "Вы па чарзе пакідаеце паведамленні на адным тэлефоне — яны адразу перакладаюцца суразмоўцу.",
+          "for_whom": "Для турыстаў і афлайн‑перамоў на адным прыладзе.",
+          "scenarios": "Зносіны з таксістам/арэндадаўцам, заказ ежы, дапамога з навігацыяй."
+        },
+        "learning": {
+          "can_do": "Захоўвайце словы і фразы, глядзіце розныя значэнні і прыклады, трэніруйцеся ў рэжымах чытання/дыктоўкі.",
+          "for_whom": "Для вывучэння моў на адным прыладзе — як «лакальны чат», але з акцэнтам на практыку.",
+          "scenarios": "Самавучэнне ў паездцы, падрыхтоўка да сустрэчы, разбіранне перапіскі, персанальны слоўнік."
+        }
+      },
+      "labels": {
+        "can_do": "Што можна",
+        "for_whom": "Для каго",
+        "scenarios": "Сцэнары"
+      },
+      "soon_tag": "Скоро",
+      "title": "Стварыць чат",
+      "types": {
+        "direct": "Прамы (1-на-1)",
+        "group": "Групавы",
+        "learning": "Навучанне",
+        "local": "Лакальны чат"
+      }
+    }
+  },
+  "core": {
+    "DialogPresenter": {
+      "permission_text_location": "Месцазнаходжанне",
+      "permission_denied": {
+        "location": "атрымаць месцазнаходжанне для выбару адрасу",
+        "title": "Доступ да {permission:String}",
+        "description": "Для выкарыстання гэтай функцыі патрабуецца доступ да {permission:String}. Вы можаце ўключыць яго ў наладах вашага прылады.",
+        "settings": "У налады",
+        "later": "Пазней"
+      }
+    },
+    "dialog_action": {
+      "ok": "Ок",
+      "login": "Увайсці",
+      "retry": "Паспрабаваць яшчэ раз",
+      "upgrade": "Абнавіць",
+      "back": "Назад",
+      "yes": "Так",
+      "no": "Не",
+      "cancel": "Скасаванне"
+    },
+    "dialog_msg": {
+      "retry_or_contact_support": "Паспрабуйце яшчэ раз або звярніцеся ў службу падтрымкі па адрасе: support@verto.chat",
+      "server_error": "На серверы адбылася памылка. {retryOrContactSupport}",
+      "default_error": "Адбылася памылка. {retryOrContactSupport}",
+      "connection_error": "Калі ласка, праверце ваша інтэрнэт-злучэнне і паспрабуйце яшчэ раз",
+      "authorization_required": "Уліковыя даныя устарэлі. Неабходна зноў увайсці",
+      "upgrade_required": "Для карэктнай працы ўсталюйце новую версію прыкладання",
+      "insufficient_access_rights": "Дзеянне недаступна. Вашы правы абмежаваныя"
+    },
+    "dialog_title": {
+      "error_title": "Памылка",
+      "connection_error": "Няма злучэння",
+      "server_error": "Памылка на серверы",
+      "not_authorized": "Не аўтарызаваны",
+      "upgrade_required": "Версія устарэла",
+      "insufficient_accessRights": "Недастаткова правоў"
+    },
+    "field_empty": "Поле не можа быць пустым",
+    "incorrect_format": "Неправільны фармат",
+    "photos": {
+      "GalleryScreen": {
+        "title": "Галерэя"
+      }
+    },
+    "upload": {
+      "select_photo": {
+        "select_source_photo": {
+          "title": "Выбраць малюнак",
+          "from": {
+            "camera": "Камера",
+            "gallery": "З галерэі"
+          }
+        }
+      },
+      "AddPhotoButton": {
+        "add_photo": "Дадаць"
+      }
+    },
+    "widgets": {
+      "LastPageErrorMessageView": {
+        "something_wrong_try_again": "Што-то пайшло не так, паспрабуйце яшчэ раз:"
+      },
+      "TryAgainButton": {
+        "something_wrong": "Што-то пайшло не так",
+        "try_again": "Паспрабаваць яшчэ раз"
+      },
+      "AttachDocuments": {
+        "title": "Дадаць дакументы"
+      }
+    }
+  },
+  "feedback": {
+    "feedback_page": {
+      "title": "Зваротная сувязь",
+      "type_label": "Тып звароту",
+      "description_label": "Апісанне",
+      "description_hint": "Апішыце падрабязней вашу праблему або ідэю",
+      "description_error": "Напішыце, калі ласка, тэкст звароту",
+      "submit": "Адправіць",
+      "success": "Зварот адпраўлены",
+      "failed_send_feedback": "Не ўдалося адправіць зваротную сувязь",
+      "types": {
+        "bug": "Паведаміць пра баг",
+        "feature": "Прапанаваць функцыянал",
+        "category": "Прапанаваць новую катэгорыю аб'яў",
+        "question": "Задаць пытанне",
+        "general": "Агульныя заўвагі і пажаданні"
+      }
+    }
+  },
+  "home": {
+    "chats_label": "Чаты",
+    "profile_label": "Профіль",
+    "settings_label": "Налады",
+    "main_label": "Галоўная"
+  },
+  "in_app": {
+    "BuyProductsScreen": {
+      "buy_button": "Купіць",
+      "title": "Выберыце тавар",
+      "unavailable": "Недаступна"
+    }
+  },
+  "legal": {
+    "failed_get_regulations": "Не ўдалося атрымаць рэгламенты.",
+    "LegalScreen": {
+      "title": "Прававая інфармацыя",
+      "policy_label": "Палітыка канфідэнцыяльнасці",
+      "terms_label": "Умовы выкарыстання",
+      "gdpr_label": "Палітыка канфідэнцыяльнасці GDPR"
+    }
+  },
+  "logger": {
+    "SessionScreen": {
+      "no_space_line_1": "На прыладзе недастаткова памяці.",
+      "no_space_line_2": "Калі ласка, вызваліце месца і паспрабуйце яшчэ раз.",
+      "ok": "ОК",
+      "title": "Спіс сесій",
+      "unknown_error": "Невядомая памылка."
+    }
+  },
+  "profile": {
+    "EditProfileScreen": {
+      "edit_password": "Змяніць пароль",
+      "first_name_label": "Імя",
+      "last_name_label": "Прозвішча",
+      "save_button_text": "Захаваць",
+      "success_toast": "Ваше імя паспяхова абноўлена",
+      "title": "Рэдагаваць профіль"
+    },
+    "ProfilePage": {
+      "create_support_chat": "Напісаць у чат падтрымкі",
+      "failed_create_support_chat": "Не ўдалося стварыць чат падтрымкі",
+      "failed_loading_profile": "Не ўдалося загрузіць інфармацыю пра карыстальніка",
+      "plan": {
+        "buy_credits": "Купіць крэдыты",
+        "credits_count": {
+          "one": "{n} крэдыт",
+          "few": "{n} крэдыта",
+          "other": "{n} крэдытаў"
+        },
+        "plan_name": "План: {planName:String}",
+        "upgrade": "Паляпшыць план"
+      }
+    },
+    "SafetyScreen": {
+      "delete_account_error": {
+        "requires_recent_login": "Для выдалення акаўнта неабходна перазайсці ў прыкладанне"
+      },
+      "delete_account_label": "Выдаліць акаўнт",
+      "delete_confirm": {
+        "description": "Вы ўпэўнены, што хочаце выдаліць акаўнт?",
+        "title": "Выдаленне акаўнта"
+      },
+      "edit_password": "Змяніць пароль",
+      "title": "Бяспека"
+    },
+    "delete_account_label": "Выдаліць акаўнт",
+    "edit_avatar_title": "Рэдагаванне аватара",
+    "edit_profile_label": "Рэдагаваць профіль",
+    "failed_update_avatar": "Не ўдалося абнавіць аватар",
+    "failed_upload_avatar": "Не ўдалося загрузіць аватар",
+    "feedback_label": "Зваротная сувязь",
+    "language_label": "Мова",
+    "legal_label": "Прававая інфармацыя",
+    "logout_label": "Выйсці з акаўнта",
+    "safety_label": "Бяспека",
+    "select_language_title": "Выбраць мову",
+    "theme": {
+      "title": "Тэма",
+      "light": "Светлая",
+      "dark": "Цёмная",
+      "system": "Сістэмная"
+    },
+    "to_favorites_adverts_label": "Улюбёныя аб'явы",
+    "to_my_adverts_label": "Мае аб'явы",
+    "version": "Версія {version}"
+  },
+  "report": {
+    "ReportSheet": {
+      "description_label": "Апісанне",
+      "reasons": {
+        "abuse": "Абарона або разжыгванне ненавісці",
+        "inappropriate": "Неналежная паводзіны",
+        "other": "Іншае",
+        "spam": "Спам"
+      },
+      "submit": "Адправіць",
+      "success": "Жалоба адпраўлена",
+      "title": "Паведаміць пра парушэнне"
+    }
+  },
+  "users": {
+    "user_select_screen": {
+      "empty": "Пакуль няма карыстальнікаў",
+      "failure": "Памылка пры загрузцы карыстальнікаў"
+    }
+  }
+}

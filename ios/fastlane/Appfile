@@ -1,0 +1,5 @@
+app_identifier ENV["IOS_BUNDLE_ID"] || "chat.verto.app"
+team_id ENV["IOS_TEAM_ID"] || "VX89ZRZZPW"
+
+# Optional for local Apple ID auth
+# apple_id ENV["FASTLANE_APPLE_ID"]

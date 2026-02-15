@@ -1,0 +1,381 @@
+{
+  "auth": {
+    "SignInScreen": {
+      "email_label": "E-post",
+      "password_label": "Passord",
+      "forgot_password": "Glemte passord?",
+      "sign_in": "Logg inn",
+      "sign_up": "Registrer deg",
+      "sign_in_with_google": "Logg inn med Google",
+      "sign_in_with_apple": "Logg inn med Apple",
+      "login_error": {
+        "invalid_credentials": "Ugyldige påloggingsopplysninger",
+        "email_not_confirmed": "E-posten er ikke bekreftet"
+      },
+      "OAuthAcceptRegulationsSheet": {
+        "title": "Registrer deg for å fortsette",
+        "regulations(rich)": "Vennligst godta {terms(Vilkår for bruk)} og {policy(Personvernerklæring)}",
+        "accept": "Godta",
+        "cancel": "Avbryt",
+        "failed_get_regulations": "Kunne ikke hente regler."
+      }
+    },
+    "SignUpScreen": {
+      "title": "Registrer deg",
+      "first_name_label": "Fornavn",
+      "last_name_label": "Etternavn",
+      "email_label": "E-post",
+      "password_label": "Passord",
+      "repeat_password": "Gjenta passord",
+      "sign_up": "Registrer deg",
+      "password_not_equal": "Passordene stemmer ikke overens",
+      "regulations(rich)": "Jeg godtar {terms(vilkårene for bruk)} og {policy(personvernerklæringen)}",
+      "after_registration_toast": "✔️ Bekreftelsesepost sendt! Sjekk e-posten og bekreft adressen.",
+      "register_error": {
+        "incorrect_email": "Ugyldig e-post",
+        "incorrect_name": "Ugyldig navn",
+        "incorrect_password": "Passordet må være minst 8 tegn langt og inneholde både store og små bokstaver samt tall",
+        "email_already_used": "E-postadressen er allerede i bruk",
+        "create_error": "Feil ved oppretting av bruker",
+        "emailRateLimitExceeded": "E-postsendingen har overskredet grensen"
+      }
+    },
+    "reset_password": {
+      "CodeScreen": {
+        "title": "Tilbakestilling av passord",
+        "description": "En tilbakestillingskode har blitt sendt til din e-post {email:String}",
+        "submit": "Neste",
+        "field_label": "Tilbakestillingskode",
+        "field_error": "Ugyldig kode",
+        "check_error_description": "Kunne ikke verifisere tilbakestillingskoden"
+      },
+      "ForgotPasswordScreen": {
+        "title": "Tilbakestilling av passord",
+        "email_label": "E-post",
+        "send_reset_link": "Send tilbakestillingslink",
+        "check_error_description": "Kunne ikke sende kode for tilbakestilling av passord"
+      },
+      "NewPasswordScreen": {
+        "title": "Nytt passord",
+        "reset_submit": "Logg inn",
+        "edit_submit": "Endre",
+        "current_password": "Nåværende passord",
+        "new_password": "Nytt passord",
+        "repeat_new_password": "Gjenta nytt passord",
+        "password_label": "Passord",
+        "repeat_password": "Gjenta passord",
+        "failed_change_password": "Kunne ikke endre passord",
+        "failed_reset_password": "Kunne ikke tilbakestille passord",
+        "errors": {
+          "wrong_current_password": "Feil nåværende passord",
+          "same_password": "Nytt passord kan ikke være det samme som det nåværende"
+        }
+      }
+    }
+  },
+  "chats": {
+    "ChatPage": {
+      "SlangChatL10n": {
+        "and": "og",
+        "attachmentButtonAccessibilityLabel": "Send media",
+        "emptyChatPlaceholder": "Du har ingen meldinger ennå",
+        "fileButtonAccessibilityLabel": "Fil",
+        "inputPlaceholder": "Melding",
+        "isTyping": "skriver…",
+        "others": "andre",
+        "sendButtonAccessibilityLabel": "Send",
+        "unreadMessagesLabel": "Uleste meldinger"
+      },
+      "advert_chat": "Chat om annonsen",
+      "attachment_type_file": "Fil",
+      "attachment_type_image": "Bilde",
+      "failure": "Feil ved lasting av chat",
+      "no_messages_yet": "Ingen meldinger ennå",
+      "return_translation": "Gå tilbake til oversettelsen",
+      "show_original": "Vis original",
+      "tts_play_failed": "Kunne ikke spille av: {error:String}",
+      "tts_play_original": "Les opp originalen",
+      "tts_play_translation": "Les opp oversettelsen"
+    },
+    "ChatsPage": {
+      "ChatCard": {
+        "favorites_chat_name": "Favoritter",
+        "support_chat_name": "Support"
+      },
+      "NoItemsStub": {
+        "description": "Du har ingen chatter ennå",
+        "title": "Ingen chatter ennå"
+      },
+      "create_direct_chat": "Opprett chat med bruker",
+      "create_group_chat": "Opprett gruppechat",
+      "delete_action": "Slett",
+      "empty": "Ingen chatter ennå",
+      "failure": "Feil ved lasting av chatter",
+      "title": "Chatter"
+    },
+    "CreateDirectChatPage": {
+      "failure_create_chat": "Kunne ikke opprette chat",
+      "title": "Opprett chat"
+    },
+    "CreateLocalChatPage": {
+      "languages_section": "Språk",
+      "my_language_label": "Ditt språk",
+      "partner_language_label": "Samtalepartnerens språk",
+      "show_both_subtitle": "Vis begge tekstene for enkel verifisering",
+      "show_both_title": "Vis original og oversettelse",
+      "start_button": "Start lokal chat",
+      "swap_languages": "Bytt om språk",
+      "tips_item_1": "• Du og samtalepartneren snakker vekselvis på én enhet.",
+      "tips_item_2": "• Meldinger oversettes automatisk, kan vise original og oversettelse.",
+      "tips_item_3": "• Slå på TTS for å få oversettelsen lest høyt.",
+      "tips_title": "Slik fungerer lokal chat",
+      "title": "Ny lokal chat",
+      "title_hint": "For eksempel: Samtale med utleier",
+      "title_label": "Tittel (valgfritt)",
+      "translation_section": "Oversettelse og visning",
+      "tts_subtitle": "Les opp oversettelsen høyt når den vises",
+      "tts_title": "Les opp oversettelsen (TTS)"
+    },
+    "RecordHoldButton": {
+      "hold_to_record": "Hold\nfor å ta opp",
+      "semantics_label": "{label:String}: hold for å ta opp"
+    },
+    "SelectChatTypePage": {
+      "continue_button": "Fortsett",
+      "details": {
+        "direct": {
+          "can_do": "Automatisk oversettelse av innkommende og utgående meldinger, talebeskjeder, vedlegg.",
+          "for_whom": "For kommunikasjon med én person på forskjellige språk.",
+          "scenarios": "Forretningskorrespondanse, personlige samtaler, kundesupport."
+        },
+        "group": {
+          "can_do": "Automatisk oversettelse for alle deltakere, roller og rettigheter, festepunkter og reaksjoner.",
+          "for_whom": "For team, familier og samfunn med deltakere fra forskjellige land.",
+          "scenarios": "Prosjektchatter, fellesskap, organisatorisk korrespondanse."
+        },
+        "local": {
+          "can_do": "Dere legger igjen meldinger vekselvis på én telefon — de oversettes umiddelbart til samtalepartneren.",
+          "for_whom": "For turister og offline-samtaler på én enhet.",
+          "scenarios": "Kommunikasjon med taxisjåfører/utleiere, bestilling av mat, hjelp med navigasjon."
+        },
+        "learning": {
+          "can_do": "Lagre ord og setninger, se forskjellige betydninger og eksempler, øv i lesing/diktering.",
+          "for_whom": "For å lære språk på én enhet — som 'lokal chat', men med fokus på praksis.",
+          "scenarios": "Selvstudium på reise, forberedelse til møter, gjennomgang av korrespondanse, personlig ordliste."
+        }
+      },
+      "labels": {
+        "can_do": "Hva kan gjøres",
+        "for_whom": "For hvem",
+        "scenarios": "Scenarier"
+      },
+      "soon_tag": "Kommer snart",
+      "title": "Opprett chat",
+      "types": {
+        "direct": "Direkte (1-til-1)",
+        "group": "Gruppe",
+        "learning": "Læring",
+        "local": "Lokal chat"
+      }
+    }
+  },
+  "core": {
+    "DialogPresenter": {
+      "permission_text_location": "Plassering",
+      "permission_denied": {
+        "location": "få tilgang til plasseringen for å velge adresse",
+        "title": "Tilgang til {permission:String}",
+        "description": "For å bruke denne funksjonen kreves tilgang til {permission:String}. Du kan aktivere det i innstillingene på enheten din.",
+        "settings": "Til innstillinger",
+        "later": "Senere"
+      }
+    },
+    "dialog_action": {
+      "ok": "OK",
+      "login": "Logg inn",
+      "retry": "Prøv igjen",
+      "upgrade": "Oppgrader",
+      "back": "Tilbake",
+      "yes": "Ja",
+      "no": "Nei",
+      "cancel": "Avbryt"
+    },
+    "dialog_msg": {
+      "retry_or_contact_support": "Prøv igjen eller kontakt support på: support@verto.chat",
+      "server_error": "Det oppstod en feil på serveren. {retryOrContactSupport}",
+      "default_error": "Det oppstod en feil. {retryOrContactSupport}",
+      "connection_error": "Vennligst sjekk internettforbindelsen din og prøv igjen",
+      "authorization_required": "Påloggingsopplysningene er utdaterte. Du må logge inn på nytt",
+      "upgrade_required": "For korrekt funksjon, installer den nyeste versjonen av appen",
+      "insufficient_access_rights": "Handling ikke tilgjengelig. Dine rettigheter er begrenset"
+    },
+    "dialog_title": {
+      "error_title": "Feil",
+      "connection_error": "Ingen tilkobling",
+      "server_error": "Serverfeil",
+      "not_authorized": "Ikke autorisert",
+      "upgrade_required": "Versjonen er utdatert",
+      "insufficient_accessRights": "Utilstrekkelige rettigheter"
+    },
+    "field_empty": "Feltet kan ikke være tomt",
+    "incorrect_format": "Ugyldig format",
+    "photos": {
+      "GalleryScreen": {
+        "title": "Galleri"
+      }
+    },
+    "upload": {
+      "select_photo": {
+        "select_source_photo": {
+          "title": "Velg bilde",
+          "from": {
+            "camera": "Kamera",
+            "gallery": "Fra galleriet"
+          }
+        }
+      },
+      "AddPhotoButton": {
+        "add_photo": "Legg til"
+      }
+    },
+    "widgets": {
+      "LastPageErrorMessageView": {
+        "something_wrong_try_again": "Noe gikk galt, prøv igjen:"
+      },
+      "TryAgainButton": {
+        "something_wrong": "Noe gikk galt",
+        "try_again": "Prøv igjen"
+      },
+      "AttachDocuments": {
+        "title": "Legg ved dokumenter"
+      }
+    }
+  },
+  "feedback": {
+    "feedback_page": {
+      "title": "Tilbakemelding",
+      "type_label": "Type henvendelse",
+      "description_label": "Beskrivelse",
+      "description_hint": "Beskriv problemet eller ideen din nærmere",
+      "description_error": "Vennligst skriv inn teksten til henvendelsen",
+      "submit": "Send",
+      "success": "Henvendelsen er sendt",
+      "failed_send_feedback": "Kunne ikke sende tilbakemelding",
+      "types": {
+        "bug": "Rapporter en feil",
+        "feature": "Foreslå funksjonalitet",
+        "category": "Foreslå en ny annonsekategori",
+        "question": "Stille spørsmål",
+        "general": "Generelle kommentarer og ønsker"
+      }
+    }
+  },
+  "home": {
+    "chats_label": "Chatter",
+    "profile_label": "Profil",
+    "settings_label": "Innstillinger",
+    "main_label": "Hjem"
+  },
+  "in_app": {
+    "BuyProductsScreen": {
+      "buy_button": "Kjøp",
+      "title": "Velg vare",
+      "unavailable": "Ikke tilgjengelig"
+    }
+  },
+  "legal": {
+    "failed_get_regulations": "Kunne ikke hente regler.",
+    "LegalScreen": {
+      "title": "Juridisk informasjon",
+      "policy_label": "Personvernerklæring",
+      "terms_label": "Vilkår for bruk",
+      "gdpr_label": "GDPR Personvernerklæring"
+    }
+  },
+  "logger": {
+    "SessionScreen": {
+      "no_space_line_1": "Det er ikke nok plass på enheten.",
+      "no_space_line_2": "Vennligst frigjør plass og prøv igjen.",
+      "ok": "OK",
+      "title": "Sesjonsliste",
+      "unknown_error": "Ukjent feil."
+    }
+  },
+  "profile": {
+    "EditProfileScreen": {
+      "edit_password": "Endre passord",
+      "first_name_label": "Fornavn",
+      "last_name_label": "Etternavn",
+      "save_button_text": "Lagre",
+      "success_toast": "Ditt navn er oppdatert",
+      "title": "Rediger profil"
+    },
+    "ProfilePage": {
+      "create_support_chat": "Skriv til support",
+      "failed_create_support_chat": "Kunne ikke opprette supportchat",
+      "failed_loading_profile": "Kunne ikke laste brukerinfo",
+      "plan": {
+        "buy_credits": "Kjøp kreditter",
+        "credits_count": {
+          "one": "{n} kredit",
+          "few": "{n} krediter",
+          "other": "{n} kreditter"
+        },
+        "plan_name": "Plan: {planName:String}",
+        "upgrade": "Oppgrader plan"
+      }
+    },
+    "SafetyScreen": {
+      "delete_account_error": {
+        "requires_recent_login": "For å slette kontoen må du logge inn på nytt i appen"
+      },
+      "delete_account_label": "Slett konto",
+      "delete_confirm": {
+        "description": "Er du sikker på at du vil slette kontoen?",
+        "title": "Sletting av konto"
+      },
+      "edit_password": "Endre passord",
+      "title": "Sikkerhet"
+    },
+    "delete_account_label": "Slett konto",
+    "edit_avatar_title": "Rediger avatar",
+    "edit_profile_label": "Rediger profil",
+    "failed_update_avatar": "Kunne ikke oppdatere avatar",
+    "failed_upload_avatar": "Kunne ikke laste opp avatar",
+    "feedback_label": "Tilbakemelding",
+    "language_label": "Språk",
+    "legal_label": "Juridisk informasjon",
+    "logout_label": "Logg ut av kontoen",
+    "safety_label": "Sikkerhet",
+    "select_language_title": "Velg språk",
+    "theme": {
+      "title": "Tema",
+      "light": "Lys",
+      "dark": "Mørk",
+      "system": "System"
+    },
+    "to_favorites_adverts_label": "Favorittannonser",
+    "to_my_adverts_label": "Mine annonser",
+    "version": "Versjon {version}"
+  },
+  "report": {
+    "ReportSheet": {
+      "description_label": "Beskrivelse",
+      "reasons": {
+        "abuse": "Krenkelser eller hatprat",
+        "inappropriate": "Upassende oppførsel",
+        "other": "Annet",
+        "spam": "Spam"
+      },
+      "submit": "Send",
+      "success": "Klager sendt",
+      "title": "Rapporter brudd"
+    }
+  },
+  "users": {
+    "user_select_screen": {
+      "empty": "Ingen brukere ennå",
+      "failure": "Feil ved lasting av brukere"
+    }
+  }
+}

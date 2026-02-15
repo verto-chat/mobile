@@ -1,0 +1,381 @@
+{
+  "auth": {
+    "SignInScreen": {
+      "email_label": "Email",
+      "password_label": "Mật khẩu",
+      "forgot_password": "Quên mật khẩu?",
+      "sign_in": "Đăng nhập",
+      "sign_up": "Đăng ký",
+      "sign_in_with_google": "Đăng nhập bằng Google",
+      "sign_in_with_apple": "Đăng nhập bằng Apple",
+      "login_error": {
+        "invalid_credentials": "Thông tin đăng nhập không hợp lệ",
+        "email_not_confirmed": "Email chưa được xác nhận"
+      },
+      "OAuthAcceptRegulationsSheet": {
+        "title": "Để tiếp tục, hãy đăng ký",
+        "regulations(rich)": "Vui lòng chấp nhận {terms(Điều khoản sử dụng)} và {policy(Các chính sách bảo mật)}",
+        "accept": "Chấp nhận",
+        "cancel": "Hủy",
+        "failed_get_regulations": "Không thể lấy quy định."
+      }
+    },
+    "SignUpScreen": {
+      "title": "Đăng ký",
+      "first_name_label": "Tên",
+      "last_name_label": "Họ",
+      "email_label": "Email",
+      "password_label": "Mật khẩu",
+      "repeat_password": "Nhập lại mật khẩu",
+      "sign_up": "Đăng ký",
+      "password_not_equal": "Mật khẩu không khớp",
+      "regulations(rich)": "Tôi đồng ý với {terms(các điều khoản sử dụng)} và {policy(các chính sách bảo mật)}",
+      "after_registration_toast": "✔️ Email xác nhận đã được gửi! Vui lòng kiểm tra email và xác nhận địa chỉ.",
+      "register_error": {
+        "incorrect_email": "Email không hợp lệ",
+        "incorrect_name": "Tên không hợp lệ",
+        "incorrect_password": "Mật khẩu phải có ít nhất 8 ký tự và bao gồm chữ cái hoa, chữ cái thường và số",
+        "email_already_used": "Địa chỉ email đã được sử dụng",
+        "create_error": "Lỗi khi tạo người dùng",
+        "emailRateLimitExceeded": "Đã vượt quá giới hạn gửi email"
+      }
+    },
+    "reset_password": {
+      "CodeScreen": {
+        "title": "Khôi phục mật khẩu",
+        "description": "Mã khôi phục đã được gửi đến email của bạn {email:String}",
+        "submit": "Tiếp theo",
+        "field_label": "Mã khôi phục",
+        "field_error": "Mã không hợp lệ",
+        "check_error_description": "Không thể xác minh mã khôi phục"
+      },
+      "ForgotPasswordScreen": {
+        "title": "Khôi phục mật khẩu",
+        "email_label": "Email",
+        "send_reset_link": "Gửi liên kết khôi phục",
+        "check_error_description": "Không thể gửi mã khôi phục mật khẩu"
+      },
+      "NewPasswordScreen": {
+        "title": "Mật khẩu mới",
+        "reset_submit": "Đăng nhập",
+        "edit_submit": "Thay đổi",
+        "current_password": "Mật khẩu hiện tại",
+        "new_password": "Mật khẩu mới",
+        "repeat_new_password": "Nhập lại mật khẩu mới",
+        "password_label": "Mật khẩu",
+        "repeat_password": "Nhập lại mật khẩu",
+        "failed_change_password": "Không thể thay đổi mật khẩu",
+        "failed_reset_password": "Không thể đặt lại mật khẩu",
+        "errors": {
+          "wrong_current_password": "Mật khẩu hiện tại không đúng",
+          "same_password": "Mật khẩu mới không được giống với mật khẩu hiện tại"
+        }
+      }
+    }
+  },
+  "chats": {
+    "ChatPage": {
+      "SlangChatL10n": {
+        "and": "và",
+        "attachmentButtonAccessibilityLabel": "Gửi phương tiện",
+        "emptyChatPlaceholder": "Hiện tại bạn chưa có tin nhắn nào",
+        "fileButtonAccessibilityLabel": "Tệp",
+        "inputPlaceholder": "Tin nhắn",
+        "isTyping": "đang gõ…",
+        "others": "người khác",
+        "sendButtonAccessibilityLabel": "Gửi",
+        "unreadMessagesLabel": "Tin nhắn chưa đọc"
+      },
+      "advert_chat": "Chat theo quảng cáo",
+      "attachment_type_file": "Tệp",
+      "attachment_type_image": "Hình ảnh",
+      "failure": "Lỗi khi tải chat",
+      "no_messages_yet": "Chưa có tin nhắn nào",
+      "return_translation": "Trả lại bản dịch",
+      "show_original": "Hiện bản gốc",
+      "tts_play_failed": "Không thể phát: {error:String}",
+      "tts_play_original": "Đọc bản gốc",
+      "tts_play_translation": "Đọc bản dịch"
+    },
+    "ChatsPage": {
+      "ChatCard": {
+        "favorites_chat_name": "Yêu thích",
+        "support_chat_name": "Hỗ trợ"
+      },
+      "NoItemsStub": {
+        "description": "Hiện tại bạn chưa có chat nào",
+        "title": "Chưa có chat"
+      },
+      "create_direct_chat": "Tạo chat với người dùng",
+      "create_group_chat": "Tạo chat nhóm",
+      "delete_action": "Xóa",
+      "empty": "Chưa có chat nào",
+      "failure": "Lỗi khi tải chat",
+      "title": "Chat"
+    },
+    "CreateDirectChatPage": {
+      "failure_create_chat": "Không thể tạo chat",
+      "title": "Tạo chat"
+    },
+    "CreateLocalChatPage": {
+      "languages_section": "Ngôn ngữ",
+      "my_language_label": "Ngôn ngữ của bạn",
+      "partner_language_label": "Ngôn ngữ của đối tác",
+      "show_both_subtitle": "Hiển thị cả hai văn bản để tiện kiểm tra",
+      "show_both_title": "Hiển thị bản gốc và bản dịch",
+      "start_button": "Bắt đầu chat địa phương",
+      "swap_languages": "Đổi chỗ",
+      "tips_item_1": "• Bạn và đối tác nói lần lượt trên một thiết bị.",
+      "tips_item_2": "• Tin nhắn được dịch tự động, có thể hiển thị bản gốc và bản dịch.",
+      "tips_item_3": "• Bật TTS để bản dịch được đọc to.",
+      "tips_title": "Cách hoạt động của chat địa phương",
+      "title": "Chat địa phương mới",
+      "title_hint": "Ví dụ: Cuộc trò chuyện với chủ nhà",
+      "title_label": "Tên (không bắt buộc)",
+      "translation_section": "Dịch và hiển thị",
+      "tts_subtitle": "Đọc bản dịch to khi hiển thị",
+      "tts_title": "Đọc bản dịch (TTS)"
+    },
+    "RecordHoldButton": {
+      "hold_to_record": "Giữ\nđể ghi âm",
+      "semantics_label": "{label:String}: giữ để ghi âm"
+    },
+    "SelectChatTypePage": {
+      "continue_button": "Tiếp tục",
+      "details": {
+        "direct": {
+          "can_do": "Dịch tự động tin nhắn đến và đi, tin nhắn thoại, tệp đính kèm.",
+          "for_whom": "Để giao tiếp với một người bằng nhiều ngôn ngữ.",
+          "scenarios": "Thư từ kinh doanh, cuộc trò chuyện cá nhân, hỗ trợ khách hàng."
+        },
+        "group": {
+          "can_do": "Dịch tự động cho tất cả người tham gia, vai trò và quyền, ghim và phản ứng.",
+          "for_whom": "Dành cho nhóm, gia đình và cộng đồng với người tham gia từ nhiều quốc gia.",
+          "scenarios": "Chat dự án, cộng đồng, thư từ tổ chức."
+        },
+        "local": {
+          "can_do": "Bạn lần lượt để lại tin nhắn trên một điện thoại — chúng sẽ ngay lập tức được dịch cho đối tác.",
+          "for_whom": "Dành cho khách du lịch và đàm phán ngoại tuyến trên một thiết bị.",
+          "scenarios": "Giao tiếp với tài xế taxi/chủ nhà, đặt đồ ăn, giúp đỡ với định vị."
+        },
+        "learning": {
+          "can_do": "Lưu từ và cụm từ, xem nhiều nghĩa và ví dụ, luyện tập trong các chế độ đọc/đánh vần.",
+          "for_whom": "Để học ngôn ngữ trên một thiết bị — giống như \"chat địa phương\", nhưng tập trung vào thực hành.",
+          "scenarios": "Tự học trong chuyến đi, chuẩn bị cho cuộc gặp, phân tích thư từ, từ điển cá nhân."
+        }
+      },
+      "labels": {
+        "can_do": "Những gì có thể",
+        "for_whom": "Dành cho ai",
+        "scenarios": "Kịch bản"
+      },
+      "soon_tag": "Sắp có",
+      "title": "Tạo chat",
+      "types": {
+        "direct": "Trực tiếp (1‑1)",
+        "group": "Nhóm",
+        "learning": "Học tập",
+        "local": "Chat địa phương"
+      }
+    }
+  },
+  "core": {
+    "DialogPresenter": {
+      "permission_text_location": "Vị trí",
+      "permission_denied": {
+        "location": "nhận vị trí để chọn địa chỉ",
+        "title": "Quyền truy cập {permission:String}",
+        "description": "Để sử dụng tính năng này, cần quyền truy cập vào {permission:String}. Bạn có thể bật nó trong cài đặt thiết bị của bạn.",
+        "settings": "Vào cài đặt",
+        "later": "Sau"
+      }
+    },
+    "dialog_action": {
+      "ok": "OK",
+      "login": "Đăng nhập",
+      "retry": "Thử lại",
+      "upgrade": "Cập nhật",
+      "back": "Quay lại",
+      "yes": "Có",
+      "no": "Không",
+      "cancel": "Hủy"
+    },
+    "dialog_msg": {
+      "retry_or_contact_support": "Hãy thử lại hoặc liên hệ với bộ phận hỗ trợ tại: support@verto.chat",
+      "server_error": "Đã xảy ra lỗi trên máy chủ. {retryOrContactSupport}",
+      "default_error": "Đã xảy ra lỗi. {retryOrContactSupport}",
+      "connection_error": "Vui lòng kiểm tra kết nối internet của bạn và thử lại",
+      "authorization_required": "Thông tin xác thực đã lỗi thời. Cần đăng nhập lại",
+      "upgrade_required": "Để hoạt động chính xác, hãy cài đặt phiên bản mới của ứng dụng",
+      "insufficient_access_rights": "Hành động không khả dụng. Quyền của bạn bị hạn chế"
+    },
+    "dialog_title": {
+      "error_title": "Lỗi",
+      "connection_error": "Không có kết nối",
+      "server_error": "Lỗi trên máy chủ",
+      "not_authorized": "Chưa được xác thực",
+      "upgrade_required": "Phiên bản đã lỗi thời",
+      "insufficient_accessRights": "Quyền truy cập không đủ"
+    },
+    "field_empty": "Trường không thể để trống",
+    "incorrect_format": "Định dạng không hợp lệ",
+    "photos": {
+      "GalleryScreen": {
+        "title": "Thư viện"
+      }
+    },
+    "upload": {
+      "select_photo": {
+        "select_source_photo": {
+          "title": "Chọn hình ảnh",
+          "from": {
+            "camera": "Máy ảnh",
+            "gallery": "Từ thư viện"
+          }
+        }
+      },
+      "AddPhotoButton": {
+        "add_photo": "Thêm ảnh"
+      }
+    },
+    "widgets": {
+      "LastPageErrorMessageView": {
+        "something_wrong_try_again": "Đã xảy ra sự cố, hãy thử lại:"
+      },
+      "TryAgainButton": {
+        "something_wrong": "Đã xảy ra sự cố",
+        "try_again": "Thử lại"
+      },
+      "AttachDocuments": {
+        "title": "Thêm tài liệu"
+      }
+    }
+  },
+  "feedback": {
+    "feedback_page": {
+      "title": "Phản hồi",
+      "type_label": "Loại phản hồi",
+      "description_label": "Mô tả",
+      "description_hint": "Vui lòng mô tả chi tiết vấn đề hoặc ý tưởng của bạn",
+      "description_error": "Vui lòng viết nội dung phản hồi",
+      "submit": "Gửi",
+      "success": "Phản hồi đã được gửi",
+      "failed_send_feedback": "Không thể gửi phản hồi",
+      "types": {
+        "bug": "Báo cáo lỗi",
+        "feature": "Đề xuất tính năng",
+        "category": "Đề xuất danh mục quảng cáo mới",
+        "question": "Đặt câu hỏi",
+        "general": "Nhận xét và đề xuất chung"
+      }
+    }
+  },
+  "home": {
+    "chats_label": "Chat",
+    "profile_label": "Hồ sơ",
+    "settings_label": "Cài đặt",
+    "main_label": "Trang chính"
+  },
+  "in_app": {
+    "BuyProductsScreen": {
+      "buy_button": "Mua",
+      "title": "Chọn sản phẩm",
+      "unavailable": "Không khả dụng"
+    }
+  },
+  "legal": {
+    "failed_get_regulations": "Không thể lấy quy định.",
+    "LegalScreen": {
+      "title": "Thông tin pháp lý",
+      "policy_label": "Chính sách bảo mật",
+      "terms_label": "Điều khoản sử dụng",
+      "gdpr_label": "Chính sách bảo mật GDPR"
+    }
+  },
+  "logger": {
+    "SessionScreen": {
+      "no_space_line_1": "Thiết bị không đủ bộ nhớ.",
+      "no_space_line_2": "Vui lòng giải phóng không gian và thử lại.",
+      "ok": "OK",
+      "title": "Danh sách phiên",
+      "unknown_error": "Lỗi không xác định."
+    }
+  },
+  "profile": {
+    "EditProfileScreen": {
+      "edit_password": "Đổi mật khẩu",
+      "first_name_label": "Tên",
+      "last_name_label": "Họ",
+      "save_button_text": "Lưu",
+      "success_toast": "Tên của bạn đã được cập nhật thành công",
+      "title": "Chỉnh sửa hồ sơ"
+    },
+    "ProfilePage": {
+      "create_support_chat": "Nhắn tin hỗ trợ",
+      "failed_create_support_chat": "Không thể tạo chat hỗ trợ",
+      "failed_loading_profile": "Không thể tải thông tin người dùng",
+      "plan": {
+        "buy_credits": "Mua tín dụng",
+        "credits_count": {
+          "one": "{n} tín dụng",
+          "few": "{n} tín dụng",
+          "other": "{n} tín dụng"
+        },
+        "plan_name": "Kế hoạch: {planName:String}",
+        "upgrade": "Nâng cấp kế hoạch"
+      }
+    },
+    "SafetyScreen": {
+      "delete_account_error": {
+        "requires_recent_login": "Cần đăng nhập lại để xóa tài khoản"
+      },
+      "delete_account_label": "Xóa tài khoản",
+      "delete_confirm": {
+        "description": "Bạn có chắc chắn muốn xóa tài khoản không?",
+        "title": "Xóa tài khoản"
+      },
+      "edit_password": "Thay đổi mật khẩu",
+      "title": "Bảo mật"
+    },
+    "delete_account_label": "Xóa tài khoản",
+    "edit_avatar_title": "Chỉnh sửa ảnh đại diện",
+    "edit_profile_label": "Chỉnh sửa hồ sơ",
+    "failed_update_avatar": "Không thể cập nhật ảnh đại diện",
+    "failed_upload_avatar": "Không thể tải lên ảnh đại diện",
+    "feedback_label": "Phản hồi",
+    "language_label": "Ngôn ngữ",
+    "legal_label": "Thông tin pháp lý",
+    "logout_label": "Đăng xuất",
+    "safety_label": "Bảo mật",
+    "select_language_title": "Chọn ngôn ngữ",
+    "theme": {
+      "title": "Chủ đề",
+      "light": "Sáng",
+      "dark": "Tối",
+      "system": "Hệ thống"
+    },
+    "to_favorites_adverts_label": "Quảng cáo yêu thích",
+    "to_my_adverts_label": "Quảng cáo của tôi",
+    "version": "Phiên bản {version}"
+  },
+  "report": {
+    "ReportSheet": {
+      "description_label": "Mô tả",
+      "reasons": {
+        "abuse": "Lời lẽ xúc phạm hoặc kích động thù ghét",
+        "inappropriate": "Hành vi không phù hợp",
+        "other": "Khác",
+        "spam": "Spam"
+      },
+      "submit": "Gửi",
+      "success": "Khiếu nại đã được gửi",
+      "title": "Báo cáo vi phạm"
+    }
+  },
+  "users": {
+    "user_select_screen": {
+      "empty": "Hiện tại chưa có người dùng",
+      "failure": "Lỗi khi tải người dùng"
+    }
+  }
+}

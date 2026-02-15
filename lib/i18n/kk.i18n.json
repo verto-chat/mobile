@@ -1,0 +1,381 @@
+{
+  "auth": {
+    "SignInScreen": {
+      "email_label": "Электрондық пошта",
+      "password_label": "Құпия сөз",
+      "forgot_password": "Құпия сөзді ұмыттыңыз ба?",
+      "sign_in": "Кіру",
+      "sign_up": "Тіркелу",
+      "sign_in_with_google": "Google арқылы кіру",
+      "sign_in_with_apple": "Apple арқылы кіру",
+      "login_error": {
+        "invalid_credentials": "Қате тіркелгі деректері",
+        "email_not_confirmed": "Электрондық пошта расталмаған"
+      },
+      "OAuthAcceptRegulationsSheet": {
+        "title": "Жалғастыру үшін тіркеліңіз",
+        "regulations(rich)": "Өтінеміз, {terms(Қолдану шарттары)} және {policy(Жеке деректерді қорғау саясаты)} қабылдаңыз",
+        "accept": "Қабылдау",
+        "cancel": "Бас тарту",
+        "failed_get_regulations": "Ережелерді алу мүмкін болмады."
+      }
+    },
+    "SignUpScreen": {
+      "title": "Тіркелу",
+      "first_name_label": "Аты",
+      "last_name_label": "Тегі",
+      "email_label": "Электрондық пошта",
+      "password_label": "Құпия сөз",
+      "repeat_password": "Құпия сөзді қайталаңыз",
+      "sign_up": "Тіркелу",
+      "password_not_equal": "Құпия сөздер сәйкес келмейді",
+      "regulations(rich)": "Мен {terms(қолдану шарттарымен)} және {policy(жеке деректерді қорғау саясаты)} келісемін",
+      "after_registration_toast": "✔️ Растау хаты жіберілді! Электрондық поштаңызды тексеріңіз және мекенжайыңызды растаңыз.",
+      "register_error": {
+        "incorrect_email": "Қате электрондық пошта",
+        "incorrect_name": "Қате аты",
+        "incorrect_password": "Құпия сөз 8 символдан кем болмауы керек және үлкен және кіші әріптер мен сандарды қамтуы тиіс",
+        "email_already_used": "Электрондық пошта мекенжайы бұрыннан қолданыста",
+        "create_error": "Пайдаланушыны жасау кезінде қате",
+        "emailRateLimitExceeded": "Электрондық поштаға хат жіберу лимиті асырылды"
+      }
+    },
+    "reset_password": {
+      "CodeScreen": {
+        "title": "Құпия сөзді қалпына келтіру",
+        "description": "Сіздің электрондық поштаңызға {email:String} қалпына келтіру коды жіберілді",
+        "submit": "Келесі",
+        "field_label": "Қалпына келтіру коды",
+        "field_error": "Қате код",
+        "check_error_description": "Қалпына келтіру кодын тексеру мүмкін болмады"
+      },
+      "ForgotPasswordScreen": {
+        "title": "Құпия сөзді қалпына келтіру",
+        "email_label": "Электрондық пошта",
+        "send_reset_link": "Сілтемені жіберу",
+        "check_error_description": "Құпия сөзді қалпына келтіру коды жіберу мүмкін болмады"
+      },
+      "NewPasswordScreen": {
+        "title": "Жаңа құпия сөз",
+        "reset_submit": "Кіру",
+        "edit_submit": "Өзгерту",
+        "current_password": "Ағымдағы құпия сөз",
+        "new_password": "Жаңа құпия сөз",
+        "repeat_new_password": "Жаңа құпия сөзді қайталаңыз",
+        "password_label": "Құпия сөз",
+        "repeat_password": "Құпия сөзді қайталаңыз",
+        "failed_change_password": "Құпия сөзді өзгерту мүмкін болмады",
+        "failed_reset_password": "Құпия сөзді қалпына келтіру мүмкін болмады",
+        "errors": {
+          "wrong_current_password": "Ағымдағы құпия сөз қате",
+          "same_password": "Жаңа құпия сөз ағымдағы құпия сөзбен сәйкес келмеуі тиіс"
+        }
+      }
+    }
+  },
+  "chats": {
+    "ChatPage": {
+      "SlangChatL10n": {
+        "and": "және",
+        "attachmentButtonAccessibilityLabel": "Медиа жіберу",
+        "emptyChatPlaceholder": "Сізде әзірге хабарламалар жоқ",
+        "fileButtonAccessibilityLabel": "Файл",
+        "inputPlaceholder": "Хабарлама",
+        "isTyping": "жазып жатыр…",
+        "others": "басқалар",
+        "sendButtonAccessibilityLabel": "Жіберу",
+        "unreadMessagesLabel": "Оқылмаған хабарламалар"
+      },
+      "advert_chat": "Жарнама чаты",
+      "attachment_type_file": "Файл",
+      "attachment_type_image": "Сурет",
+      "failure": "Чатты жүктеу кезінде қате",
+      "no_messages_yet": "Әзірге хабарламалар жоқ",
+      "return_translation": "Аударманы қайтару",
+      "show_original": "Нұсқасын көрсету",
+      "tts_play_failed": "Ойнату мүмкін болмады: {error:String}",
+      "tts_play_original": "Нұсқасын дауыстап оқу",
+      "tts_play_translation": "Аударманы дауыстап оқу"
+    },
+    "ChatsPage": {
+      "ChatCard": {
+        "favorites_chat_name": "Таңдаулылар",
+        "support_chat_name": "Қолдау"
+      },
+      "NoItemsStub": {
+        "description": "Сізде әзірге чаттар жоқ",
+        "title": "Чаттар жоқ"
+      },
+      "create_direct_chat": "Пайдаланушымен чат жасау",
+      "create_group_chat": "Топтық чат жасау",
+      "delete_action": "Жою",
+      "empty": "Чаттар жоқ",
+      "failure": "Чаттарды жүктеу кезінде қате",
+      "title": "Чаттар"
+    },
+    "CreateDirectChatPage": {
+      "failure_create_chat": "Чат жасау мүмкін болмады",
+      "title": "Чат жасау"
+    },
+    "CreateLocalChatPage": {
+      "languages_section": "Тілдер",
+      "my_language_label": "Сіздің тіліңіз",
+      "partner_language_label": "Серіктесіңіздің тілі",
+      "show_both_subtitle": "Тексеруді жеңілдету үшін екі мәтінді көрсету",
+      "show_both_title": "Нұсқа мен аударманы көрсету",
+      "start_button": "Локалды чат бастау",
+      "swap_languages": "Тілдерді ауыстыру",
+      "tips_item_1": "• Сіз бен серіктесіңіз бір құрылғыда кезекпен сөйлесесіз.",
+      "tips_item_2": "• Хабарламалар автоматты түрде аударылады, нұсқасы мен аудармасын көрсетуге болады.",
+      "tips_item_3": "• Аударманы дауыстап оқу үшін TTS-ті қосыңыз.",
+      "tips_title": "Локалды чат қалай жұмыс істейді",
+      "title": "Жаңа локалды чат",
+      "title_hint": "Мысалы: Пәтер иесімен әңгіме",
+      "title_label": "Атауы (міндетті емес)",
+      "translation_section": "Аударма және көрсету",
+      "tts_subtitle": "Көрсету кезінде аударманы дауыстап оқу",
+      "tts_title": "Аударманы дауыстап оқу (TTS)"
+    },
+    "RecordHoldButton": {
+      "hold_to_record": "Басып тұрып\nжазу",
+      "semantics_label": "{label:String}: басып тұрып жазу"
+    },
+    "SelectChatTypePage": {
+      "continue_button": "Жалғастыру",
+      "details": {
+        "direct": {
+          "can_do": "Кіріс және шығыс автоматты аударма, дауыстық хабарламалар, тіркемелер.",
+          "for_whom": "Әртүрлі тілдерде бір адаммен сөйлесу үшін.",
+          "scenarios": "Бизнес хат алмасу, жеке әңгімелер, клиенттермен қолдау."
+        },
+        "group": {
+          "can_do": "Барлық қатысушылар үшін автоматты аударма, рөлдер мен құқықтар, пиндер мен реакциялар.",
+          "for_whom": "Әртүрлі елдерден қатысушылармен командалар, отбасылар және қауымдастықтар үшін.",
+          "scenarios": "Жоба чаттары, қауымдастық, ұйымдастыру хат алмасу."
+        },
+        "local": {
+          "can_do": "Сіз бір телефонда кезекпен хабарламалар қалдырасыз — олар дереу серіктесіңізге аударылады.",
+          "for_whom": "Саяхатшылар мен офлайн келіссөздер үшін бір құрылғыда.",
+          "scenarios": "Таксистпен/жалға берушімен сөйлесу, тамақ тапсырыс беру, навигацияға көмектесу."
+        },
+        "learning": {
+          "can_do": "Сөздер мен фразаларды сақтаңыз, әртүрлі мағыналар мен мысалдарды қараңыз, оқу/диктовка режимдерінде жаттығыңыз.",
+          "for_whom": "Бір құрылғыда тілдерді үйрену үшін — «локалды чат» сияқты, бірақ тәжірибеге баса назар аударумен.",
+          "scenarios": "Саяхатта өзін-өзі оқу, кездесуге дайындық, хат алмасуды талдау, жеке сөздік."
+        }
+      },
+      "labels": {
+        "can_do": "Не істей аласыз",
+        "for_whom": "Кім үшін",
+        "scenarios": "Сценарийлер"
+      },
+      "soon_tag": "Жақында",
+      "title": "Чат жасау",
+      "types": {
+        "direct": "Тікелей (1-1)",
+        "group": "Топтық",
+        "learning": "Оқу",
+        "local": "Локалды чат"
+      }
+    }
+  },
+  "core": {
+    "DialogPresenter": {
+      "permission_text_location": "Орналасқан жер",
+      "permission_denied": {
+        "location": "мекенжайды таңдау үшін орналасқан жерді алу",
+        "title": "{permission:String} рұқсаты",
+        "description": "Бұл функцияны пайдалану үшін {permission:String} рұқсатын алу қажет. Сіз оны құрылғыңыздың параметрлерінде қосуға болады.",
+        "settings": "Параметрлерге",
+        "later": "Кейін"
+      }
+    },
+    "dialog_action": {
+      "ok": "ОК",
+      "login": "Кіру",
+      "retry": "Қайтадан көріңіз",
+      "upgrade": "Жаңарту",
+      "back": "Артқа",
+      "yes": "Иә",
+      "no": "Жоқ",
+      "cancel": "Бас тарту"
+    },
+    "dialog_msg": {
+      "retry_or_contact_support": "Қайтадан көріңіз немесе қолдау қызметіне хабарласыңыз: support@verto.chat",
+      "server_error": "Серверде қате орын алды. {retryOrContactSupport}",
+      "default_error": "Қате орын алды. {retryOrContactSupport}",
+      "connection_error": "Интернет байланысыңызды тексеріңіз және қайтадан көріңіз",
+      "authorization_required": "Авторизация деректері ескірген. Қайта кіру қажет",
+      "upgrade_required": "Дұрыс жұмыс істеу үшін жаңа нұсқасын орнатыңыз",
+      "insufficient_access_rights": "Әрекет қолжетімсіз. Сіздің құқықтарыңыз шектеулі"
+    },
+    "dialog_title": {
+      "error_title": "Қате",
+      "connection_error": "Байланыс жоқ",
+      "server_error": "Серверде қате",
+      "not_authorized": "Авторизацияланбаған",
+      "upgrade_required": "Нұсқа ескірген",
+      "insufficient_accessRights": "Құқықтар жеткіліксіз"
+    },
+    "field_empty": "Өріс бос болмауы тиіс",
+    "incorrect_format": "Қате формат",
+    "photos": {
+      "GalleryScreen": {
+        "title": "Галерея"
+      }
+    },
+    "upload": {
+      "select_photo": {
+        "select_source_photo": {
+          "title": "Суретті таңдау",
+          "from": {
+            "camera": "Камерадан",
+            "gallery": "Галереядан"
+          }
+        }
+      },
+      "AddPhotoButton": {
+        "add_photo": "Сурет қосу"
+      }
+    },
+    "widgets": {
+      "LastPageErrorMessageView": {
+        "something_wrong_try_again": "Бір нәрсе дұрыс емес, қайтадан көріңіз:"
+      },
+      "TryAgainButton": {
+        "something_wrong": "Бір нәрсе дұрыс емес",
+        "try_again": "Қайтадан көріңіз"
+      },
+      "AttachDocuments": {
+        "title": "Құжаттарды қосу"
+      }
+    }
+  },
+  "feedback": {
+    "feedback_page": {
+      "title": "Кері байланыс",
+      "type_label": "Хабарлама түрі",
+      "description_label": "Сипаттама",
+      "description_hint": "Мәселеңізді немесе идеяңызды толығырақ сипаттаңыз",
+      "description_error": "Хабарлама мәтінін жазыңыз",
+      "submit": "Жіберу",
+      "success": "Хабарлама жіберілді",
+      "failed_send_feedback": "Кері байланысты жіберу мүмкін болмады",
+      "types": {
+        "bug": "Қате туралы хабарлау",
+        "feature": "Функция ұсыну",
+        "category": "Жаңа жарнама санатын ұсыну",
+        "question": "Сұрақ қою",
+        "general": "Жалпы ескертпелер мен ұсыныстар"
+      }
+    }
+  },
+  "home": {
+    "chats_label": "Чаттар",
+    "profile_label": "Профиль",
+    "settings_label": "Параметрлер",
+    "main_label": "Басты"
+  },
+  "in_app": {
+    "BuyProductsScreen": {
+      "buy_button": "Сатып алу",
+      "title": "Тауарды таңдаңыз",
+      "unavailable": "Қол жетімсіз"
+    }
+  },
+  "legal": {
+    "failed_get_regulations": "Ережелерді алу мүмкін болмады.",
+    "LegalScreen": {
+      "title": "Заңдық ақпарат",
+      "policy_label": "Жеке деректерді қорғау саясаты",
+      "terms_label": "Қолдану шарттары",
+      "gdpr_label": "GDPR жеке деректерді қорғау саясаты"
+    }
+  },
+  "logger": {
+    "SessionScreen": {
+      "no_space_line_1": "Құрылғыда жеткілікті орын жоқ.",
+      "no_space_line_2": "Орынды босатыңыз және қайтадан көріңіз.",
+      "ok": "ОК",
+      "title": "Сессиялар тізімі",
+      "unknown_error": "Белгісіз қате."
+    }
+  },
+  "profile": {
+    "EditProfileScreen": {
+      "edit_password": "Құпия сөзді өзгерту",
+      "first_name_label": "Аты",
+      "last_name_label": "Тегі",
+      "save_button_text": "Сақтау",
+      "success_toast": "Сіздің атыңыз сәтті жаңартылды",
+      "title": "Профильді өңдеу"
+    },
+    "ProfilePage": {
+      "create_support_chat": "Қолдау чатына жазу",
+      "failed_create_support_chat": "Қолдау чатын жасау мүмкін болмады",
+      "failed_loading_profile": "Пайдаланушы туралы ақпаратты жүктеу мүмкін болмады",
+      "plan": {
+        "buy_credits": "Кредит сатып алу",
+        "credits_count": {
+          "one": "{n} кредит",
+          "few": "{n} кредита",
+          "other": "{n} кредитов"
+        },
+        "plan_name": "Жоспар: {planName:String}",
+        "upgrade": "Жоспарды жақсарту"
+      }
+    },
+    "SafetyScreen": {
+      "delete_account_error": {
+        "requires_recent_login": "Аккаунтты жою үшін қосымшаға қайта кіру қажет"
+      },
+      "delete_account_label": "Аккаунтты жою",
+      "delete_confirm": {
+        "description": "Сіз аккаунтты жойғыңыз келе ме?",
+        "title": "Аккаунтты жою"
+      },
+      "edit_password": "Құпия сөзді өзгерту",
+      "title": "Қауіпсіздік"
+    },
+    "delete_account_label": "Аккаунтты жою",
+    "edit_avatar_title": "Аватарды өңдеу",
+    "edit_profile_label": "Профильді өңдеу",
+    "failed_update_avatar": "Аватарды жаңарту мүмкін болмады",
+    "failed_upload_avatar": "Аватарды жүктеу мүмкін болмады",
+    "feedback_label": "Кері байланыс",
+    "language_label": "Тіл",
+    "legal_label": "Заңдық ақпарат",
+    "logout_label": "Аккаунттан шығу",
+    "safety_label": "Қауіпсіздік",
+    "select_language_title": "Тілді таңдау",
+    "theme": {
+      "title": "Тема",
+      "light": "Жарық",
+      "dark": "Қараңғы",
+      "system": "Жүйелік"
+    },
+    "to_favorites_adverts_label": "Таңдаулы жарнамалар",
+    "to_my_adverts_label": "Менің жарнамаларым",
+    "version": "Нұсқа {version}"
+  },
+  "report": {
+    "ReportSheet": {
+      "description_label": "Сипаттама",
+      "reasons": {
+        "abuse": "Жәбірлеу немесе ненависть қоздыру",
+        "inappropriate": "Тиімсіз мінез-құлық",
+        "other": "Басқа",
+        "spam": "Спам"
+      },
+      "submit": "Жіберу",
+      "success": "Шағым жіберілді",
+      "title": "Бұзушылық туралы хабарлау"
+    }
+  },
+  "users": {
+    "user_select_screen": {
+      "empty": "Пока нет пользователей",
+      "failure": "Пайдаланушыларды жүктеу кезінде қате"
+    }
+  }
+}

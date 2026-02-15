@@ -1,11 +1,13 @@
 import 'dart:io';
 
+import 'package:flutter/foundation.dart';
+import 'package:openapi/openapi.dart';
+
 import '../../../../../common/common.dart';
 import '../../../../core.dart';
-import '../models/models.dart';
 
 class TokenRepository implements ITokenRepository {
-  final TokenApi _deviceTokenApi;
+  final DeviceApi _deviceTokenApi;
   final DeviceIdProvider _deviceIdProvider;
   final SafeDio _safeDio;
 
@@ -17,7 +19,7 @@ class TokenRepository implements ITokenRepository {
 
     if (request == null) return Error(errorData: const DomainErrorType.errorDefaultType());
 
-    final apiResult = await _safeDio.execute(() => _deviceTokenApi.actualize(request));
+    final apiResult = await _safeDio.execute(() => _deviceTokenApi.actualizeToken(deviceTokenRequestDto: request));
 
     return switch (apiResult) {
       ApiSuccess() => Success(data: null),
@@ -27,7 +29,7 @@ class TokenRepository implements ITokenRepository {
 
   @override
   Future<EmptyDomainResult> archive({required String token}) async {
-    final apiResult = await _safeDio.execute(() => _deviceTokenApi.archive(token));
+    final apiResult = await _safeDio.execute(() => _deviceTokenApi.archiveToken(fcmToken: token));
 
     return switch (apiResult) {
       ApiSuccess() => Success(data: null),
@@ -35,7 +37,7 @@ class TokenRepository implements ITokenRepository {
     };
   }
 
-  DeviceTokenRequest? _createDeviceTokenRequest(String token) {
+  DeviceTokenRequestDto? _createDeviceTokenRequest(String token) {
     String? deviceId = _deviceIdProvider.deviceId;
     PlatformDto? platform;
 
@@ -49,6 +51,6 @@ class TokenRepository implements ITokenRepository {
 
     if (deviceId == null || platform == null) return null;
 
-    return DeviceTokenRequest(fcmToken: token, platform: platform, deviceId: deviceId);
+    return DeviceTokenRequestDto(fcmToken: token, platform: platform, isProduction: kReleaseMode, deviceId: deviceId);
   }
 }

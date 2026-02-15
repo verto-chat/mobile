@@ -1,11 +1,8 @@
-﻿import 'dart:io';
-
-import 'package:auto_route/auto_route.dart';
+﻿import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../../../../features/in_app/presentation/managers/select_subscription_bloc.dart';
-import '../../../../../i18n/translations.g.dart';
 import '../../../../core/core.dart';
 import '../../../features.dart';
 
@@ -15,59 +12,80 @@ class SelectSubscriptionScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final loc = context.appTexts.in_app.select_subscription_screen;
+    //final loc = context.appTexts.in_app.select_subscription_screen;
 
-    final backgroundColor = Theme.of(context).colorScheme.surfaceContainerHighest;
+    final backgroundColor = Theme.of(
+      context,
+    ).colorScheme.surfaceContainerHighest;
 
     return PurchasesFeature(
       builder: (context, _) {
         return BlocProvider(
-          create: (_) => context.read<CreateSelectSubscriptionBloc>().call(context),
+          create: (_) =>
+              context.read<CreateSelectSubscriptionBloc>().call(context),
           child: Scaffold(
             backgroundColor: backgroundColor,
             appBar: AppBar(
               backgroundColor: backgroundColor,
-              leading: IconButton(onPressed: () => context.router.pop(), icon: const Icon(Icons.close)),
+              leading: IconButton(
+                onPressed: () => context.router.pop(),
+                icon: const Icon(Icons.close),
+              ),
             ),
             body: CustomScrollView(
               slivers: [
                 SliverToBoxAdapter(
                   child: Text(
-                    loc.title,
+                    "Выберите подписку",
                     style: Theme.of(context).textTheme.headlineMedium,
                     textAlign: TextAlign.center,
                   ),
                 ),
                 SliverPadding(
-                  padding: const EdgeInsets.symmetric(horizontal: 24).copyWith(top: 24),
-                  sliver: BlocBuilder<SelectSubscriptionBloc, SelectSubscriptionState>(
-                    builder: (context, state) {
-                      return switch (state) {
-                        Loading() => const SliverToBoxAdapter(child: Center(child: CircularProgressIndicator())),
-                        Failure() => SliverToBoxAdapter(
-                          child: TryAgainButton(
-                            tryAgainAction: () =>
-                                context.read<SelectSubscriptionBloc>().add(const SelectSubscriptionEvent.load()),
-                          ),
-                        ),
-                        Loaded() => SliverList.separated(
-                          itemCount: state.subscriptions.length,
-                          separatorBuilder: (_, _) => const Divider(),
-                          itemBuilder: (context, index) {
-                            final subscription = state.subscriptions[index];
-
-                            return SubscriptionCard(
-                              subscription: subscription,
-                              isSelected: state.selectedSubscription == subscription,
-                              onTap: () => context.read<SelectSubscriptionBloc>().add(
-                                SelectSubscriptionEvent.select(subscription),
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: 24,
+                  ).copyWith(top: 24),
+                  sliver:
+                      BlocBuilder<
+                        SelectSubscriptionBloc,
+                        SelectSubscriptionState
+                      >(
+                        builder: (context, state) {
+                          return switch (state) {
+                            Loading() => const SliverToBoxAdapter(
+                              child: Center(child: CircularProgressIndicator()),
+                            ),
+                            Failure() => SliverToBoxAdapter(
+                              child: TryAgainButton(
+                                tryAgainAction: () => context
+                                    .read<SelectSubscriptionBloc>()
+                                    .add(const SelectSubscriptionEvent.load()),
                               ),
-                            );
-                          },
-                        ),
-                      };
-                    },
-                  ),
+                            ),
+                            Loaded() => SliverList.separated(
+                              itemCount: state.subscriptions.length,
+                              separatorBuilder: (_, _) => const Divider(),
+                              itemBuilder: (context, index) {
+                                final subscription = state.subscriptions[index];
+
+                                return SubscriptionCard(
+                                  subscription: subscription,
+                                  isSelected:
+                                      state.selectedSubscription ==
+                                      subscription,
+                                  onTap: () => context
+                                      .read<SelectSubscriptionBloc>()
+                                      .add(
+                                        SelectSubscriptionEvent.select(
+                                          subscription,
+                                        ),
+                                      ),
+                                );
+                              },
+                            ),
+                          };
+                        },
+                      ),
                 ),
               ],
             ),
@@ -82,8 +100,8 @@ class SelectSubscriptionScreen extends StatelessWidget {
 class _BottomBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    final loc = context.appTexts.in_app.select_subscription_screen;
-    final storeName = Platform.isAndroid ? "Google Play" : "App Store";
+    //final loc = context.appTexts.in_app.select_subscription_screen;
+    //final storeName = Platform.isAndroid ? "Google Play" : "App Store";
 
     return SizedBox(
       width: double.infinity,
@@ -96,19 +114,23 @@ class _BottomBar extends StatelessWidget {
             mainAxisSize: MainAxisSize.min,
             children: [
               Text(
-                loc.description(storeName: storeName),
+                "Отмените в любое время в {storeName:String}",
                 style: Theme.of(context).textTheme.labelLarge,
                 textAlign: TextAlign.center,
               ),
               BlocBuilder<SelectSubscriptionBloc, SelectSubscriptionState>(
                 builder: (context, state) {
                   return FilledButton(
-                    onPressed: state is Loaded && state.selectedSubscription?.productDetails != null
+                    onPressed:
+                        state is Loaded &&
+                            state.selectedSubscription?.productDetails != null
                         ? () => context.read<SelectSubscriptionBloc>().add(
-                            SelectSubscriptionEvent.buy(state.selectedSubscription!),
+                            SelectSubscriptionEvent.buy(
+                              state.selectedSubscription!,
+                            ),
                           )
                         : null,
-                    child: Text(loc.try_1_week_free),
+                    child: const Text("Попробовать 1 неделю бесплатно"),
                   );
                 },
               ),

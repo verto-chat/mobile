@@ -4,6 +4,15 @@ import '../../../../common/common.dart';
 
 part 'chat_user.freezed.dart';
 
+const emptyChatUser = ChatUser(
+  id: DomainId.fromInt(id: 0),
+  firstName: '',
+  lastName: null,
+  avatarUrl: null,
+  thumbnailAvatarUrl: null,
+  isSupport: false,
+);
+
 @freezed
 sealed class ChatUser with _$ChatUser {
   const factory ChatUser({

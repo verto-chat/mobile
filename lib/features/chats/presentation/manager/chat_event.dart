@@ -13,5 +13,15 @@ class ChatEvent with _$ChatEvent {
   const factory ChatEvent.tapMessage(Message message) = _TapMessage;
 
   const factory ChatEvent.longTapMessage(Message message) = _LongTapMessage;
+
+  const factory ChatEvent.voiceCompleted({
+    required String originalLanguageCode,
+    required String translatedLanguageCode,
+    required String filePath,
+    required Duration duration,
+  }) = _VoiceCompleted;
+
+  const factory ChatEvent.playTts(MessageID id, {required Completer<void> completer}) = _PlayTts;
+
   // const factory ChatEvent.loadPreview(TextMessage message, PreviewData previewData) = _LoadPreview;
 }

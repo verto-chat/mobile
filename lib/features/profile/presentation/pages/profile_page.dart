@@ -11,10 +11,9 @@ import '../../../../core/core.dart';
 import '../../../../i18n/translations.g.dart';
 import '../../../../router/app_router.dart';
 import '../../../features.dart';
+import '../../../settings/presentation/widgets/settings_title.dart';
 import '../manager/profile_bloc.dart';
 import '../widgets/widgets.dart';
-import 'select_language_sheet.dart';
-import 'select_theme_sheet.dart';
 
 @RoutePage()
 class ProfilePage extends StatelessWidget {
@@ -43,7 +42,9 @@ class ProfilePage extends StatelessWidget {
               edgeOffset: topPadding,
               onRefresh: () {
                 final completer = Completer<void>();
-                context.read<ProfileBloc>().add(ProfileEvent.load(completer: completer));
+                context.read<ProfileBloc>().add(
+                  ProfileEvent.load(completer: completer),
+                );
                 return completer.future;
               },
               child: CustomScrollView(
@@ -71,73 +72,67 @@ class ProfilePage extends StatelessWidget {
                                 : RepaintBoundary(
                                     child: ClipRect(
                                       child: ImageFiltered(
-                                        imageFilter: ImageFilter.blur(sigmaX: 15.0, sigmaY: 15.0),
-                                        child: state.userInfo.thumbnail?.isNotEmpty ?? false
-                                            ? CachedNetworkImage(imageUrl: state.userInfo.thumbnail!, fit: BoxFit.cover)
-                                            : Container(color: getUserAvatarNameColor(state.userInfo.id)),
+                                        imageFilter: ImageFilter.blur(
+                                          sigmaX: 15.0,
+                                          sigmaY: 15.0,
+                                        ),
+                                        child:
+                                            state
+                                                    .userInfo
+                                                    .thumbnail
+                                                    ?.isNotEmpty ??
+                                                false
+                                            ? CachedNetworkImage(
+                                                imageUrl:
+                                                    state.userInfo.thumbnail!,
+                                                fit: BoxFit.cover,
+                                              )
+                                            : Container(
+                                                color: getUserAvatarNameColor(
+                                                  state.userInfo.id,
+                                                ),
+                                              ),
                                       ),
                                     ),
                                   ),
                           ),
-                          Container(color: Theme.of(context).colorScheme.surface.withValues(alpha: 0.2)),
-                          _Header(state.userInfo, state.isShimmerLoading, avatarRadius),
+                          Container(
+                            color: Theme.of(
+                              context,
+                            ).colorScheme.surface.withValues(alpha: 0.2),
+                          ),
+                          _Header(
+                            state.userInfo,
+                            state.isShimmerLoading,
+                            avatarRadius,
+                          ),
                         ],
                       ),
                     ),
                   ),
                   SliverToBoxAdapter(
                     child: Padding(
-                      padding: const EdgeInsets.all(24.0).copyWith(top: 0),
+                      padding: const EdgeInsets.all(
+                        16.0,
+                      ).copyWith(top: 0, bottom: 80),
                       child: ListView(
                         shrinkWrap: true,
                         physics: const NeverScrollableScrollPhysics(),
                         padding: EdgeInsets.zero,
                         children: [
                           const _SubscriptionInfo(),
-                          const Divider(),
+                          const SizedBox(height: 16),
                           CommonSettingsTitle(
-                            onTap: () => context.read<ProfileBloc>().add(const ProfileEvent.editProfile()),
+                            onTap: () => context.read<ProfileBloc>().add(
+                              const ProfileEvent.editProfile(),
+                            ),
                             title: loc.edit_profile_label,
                             icon: Icons.edit,
                           ),
-                          const Divider(),
-                          CommonSettingsTitle(
-                            onTap: () => context.router.push(const SafetyRoute()),
-                            title: loc.safety_label,
-                            icon: Icons.shield,
+                          const SizedBox(height: 16),
+                          SmartAdInlineBanner(
+                            adUnitId: context.read<IAdMobId>().profileBannerId,
                           ),
-                          const Divider(),
-                          const _LanguageSettingsTile(),
-                          const Divider(),
-                          const _ThemeSettingsTile(),
-                          const Divider(),
-                          CommonSettingsTitle(
-                            onTap: () => context.read<ProfileBloc>().add(const ProfileEvent.createSupportChat()),
-                            title: loc.profile_page.create_support_chat,
-                            icon: Icons.contact_support,
-                          ),
-                          const Divider(),
-                          CommonSettingsTitle(
-                            onTap: () => context.router.push(FeedbackRoute()),
-                            title: loc.feedback_label,
-                            icon: Icons.feedback,
-                          ),
-                          const Divider(),
-                          CommonSettingsTitle(
-                            onTap: () => context.router.push(const LegalRoute()),
-                            title: loc.legal_label,
-                            icon: Icons.policy,
-                          ),
-                          const Divider(),
-                          CommonSettingsTitle(
-                            onTap: () => context.read<ProfileBloc>().add(const ProfileEvent.logout()),
-                            title: loc.logout_label,
-                            icon: Icons.logout,
-                          ),
-                          const Divider(),
-                          SmartAdInlineBanner(adUnitId: context.read<IAdMobId>().profileBannerId),
-                          const SizedBox(height: 48),
-                          Center(child: ServiceButton(version: state.version)),
                         ],
                       ),
                     ),
@@ -165,7 +160,12 @@ class _Username extends StatelessWidget {
 
     return Align(
       alignment: Alignment.topCenter,
-      child: Text(displayName, style: Theme.of(context).textTheme.headlineLarge!.copyWith(fontWeight: FontWeight.w600)),
+      child: Text(
+        displayName,
+        style: Theme.of(
+          context,
+        ).textTheme.headlineLarge!.copyWith(fontWeight: FontWeight.w600),
+      ),
     );
   }
 }
@@ -184,7 +184,10 @@ class _Header extends StatelessWidget {
       children: [
         Align(
           alignment: Alignment.bottomCenter,
-          child: Container(height: avatarRadius, color: Theme.of(context).colorScheme.surface),
+          child: Container(
+            height: avatarRadius,
+            color: Theme.of(context).colorScheme.surface,
+          ),
         ),
         Align(
           alignment: Alignment.bottomCenter,
@@ -192,7 +195,9 @@ class _Header extends StatelessWidget {
             avatarRadius: avatarRadius,
             userInfo: userInfo,
             isShimmerLoading: isShimmerLoading,
-            onEditTap: () => context.read<ProfileBloc>().add(const ProfileEvent.uploadAvatar()),
+            onEditTap: () => context.read<ProfileBloc>().add(
+              const ProfileEvent.uploadAvatar(),
+            ),
           ),
         ),
       ],
@@ -205,7 +210,7 @@ class _SubscriptionInfo extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final loc = context.appTexts.profile.profile_page.subscription;
+    final loc = context.appTexts.profile.profile_page.plan;
 
     return Center(
       child: Padding(
@@ -219,103 +224,34 @@ class _SubscriptionInfo extends StatelessWidget {
               mainAxisSize: MainAxisSize.min,
               children: [
                 Text(
-                  loc.subscription_name(subscriptionName: sub.subscriptionName),
-                  style: Theme.of(
-                    context,
-                  ).textTheme.titleLarge!.copyWith(color: Theme.of(context).colorScheme.tertiary),
+                  loc.plan_name(planName: sub.plan.name),
+                  style: Theme.of(context).textTheme.titleLarge!.copyWith(
+                    color: Theme.of(context).colorScheme.tertiary,
+                  ),
                 ),
                 Text(
-                  loc.promotions_count(n: sub.singlePromotionLimit) +
-                      (sub.subscriptionPromoteLimit != null
-                          ? " + ${loc.sub_promotion_limit(count: sub.subscriptionPromoteLimit!)}"
-                          : ""),
-                  style: Theme.of(
-                    context,
-                  ).textTheme.titleMedium!.copyWith(color: Theme.of(context).colorScheme.secondary),
-                ),
-                if (sub.recommendUpgrade)
-                  FilledButton.icon(
-                    onPressed: () => context.router.push(const SupposeSubscriptionRoute()),
-                    label: Text(loc.upgrade),
-                    icon: const Icon(Icons.upgrade),
+                  loc.credits_count(n: sub.creditsBalance),
+                  style: Theme.of(context).textTheme.titleMedium!.copyWith(
+                    color: Theme.of(context).colorScheme.secondary,
                   ),
+                ),
+                // if (sub.recommendUpgrade)
+                //   FilledButton.icon(
+                //     onPressed: () => context.router.push(const SupposeSubscriptionRoute()),
+                //     label: Text(loc.upgrade),
+                //     icon: const Icon(Icons.upgrade),
+                //   ),
                 FilledButton.tonalIcon(
-                  onPressed: () => context.router.push(const BuyProductsRoute()),
+                  onPressed: () =>
+                      context.router.push(const BuyProductsRoute()),
                   icon: const Icon(Icons.add),
-                  label: Text(loc.buy_promotion),
+                  label: Text(loc.buy_credits),
                 ),
               ],
             );
           },
         ),
       ),
-    );
-  }
-}
-
-class _LanguageSettingsTile extends StatelessWidget {
-  const _LanguageSettingsTile();
-
-  @override
-  Widget build(BuildContext context) {
-    return BlocBuilder<LangBloc, LangState>(
-      builder: (context, state) {
-        return CommonSettingsTitle(
-          onTap: () => _showLanguageSelectionDialog(context),
-          title: context.appTexts.profile.language_label,
-          icon: Icons.language,
-          value: getLocaleName(state.selectedLocale),
-        );
-      },
-    );
-  }
-
-  void _showLanguageSelectionDialog(BuildContext context) {
-    showModalBottomSheet<void>(
-      context: context,
-      isScrollControlled: true,
-      backgroundColor: Colors.transparent,
-      builder: (_) {
-        return SelectLanguageSheet(
-          onLanguageChanged: (locale) {
-            context.read<LangBloc>().add(LangEvent.changeLanguage(locale: locale));
-            context.read<TokenService>().changeLanguage(locale.languageTag);
-            Navigator.of(context).pop();
-          },
-        );
-      },
-    );
-  }
-}
-
-class _ThemeSettingsTile extends StatelessWidget {
-  const _ThemeSettingsTile();
-
-  @override
-  Widget build(BuildContext context) {
-    return BlocBuilder<AppBloc, AppState>(
-      builder: (context, state) {
-        return CommonSettingsTitle(
-          onTap: () => _showThemeModeSelectionDialog(context),
-          title: context.appTexts.profile.theme.title,
-          icon: Icons.color_lens,
-          value: getThemeModeName(state.themeMode, context),
-        );
-      },
-    );
-  }
-
-  void _showThemeModeSelectionDialog(BuildContext context) {
-    showModalBottomSheet<void>(
-      context: context,
-      builder: (_) {
-        return SelectThemeSheet(
-          onThemeModeChanged: (t) {
-            context.read<AppBloc>().add(AppEvent.changeThemeMode(t));
-            Navigator.of(context).pop();
-          },
-        );
-      },
     );
   }
 }

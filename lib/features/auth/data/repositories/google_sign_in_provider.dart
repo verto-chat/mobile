@@ -4,8 +4,9 @@ import 'package:supabase_flutter/supabase_flutter.dart';
 import '../../../../common/common.dart';
 
 const _googleScopes = ["email", "openid", "profile"];
-const _webClientId = '314980146578-4kkrh8v3bsv8mtgqdpqc7jtiqgnvjjfm.apps.googleusercontent.com';
-const _iosClientId = '314980146578-d12qvd27iv3rk27rlbcfranul41s7c81.apps.googleusercontent.com';
+
+const _webClientId = '702476548325-ougll3a7re1vcrfqd5jn21vun88ripc0.apps.googleusercontent.com';
+const _iosClientId = '702476548325-j7adhk03g6iurpfg6q0p48p88b192k8p.apps.googleusercontent.com';
 
 class GoogleSignInProvider {
   final SupabaseClient _supabase;

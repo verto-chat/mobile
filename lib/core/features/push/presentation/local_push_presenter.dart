@@ -23,7 +23,7 @@ class LocalPushPresenter {
     );
 
     await _localNotifications.initialize(
-      settings,
+      settings: settings,
       onDidReceiveNotificationResponse: (notificationResponse) => _onAction(notificationResponse.payload),
     );
 
@@ -53,7 +53,13 @@ class LocalPushPresenter {
 
     _logger.log(LogLevel.info, "Started showing push: id:$id");
 
-    await _localNotifications.show(id, title, body, notificationDetails, payload: payload);
+    await _localNotifications.show(
+      id: id,
+      title: title,
+      body: body,
+      notificationDetails: notificationDetails,
+      payload: payload,
+    );
 
     _logger.log(LogLevel.info, "Ended showing push: id:$id");
   }

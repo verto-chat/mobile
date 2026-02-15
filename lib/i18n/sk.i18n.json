@@ -1,0 +1,381 @@
+{
+  "auth": {
+    "SignInScreen": {
+      "email_label": "Email",
+      "password_label": "Heslo",
+      "forgot_password": "Zabudli ste heslo?",
+      "sign_in": "Prihlásiť sa",
+      "sign_up": "Registrácia",
+      "sign_in_with_google": "Prihlásiť sa cez Google",
+      "sign_in_with_apple": "Prihlásiť sa cez Apple",
+      "login_error": {
+        "invalid_credentials": "Neplatné prihlasovacie údaje",
+        "email_not_confirmed": "Email nebol potvrdený"
+      },
+      "OAuthAcceptRegulationsSheet": {
+        "title": "Pre pokračovanie sa zaregistrujte",
+        "regulations(rich)": "Prosím, prijmite {terms(Podmienky používania)} a {policy(Politiku ochrany osobných údajov)}",
+        "accept": "Súhlasím",
+        "cancel": "Zrušiť",
+        "failed_get_regulations": "Nepodarilo sa získať pravidlá."
+      }
+    },
+    "SignUpScreen": {
+      "title": "Registrácia",
+      "first_name_label": "Meno",
+      "last_name_label": "Priezvisko",
+      "email_label": "Email",
+      "password_label": "Heslo",
+      "repeat_password": "Zopakujte heslo",
+      "sign_up": "Registrácia",
+      "password_not_equal": "Heslá sa nezhodujú",
+      "regulations(rich)": "Súhlasím s {terms(podmienkami používania)} a {policy(politikou ochrany osobných údajov)}",
+      "after_registration_toast": "✔️ Potvrdenie bolo odoslané! Skontrolujte svoj email a potvrďte adresu.",
+      "register_error": {
+        "incorrect_email": "Nesprávny email",
+        "incorrect_name": "Nesprávne meno",
+        "incorrect_password": "Heslo musí mať najmenej 8 znakov a obsahovať veľké a malé písmená a čísla",
+        "email_already_used": "Emailová adresa už je použitá",
+        "create_error": "Chyba pri vytváraní používateľa",
+        "emailRateLimitExceeded": "Prekročený limit odosielania emailov"
+      }
+    },
+    "reset_password": {
+      "CodeScreen": {
+        "title": "Obnovenie hesla",
+        "description": "Na váš email {email:String} bol odoslaný kód na obnovenie",
+        "submit": "Ďalej",
+        "field_label": "Kód na obnovenie",
+        "field_error": "Nesprávny kód",
+        "check_error_description": "Nepodarilo sa overiť kód na obnovenie"
+      },
+      "ForgotPasswordScreen": {
+        "title": "Obnovenie hesla",
+        "email_label": "Email",
+        "send_reset_link": "Odoslať odkaz",
+        "check_error_description": "Nepodarilo sa odoslať kód na obnovenie hesla"
+      },
+      "NewPasswordScreen": {
+        "title": "Nové heslo",
+        "reset_submit": "Prihlásiť sa",
+        "edit_submit": "Zmeniť",
+        "current_password": "Aktuálne heslo",
+        "new_password": "Nové heslo",
+        "repeat_new_password": "Zopakujte nové heslo",
+        "password_label": "Heslo",
+        "repeat_password": "Zopakujte heslo",
+        "failed_change_password": "Nepodarilo sa zmeniť heslo",
+        "failed_reset_password": "Nepodarilo sa resetovať heslo",
+        "errors": {
+          "wrong_current_password": "Nesprávne aktuálne heslo",
+          "same_password": "Nové heslo sa nesmie zhodovať s aktuálnym"
+        }
+      }
+    }
+  },
+  "chats": {
+    "ChatPage": {
+      "SlangChatL10n": {
+        "and": "a",
+        "attachmentButtonAccessibilityLabel": "Odoslať médiá",
+        "emptyChatPlaceholder": "Zatiaľ nemáte žiadne správy",
+        "fileButtonAccessibilityLabel": "Súbor",
+        "inputPlaceholder": "Správa",
+        "isTyping": "píše…",
+        "others": "iní",
+        "sendButtonAccessibilityLabel": "Odoslať",
+        "unreadMessagesLabel": "Neprečítané správy"
+      },
+      "advert_chat": "Chat k inzerátu",
+      "attachment_type_file": "Súbor",
+      "attachment_type_image": "Obrázok",
+      "failure": "Chyba pri načítaní chatu",
+      "no_messages_yet": "Zatiaľ nie sú správy",
+      "return_translation": "Vrátiť preklad",
+      "show_original": "Zobraziť originál",
+      "tts_play_failed": "Nepodarilo sa prehrávať: {error:String}",
+      "tts_play_original": "Prehrať originál",
+      "tts_play_translation": "Prehrať preklad"
+    },
+    "ChatsPage": {
+      "ChatCard": {
+        "favorites_chat_name": "Obľúbené",
+        "support_chat_name": "Podpora"
+      },
+      "NoItemsStub": {
+        "description": "Zatiaľ nemáte žiadne chaty",
+        "title": "Zatiaľ žiadne chaty"
+      },
+      "create_direct_chat": "Vytvoriť chat s používateľom",
+      "create_group_chat": "Vytvoriť skupinový chat",
+      "delete_action": "Odstrániť",
+      "empty": "Zatiaľ žiadne chaty",
+      "failure": "Chyba pri načítaní chatov",
+      "title": "Chaty"
+    },
+    "CreateDirectChatPage": {
+      "failure_create_chat": "Nepodarilo sa vytvoriť chat",
+      "title": "Vytvoriť chat"
+    },
+    "CreateLocalChatPage": {
+      "languages_section": "Jazyky",
+      "my_language_label": "Váš jazyk",
+      "partner_language_label": "Jazyk partnera",
+      "show_both_subtitle": "Zobrazovať oba texty pre pohodlné overenie",
+      "show_both_title": "Zobrazovať originál a preklad",
+      "start_button": "Začať lokálny chat",
+      "swap_languages": "Vymeniť jazyky",
+      "tips_item_1": "• Vy a partner sa striedate v písaní na jednom zariadení.",
+      "tips_item_2": "• Správy sa automaticky prekladajú, môžete zobraziť originál a preklad.",
+      "tips_item_3": "• Zapnite TTS, aby sa preklad čítal nahlas.",
+      "tips_title": "Ako funguje lokálny chat",
+      "title": "Nový lokálny chat",
+      "title_hint": "Napríklad: Rozhovor s majiteľom bytu",
+      "title_label": "Názov (nepovinné)",
+      "translation_section": "Preklad a zobrazenie",
+      "tts_subtitle": "Čítať preklad nahlas pri zobrazení",
+      "tts_title": "Prečítať preklad (TTS)"
+    },
+    "RecordHoldButton": {
+      "hold_to_record": "Držte\nna nahrávanie",
+      "semantics_label": "{label:String}: držte na nahrávanie"
+    },
+    "SelectChatTypePage": {
+      "continue_button": "Pokračovať",
+      "details": {
+        "direct": {
+          "can_do": "Automatický preklad prichádzajúcich a odchádzajúcich správ, hlasové správy, prílohy.",
+          "for_whom": "Na komunikáciu s jednou osobou v rôznych jazykoch.",
+          "scenarios": "Obchodná korešpondencia, osobné rozhovory, zákaznícka podpora."
+        },
+        "group": {
+          "can_do": "Automatický preklad pre všetkých účastníkov, role a práva, pripnuté správy a reakcie.",
+          "for_whom": "Pre tímy, rodiny a komunity s účastníkmi z rôznych krajín.",
+          "scenarios": "Projektové chaty, komunity, organizačné korešpondencie."
+        },
+        "local": {
+          "can_do": "Striedate sa v písaní správ na jednom telefóne — okamžite sa prekladajú partnerovi.",
+          "for_whom": "Pre turistov a offline rozhovory na jednom zariadení.",
+          "scenarios": "Komunikácia s taxikárom/majiteľom, objednávanie jedla, pomoc s navigáciou."
+        },
+        "learning": {
+          "can_do": "Ukladajte slová a frázy, sledujte rôzne významy a príklady, trénujte v režimoch čítania/diktovania.",
+          "for_whom": "Na učenie jazykov na jednom zariadení — ako „lokálny chat“, ale so zameraním na prax.",
+          "scenarios": "Samoštúdium na cestách, príprava na stretnutie, analýza korešpondencie, osobný slovník."
+        }
+      },
+      "labels": {
+        "can_do": "Čo je možné",
+        "for_whom": "Pre koho",
+        "scenarios": "Scenáre"
+      },
+      "soon_tag": "Čoskoro",
+      "title": "Vytvoriť chat",
+      "types": {
+        "direct": "Priamy (1-na-1)",
+        "group": "Skupinový",
+        "learning": "Učenie",
+        "local": "Lokálny chat"
+      }
+    }
+  },
+  "core": {
+    "DialogPresenter": {
+      "permission_text_location": "Poloha",
+      "permission_denied": {
+        "location": "získať polohu pre výber adresy",
+        "title": "Prístup k {permission:String}",
+        "description": "Na používanie tejto funkcie je potrebný prístup k {permission:String}. Môžete ho povoliť v nastaveniach vášho zariadenia.",
+        "settings": "V nastaveniach",
+        "later": "Neskôr"
+      }
+    },
+    "dialog_action": {
+      "ok": "OK",
+      "login": "Prihlásiť sa",
+      "retry": "Skúsiť znova",
+      "upgrade": "Aktualizovať",
+      "back": "Späť",
+      "yes": "Áno",
+      "no": "Nie",
+      "cancel": "Zrušiť"
+    },
+    "dialog_msg": {
+      "retry_or_contact_support": "Skúste to znova alebo kontaktujte podporu na adrese: support@verto.chat",
+      "server_error": "Na serveri došlo k chybe. {retryOrContactSupport}",
+      "default_error": "Došlo k chybe. {retryOrContactSupport}",
+      "connection_error": "Prosím, skontrolujte svoje internetové pripojenie a skúste to znova",
+      "authorization_required": "Autorizácia vypršala. Je potrebné sa znova prihlásiť",
+      "upgrade_required": "Pre správnu funkciu nainštalujte novú verziu aplikácie",
+      "insufficient_access_rights": "Akcia nie je dostupná. Vaše práva sú obmedzené"
+    },
+    "dialog_title": {
+      "error_title": "Chyba",
+      "connection_error": "Žiadne pripojenie",
+      "server_error": "Chyba na serveri",
+      "not_authorized": "Nie ste autorizovaný",
+      "upgrade_required": "Verzia je zastaraná",
+      "insufficient_accessRights": "Nedostatočné práva"
+    },
+    "field_empty": "Pole nemôže byť prázdne",
+    "incorrect_format": "Nesprávny formát",
+    "photos": {
+      "GalleryScreen": {
+        "title": "Galéria"
+      }
+    },
+    "upload": {
+      "select_photo": {
+        "select_source_photo": {
+          "title": "Vybrať obrázok",
+          "from": {
+            "camera": "Kamera",
+            "gallery": "Z galérie"
+          }
+        }
+      },
+      "AddPhotoButton": {
+        "add_photo": "Pridať"
+      }
+    },
+    "widgets": {
+      "LastPageErrorMessageView": {
+        "something_wrong_try_again": "Niečo sa pokazilo, skúste znova:"
+      },
+      "TryAgainButton": {
+        "something_wrong": "Niečo sa pokazilo",
+        "try_again": "Skúsiť znova"
+      },
+      "AttachDocuments": {
+        "title": "Pridať dokumenty"
+      }
+    }
+  },
+  "feedback": {
+    "feedback_page": {
+      "title": "Spätná väzba",
+      "type_label": "Typ žiadosti",
+      "description_label": "Popis",
+      "description_hint": "Podrobne popíšte váš problém alebo nápad",
+      "description_error": "Prosím, napíšte text žiadosti",
+      "submit": "Odoslať",
+      "success": "Žiadosť bola odoslaná",
+      "failed_send_feedback": "Nepodarilo sa odoslať spätnú väzbu",
+      "types": {
+        "bug": "Nahlásiť chybu",
+        "feature": "Navrhnúť funkciu",
+        "category": "Navrhnúť novú kategóriu inzerátov",
+        "question": "Položiť otázku",
+        "general": "Všeobecné pripomienky a návrhy"
+      }
+    }
+  },
+  "home": {
+    "chats_label": "Chaty",
+    "profile_label": "Profil",
+    "settings_label": "Nastavenia",
+    "main_label": "Hlavná"
+  },
+  "in_app": {
+    "BuyProductsScreen": {
+      "buy_button": "Kúpiť",
+      "title": "Vyberte tovar",
+      "unavailable": "Nedostupné"
+    }
+  },
+  "legal": {
+    "failed_get_regulations": "Nepodarilo sa získať predpisy.",
+    "LegalScreen": {
+      "title": "Právne informácie",
+      "policy_label": "Politika ochrany osobných údajov",
+      "terms_label": "Podmienky používania",
+      "gdpr_label": "Politika ochrany osobných údajov GDPR"
+    }
+  },
+  "logger": {
+    "SessionScreen": {
+      "no_space_line_1": "Na zariadení nie je dostatok miesta.",
+      "no_space_line_2": "Prosím, uvoľnite miesto a skúste to znova.",
+      "ok": "OK",
+      "title": "Zoznam relácií",
+      "unknown_error": "Neznáma chyba."
+    }
+  },
+  "profile": {
+    "EditProfileScreen": {
+      "edit_password": "Zmeniť heslo",
+      "first_name_label": "Meno",
+      "last_name_label": "Priezvisko",
+      "save_button_text": "Uložiť",
+      "success_toast": "Vaše meno bolo úspešne aktualizované",
+      "title": "Upraviť profil"
+    },
+    "ProfilePage": {
+      "create_support_chat": "Napísať do podpory",
+      "failed_create_support_chat": "Nepodarilo sa vytvoriť chat podpory",
+      "failed_loading_profile": "Nepodarilo sa načítať informácie o používateľovi",
+      "plan": {
+        "buy_credits": "Kúpiť kredity",
+        "credits_count": {
+          "one": "{n} kredit",
+          "few": "{n} kredity",
+          "other": "{n} kreditov"
+        },
+        "plan_name": "Plán: {planName:String}",
+        "upgrade": "Vylepšiť plán"
+      }
+    },
+    "SafetyScreen": {
+      "delete_account_error": {
+        "requires_recent_login": "Na odstránenie účtu je potrebné sa znova prihlásiť do aplikácie"
+      },
+      "delete_account_label": "Odstrániť účet",
+      "delete_confirm": {
+        "description": "Ste si istí, že chcete odstrániť účet?",
+        "title": "Odstránenie účtu"
+      },
+      "edit_password": "Zmeniť heslo",
+      "title": "Bezpečnosť"
+    },
+    "delete_account_label": "Odstrániť účet",
+    "edit_avatar_title": "Úprava avatara",
+    "edit_profile_label": "Upraviť profil",
+    "failed_update_avatar": "Nepodarilo sa aktualizovať avatar",
+    "failed_upload_avatar": "Nepodarilo sa nahrať avatar",
+    "feedback_label": "Spätná väzba",
+    "language_label": "Jazyk",
+    "legal_label": "Právne informácie",
+    "logout_label": "Odhlásiť sa",
+    "safety_label": "Bezpečnosť",
+    "select_language_title": "Vybrať jazyk",
+    "theme": {
+      "title": "Téma",
+      "light": "Svetlá",
+      "dark": "Tmavá",
+      "system": "Systémová"
+    },
+    "to_favorites_adverts_label": "Obľúbené inzeráty",
+    "to_my_adverts_label": "Moje inzeráty",
+    "version": "Verzia {version}"
+  },
+  "report": {
+    "ReportSheet": {
+      "description_label": "Popis",
+      "reasons": {
+        "abuse": "Urážky alebo podnecovanie nenávisti",
+        "inappropriate": "Nevhodné správanie",
+        "other": "Iné",
+        "spam": "Spam"
+      },
+      "submit": "Odoslať",
+      "success": "Sťažnosť bola odoslaná",
+      "title": "Nahlásiť porušenie"
+    }
+  },
+  "users": {
+    "user_select_screen": {
+      "empty": "Zatiaľ nie sú žiadni používatelia",
+      "failure": "Chyba pri načítaní používateľov"
+    }
+  }
+}

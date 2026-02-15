@@ -19,7 +19,7 @@ class NoItemsStub extends StatelessWidget {
           Text(title, style: Theme.of(context).textTheme.headlineMedium, textAlign: TextAlign.center),
           if (description != null)
             Text(description!, style: Theme.of(context).textTheme.bodyMedium, textAlign: TextAlign.center),
-          if (child != null) child!,
+          ?child,
         ],
       ),
     );

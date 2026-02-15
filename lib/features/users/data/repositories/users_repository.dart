@@ -32,7 +32,6 @@ class UsersRepository implements IUsersRepository {
       avatarUrl: data["avatar_url"] as String?,
       thumbnailAvatarUrl: data["thumbnail_avatar_url"] as String?,
       email: '',
-      lastAddressId: null,
     );
   }
 }

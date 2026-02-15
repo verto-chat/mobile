@@ -1,0 +1,199 @@
+name: iOS Publish
+
+on:
+  workflow_dispatch:
+    inputs:
+      build_number:
+        description: "Override iOS build number (optional)"
+        required: false
+        type: string
+  push:
+    branches:
+      - develop
+      - main
+
+jobs:
+  publish:
+    runs-on: macos-latest
+    timeout-minutes: 60
+    permissions:
+      contents: read
+    env:
+      XCODE_VERSION: "26.0"
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Select Xcode
+        uses: maxim-lobanov/setup-xcode@v1
+        with:
+          xcode-version: ${{ env.XCODE_VERSION }}
+
+      - name: Verify Xcode and SDK
+        run: |
+          xcodebuild -version
+          xcodebuild -showsdks
+          xcodebuild -showsdks | grep -E "iphoneos26(\.|$)"
+
+      - name: Create GitHub App token
+        id: app-token
+        uses: actions/create-github-app-token@v1
+        with:
+          app-id: ${{ secrets.CI_GH_APP_ID }}
+          private-key: ${{ secrets.CI_GH_APP_PRIVATE_KEY }}
+          owner: verto-chat
+
+      - name: Configure git auth for private dependencies
+        run: git config --global url."https://x-access-token:${{ steps.app-token.outputs.token }}@github.com/".insteadOf "https://github.com/"
+
+      - name: Set up Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+          cache: true
+
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.1"
+          bundler-cache: true
+          working-directory: ios
+
+      - name: Install Flutter dependencies
+        run: flutter pub get
+
+      - name: Generate code with build_runner
+        run: dart run build_runner build --delete-conflicting-outputs
+
+      - name: Derive iOS build info from pubspec
+        shell: bash
+        env:
+          INPUT_BUILD_NUMBER: ${{ github.event.inputs.build_number }}
+        run: |
+          set -euo pipefail
+          ruby -e 'v=File.read("pubspec.yaml")[/^\s*version:\s*([^\s#]+)/,1]; abort("version not found in pubspec.yaml") unless v; name, number = v.split("+",2); input = ENV["INPUT_BUILD_NUMBER"].to_s.strip; number = input unless input.empty?; number = ENV["GITHUB_RUN_NUMBER"] if number.nil? || number.strip.empty?; puts "IOS_BUILD_NAME=#{name}"; puts "IOS_BUILD_NUMBER=#{number}";' >> "$GITHUB_ENV"
+
+      - name: Install CocoaPods
+        working-directory: ios
+        run: pod install
+
+      - name: Set up iOS signing
+        shell: bash
+        env:
+          IOS_CERTIFICATE_P12_BASE64: ${{ secrets.IOS_CERTIFICATE_P12_BASE64 }}
+          IOS_CERTIFICATE_PASSWORD: ${{ secrets.IOS_CERTIFICATE_PASSWORD }}
+          IOS_PROVISIONING_PROFILE_BASE64: ${{ secrets.IOS_PROVISIONING_PROFILE_BASE64 }}
+          IOS_KEYCHAIN_PASSWORD: ${{ secrets.IOS_KEYCHAIN_PASSWORD }}
+        run: |
+          set -euo pipefail
+          KEYCHAIN_PASSWORD="${IOS_KEYCHAIN_PASSWORD:-$IOS_CERTIFICATE_PASSWORD}"
+          KEYCHAIN_PATH="$RUNNER_TEMP/app-signing.keychain-db"
+
+          echo "$IOS_CERTIFICATE_P12_BASE64" | base64 --decode > "$RUNNER_TEMP/cert.p12"
+          security create-keychain -p "$KEYCHAIN_PASSWORD" "$KEYCHAIN_PATH"
+          security set-keychain-settings -lut 21600 "$KEYCHAIN_PATH"
+          security unlock-keychain -p "$KEYCHAIN_PASSWORD" "$KEYCHAIN_PATH"
+          security import "$RUNNER_TEMP/cert.p12" -k "$KEYCHAIN_PATH" -P "$IOS_CERTIFICATE_PASSWORD" -T /usr/bin/codesign -T /usr/bin/security
+          security list-keychains -d user -s "$KEYCHAIN_PATH"
+          security set-key-partition-list -S apple-tool:,apple:,codesign: -s -k "$KEYCHAIN_PASSWORD" "$KEYCHAIN_PATH"
+          security find-identity -v -p codesigning "$KEYCHAIN_PATH"
+
+          echo "$IOS_PROVISIONING_PROFILE_BASE64" | base64 --decode > "$RUNNER_TEMP/profile.mobileprovision"
+          PROFILE_PLIST="$(security cms -D -i "$RUNNER_TEMP/profile.mobileprovision")"
+          PROFILE_UUID=$(/usr/libexec/PlistBuddy -c 'Print :UUID' /dev/stdin <<< "$PROFILE_PLIST")
+          PROFILE_NAME=$(/usr/libexec/PlistBuddy -c 'Print :Name' /dev/stdin <<< "$PROFILE_PLIST")
+          PROFILE_APP_IDENTIFIER=$(/usr/libexec/PlistBuddy -c 'Print :Entitlements:application-identifier' /dev/stdin <<< "$PROFILE_PLIST")
+          mkdir -p "$HOME/Library/MobileDevice/Provisioning Profiles"
+          cp "$RUNNER_TEMP/profile.mobileprovision" "$HOME/Library/MobileDevice/Provisioning Profiles/$PROFILE_UUID.mobileprovision"
+          echo "IOS_PROFILE_UUID=$PROFILE_UUID" >> "$GITHUB_ENV"
+          echo "IOS_PROFILE_NAME_FROM_MOBILEPROVISION=$PROFILE_NAME" >> "$GITHUB_ENV"
+          echo "IOS_PROFILE_APP_IDENTIFIER=$PROFILE_APP_IDENTIFIER" >> "$GITHUB_ENV"
+
+      - name: Create export options plist
+        shell: bash
+        env:
+          IOS_TEAM_ID: ${{ secrets.IOS_TEAM_ID }}
+          IOS_BUNDLE_ID: ${{ secrets.IOS_BUNDLE_ID }}
+          IOS_PROFILE_NAME: ${{ secrets.IOS_PROFILE_NAME }}
+        run: |
+          set -euo pipefail
+          TEAM_ID="${IOS_TEAM_ID:-VX89ZRZZPW}"
+          BUNDLE_ID="${IOS_BUNDLE_ID:-chat.verto.app}"
+          PROFILE_NAME="${IOS_PROFILE_NAME_FROM_MOBILEPROVISION:-$IOS_PROFILE_NAME}"
+          PROFILE_APP_IDENTIFIER="${IOS_PROFILE_APP_IDENTIFIER:-}"
+          PROFILE_BUNDLE_PATTERN="${PROFILE_APP_IDENTIFIER#*.}"
+          if [ -z "$PROFILE_NAME" ]; then
+            echo "Provisioning profile name is empty. Set IOS_PROFILE_NAME secret or provide a valid mobileprovision profile." >&2
+            exit 1
+          fi
+          if [ -n "$PROFILE_BUNDLE_PATTERN" ] && [ "$PROFILE_BUNDLE_PATTERN" != "*" ] && [[ "$BUNDLE_ID" != $PROFILE_BUNDLE_PATTERN ]]; then
+            echo "Bundle identifier '$BUNDLE_ID' does not match provisioning profile app identifier '$PROFILE_BUNDLE_PATTERN'." >&2
+            exit 1
+          fi
+          EXPORT_OPTIONS_PATH="$RUNNER_TEMP/exportOptions.plist"
+          cat > "$EXPORT_OPTIONS_PATH" <<EOF
+          <?xml version="1.0" encoding="UTF-8"?>
+          <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+          <plist version="1.0">
+          <dict>
+            <key>method</key>
+            <string>app-store</string>
+            <key>signingStyle</key>
+            <string>manual</string>
+            <key>teamID</key>
+            <string>$TEAM_ID</string>
+            <key>provisioningProfiles</key>
+            <dict>
+              <key>$BUNDLE_ID</key>
+              <string>$PROFILE_NAME</string>
+            </dict>
+          </dict>
+          </plist>
+          EOF
+          echo "IOS_PROFILE_NAME=$PROFILE_NAME" >> "$GITHUB_ENV"
+          echo "IOS_EXPORT_OPTIONS_PLIST=$EXPORT_OPTIONS_PATH" >> "$GITHUB_ENV"
+
+      - name: Create Xcode signing overrides
+        shell: bash
+        env:
+          IOS_TEAM_ID: ${{ secrets.IOS_TEAM_ID }}
+        run: |
+          set -euo pipefail
+          TEAM_ID="${IOS_TEAM_ID:-VX89ZRZZPW}"
+          PROFILE_NAME="${IOS_PROFILE_NAME:-}"
+          if [ -z "$PROFILE_NAME" ]; then
+            echo "Provisioning profile name is empty, cannot configure manual signing." >&2
+            exit 1
+          fi
+          XCODE_CONFIG_PATH="$RUNNER_TEMP/ci-signing.xcconfig"
+          cat > "$XCODE_CONFIG_PATH" <<EOF
+          CODE_SIGN_STYLE = Manual
+          DEVELOPMENT_TEAM = $TEAM_ID
+          CODE_SIGN_IDENTITY = Apple Distribution
+          PROVISIONING_PROFILE_SPECIFIER = $PROFILE_NAME
+          EOF
+          echo "XCODE_XCCONFIG_FILE=$XCODE_CONFIG_PATH" >> "$GITHUB_ENV"
+
+      - name: Build IPA
+        run: flutter build ipa --export-options-plist "$IOS_EXPORT_OPTIONS_PLIST" --build-name "$IOS_BUILD_NAME" --build-number "$IOS_BUILD_NUMBER"
+
+      - name: Upload to TestFlight (develop)
+        if: github.ref == 'refs/heads/develop'
+        working-directory: ios
+        env:
+          APP_STORE_CONNECT_API_KEY_ID: ${{ secrets.APP_STORE_CONNECT_API_KEY_ID }}
+          APP_STORE_CONNECT_ISSUER_ID: ${{ secrets.APP_STORE_CONNECT_ISSUER_ID }}
+          APP_STORE_CONNECT_API_KEY_BASE64: ${{ secrets.APP_STORE_CONNECT_API_KEY_BASE64 }}
+          IOS_IPA_PATH: ../build/ios/ipa/vertochat.ipa
+        run: bundle exec fastlane ios upload_testflight
+
+      - name: Upload to App Store (main)
+        if: github.ref == 'refs/heads/main'
+        working-directory: ios
+        env:
+          APP_STORE_CONNECT_API_KEY_ID: ${{ secrets.APP_STORE_CONNECT_API_KEY_ID }}
+          APP_STORE_CONNECT_ISSUER_ID: ${{ secrets.APP_STORE_CONNECT_ISSUER_ID }}
+          APP_STORE_CONNECT_API_KEY_BASE64: ${{ secrets.APP_STORE_CONNECT_API_KEY_BASE64 }}
+          IOS_IPA_PATH: ../build/ios/ipa/vertochat.ipa
+        run: bundle exec fastlane ios upload_app_store

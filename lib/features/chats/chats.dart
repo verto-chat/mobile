@@ -1,8 +1,7 @@
 import 'package:context_di/context_di.dart';
+import 'package:openapi/openapi.dart';
 import 'package:provider/provider.dart';
 
-import '../../core/core.dart';
-import 'data/data_sources/data_sources.dart';
 import 'data/repositories/repositories.dart';
 import 'data/supabase/supabase.dart';
 import 'domain/domain.dart';
@@ -22,21 +21,8 @@ class ChatsFeature extends FeatureDependencies with _$ChatsFeatureMixin {
   @override
   List<Registration> register() {
     return [
-      registerSingleton((context) {
-        final dio = context.read<CreateDio>().call(context, const (backendSupport: true));
-
-        final endpoints = context.read<IEndpoints>();
-
-        return ChatsApi(dio, baseUrl: "${endpoints.baseUrl}/chats");
-      }),
-
-      registerSingleton((context) {
-        final dio = context.read<CreateDio>().call(context, const (backendSupport: true));
-
-        final endpoints = context.read<IEndpoints>();
-
-        return ChatMessagesApi(dio, baseUrl: "${endpoints.baseUrl}/chat-messages");
-      }),
+      registerSingleton((context) => context.read<Openapi>().getChatsApi()),
+      registerSingleton((context) => context.read<Openapi>().getChatMessagesApi()),
 
       ...super.register(),
     ];
