@@ -34,6 +34,7 @@ platform :ios do
       ipa: ipa_path,
       metadata_path: metadata_path,
       screenshots_path: screenshots_path,
+      precheck_include_in_app_purchases: false,
       force: true,
       skip_metadata: !has_metadata,
       skip_screenshots: !has_screenshots,
