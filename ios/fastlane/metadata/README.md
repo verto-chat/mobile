@@ -3,6 +3,7 @@
 Fastlane reads metadata from:
 - `ios/fastlane/metadata/en-US/*`
 - `ios/fastlane/metadata/ru/*`
+- `ios/fastlane/metadata/copyright.txt` (non-localized)
 
 Editable files per locale:
 - `name.txt`
